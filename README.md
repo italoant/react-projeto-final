@@ -1,2 +1,3 @@
-# Projeto Final React🌈📚
-REPOSITÓRIO DO PROJETO.
+## Projeto Final React ⚛️🌈
+
+- REPOSITÓRIO DO PROJETO.
