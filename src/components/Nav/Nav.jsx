@@ -8,7 +8,7 @@ import Logo from '../../assets/logo.svg';
 export default function Nav() {
     return <Header>
         <div className="container">
-            <Link to="/"><img src={Logo} alt="" /></Link>   
+            <Link to="/"><img src={Logo} alt="logo" /></Link>   
             <ul className="container_nav">
                 <li><Link className="link" to="/" >Home</Link></li>
                 <li><Link className="link" to="/anime" >Anime</Link></li>
