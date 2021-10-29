@@ -28,6 +28,7 @@ export const Formulario = styled.form`
         height: 6.1vh;
         border-radius: 20px;
         border: none;
+        background-color: #FFFFFF;
     }
 
     .botao{
