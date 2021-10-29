@@ -8,6 +8,7 @@ import Login from './pages/Login/Login';
 import Noticias from './pages/Noticias/Noticias';
 import Nav from './components/Nav/Nav';
 import GlobalStyle from './styles/global';
+import Footer from './components/Footer/Footer.jsx';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         </Switch>
       </div>
      <GlobalStyle/>
+     <Footer/>
     </BrowserRouter>
   );
 }
