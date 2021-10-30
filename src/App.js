@@ -11,6 +11,7 @@ import GlobalStyle from './styles/global';
 import Footer from './components/Footer/Footer.jsx';
 
 
+
 function App() {
   return (
     <BrowserRouter>
