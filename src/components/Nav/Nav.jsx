@@ -30,13 +30,16 @@ export default function Nav() {
                         key={placement}
                         placement={placement}
                         overlay={
-                            <Popover id={`popover-positioned-${placement}`}>
-                            <Popover.Header as="h3">{`Usuário`}</Popover.Header>
+                            <Popover Style="border-radius: 1rem;" id={`popover-positioned-${placement}`}>
+                            <Popover.Header className="d-flex justify-content-center" Style="
+                            border-radius: 1rem 1rem 0 0; background-color: #FFBDBF; color: #FFFFFF"
+                            as="h3">{`Usuário`}</Popover.Header>
                             <Popover.Body className="d-flex flex-column pop_up">
-                                <ButtonPopUp>Login</ButtonPopUp>
+                                <Link to="/login"><ButtonPopUp color="#F16EA5">Login</ButtonPopUp></Link>
+                                <Link to="/cadastro"><ButtonPopUp color="#FE6688">Cadastro</ButtonPopUp></Link>
                             </Popover.Body>
                             </Popover>
-                    }
+                    } 
                     >
                     <li><img src={User} alt="user" /></li>
 

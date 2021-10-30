@@ -16,6 +16,7 @@ export const Header = styled.header`
         gap: 1.9rem;
     }
 
+
     .container_icons {
         max-width: 200px;
     }
@@ -52,5 +53,6 @@ export const ButtonPopUp = styled.button`
     margin: .5rem 1rem;
     border: none;
     border-radius: 15px;
-    background-color: ;
+    background-color: ${props => props.color};
+    color: white;
 `;
