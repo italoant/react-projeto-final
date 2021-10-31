@@ -1,29 +1,40 @@
 import React from 'react';
-import { Conteudo, Footer } from './Footer';
-import Logo from '../../assets/logo.svg'
+import Logo from '../../assets/logo.svg';
+import { BrowserRouter, Router, Switch, Link } from 'react-router-dom';
+import "./Style"
 
 
-export default function footer(){
+import Sobre from './pagFooter/Sobre';
+import Contato from './pagFooter/Contato';
+import Equipe from './pagFooter/Equipe';
+
+
+export default function Footer(){
     return(
         <Footer>
-            <Conteudo>
-               <div className="infoFooter">
-                    <div className="left">
-                        <div className="logo">
-                            <img src={Logo} alt="" /> NOME
-                        </div>
+            <div className="infoFooter">
+                <div className="left">
+                    <div className="logo">
+                        <img src={Logo} alt="" /> NOME
                     </div>
-                    <div className="right">
-                        <p>Sobre</p>
-                        <p>Contato</p>
-                        <p>Saiba mais</p>
-                    </div>
-               </div>
-                <div className="linha"></div>
-                <p className="copyright">
-                    &copy; 2021 Copyright - Equipe 4
-                </p>
-            </Conteudo>
+                </div>
+                <div className="right">
+                    <Link to="/sobre">Sobre</Link>
+                    <Link to="/contato">Contato</Link>
+                    <Link to="/equipe">Equipe</Link>
+                    <BrowserRouter>
+                        <Switch>
+                            <Router path="/sobre" component={Sobre} exact />
+                            <Router path="/contato" component={Contato} exact />
+                            <Router path="/equipe" component={Equipe} exact />
+                        </Switch>
+                    </BrowserRouter>
+                </div>
+            </div>
+            <div className="linha"></div>
+            <p className="copyright">
+                &copy; 2021 Copyright - Equipe 4
+            </p>  
         </Footer>
     );
 }
