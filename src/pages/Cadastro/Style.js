@@ -18,7 +18,7 @@ export const FormCadastro = styled.form`
         border-radius: 20px;
         padding: 5vh;
         box-shadow: 1px 1px rgba(0, 0, 0, 25%);
-        gap: 10px;
+        gap: 20px;
 
     }
 
