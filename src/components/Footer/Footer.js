@@ -57,6 +57,7 @@ export const Conteudo = styled.footer`
     .copyright{
         position: absolute;
         bottom: 0;
+        margin: 0;
     }
 
 `;
