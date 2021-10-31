@@ -1,13 +1,5 @@
 import React from 'react';
 import Logo from '../../assets/logo.svg';
-import { BrowserRouter, Router, Switch, Link } from 'react-router-dom';
-import "./Style"
-
-
-import Sobre from './pagFooter/Sobre';
-import Contato from './pagFooter/Contato';
-import Equipe from './pagFooter/Equipe';
-
 
 export default function Footer(){
     return(
@@ -19,16 +11,10 @@ export default function Footer(){
                     </div>
                 </div>
                 <div className="right">
-                    <Link to="/sobre">Sobre</Link>
-                    <Link to="/contato">Contato</Link>
-                    <Link to="/equipe">Equipe</Link>
-                    <BrowserRouter>
-                        <Switch>
-                            <Router path="/sobre" component={Sobre} exact />
-                            <Router path="/contato" component={Contato} exact />
-                            <Router path="/equipe" component={Equipe} exact />
-                        </Switch>
-                    </BrowserRouter>
+                    <p>Sobre</p>
+                    <p>Contato</p>
+                    <p>Equipe</p>
+                    
                 </div>
             </div>
             <div className="linha"></div>
