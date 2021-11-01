@@ -12,18 +12,18 @@ export const Formulario = styled.form`
     box-shadow: 1px 1px rgba(0, 0, 0, 25%);
 
     label{
-        margin-top: 10vh;
         font-size: 64px;
         color: #FFFFFF;
         text-shadow: .5px .5px rgba(241, 110, 165, 50);
     }
-
+    
     .campos-form{
         margin-top: 40px;
         margin-bottom: 20px;
     }
 
     .campos-form input{
+        padding: 15px;
         width: 25vw;
         height: 6.1vh;
         border-radius: 20px;

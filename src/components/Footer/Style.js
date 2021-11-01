@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Footer = styled.footer`
+export const Rodape = styled.footer`
     position: fixed;
     bottom: 0;
     right: 0;
@@ -9,8 +9,7 @@ export const Footer = styled.footer`
     width: 100%;
     text-align: center;
     justify-content: center;
-`
-export const Conteudo = styled.footer`
+
     height: 10vh;
     display: flex; 
     flex-direction: column;
@@ -48,6 +47,15 @@ export const Conteudo = styled.footer`
         }
     }
     
+    p{
+        margin: 0;
+    }
+
+    .link {
+        text-decoration: none;
+        color: #FFFFFF;
+        text-shadow: .5px .5px rgba(241, 110, 165, 50);
+    }
 
     .linha{
         height: 1px; width: 80vw;
@@ -57,6 +65,7 @@ export const Conteudo = styled.footer`
     .copyright{
         position: absolute;
         bottom: 0;
+        margin: 0;
     }
 
 `;
