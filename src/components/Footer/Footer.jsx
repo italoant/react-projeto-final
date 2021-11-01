@@ -1,9 +1,10 @@
 import React from 'react';
 import Logo from '../../assets/logo.svg';
+import { Rodape } from './Style';
 
 export default function Footer(){
     return(
-        <Footer>
+        <Rodape>
             <div className="infoFooter">
                 <div className="left">
                     <div className="logo">
@@ -21,6 +22,6 @@ export default function Footer(){
             <p className="copyright">
                 &copy; 2021 Copyright - Equipe 4
             </p>  
-        </Footer>
+        </Rodape>
     );
 }

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Footer = styled.footer`
+export const Rodape = styled.footer`
     position: fixed;
     bottom: 0;
     right: 0;

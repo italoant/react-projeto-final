@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from "react-router-dom";
+
+import NotFound from './pages/NotFound/NotFound';
 import Anime from './pages/Anime/Anime';
 import Manga from './pages/Manga/Manga';
 import Cadastro from './pages/Cadastro/Cadastro';
@@ -24,6 +26,7 @@ function App() {
           <Route path="/noticias" component={Noticias}></Route>
           <Route path="/login" component={Login}></Route>
           <Route path="/cadastro" component={Cadastro}></Route>
+          <Route component={NotFound}></Route>
         </Switch>
       </div>
      <GlobalStyle/>
