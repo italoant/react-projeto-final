@@ -1,9 +1,15 @@
 import React from "react";
-import { Formulario } from './Style';
+import { Formulario, Botao } from './Style';
 import { Link } from 'react-router-dom';
 
 
 export default function Login(){
+
+    
+
+
+
+
     return(
         <div>
             <Formulario>
@@ -14,8 +20,8 @@ export default function Login(){
                 <section className="campos-form">
                     <input type='password' placeholder="Senha"/>
                 </section>
-                <Link to='/cadastro'><button color="#FE6688" className="botao">Cadastre-se</button></Link>
-                <Link to='./'><button color="#F16EA5" className="botao">Entrar</button></Link>
+                <Link to='/cadastro'><Botao color="#FE6688">Cadastre-se</Botao></Link>
+                <Link to='./'><Botao color="#F16EA5">Entrar</Botao></Link>
                 <p>Esqueceu a senha? <a href="##" target="_black">Clique aqui.</a></p>
             </Formulario>
         </div>

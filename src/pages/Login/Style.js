@@ -5,7 +5,7 @@ export const Formulario = styled.form`
     background-color: #FFBDBF;
     width: 40vw;
     margin: auto;
-    margin-top: 9vh;
+    margin-top: 5vh;
     text-align: center;
     border-radius: 20px;
     padding: 6vh;
@@ -29,17 +29,7 @@ export const Formulario = styled.form`
         border-radius: 20px;
         border: none;
         background-color: #FFFFFF;
-    }
-
-    .botao{
-        margin: 20px;
-        width: 11.5vw;
-        border-radius: 25px;
-        border: none;
-        color: #FFFFFF;
-        height: 6vh;
-        font-size: 25px;
-        background-color: ${props => props.color};
+        color: #A9A9A9;
     }
 
     p{
@@ -51,4 +41,24 @@ export const Formulario = styled.form`
         color: #F586AD;
         text-decoration: none;
     }
+
+    a:hover{
+        color: #FE6688;
+    }
+`
+
+export const Botao = styled.button`
+        margin: 20px;
+        width: 11.5vw;
+        border-radius: 25px;
+        border: none;
+        color: #FFFFFF;
+        height: 6vh;
+        font-size: 25px;
+        background-color: ${props => props.color};
+        
+        :hover{
+            color: #A9A9A9;
+            background-color: #EED9D6;
+        }
 `
