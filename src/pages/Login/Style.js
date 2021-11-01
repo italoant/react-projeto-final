@@ -39,14 +39,7 @@ export const Formulario = styled.form`
         color: #FFFFFF;
         height: 6vh;
         font-size: 25px;
-    }
-
-    #btn-esquerda{
-        background-color: #FE6688;
-    }
-
-    #btn-direita{
-        background-color: #F16EA5;
+        background-color: ${props => props.color};
     }
 
     p{

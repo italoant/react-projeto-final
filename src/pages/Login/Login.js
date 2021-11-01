@@ -14,8 +14,8 @@ export default function Login(){
                 <section className="campos-form">
                     <input type='password' placeholder="Senha"/>
                 </section>
-                <Link to='/cadastro'><button id="btn-esquerda" className="botao">Cadastre-se</button></Link>
-                <Link to='./'><button id="btn-direita" className="botao">Entrar</button></Link>
+                <Link to='/cadastro'><button color="#FE6688" className="botao">Cadastre-se</button></Link>
+                <Link to='./'><button color="#F16EA5" className="botao">Entrar</button></Link>
                 <p>Esqueceu a senha? <a href="##" target="_black">Clique aqui.</a></p>
             </Formulario>
         </div>
