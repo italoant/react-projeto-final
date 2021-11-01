@@ -9,13 +9,14 @@ export const Header = styled.header`
     background: linear-gradient(rgba(254, 133, 138, 80), rgba(254, 133, 138, 40),  rgba(254, 133, 138, 20), rgba(254, 133, 138, 10)   ,rgba(254, 133, 138, 0));
     opacity: 80%;    
 
+    
+
     .container {
         display: flex;
         justify-content: flex-start;
         align-items: center;
         gap: 1.9rem;
     }
-
 
     .container_icons {
         max-width: 200px;
@@ -45,6 +46,21 @@ export const Header = styled.header`
             text-shadow: .5px .5px rgba(241, 110, 165, 50);
         }
     }  
+
+    @media(max-width: 840px){
+        .container_nav {
+            display: none;
+        }
+        .menuMobile {
+            display: inline;
+        }
+    }
+
+    @media(min-width: 840px){
+        .menuMobile {
+            display: none;
+        }
+    }
 `;
 
 export const ButtonPopUp = styled.button`

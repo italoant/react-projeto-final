@@ -16,7 +16,7 @@ export const Formulario = styled.form`
         color: #FFFFFF;
         text-shadow: .5px .5px rgba(241, 110, 165, 50);
     }
-
+    
     .campos-form{
         margin-top: 40px;
         margin-bottom: 20px;

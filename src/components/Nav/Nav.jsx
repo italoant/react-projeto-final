@@ -8,6 +8,7 @@ import Popover from 'react-bootstrap/Popover';
 import Logo from '../../assets/logo.svg';
 import User from '../../assets/user.svg';
 import Theme from '../../assets/theme.svg';
+import Menu from '../../assets/menu.svg';
 
 
 export default function Nav() {
@@ -25,29 +26,32 @@ export default function Nav() {
             <ul className="container_nav ">
 
                     {['bottom'].map((placement) => (
-                    <OverlayTrigger
-                        trigger="click"
-                        key={placement}
-                        placement={placement}
-                        overlay={
-                            <Popover Style="border-radius: 1rem;" id={`popover-positioned-${placement}`}>
-                            <Popover.Header className="d-flex justify-content-center" Style="
-                            border-radius: 1rem 1rem 0 0; background-color: #FFBDBF; color: #FFFFFF"
-                            as="h3">{`Usuário`}</Popover.Header>
-                            <Popover.Body className="d-flex flex-column pop_up">
-                                <Link to="/login"><ButtonPopUp color="#F16EA5">Login</ButtonPopUp></Link>
-                                <Link to="/cadastro"><ButtonPopUp color="#FE6688">Cadastro</ButtonPopUp></Link>
-                            </Popover.Body>
-                            </Popover>
-                    } 
-                    >
-                    <li><img src={User} alt="user" /></li>
+                        <OverlayTrigger
+                            trigger="click"
+                            key={placement}
+                            placement={placement}
+                            overlay={
+                                <Popover Style="border-radius: 1rem;" id={`popover-positioned-${placement}`}>
+                                <Popover.Header className="d-flex justify-content-center" Style="
+                                border-radius: 1rem 1rem 0 0; background-color: #FFBDBF; color: #FFFFFF"
+                                as="h3">{`Usuário`}</Popover.Header>
+                                <Popover.Body className="d-flex flex-column pop_up">
+                                    <Link to="/login"><ButtonPopUp color="#F16EA5">Login</ButtonPopUp></Link>
+                                    <Link to="/cadastro"><ButtonPopUp color="#FE6688">Cadastro</ButtonPopUp></Link>
+                                </Popover.Body>
+                                </Popover>
+                        } 
+                        >
+                        <li><img src={User} alt="user" /></li>
 
-                    </OverlayTrigger>
-                ))}
+                        </OverlayTrigger>
+                    ))}
 
                 <li><img src={Theme} alt="icon theme" /></li>
             </ul>
+        </div>
+        <div className="menuMobile">
+            <img src={Menu} alt="icon theme" />
         </div>
     </Header>
 
