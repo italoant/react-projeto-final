@@ -12,9 +12,9 @@ import Nav from './components/Nav/Nav';
 import GlobalStyle from './styles/global';
 import Footer from './components/Footer/Footer';
 
-import Contato from './components/Footer/Contato/Contato';
-import Saiba from './components/Footer/Saiba/Saiba';
-import Sobre from './components/Footer/Sobre/Sobre';
+import Contato from './components/Footer/pagFooter/Contato/Contato';
+import Equipe from './components/Footer/pagFooter/Equipe/Equipe';
+import Sobre from './components/Footer/pagFooter/Sobre/Sobre';
 
 
 
@@ -30,11 +30,11 @@ function App() {
           <Route path="/noticias" component={Noticias}></Route>
           <Route path="/login" component={Login}></Route>
           <Route path="/cadastro" component={Cadastro}></Route>
-          <Route path="/404" component={NotFound}></Route>
-
+      
           <Route path="/contato" component={Contato}></Route>
-          <Route path="/saibamais" component={Saiba}></Route>
+          <Route path="/equipe" component={Equipe}></Route>
           <Route path="/sobre" component={Sobre}></Route>
+          <Route component={NotFound}></Route>
         </Switch>
       </div>
      <GlobalStyle/>

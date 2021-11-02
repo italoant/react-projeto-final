@@ -1,21 +1,23 @@
 import styled from "styled-components";
 
 export const Style = styled.footer`
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    background: linear-gradient(rgba(254, 133, 138, 0), rgba(254, 133, 138, 10),  rgba(254, 133, 138, 20), rgba(254, 133, 138, 40)   ,rgba(254, 133, 138, 80));
+    margin-top: 2.5rem;
+    background: linear-gradient(to top, rgba(254, 133, 138, 40)   ,rgba(254, 133, 138, 80),rgba(254, 133, 138, 40),rgba(254, 133, 138, 0));
     opacity: 80%;
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-
+    width: 100vw;
     height: 10vh;
     display: flex; 
     flex-direction: column;
     justify-content: center; 
     align-items: center;
     color: white;
+    
+    .containerFooter{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
     .infoFooter{
         width: 100vw;
@@ -31,7 +33,8 @@ export const Style = styled.footer`
         }
 
         .logo{
-            display: flex; align-items: center;
+            display: flex; 
+            align-items: center;
             gap: 5px; font-weight: bold;
 
             img{
@@ -63,14 +66,7 @@ export const Style = styled.footer`
     }
 
     .linha{
-        height: 2px; width: 80vw;
-        background-color: #DB7093;
-    }
-
-    .copyright{
-        position: absolute;
-        bottom: 0;
-        margin: 0;
+        color: var(--pink2);
     }
 
     @media (max-width:600px){

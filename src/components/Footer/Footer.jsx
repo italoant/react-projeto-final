@@ -14,14 +14,15 @@ export default function Footer(){
                 </div>
                 <div className="right">
                     <Link to="/contato" className="links">Contato</Link>
-                    <Link to="/saibamais" className="links">Saiba mais</Link>
+                    <Link to="/equipe" className="links">Equipe</Link>
                     <Link to="/sobre" className="links">Sobre</Link>
                 </div>
             </div>
-            <div className="linha"></div>
-            <p className="copyright">
+            <div className="copyright"> 
+                <p>
                 &copy; 2021 Copyright - Equipe 4
-            </p>
+                </p> 
+            </div>
         </Style>
     );
 }
