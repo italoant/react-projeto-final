@@ -1,21 +1,23 @@
 import styled from "styled-components";
 
-export const Rodape = styled.footer`
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    background: linear-gradient(rgba(254, 133, 138, 0), rgba(254, 133, 138, 10),  rgba(254, 133, 138, 20), rgba(254, 133, 138, 40)   ,rgba(254, 133, 138, 80));
+export const Style = styled.footer`
+    margin-top: 2.5rem;
+    background: linear-gradient(to top, rgba(254, 133, 138, 40)   ,rgba(254, 133, 138, 80),rgba(254, 133, 138, 40),rgba(254, 133, 138, 0));
     opacity: 80%;
-    width: 100%;
-    text-align: center;
-    justify-content: center;
-
+    width: 100vw;
     height: 10vh;
     display: flex; 
     flex-direction: column;
     justify-content: center; 
     align-items: center;
     color: white;
+    
+    .containerFooter{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
     .infoFooter{
         width: 100vw;
@@ -31,7 +33,8 @@ export const Rodape = styled.footer`
         }
 
         .logo{
-            display: flex; align-items: center;
+            display: flex; 
+            align-items: center;
             gap: 5px; font-weight: bold;
 
             img{
@@ -40,9 +43,14 @@ export const Rodape = styled.footer`
         }
 
         .right{
-            display: flex; gap: 50px;
+            display: flex; gap: 2rem;
             padding-right: 2.5rem;
             text-transform: uppercase;
+        }
+
+        .links{
+            text-decoration: none;
+            color: white;
             text-shadow: .5px .5px rgba(241, 110, 165, 50);
         }
     }
@@ -58,14 +66,22 @@ export const Rodape = styled.footer`
     }
 
     .linha{
-        height: 1px; width: 80vw;
-        background-color: var(--pink3);
+        color: var(--pink2);
     }
 
-    .copyright{
-        position: absolute;
-        bottom: 0;
-        margin: 0;
+    @media (max-width:600px){
+        background-color: violet;
+        
+        .infoFooter{
+            justify-content: space-between;
+        }
+
+        .right{
+            display: flex;
+            padding-right: 2rem;
+            text-transform: uppercase;
+        }
+
     }
 
 `;
