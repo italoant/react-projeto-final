@@ -17,15 +17,20 @@ export const Formulario = styled.form`
         text-shadow: .5px .5px rgba(241, 110, 165, 50);
     }
     
+    #mensagem{
+        color: #FF0000;
+        font-size: 15px;
+    }
+
     .campos-form{
-        margin-top: 40px;
+        margin-top: 30px;
         margin-bottom: 20px;
     }
 
     .campos-form input{
         padding: 15px;
         width: 25vw;
-        height: 6.1vh;
+        min-height: 6vh;
         border-radius: 20px;
         border: none;
         background-color: #FFFFFF;
