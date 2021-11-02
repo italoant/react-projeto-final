@@ -9,8 +9,7 @@ export const Footer = styled.footer`
     width: 100%;
     text-align: center;
     justify-content: center;
-`
-export const Conteudo = styled.footer`
+
     height: 10vh;
     display: flex; 
     flex-direction: column;
@@ -41,22 +40,50 @@ export const Conteudo = styled.footer`
         }
 
         .right{
-            display: flex; gap: 50px;
+            display: flex; gap: 2rem;
             padding-right: 2.5rem;
             text-transform: uppercase;
+        }
+
+        .links{
+            text-decoration: none;
+            color: white;
             text-shadow: .5px .5px rgba(241, 110, 165, 50);
         }
     }
     
 
     .linha{
-        height: 1px; width: 80vw;
-        background-color: var(--pink3);
+        height: 2px; width: 80vw;
+        background-color: #DB7093;
     }
 
     .copyright{
         position: absolute;
         bottom: 0;
+    }
+
+    @media (max-width:600px){
+        background-color: violet;
+        
+        .infoFooter{
+            justify-content: space-between;
+        }
+
+        .right{
+            display: flex;
+            padding-right: 2rem;
+            text-transform: uppercase;
+        }
+
+        .linha{
+            
+        }
+
+        .copyright{
+            
+        }
+
     }
 
 `;

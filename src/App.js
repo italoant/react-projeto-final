@@ -10,6 +10,10 @@ import Nav from './components/Nav/Nav';
 import GlobalStyle from './styles/global';
 import Footer from './components/Footer/Footer.jsx';
 
+import Contato from './components/Footer/Contato/Contato';
+import Saiba from './components/Footer/Saiba/Saiba';
+import Sobre from './components/Footer/Sobre/Sobre';
+
 
 function App() {
   return (
@@ -23,6 +27,9 @@ function App() {
           <Route path="/noticias" component={Noticias}></Route>
           <Route path="/login" component={Login}></Route>
           <Route path="/cadastro" component={Cadastro}></Route>
+          <Route path="/contato" component={Contato}></Route>
+          <Route path="/saibamais" component={Saiba}></Route>
+          <Route path="/sobre" component={Sobre}></Route>
         </Switch>
       </div>
      <GlobalStyle/>

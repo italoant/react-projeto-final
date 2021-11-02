@@ -1,29 +1,28 @@
 import React from 'react';
-import { Conteudo, Footer } from './Footer';
-import Logo from '../../assets/logo.svg'
+import { Footer } from './Footer';
+import Logo from '../../assets/logo.svg';
+import { Link } from 'react-router-dom';
 
 
 export default function footer(){
     return(
         <Footer>
-            <Conteudo>
-               <div className="infoFooter">
-                    <div className="left">
-                        <div className="logo">
-                            <img src={Logo} alt="" /> NOME
-                        </div>
+            <div className="infoFooter">
+                <div className="left">
+                    <div className="logo">
+                        <img src={Logo} alt="" /> NOME
                     </div>
-                    <div className="right">
-                        <p>Sobre</p>
-                        <p>Contato</p>
-                        <p>Saiba mais</p>
-                    </div>
-               </div>
-                <div className="linha"></div>
-                <p className="copyright">
-                    &copy; 2021 Copyright - Equipe 4
-                </p>
-            </Conteudo>
+                </div>
+                <div className="right">
+                    <Link to="/contato" className="links">Contato</Link>
+                    <Link to="/saibamais" className="links">Saiba mais</Link>
+                    <Link to="/sobre" className="links">Sobre</Link>
+                </div>
+            </div>
+            <div className="linha"></div>
+            <p className="copyright">
+                &copy; 2021 Copyright - Equipe 4
+            </p>
         </Footer>
     );
 }
