@@ -1,21 +1,35 @@
-import React from "react";
-import { Formulario } from './Style';
+import React, { useState } from "react";
+import { Formulario, Botao } from './Style';
 import { Link } from 'react-router-dom';
 
 
 export default function Login(){
+
+    const [usuario, setUsuario] = useState("thayza");
+    const [senha, setSenha] = useState("thayza123");
+    const [mensagem, setMensagem] = useState("");
+
+
+    //Validação do formulário de login
+
+
+    function Logar(){
+      
+    }
+
     return(
         <div>
             <Formulario>
                 <label>Login</label>
                 <section className="campos-form">
-                    <input type='text' placeholder="Email"/>
+                    <p id="mensagem">{mensagem}</p>
+                    <input onChange={(e) => setUsuario(e.target.value)} type='text' placeholder="Email"/>
                 </section>
                 <section className="campos-form">
-                    <input type='password' placeholder="Senha"/>
+                    <input onChange={(e) => setSenha(e.target.value)} type='password' placeholder="Senha"/>
                 </section>
-                <Link to='/cadastro'><button id="btn-esquerda" className="botao">Cadastre-se</button></Link>
-                <Link to='./'><button id="btn-direita" className="botao">Entrar</button></Link>
+                <Link to='/cadastro'><Botao color="#FE6688">Cadastre-se</Botao></Link>
+                <Link to='./'><Botao color="#F16EA5" onClick={Logar}>Entrar</Botao></Link>
                 <p>Esqueceu a senha? <a href="##" target="_black">Clique aqui.</a></p>
             </Formulario>
         </div>
