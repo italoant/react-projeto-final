@@ -1,8 +1,15 @@
 import React from "react";
-import { Formulario } from './Style';
+import { Formulario, Botao } from './Style';
+import { Link } from 'react-router-dom';
 
 
 export default function Login(){
+
+    
+
+
+
+
     return(
         <div>
             <Formulario>
@@ -11,10 +18,10 @@ export default function Login(){
                     <input type='text' placeholder="Email"/>
                 </section>
                 <section className="campos-form">
-                    <input type='text' placeholder="Senha"/>
+                    <input type='password' placeholder="Senha"/>
                 </section>
-                <button id="btn-esquerda" className="botao">Cadastre-se</button>
-                <button id="btn-direita" className="botao">Entrar</button>
+                <Link to='/cadastro'><Botao color="#FE6688">Cadastre-se</Botao></Link>
+                <Link to='./'><Botao color="#F16EA5">Entrar</Botao></Link>
                 <p>Esqueceu a senha? <a href="##" target="_black">Clique aqui.</a></p>
             </Formulario>
         </div>

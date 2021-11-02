@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Footer = styled.footer`
+export const Style = styled.footer`
     position: fixed;
     bottom: 0;
     right: 0;
@@ -52,6 +52,15 @@ export const Footer = styled.footer`
         }
     }
     
+    p{
+        margin: 0;
+    }
+
+    .link {
+        text-decoration: none;
+        color: #FFFFFF;
+        text-shadow: .5px .5px rgba(241, 110, 165, 50);
+    }
 
     .linha{
         height: 2px; width: 80vw;
@@ -61,6 +70,7 @@ export const Footer = styled.footer`
     .copyright{
         position: absolute;
         bottom: 0;
+        margin: 0;
     }
 
     @media (max-width:600px){

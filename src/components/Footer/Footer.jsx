@@ -1,12 +1,11 @@
 import React from 'react';
-import { Footer } from './Footer';
+import { Style } from './Style';
 import Logo from '../../assets/logo.svg';
 import { Link } from 'react-router-dom';
 
-
-export default function footer(){
+export default function Footer(){
     return(
-        <Footer>
+        <Style>
             <div className="infoFooter">
                 <div className="left">
                     <div className="logo">
@@ -23,6 +22,6 @@ export default function footer(){
             <p className="copyright">
                 &copy; 2021 Copyright - Equipe 4
             </p>
-        </Footer>
+        </Style>
     );
 }
