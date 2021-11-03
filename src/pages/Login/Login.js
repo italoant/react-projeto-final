@@ -14,12 +14,27 @@ export default function Login(){
 
 
 
-    function Logar(){
-      
+    function Logar(e){
+        
+        if(usuario == "" && senha == ""){
+            setMensagem("Preencha todos os campos abaixo.")
+            e.preventDefault()
+        } else if(senha == ""){
+            setMensagem("Preencha o campo de senha.")
+            document.getElementById("senha").focus();
+            e.preventDefault()
+        } else if(usuario == ""){
+            setMensagem("Preencha o campo de usuário.")
+            document.getElementById("email").focus();
+            e.preventDefault()
+        } else if(usuario != "usuario@gmail.com" && senha != "usuario123"){
+            setMensagem("Usuário ou senha incorreta.")
+            e.preventDefault()
+        } else{
+            
+        }
     }
 
-    console.log(usuario)
-    console.log(senha)
 
     return(
         <div>
@@ -27,10 +42,10 @@ export default function Login(){
                 <label>Login</label>
                 <section className="campos-form">
                     <p id="mensagem">{mensagem}</p>
-                    <input onChange={(e) => {setUsuario(e.target.value)}} type='text' placeholder="Email"/>
+                    <input onChange={(e) => {setUsuario(e.target.value)}} id="email" type='email' placeholder="Email"/>
                 </section>
                 <section className="campos-form">
-                    <input onChange={(e) => {setSenha(e.target.value)}} type='password' placeholder="Senha"/>
+                    <input onChange={(e) => {setSenha(e.target.value)}} id="senha" type='password' placeholder="Senha"/>
                 </section>
                 <Link to='/cadastro'><Botao color="#FE6688">Cadastre-se</Botao></Link>
                 <Link to='./'><Botao color="#F16EA5" onClick={Logar}>Entrar</Botao></Link>
