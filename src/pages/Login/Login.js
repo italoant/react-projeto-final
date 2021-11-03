@@ -5,15 +5,17 @@ import { Link } from 'react-router-dom';
 
 export default function Login(){
 
-    const [usuario, setUsuario] = useState("thayza");
-    const [senha, setSenha] = useState("thayza123");
+    const [usuario, setUsuario] = useState("");
+    const [senha, setSenha] = useState("");
     const [mensagem, setMensagem] = useState("");
 
 
     //Validação do formulário de login
 
+    
 
-    function Logar(){
+
+    function Logar(e){
       
     }
 
