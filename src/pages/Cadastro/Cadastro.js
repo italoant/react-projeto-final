@@ -6,15 +6,17 @@ export default function Cadastro(){
         <div>
             <FormCadastro>
                     <div className="container">
-                        <label>Cadastro</label>
-                        <input type="text" placeholder="Nome" />
+                        <h1>Cadastro</h1>
+                        <input type="text" placeholder="Nome" id="" />
                         <input type="email"  placeholder="Email" />
                         <input type="password"  placeholder="Senha" />
-                        <input type="date"  placeholder="Data de nascimento" className="date" />
-                        <button> Cadastre-se </button>
+                        <label htmlFor="data"> Data de nascimento</label>
+                        <input type="date" id="data" className="date" />
+                        <button id="btnCadastro"> Cadastre-se </button>
                     </div>
             </FormCadastro>
         </div>
     );
 
 };
+

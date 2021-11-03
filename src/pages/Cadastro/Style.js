@@ -22,10 +22,14 @@ export const FormCadastro = styled.form`
 
     }
 
-    label{
+    h1{
         font-size: 60px;
         color: #FFFFFF;
         text-shadow: .5px .5px rgba(241, 110, 165, 50);
+    }
+
+    label{
+        text-align: left;
     }
 
     input, button {
