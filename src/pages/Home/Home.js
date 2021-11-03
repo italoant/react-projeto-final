@@ -1,77 +1,103 @@
 import React, { useEffect, useState } from "react";
+<<<<<<< HEAD
 import api from "../../services/api";
+=======
+import { Lista, Container } from "./Style"
+import Api from "../../services/api";
+>>>>>>> developer
 
-export default function Home(){
+import { Modal, Button } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import MyVerticallyCenteredModal from "../../components/Modal";
+
+
+export default function Home() {
 
     const [listAnime, setListAnime] = useState([]);
     const [listManga, setListManga] = useState([]);
     const [listRaking, setListRaking] = useState([]);
     const [listRakingDois, setListRakingDois] = useState([]);
+    const [modalShow, setModalShow] = React.useState(false);
+
 
 
 
     useEffect(() => {
-        api.get(`anime?sort=-popularityRank`)
-        .then(data => {
-            setListAnime(data.data.data)
-        })
-        .catch(() => {
-            console.log("erro")
-        });
+        Api.get(`anime?sort=-popularityRank`)
+            .then(data => {
+                setListAnime(data.data.data)
+            })
+            .catch(() => {
+                console.log("erro")
+            });
     }, [])
 
     useEffect(() => {
-        api.get(`manga?sort=-popularityRank`)
-        .then(data => {
-            setListManga(data.data.data)
-        })
-        .catch(() => {
-            console.log("erro")
-        });
+        Api.get(`manga?sort=-popularityRank`)
+            .then(data => {
+                setListManga(data.data.data)
+            })
+            .catch(() => {
+                console.log("erro")
+            });
     }, [])
 
-        useEffect(() => {
-            setListRakingDois(listManga.map((respListAnime) => {
-               
-                    return(
-                        <img alt="" src={respListAnime.attributes.posterImage.small}/>
-                    )
-                
-                
-                
-            }).slice(0,5))
-        })
+    useEffect(() => {
+        setListRakingDois(listManga.map((respListAnime) => {
 
-        useEffect(() => {
-            setListRaking(listAnime.map((respListAnime) => {
-               
-                    return(
-                        <img alt="" src={respListAnime.attributes.posterImage.small}/>
-                    )
-                
-                
-                
-            }).slice(0,5))
-        })
+            return (
+                <>
+                <Button variant="primary" onClick={() => setModalShow(true)} ><img alt="" src={respListAnime.attributes.posterImage.small} /></Button>
+                <MyVerticallyCenteredModal
+                    show={modalShow}
+                    onHide={() => setModalShow(false)}
+                />
+                </>
+            )
 
 
 
+        }).slice(0, 5))
+    })
 
-        
-        console.log(listAnime)
+    useEffect(() => {
+        setListRaking(listAnime.map((respListManga) => {
 
-    return(
-        <div>
-            <h1>Home</h1>
+            return (
+                <>
+                <Button variant="primary" onClick={() => setModalShow(true)}><img alt="" src={respListManga.attributes.posterImage.small} /></Button>
+                <MyVerticallyCenteredModal
+                    show={modalShow}
+                    onHide={() => setModalShow(false)}
+                />
+                </>
+            )
+
+
+
+        }).slice(0, 5))
+    })
+
+
+
+
+    return (
+        <Container>
             <h2>Melhores animes semana</h2>
-            <ul>
+            <Lista>
                 {listRaking}
-            </ul>
+            </Lista>
             <h2>Melhores mangás semana</h2>
-            <ul>
+            <Lista>
                 {listRakingDois}
-            </ul>
-            <h2>Noticias</h2>
-        </div>
+            </Lista>
+            <div className="noticiasDiv">
+                <div className="noticias">
+                    <h2>Noticias</h2>
+                    <img alt="" src="https://jpimg.com.br/uploads/2021/03/design-sem-nome-39.jpg" className="imgNoticia" />
+                </div>
+                <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer </p>
+            </div>
+        </Container>
     );
 };

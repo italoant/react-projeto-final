@@ -1,10 +1,11 @@
 import React from 'react';
-import Logo from '../../assets/logo.svg';
-import { Rodape } from './Style';
+import { Style } from './Style';
+import Logo from '../../assets/logo.png';
+import { Link } from 'react-router-dom';
 
 export default function Footer(){
     return(
-        <Rodape>
+        <Style>
             <div className="infoFooter">
                 <div className="left">
                     <div className="logo">
@@ -12,16 +13,16 @@ export default function Footer(){
                     </div>
                 </div>
                 <div className="right">
-                    <p>Sobre</p>
-                    <p>Contato</p>
-                    <p>Equipe</p>
-                    
+                    <Link to="/contato" className="links">Contato</Link>
+                    <Link to="/equipe" className="links">Equipe</Link>
+                    <Link to="/sobre" className="links">Sobre</Link>
                 </div>
             </div>
-            <div className="linha"></div>
-            <p className="copyright">
+            <div className="copyright"> 
+                <p>
                 &copy; 2021 Copyright - Equipe 4
-            </p>  
-        </Rodape>
+                </p> 
+            </div>
+        </Style>
     );
 }
