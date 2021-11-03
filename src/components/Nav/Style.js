@@ -4,7 +4,6 @@ export const Header = styled.header`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100vw;
     padding: 1.7rem 2.5rem;
     background: linear-gradient(rgba(254, 133, 138, 80), rgba(254, 133, 138, 40),  rgba(254, 133, 138, 20), rgba(254, 133, 138, 10)   ,rgba(254, 133, 138, 0));
     opacity: 80%;    
@@ -18,11 +17,13 @@ export const Header = styled.header`
 
         img {
             width: 45px;
+            cursor: pointer;
         }
 
         .theme {
             transform: rotate(${props => props.theme});
             transition: 1s;
+            
         }
     }
 
@@ -63,8 +64,6 @@ export const Header = styled.header`
         }
     }
 
-    
-
     @media(max-width: 840px){
         padding: 1rem 2.5rem;
 
@@ -86,7 +85,7 @@ export const Header = styled.header`
         }
     }
 
-    @media(min-width: 840px){
+    @media(min-width: 841px){
         .menuMobile {
             display: none;
         }
@@ -94,7 +93,7 @@ export const Header = styled.header`
 `;
 
 export const ButtonPopUp = styled.button`
-    width: ${props => props.witdh};
+    width: 125px;
     height: 30px;
     margin: ${props => props.margin};
     border: none;
@@ -107,8 +106,6 @@ export const ButtonPopUp = styled.button`
 export const NavMobile = styled.nav`
     background: linear-gradient(rgba(254, 133, 138, 0), rgba(254, 133, 138, 80), rgba(254, 133, 138, 40),  rgba(254, 133, 138, 20), rgba(254, 133, 138, 10) );
     opacity: 80%;    
-    width: 100vw;
-
     display: ${props => props.display};
     justify-content: center;
     align-items: center;
@@ -134,7 +131,13 @@ export const NavMobile = styled.nav`
 
     .links_and_buttons {
         display: flex;
+        align-items: center;
         gap: 1rem;
+
+        .theme {
+            transform: rotate(${props => props.theme});
+            transition: 1s;
+        }
     }
 
     @media(min-width: 840px){

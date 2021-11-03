@@ -37,14 +37,15 @@ export default function Nav() {
                                     key={placement}
                                     placement={placement}
                                     overlay={
-                                        <Popover Style="border-radius: 1rem;" id={`popover-positioned-${placement}`}>
-                                        <Popover.Header className="d-flex justify-content-center" Style="
-                                        border-radius: 1rem 1rem 0 0; background-color: #FFBDBF; color: #FFFFFF"
-                                        as="h3">{`Usuário`}</Popover.Header>
-                                        <Popover.Body className="d-flex flex-column pop_up">
-                                            <Link to="/login"><ButtonPopUp color="#F16EA5" witdh="100px" margin=".7rem">Login</ButtonPopUp></Link>
-                                            <Link to="/cadastro"><ButtonPopUp color="#FE6688" witdh="100px" margin=".7rem">Cadastro</ButtonPopUp></Link>
-                                        </Popover.Body>
+                                        <Popover className="pop-up-user" Style="border-radius: 1rem;" id={`popover-positioned-${placement}`}>
+                                            <Popover.Header className="d-flex justify-content-center" Style="
+                                            border-radius: 1rem 1rem 0 0; background-color: #FFBDBF; color: #FFFFFF"
+                                            as="h3">{`Usuário`}
+                                            </Popover.Header>
+                                            <Popover.Body className="d-flex flex-column pop_up">
+                                                <Link to="/login"><ButtonPopUp color="#F16EA5" witdh="100px" margin=".7rem">Login</ButtonPopUp></Link>
+                                                <Link to="/cadastro"><ButtonPopUp color="#FE6688" witdh="100px" margin=".7rem">Cadastro</ButtonPopUp></Link>
+                                            </Popover.Body>
                                         </Popover>
                                 } 
                                 >
@@ -69,7 +70,7 @@ export default function Nav() {
                     }} />
                 </div>
             </Header>
-            <NavMobile display={display}> 
+            <NavMobile display={display} theme={themeAnimation}> 
                 <nav className="container_nav_mobile">
                     <div className="links_and_buttons">
                         <Link className="link" to="/" >Home</Link>
@@ -78,8 +79,16 @@ export default function Nav() {
                         <Link className="link" to="/noticias">Noticias</Link>
                     </div>
                     <div className="links_and_buttons">
-                        <Link to="/login"><ButtonPopUp color="#F16EA5" witdh="100px">Login</ButtonPopUp></Link>
-                        <Link to="/cadastro"><ButtonPopUp color="#FE6688" witdh="100px">Cadastro</ButtonPopUp></Link>
+                        <Link to="/login"><ButtonPopUp color="#F16EA5" >Login</ButtonPopUp></Link>
+                        <Link to="/cadastro"><ButtonPopUp color="#FE6688" >Cadastro</ButtonPopUp></Link>
+                        <img 
+                            src={Theme} 
+                            className="theme" 
+                            alt="icon theme"
+                            onClick={() => {
+                                themeAnimation === "0deg" ? setThemeAnimation("160deg") : setThemeAnimation("0deg")
+                            }}
+                        />
                     </div>
                 </nav>
             </NavMobile>
