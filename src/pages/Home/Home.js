@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Lista, Container } from "./Style"
-import Api from "../../services/api";
+import Api from "../../services/Api";
 
 import { Modal, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -43,7 +43,7 @@ export default function Home() {
 
             return (
                 <>
-                <Button variant="primary" onClick={() => setModalShow(true)} ><img alt="" src={respListAnime.attributes.posterImage.small} /></Button>
+                <img alt="" src={respListAnime.attributes.posterImage.small}  variant="primary" onClick={() => setModalShow(true)} />
                 <MyVerticallyCenteredModal
                     show={modalShow}
                     onHide={() => setModalShow(false)}
@@ -53,7 +53,7 @@ export default function Home() {
 
 
 
-        }).slice(0, 5))
+        }).slice(0, 7))
     })
 
     useEffect(() => {
@@ -61,7 +61,8 @@ export default function Home() {
 
             return (
                 <>
-                <Button variant="primary" onClick={() => setModalShow(true)}><img alt="" src={respListManga.attributes.posterImage.small} /></Button>
+                <img alt="" src={respListManga.attributes.posterImage.small}  variant="primary" onClick={(e) => {
+                    setModalShow(true)}}/>
                 <MyVerticallyCenteredModal
                     show={modalShow}
                     onHide={() => setModalShow(false)}
@@ -71,8 +72,9 @@ export default function Home() {
 
 
 
-        }).slice(0, 5))
+        }).slice(0, 7))
     })
+
 
 
 

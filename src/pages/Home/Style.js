@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Lista = styled.ul`
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 3rem;
     justify-content: center;
 
     img {
@@ -11,18 +11,6 @@ export const Lista = styled.ul`
         border: 1px solid black;
         height: 20rem;
     }
-    Button{
-        border: none;
-        outline:none;
-        background-color: #EED9D6;
-    }
-    Button:hover{
-        background-color: #EED9D6;
-}
-    Button:focus{
-        background-color: #EED9D6;
-        border: none;
-}
 
 `
 
