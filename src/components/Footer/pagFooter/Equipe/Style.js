@@ -20,10 +20,9 @@ export const EstiloEquipe = styled.div`
         width: 70vw;
         display: flex;
         gap: 2rem;
+        border-radius: 20px 5px;
         background: var(--pink1);
         background-image: linear-gradient(to bottom , pink, var(--pink1), var(--pink1), var(--pink1));
-        border-radius: 20px 5px;
-        
 
         .bordaImagem{
             border: 1px solid black;

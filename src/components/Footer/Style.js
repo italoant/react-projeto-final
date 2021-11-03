@@ -8,9 +8,10 @@ export const Style = styled.footer`
     height: 10vh;
     display: flex; 
     flex-direction: column;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     color: white;
+    
     
     .containerFooter{
         display: flex;
