@@ -4,6 +4,7 @@ const GlobalStyle = createGlobalStyle`
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
     :root{
+        --pink: #FFBDBF;
         --pink1: #DAAAAE;
         --pink2: #FE858A;
         --pink3: #F16EA5;

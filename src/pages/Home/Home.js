@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Lista, Container } from "./Style"
 import api from "../../services/api";
 
-import { Modal, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MyVerticallyCenteredModal from "../../components/Modal";
+
+import Carrossel from "./Carrousel";
 
 
 export default function Home() {
@@ -43,17 +44,17 @@ export default function Home() {
 
             return (
                 <>
-                <img alt="" src={respListAnime.attributes.posterImage.small} variant="primary" onClick={() => setModalShow(true)} />
-                <MyVerticallyCenteredModal
-                    show={modalShow}
-                    onHide={() => setModalShow(false)}
-                />
+                    <img alt="" src={respListAnime.attributes.posterImage.small} variant="primary" onClick={() => setModalShow(true)} />
+                    <MyVerticallyCenteredModal
+                        show={modalShow}
+                        onHide={() => setModalShow(false)}
+                    />
                 </>
             )
 
 
 
-        }).slice(0, 5))
+        }).slice(0, 6))
     })
 
     useEffect(() => {
@@ -61,24 +62,28 @@ export default function Home() {
 
             return (
                 <>
-                <img alt="" src={respListManga.attributes.posterImage.small} ariant="primary" onClick={() => setModalShow(true)}/>
-                <MyVerticallyCenteredModal
-                    show={modalShow}
-                    onHide={() => setModalShow(false)}
-                />
+                    <img alt="" src={respListManga.attributes.posterImage.small} ariant="primary" onClick={() => setModalShow(true)} />
+                    <MyVerticallyCenteredModal
+                        show={modalShow}
+                        onHide={() => setModalShow(false)}
+                    />
                 </>
             )
 
 
 
-        }).slice(0, 5))
+        }).slice(0, 6))
     })
+
 
 
 
 
     return (
         <Container>
+            <div id="carrossel">
+                <Carrossel />
+            </div>
             <h2>Melhores animes semana</h2>
             <Lista>
                 {listRaking}
@@ -88,11 +93,11 @@ export default function Home() {
                 {listRakingDois}
             </Lista>
             <div className="noticiasDiv">
+                <h2>Noticias</h2>
                 <div className="noticias">
-                    <h2>Noticias</h2>
                     <img alt="" src="https://jpimg.com.br/uploads/2021/03/design-sem-nome-39.jpg" className="imgNoticia" />
+                    <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer </p>
                 </div>
-                <p>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer </p>
             </div>
         </Container>
     );
