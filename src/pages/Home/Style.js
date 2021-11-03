@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Lista = styled.ul`
     display: flex;
     flex-wrap: wrap;
-    gap: 7rem;
+    gap: 2rem;
     justify-content: center;
 
     img {
