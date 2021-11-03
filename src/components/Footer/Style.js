@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Style = styled.footer`
     margin-top: 2.5rem;
     background: linear-gradient(to top, rgba(254, 133, 138, 40)   ,rgba(254, 133, 138, 80),rgba(254, 133, 138, 40),rgba(254, 133, 138, 0));
-    opacity: 80%;
+    opacity: 90%;
     width: 100vw;
     height: 10vh;
     display: flex; 
@@ -11,6 +11,8 @@ export const Style = styled.footer`
     justify-content: center; 
     align-items: center;
     color: white;
+    position: fixed;
+    bottom: 0;
     
     .containerFooter{
         display: flex;
@@ -69,18 +71,27 @@ export const Style = styled.footer`
         color: var(--pink2);
     }
 
-    @media (max-width:600px){
-        background-color: violet;
+    @media (max-width: 840px){
+        align-items: center;
+
+        .infoFooter {
+            .left {
+                display: none;
+            }
+        }
         
         .infoFooter{
-            justify-content: space-between;
-        }
+            justify-content: center;
 
-        .right{
+            .right{
             display: flex;
-            padding-right: 2rem;
+            padding-right: 0;
             text-transform: uppercase;
         }
+        }
+        
+
+        
 
     }
 
