@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Lista, Container } from "./Style"
-import Api from "../../services/Api";
+import Api from "../../services/api";
 
 import { Modal, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
