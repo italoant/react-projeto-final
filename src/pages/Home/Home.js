@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Lista, Container } from "./Style"
-import api from "../../services/Api";
+import api from "../../services/api";
 
 export default function Home() {
 

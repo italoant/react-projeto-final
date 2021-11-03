@@ -1,12 +1,7 @@
 import React from 'react';
-<<<<<<< HEAD
-import Logo from '../../assets/logo.png';
-import { Rodape } from './Style';
-=======
 import { Style } from './Style';
-import Logo from '../../assets/logo.svg';
+import Logo from '../../assets/logo.png';
 import { Link } from 'react-router-dom';
->>>>>>> 4f3d7798941f3f6c8773cec0bd71373c6f252567
 
 export default function Footer(){
     return(
