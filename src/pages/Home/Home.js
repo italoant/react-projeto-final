@@ -78,7 +78,6 @@ export default function Home() {
 
 
 
-
     return (
         <Container>
             <div id="carrossel">

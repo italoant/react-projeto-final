@@ -50,6 +50,8 @@ export const Formulario = styled.form`
     a:hover{
         color: #FE6688;
     }
+
+    //Responsividade  
 `
 
 export const Botao = styled.button`
@@ -66,4 +68,7 @@ export const Botao = styled.button`
             color: #A9A9A9;
             background-color: #EED9D6;
         }
+
+
+        // Responsividade      
 `
