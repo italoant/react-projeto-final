@@ -5,8 +5,8 @@ import { H1Style } from '../Equipe/Style';
 export default function Contato() {
     return (
         <div className="containerContato">
-            <H1Style> Entre em contato </H1Style>
                 <EstiloContato>
+                    <H1Style> Entre em contato </H1Style>
                     <BackgroudForm>
                         <div className="containerForm">
                             <h4> Por meio desse formulário preencha os campos para entrar em contato com nossa equipe de desenvolvimento Front-End do site NOME. </h4>
