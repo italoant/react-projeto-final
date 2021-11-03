@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Lista, Container } from "./Style"
-import Api from "../../services/Api";
+import api from "../../services/api";
 
 import { Modal, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -19,7 +19,7 @@ export default function Home() {
 
 
     useEffect(() => {
-        Api.get(`anime?sort=-popularityRank`)
+        api.get(`anime?sort=-popularityRank`)
             .then(data => {
                 setListAnime(data.data.data)
             })
@@ -29,7 +29,7 @@ export default function Home() {
     }, [])
 
     useEffect(() => {
-        Api.get(`manga?sort=-popularityRank`)
+        api.get(`manga?sort=-popularityRank`)
             .then(data => {
                 setListManga(data.data.data)
             })
