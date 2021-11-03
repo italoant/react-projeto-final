@@ -12,12 +12,14 @@ export default function Login(){
 
     //Validação do formulário de login
 
-    
 
 
-    function Logar(e){
+    function Logar(){
       
     }
+
+    console.log(usuario)
+    console.log(senha)
 
     return(
         <div>
@@ -25,10 +27,10 @@ export default function Login(){
                 <label>Login</label>
                 <section className="campos-form">
                     <p id="mensagem">{mensagem}</p>
-                    <input onChange={(e) => setUsuario(e.target.value)} type='text' placeholder="Email"/>
+                    <input onChange={(e) => {setUsuario(e.target.value)}} type='text' placeholder="Email"/>
                 </section>
                 <section className="campos-form">
-                    <input onChange={(e) => setSenha(e.target.value)} type='password' placeholder="Senha"/>
+                    <input onChange={(e) => {setSenha(e.target.value)}} type='password' placeholder="Senha"/>
                 </section>
                 <Link to='/cadastro'><Botao color="#FE6688">Cadastre-se</Botao></Link>
                 <Link to='./'><Botao color="#F16EA5" onClick={Logar}>Entrar</Botao></Link>

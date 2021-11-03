@@ -1,11 +1,6 @@
 import React, { useEffect, useState } from "react";
-<<<<<<< HEAD
-import api from "../../services/api";
-=======
 import { Lista, Container } from "./Style"
 import Api from "../../services/api";
->>>>>>> developer
-
 import { Modal, Button } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import MyVerticallyCenteredModal from "../../components/Modal";
