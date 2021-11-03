@@ -42,6 +42,7 @@ export const FormCadastro = styled.form`
     input{
         background-color: #FFFFFF;
         border-radius: 20px;
+        width: 80%;
     }
 
     input::placeholder, input[type=date]{
