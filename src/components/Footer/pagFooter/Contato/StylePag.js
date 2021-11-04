@@ -1,15 +1,5 @@
 import styled from "styled-components";
 
-export const BackgroudForm = styled.div`
-    text-align: center;
-    border-radius: 20px;
-    padding: 4vh;
-    box-shadow: 1px 1px rgba(0, 0, 0, 25%);
-    background: var(--pink1);
-    background-image: linear-gradient(to bottom , pink, var(--pink1), var(--pink1), var(--pink1),var(--pink1));
-`;
-
-
 export const EstiloContato = styled.div`
     width: 99vw; height: 100vh;
     display: flex;

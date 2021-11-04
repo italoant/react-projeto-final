@@ -40,7 +40,7 @@ function App() {
         </Switch>
       </div>
      <GlobalStyle/>
-     <Footer/>
+     <Footer />
     </BrowserRouter>
   );
 }
