@@ -1,6 +1,6 @@
 import React from 'react';
 import EquipeDados from './DadosProps';
-import { H1Style } from './Style';
+import { H1Style } from '../../../Components';
 
 // imagens
 import Camila from './img/camila.png';

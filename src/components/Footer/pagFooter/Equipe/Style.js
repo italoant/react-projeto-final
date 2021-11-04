@@ -1,29 +1,20 @@
 import styled from "styled-components";
 
-export const H1Style = styled.h1`
-    color: black;
-    margin: 2rem;
-    text-align: center;
-    text-shadow: 2px 2px 5px var(--salmao);
-`;
-
 export const EstiloEquipe = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100vw;
+    gap: 2rem;
 
     .containerProps{
         padding: 2%;
-        margin-left: 2%;
         width: 70vw;
         display: flex;
         gap: 2rem;
         border-radius: 20px 5px;
-        background: var(--pink1);
-        background-image: linear-gradient(to bottom , pink, var(--pink1), var(--pink1), var(--pink1));
-
+    
         .bordaImagem{
             border: 1px solid black;
             width: 200px; height: 200px;
@@ -35,6 +26,10 @@ export const EstiloEquipe = styled.div`
                 width: 200px; height: 200px;
                 padding: 2%;
             }
+        }
+
+        .informacoes{
+            margin: 0;
         }
 
         .cvEquipe{

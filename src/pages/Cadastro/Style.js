@@ -3,23 +3,19 @@ import styled from "styled-components";
 
 export const FormCadastro = styled.form`
 
-    width: 100vw; height: 73vh;
+    height: 100vh; width: 99vw;
     display: flex;
     justify-content: center;
     align-items: center;
     
     .container{
-        width: 40vw; height: 55vh;
+        width: 40vw;
+        height: 55vh;
         display: flex;
         flex-direction: column;
-        justify-content: center; 
         align-items: center;
-        background-color: #FFBDBF;
-        border-radius: 20px;
-        padding: 5vh;
-        box-shadow: 1px 1px rgba(0, 0, 0, 25%);
+        justify-content: center;
         gap: 20px;
-
     }
 
     h1{
@@ -29,14 +25,24 @@ export const FormCadastro = styled.form`
     }
 
     label{
-        text-align: left;
+        text-align: center;
     }
 
     input, button {
-        width: 20vw; height: 6vh;
+        width: 20vw; height: 5vh;
         border: none; background: none;
         outline: none;
         padding: 1% 3%;
+    }
+    
+    .dataN{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #data{
+        width: 21vw;
     }
 
     input{
@@ -63,19 +69,50 @@ export const FormCadastro = styled.form`
         box-shadow: 1px 1px 5px #cf5575;
     }
 
-    @media (max-width:770px){
-        height: 83vh; width: 100vw;
+    @media (max-width:850px){
+
         .container{
             width: 60vw;
-            label{
-                font-size: 3rem;
-            }
-            input, button {
-                width: 28vw; height: 6vh;
-                border: none;
-                outline: none;
-                padding: 1% 3%;
-            }
+        }
+
+        .dataN{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label{
+            width: 20vw;
+        }
+
+        input, button{
+            width: 28vw; height: 5vh;
+            border: none;
+            outline: none;
+            padding: 1% 3%;
+        }
+        button{
+            font-weight: bold;
         }
     }
+
+    @media (max-height:720px){
+        .container{
+            height: 600px;
+        }
+
+        input{
+            height: 40px;
+        }
+
+        #data{
+            padding: 20px;
+        }
+        
+        button{
+            margin-top: 2rem;
+            height: 50px;
+        }
+    }
+    
 `;
