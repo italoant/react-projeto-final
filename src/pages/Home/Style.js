@@ -1,23 +1,9 @@
 import styled from "styled-components";
 
-export const Lista = styled.ul`
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3rem;
-    justify-content: center;
-
-    img {
-        border-radius: 5%;
-        border: 1px solid black;
-        height: 20rem;
-    }
-
-`
-
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
-    width: 98vw;
+    width: 100vw;
     margin: 0 auto;
 
     h2{
@@ -55,22 +41,6 @@ export const Container = styled.div`
     @media (max-width: 840px){
         #carrossel{
             display: none;
-        }
-        h2{
-            text-align: center;
-        }
-        .noticias{
-            margin: 0 auto;
-            
-        }
-        .noticiasDiv p{
-            padding: 1%;
-            text-align: center;
-        }
-        .imgNoticia {
-            
-            height: 10rem;
-            width: 20rem;
         }
     }
 `

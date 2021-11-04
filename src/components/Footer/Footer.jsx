@@ -7,8 +7,8 @@ export default function Footer(){
     return(
         <Style>
             <div className="infoFooter">
-                <div className="left">
-                    <div className="logo">
+                <div>
+                    <div className="logo" id="logo_footer">
                         <img src={Logo} alt="" /> PanimE
                     </div>
                 </div>

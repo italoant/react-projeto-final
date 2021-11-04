@@ -23,5 +23,9 @@ const GlobalStyle = createGlobalStyle`
     body {
         background-color: #EED9D6;        
     }
+
+    dl, ol, ul {
+        margin-bottom: 0;
+    }
 `
 export default GlobalStyle;

@@ -5,7 +5,7 @@ export const Header = styled.header`
     align-items: center;
     justify-content: space-between;
     padding: 1.7rem 2.5rem;
-    background: linear-gradient(rgba(254, 133, 138, 80), rgba(254, 133, 138, 40),  rgba(254, 133, 138, 20), rgba(254, 133, 138, 10)   ,rgba(254, 133, 138, 0));
+    background: linear-gradient(rgba(254, 133, 138, 80), rgba(254, 133, 138, 40),  rgba(254, 133, 138, 20), rgba(254, 133, 138, 10)   ,rgba(254, 133, 138, 0.5));
     opacity: 80%;    
 
 

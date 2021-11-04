@@ -1,4 +1,7 @@
 import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import GlobalStyle from './styles/global';
+
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import NotFound from './pages/NotFound/NotFound';
@@ -9,7 +12,6 @@ import Home from './pages/Home/Home';
 import Login from './pages/Login/Login';
 import Noticias from './pages/Noticias/Noticias';
 import Nav from './components/Nav/Nav';
-import GlobalStyle from './styles/global';
 import Footer from './components/Footer/Footer';
 
 import Contato from './components/Footer/pagFooter/Contato/Contato';

@@ -94,6 +94,4 @@ export default function Nav() {
             </NavMobile>
         </>
     )
-    
-
 };

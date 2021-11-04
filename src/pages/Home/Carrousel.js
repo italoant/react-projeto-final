@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Carousel from 'react-bootstrap/Carousel';
-import api from "../../services/api";
-import './Style'
 
 export default function Carrossel (){
 
     
-    return <Carousel variant="dark">
+    return <Carousel fade variant="light">
     <Carousel.Item>
       <img
         className="d-block w-100"
