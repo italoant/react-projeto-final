@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const FormCadastro = styled.form`
 
-    height: 100vh; width: 99vw;
     display: flex;
     justify-content: center;
     align-items: center;
