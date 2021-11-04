@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Style = styled.footer`
     background: linear-gradient(to top, rgba(254, 133, 138, 40)   ,rgba(254, 133, 138, 80),rgba(254, 133, 138, 40),rgba(254, 133, 138, 0.5));
     opacity: 80%;
-    width: 100vw;
     height: 12vh;
     display: flex; 
     flex-direction: column;

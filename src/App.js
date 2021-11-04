@@ -13,6 +13,8 @@ import Login from './pages/Login/Login';
 import Noticias from './pages/Noticias/Noticias';
 import Nav from './components/Nav/Nav';
 import Footer from './components/Footer/Footer';
+import AnimePage from './pages/AnimePage/AnimePage';
+import MangaPage from './pages/MangaPage/MangaPage';
 
 import Contato from './components/Footer/pagFooter/Contato/Contato';
 import Equipe from './components/Footer/pagFooter/Equipe/Equipe';
@@ -32,6 +34,8 @@ function App() {
           <Route path="/noticias" component={Noticias}></Route>
           <Route path="/login" component={Login}></Route>
           <Route path="/cadastro" component={Cadastro}></Route>
+          <Route path="/anime_page" component={AnimePage}></Route>
+          <Route path="/manga_page" component={MangaPage}></Route>
       
           <Route path="/contato" component={Contato}></Route>
           <Route path="/equipe" component={Equipe}></Route>

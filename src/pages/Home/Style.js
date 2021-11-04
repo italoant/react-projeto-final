@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
-    width: 100vw;
     margin: 0 auto;
+
 
     h2{
         width: 80vw;
@@ -17,25 +17,6 @@ export const Container = styled.div`
         background-size: cover !important;
     }
 
-    .imgNoticia{
-        height: 20rem;
-        width: 30rem;   
-        border-radius: 5%;
-        border: 1px solid black;
-    }
-    .noticiasDiv{
-        width: 78vw;
-        margin: 0 auto;
-    }
-    .noticiasDiv p {
-      width: 45vw;
-    }
-    .noticias {
-        display: flex;
-        gap: 2%;
-        justify-content: center;
-    }
-
     /* responsividade */
 
     @media (max-width: 840px){
@@ -44,3 +25,36 @@ export const Container = styled.div`
         }
     }
 `
+
+export const Response = styled.article`
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem 0;
+
+    aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .resposta_api {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 1rem 0;
+    }
+
+    h1 {
+        margin: .8rem;
+        color: #FE858A;
+    }
+
+    img {
+        width: 220px;
+        margin: .8rem;
+        border-radius: 1rem;
+        border: 2px solid #FE858A;
+    }
+`;
