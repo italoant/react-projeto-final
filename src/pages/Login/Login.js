@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Redirect } from 'react-router-dom';
 import { Formulario, Botao } from './Style';
 import { Link } from 'react-router-dom';
 
@@ -31,7 +32,7 @@ export default function Login(){
             setMensagem("Usuário ou senha incorreta.")
             e.preventDefault()
         } else{
-            
+            return <Redirect to="./" />
         }
     }
 
@@ -48,8 +49,8 @@ export default function Login(){
                     <input onChange={(e) => {setSenha(e.target.value)}} id="senha" type='password' placeholder="Senha"/>
                 </section>
                 <Link to='/cadastro'><Botao color="#FE6688">Cadastre-se</Botao></Link>
-                <Link to='./'><Botao color="#F16EA5" onClick={Logar}>Entrar</Botao></Link>
-                <p>Esqueceu a senha? <a href="##" target="_black">Clique aqui.</a></p>
+                <Link to=''><Botao color="#F16EA5" onClick={Logar}>Entrar</Botao></Link>
+                <p id="esqueceu-senha">Esqueceu a senha? <Link id="contato" to="/contato">Clique aqui.</Link></p>
             </Formulario>
         </div>
     );
