@@ -9,7 +9,7 @@ export default function Footer(){
             <div className="infoFooter">
                 <div className="left">
                     <div className="logo">
-                        <img src={Logo} alt="" /> NOME
+                        <img src={Logo} alt="" /> PanimE
                     </div>
                 </div>
                 <div className="right">
@@ -19,8 +19,8 @@ export default function Footer(){
                 </div>
             </div>
             <div className="copyright"> 
-                <p>
-                &copy; 2021 Copyright - Equipe 4
+                <p className="copyright">
+                &copy; 2021 Copyright - As panteras cor de rosa
                 </p> 
             </div>
         </Style>

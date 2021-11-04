@@ -13,7 +13,7 @@ export default function Equipe(){
     
     return (
         <div className="containerDados">
-            <H1Style> Equipe 4 </H1Style>
+            <H1Style> As panteras cor de rosa </H1Style>
             <div className="informacoes">
                 <EquipeDados 
                     foto={Camila}
