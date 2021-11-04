@@ -88,12 +88,9 @@ export const Style = styled.footer`
             display: flex;
             padding-right: 0;
             text-transform: uppercase;
-        }
+            }
         }
         
-
-        
-
     }
 
 `;
