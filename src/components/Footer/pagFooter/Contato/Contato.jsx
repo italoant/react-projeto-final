@@ -43,7 +43,7 @@ export default function Contato() {
                                         Enviar
                                     </button>
                                 </div>
-                                <div className="gif">
+                                {/* <div className="gif">
                                     <img src="https://i.pinimg.com/originals/1f/a8/d9/1fa8d907a5cc6e1fa22f431929ebc12a.gif" alt="" />
                                 </div>
                                 <div className="agradecimento">
@@ -51,7 +51,7 @@ export default function Contato() {
                                         Até mais!
                                             <span className="colocar um popup legal agradecendo e vice versa"> ありがとう </span>
                                     </h5>
-                                </div>
+                                </div> */}
                             </form>
                         </div>
                     </BackgroundForm>
