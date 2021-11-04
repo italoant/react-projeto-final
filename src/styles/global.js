@@ -21,12 +21,41 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
+<<<<<<< HEAD
         background-color: #EED9D6; 
         overflow-x: hidden;  
     }
 
     dl, ol, ul {
         margin-bottom: 0;
+=======
+        background-color: #EED9D6;
+        
+        /* width */
+        ::-webkit-scrollbar {
+        width: 15px;
+        background-image: linear-gradient(to bottom, pink, pink, pink, red)
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px blue;
+        
+        }
+        
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+        background: rgba(0,0,0,0.5); 
+        height: 5px;
+        border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+        background: rgba(0,0,0,0.7); 
+        }
+
+>>>>>>> thayza
     }
 `
 export default GlobalStyle;
