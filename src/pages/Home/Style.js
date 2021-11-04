@@ -17,7 +17,7 @@ export const Lista = styled.ul`
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
-    width: 99vw;
+    width: 98vw;
     margin: 0 auto;
 
     h2{
