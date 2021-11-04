@@ -12,7 +12,7 @@ export const EstiloEquipe = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 99vw;
 
     .containerProps{
         padding: 2%;
@@ -49,13 +49,18 @@ export const EstiloEquipe = styled.div`
             transition: 1s;
             box-shadow: 1px 1px 10px var(--salmao);
         }
+    }
 
+    @media (max-width:800px){
         
-
+        gap: 2rem;
+       
+        .containerProps{
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+        }
+            
     }
     
-    
-
-    
-
-`
+`;
