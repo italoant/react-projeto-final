@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 export const EstiloContato = styled.div`
-    width: 99vw; height: 100vh;
+    width: 99vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-shadow: 1px 1px 10px white;
+    text-align: center;
     
     h5{
         flex-wrap: wrap;

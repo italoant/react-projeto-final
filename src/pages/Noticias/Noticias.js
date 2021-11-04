@@ -1,6 +1,6 @@
 import React from "react";
 import { EstiloNoticia } from "./Style";
-import { H1Style } from "../../components/Footer/pagFooter/Equipe/Style";
+import { H1Style } from "../../components/Components";
 
 export default function Noticias(){
     return(
