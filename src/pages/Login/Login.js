@@ -50,7 +50,7 @@ export default function Login(){
                 </section>
                 <Link to='/cadastro'><Botao color="#FE6688">Cadastre-se</Botao></Link>
                 <Link to=''><Botao color="#F16EA5" onClick={Logar}>Entrar</Botao></Link>
-                <p id="esqueceu-senha">Esqueceu a senha? <a href="##" target="_black">Clique aqui.</a></p>
+                <p id="esqueceu-senha">Esqueceu a senha? <Link id="contato" to="/contato">Clique aqui.</Link></p>
             </Formulario>
         </div>
     );
