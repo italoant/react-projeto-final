@@ -4,10 +4,6 @@ import { H1Style } from "../../components/Footer/pagFooter/Equipe/Style";
 
 export default function Noticias(){
     return(
-<<<<<<< HEAD
-        <div>
-        </div>
-=======
         <EstiloNoticia>
             <div className="noticias">
                 <div className="right">
@@ -75,7 +71,6 @@ export default function Noticias(){
                 </div>
             </div>
         </EstiloNoticia>
->>>>>>> noticias
     );
 
 };

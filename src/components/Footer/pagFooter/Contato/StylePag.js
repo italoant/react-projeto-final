@@ -11,16 +11,7 @@ export const BackgroudForm = styled.div`
 
 
 export const EstiloContato = styled.div`
-<<<<<<< HEAD
-<<<<<<< HEAD
-    width: 100vw; 
-    height: 100vh;
-=======
-    width: 100vw; height: 120vh;
->>>>>>> noticias
-=======
-    width: 100vw; height: 100vh;
->>>>>>> thayza
+    width: 99vw; height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
