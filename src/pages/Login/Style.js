@@ -42,12 +42,12 @@ export const Formulario = styled.form`
         padding-top: 2vh;
     }
 
-    a{
+    #contato{
         color: #F586AD;
         text-decoration: none;
     }
 
-    a:hover{
+    #contato:hover{
         color: #FE6688;
     }
 
