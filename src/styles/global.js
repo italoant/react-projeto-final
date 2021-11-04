@@ -21,16 +21,9 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-<<<<<<< HEAD
         background-color: #EED9D6; 
-        overflow-x: hidden;  
-    }
+        overflow-x: hidden;
 
-    dl, ol, ul {
-        margin-bottom: 0;
-=======
-        background-color: #EED9D6;
-        
         /* width */
         ::-webkit-scrollbar {
         width: 15px;
@@ -54,8 +47,12 @@ const GlobalStyle = createGlobalStyle`
         ::-webkit-scrollbar-thumb:hover {
         background: rgba(0,0,0,0.7); 
         }
+  
+    }
 
->>>>>>> thayza
+    dl, ol, ul {
+        margin-bottom: 0;
+        /* background-color: #EED9D6; */
     }
 `
 export default GlobalStyle;
