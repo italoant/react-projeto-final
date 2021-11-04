@@ -1,5 +1,5 @@
 import React from 'react';
-import { H1Style } from '../Equipe/Style';
+import { H1Style } from '../../../Components';
  import { ContainerSobre } from './StylePag';
 
 export default function Sobre() {

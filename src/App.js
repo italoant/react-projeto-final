@@ -10,7 +10,7 @@ import Login from './pages/Login/Login';
 import Noticias from './pages/Noticias/Noticias';
 import Nav from './components/Nav/Nav';
 import GlobalStyle from './styles/global';
-import Footer from './components/Footer/Footer';
+import Footer from './components/Footer/Footer.jsx';
 
 import Contato from './components/Footer/pagFooter/Contato/Contato';
 import Equipe from './components/Footer/pagFooter/Equipe/Equipe';
@@ -38,7 +38,7 @@ function App() {
         </Switch>
       </div>
      <GlobalStyle/>
-     <Footer/>
+     <Footer />
     </BrowserRouter>
   );
 }
