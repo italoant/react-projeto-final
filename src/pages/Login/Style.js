@@ -3,12 +3,12 @@ import styled from "styled-components";
 
 export const Formulario = styled.form`
     background-color: #FFBDBF;
-    width: 40vw;
+    width: 38vw;
     margin: auto;
     margin-top: 5vh;
     text-align: center;
     border-radius: 20px;
-    padding: 6vh;
+    padding: 7vh;
     box-shadow: 1px 1px rgba(0, 0, 0, 25%);
 
     label{
@@ -19,11 +19,11 @@ export const Formulario = styled.form`
     
     #mensagem{
         color: #FF0000;
-        font-size: 15px;
+        font-size: 20px;
     }
 
     .campos-form{
-        margin-top: 30px;
+        margin-top: 40px;
         margin-bottom: 20px;
     }
 
@@ -37,7 +37,7 @@ export const Formulario = styled.form`
         color: #A9A9A9;
     }
 
-    p{
+    #esqueceu-senha{
         color: #FFFFFF;
         padding-top: 2vh;
     }
@@ -52,6 +52,35 @@ export const Formulario = styled.form`
     }
 
     //Responsividade  
+
+    @media (max-width: 1326px){
+        width: 47vw;
+
+        .campos-form input{
+            width: 35vw;
+        }
+    }
+
+    @media (max-width: 1291px){
+
+        width: 50vw;
+    }
+
+    @media (max-width: 1081px){
+
+        width: 52vw;
+    }
+
+    @media (max-width: 975px){
+
+        width: 55vw;
+    }
+
+    @media (max-width: 850px){
+
+        width: 55.5vw;
+    }
+
 `
 
 export const Botao = styled.button`
@@ -70,5 +99,21 @@ export const Botao = styled.button`
         }
 
 
-        // Responsividade      
+        // Responsividade 
+        
+        @media (max-width: 1326px){
+
+            width: 15.8vw;
+        }
+        
+        @media (max-width: 866px){
+
+            font-size: 20px;
+        }
+       
+
+       @media (max-width: 840px){
+            
+            width: 35vw;
+       }
 `
