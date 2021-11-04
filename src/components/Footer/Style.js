@@ -3,8 +3,13 @@ import styled from "styled-components";
 export const Style = styled.footer`
     margin-top: 2.5rem;
     background: linear-gradient(to top, rgba(254, 133, 138, 40)   ,rgba(254, 133, 138, 80),rgba(254, 133, 138, 40),rgba(254, 133, 138, 0));
+<<<<<<< HEAD
     opacity: 90%;
     width: 100vw;
+=======
+    opacity: 80%;
+    width: 99vw;
+>>>>>>> thayza
     height: 10vh;
     display: flex; 
     flex-direction: column;
@@ -23,7 +28,7 @@ export const Style = styled.footer`
     }
 
     .infoFooter{
-        width: 100vw;
+        width: 99vw;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -36,8 +41,9 @@ export const Style = styled.footer`
         }
 
         .logo{
-            display: flex; 
+            display: flex;
             align-items: center;
+            margin-top: 2rem;
             gap: 5px; font-weight: bold;
 
             img{
@@ -72,6 +78,7 @@ export const Style = styled.footer`
         color: var(--pink2);
     }
 
+<<<<<<< HEAD
     @media (max-width: 840px){
         align-items: center;
 
@@ -80,6 +87,15 @@ export const Style = styled.footer`
                 display: none;
             }
         }
+=======
+    .copyright{
+        text-shadow: 1px 1px 3px var(--black);
+    }
+
+    @media (max-width:600px){
+        background-color: violet;
+        width: 20vh;
+>>>>>>> thayza
         
         .infoFooter{
             justify-content: center;
