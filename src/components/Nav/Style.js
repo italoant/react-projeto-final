@@ -93,7 +93,7 @@ export const Header = styled.header`
 `;
 
 export const ButtonPopUp = styled.button`
-    width: 125px;
+    width: 100px;
     height: 30px;
     margin: ${props => props.margin};
     border: none;
@@ -105,12 +105,10 @@ export const ButtonPopUp = styled.button`
 
 export const NavMobile = styled.nav`
     background: linear-gradient(rgba(254, 133, 138, 0), rgba(254, 133, 138, 80), rgba(254, 133, 138, 40),  rgba(254, 133, 138, 20), rgba(254, 133, 138, 10) );
-    opacity: 80%;    
     display: ${props => props.display};
     justify-content: center;
     align-items: center;
-
-    padding: 1rem;
+    padding: 2rem 1rem;
     position: relative;
     top: -23px;
 

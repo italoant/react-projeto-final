@@ -11,7 +11,8 @@ export const Style = styled.footer`
     align-items: center;
     color: white;
     margin-top: 1rem;
-    
+    position: fixed;
+    bottom: 0;
     
     .containerFooter{
         display: flex;

@@ -12,7 +12,7 @@ export const EstiloEquipe = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 99vw;
+
 
     .containerProps{
         padding: 2%;
