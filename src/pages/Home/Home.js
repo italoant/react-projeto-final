@@ -17,27 +17,22 @@ export default function Home() {
     const [modalShow, setModalShow] = React.useState(false);
 
 
+    api.get(`anime?sort=-popularityRank`)
+        .then(data => {
+            setListAnime(data.data.data)
+        })
+        .catch(() => {
+            console.log("erro")
+        });
 
+    api.get(`manga?sort=-popularityRank`)
+        .then(data => {
+            setListManga(data.data.data)
+        })
+        .catch(() => {
+            console.log("erro")
+        });
 
-    useEffect(() => {
-        api.get(`anime?sort=-popularityRank`)
-            .then(data => {
-                setListAnime(data.data.data)
-            })
-            .catch(() => {
-                console.log("erro")
-            });
-    }, [])
-
-    useEffect(() => {
-        api.get(`manga?sort=-popularityRank`)
-            .then(data => {
-                setListManga(data.data.data)
-            })
-            .catch(() => {
-                console.log("erro")
-            });
-    }, [])
 
     useEffect(() => {
         setListRakingDois(listManga.map((respListAnime) => {
