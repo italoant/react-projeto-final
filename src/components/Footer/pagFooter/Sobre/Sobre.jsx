@@ -17,7 +17,7 @@ export default function Sobre() {
                 </div>
             </div>
             <div className="bot">
-                <h5> Para mais informações sobre os desenvolvedores FODASE</h5>
+                <h5> Para mais informações sobre os desenvolvedores </h5>
             </div>
         </ContainerSobre>
     );
