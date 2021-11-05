@@ -4,13 +4,16 @@ export const Style = styled.footer`
     margin-top: 2.5rem;
     background: linear-gradient(to top, rgba(254, 133, 138, 40)   ,rgba(254, 133, 138, 80),rgba(254, 133, 138, 40),rgba(254, 133, 138, 0));
     opacity: 80%;
-    width: 100vw;
+    width: 99vw;
     height: 10vh;
     display: flex; 
     flex-direction: column;
-    justify-content: center; 
+    justify-content: center;
     align-items: center;
     color: white;
+    position: fixed;
+    bottom: 0;
+    
     
     .containerFooter{
         display: flex;
@@ -20,7 +23,7 @@ export const Style = styled.footer`
     }
 
     .infoFooter{
-        width: 100vw;
+        width: 99vw;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -33,8 +36,9 @@ export const Style = styled.footer`
         }
 
         .logo{
-            display: flex; 
+            display: flex;
             align-items: center;
+            margin-top: 2rem;
             gap: 5px; font-weight: bold;
 
             img{
@@ -69,19 +73,24 @@ export const Style = styled.footer`
         color: var(--pink2);
     }
 
+    .copyright{
+        text-shadow: 1px 1px 3px var(--black);
+    }
+
     @media (max-width:600px){
         background-color: violet;
+        width: 20vh;
         
         .infoFooter{
-            justify-content: space-between;
-        }
+            justify-content: center;
 
-        .right{
+            .right{
             display: flex;
-            padding-right: 2rem;
+            padding-right: 0;
             text-transform: uppercase;
+            }
         }
-
+        
     }
 
 `;

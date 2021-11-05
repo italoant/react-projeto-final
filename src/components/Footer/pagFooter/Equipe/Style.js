@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const H1Style = styled.h1`
     color: black;
     margin: 2rem;
-    text-align: center;
     text-shadow: 2px 2px 5px var(--salmao);
+    text-transform: uppercase;
 `;
 
 export const EstiloEquipe = styled.div`
@@ -12,7 +12,7 @@ export const EstiloEquipe = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: 99vw;
 
     .containerProps{
         padding: 2%;
@@ -20,10 +20,9 @@ export const EstiloEquipe = styled.div`
         width: 70vw;
         display: flex;
         gap: 2rem;
+        border-radius: 20px 5px;
         background: var(--pink1);
         background-image: linear-gradient(to bottom , pink, var(--pink1), var(--pink1), var(--pink1));
-        border-radius: 20px 5px;
-        
 
         .bordaImagem{
             border: 1px solid black;
@@ -50,13 +49,18 @@ export const EstiloEquipe = styled.div`
             transition: 1s;
             box-shadow: 1px 1px 10px var(--salmao);
         }
+    }
 
+    @media (max-width:800px){
         
-
+        gap: 2rem;
+       
+        .containerProps{
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+        }
+            
     }
     
-    
-
-    
-
-`
+`;
