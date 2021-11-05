@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Style = styled.footer`
-    background: linear-gradient(to top, rgba(254, 133, 138, 40)   ,rgba(254, 133, 138, 80),rgba(254, 133, 138, 40),rgba(254, 133, 138, 0.5));
+    background: ${props => props.theme.backgroundPrimary};
     opacity: 80%;
     height: 12vh;
     display: flex; 
@@ -9,7 +9,6 @@ export const Style = styled.footer`
     justify-content: center;
     align-items: center;
     color: white;
-    margin-top: 1rem;
     
     .containerFooter{
         display: flex;

@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const BackgroundForm = styled.div`
     background-color: #FFBDBF;
     border-radius: 20px;
+    margin-bottom: 1rem;
     padding: 5vh;
     box-shadow: 1px 1px rgba(0, 0, 0, 25%);
     background: var(--pink1);
