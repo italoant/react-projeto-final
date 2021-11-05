@@ -1,24 +1,11 @@
 import styled from "styled-components";
 
-export const Lista = styled.ul`
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3rem;
-    justify-content: center;
-
-    img {
-        border-radius: 5%;
-        border: 1px solid black;
-        height: 20rem;
-    }
-
-`
-
 export const Container = styled.div`
+    background: ${props => props.theme.backgroundSecondary};
     display: flex;
     flex-direction: column;
-    width: 98vw;
     margin: 0 auto;
+
 
     h2{
         width: 80vw;
@@ -31,46 +18,51 @@ export const Container = styled.div`
         background-size: cover !important;
     }
 
-    .imgNoticia{
-        height: 20rem;
-        width: 30rem;   
-        border-radius: 5%;
-        border: 1px solid black;
-    }
-    .noticiasDiv{
-        width: 78vw;
-        margin: 0 auto;
-    }
-    .noticiasDiv p {
-      width: 45vw;
-    }
-    .noticias {
-        display: flex;
-        gap: 2%;
-        justify-content: center;
-    }
-
     /* responsividade */
 
     @media (max-width: 840px){
         #carrossel{
             display: none;
         }
-        h2{
-            text-align: center;
-        }
-        .noticias{
-            margin: 0 auto;
-            
-        }
-        .noticiasDiv p{
-            padding: 1%;
-            text-align: center;
-        }
-        .imgNoticia {
-            
-            height: 10rem;
-            width: 20rem;
-        }
     }
 `
+
+export const Response = styled.article`
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1rem 0;
+
+    aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .resposta_api {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 1rem 0;
+    }
+
+    h1 {
+        margin: .8rem;
+        color: ${props => props.theme.textColor};
+    }
+
+    img {
+        width: 220px;
+        margin: .8rem;
+        border-radius: 1rem;
+        box-shadow: 3px 3px 10px ${props => props.theme.borderColor};
+        transition: .6s;
+
+    }
+
+    img:hover {
+        transform: scale(1.1);
+    }
+`;

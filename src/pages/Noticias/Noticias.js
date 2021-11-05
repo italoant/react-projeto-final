@@ -1,6 +1,6 @@
 import React from "react";
 import { EstiloNoticia } from "./Style";
-import { H1Style } from "../../components/Footer/pagFooter/Equipe/Style";
+import { H1Style } from "../../components/Components";
 
 export default function Noticias(){
     return(
@@ -16,7 +16,7 @@ export default function Noticias(){
                                 <span> data </span>
                             </div>
                             <div>
-                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia ex et iaculis tincidunt. Donec auctor condimentum quam ac convallis. Nulla facilisi. Suspendisse ac diam non risus condimentum luctus. Fusce urna lacus, convallis ac efficitur sed, fringilla non ante. Praesent eleifend veentum at turpis vitae pretium.  </p>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia ex et iaculis tincidunt. Donec auctor condimentum quam ac convallis.  </p>
                             </div>
                         </div>
                     </div>
@@ -28,7 +28,7 @@ export default function Noticias(){
                                 <span> data </span>
                             </div>
                             <div>
-                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia ex et iaculis tincidunt. Donec auctor condimentum quam ac convallis. Nulla facilisi. Suspendisse ac diam non risus condimentum luctus. Fusce urna lacus, convallis ac efficitur sed, fringilla non ante. Praesent eleifend veentum at turpis vitae pretium.  </p>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia ex et iaculis tincidunt. Donec auctor condimentum quam ac convallis.  </p>
                             </div>
                         </div>
                     </div>
@@ -40,7 +40,7 @@ export default function Noticias(){
                                 <span> data </span>
                             </div>
                             <div>
-                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia ex et iaculis tincidunt. Donec auctor condimentum quam ac convallis. Nulla facilisi. Suspendisse ac diam non risus condimentum luctus. Fusce urna lacus, convallis ac efficitur sed, fringilla non ante. Praesent eleifend veentum at turpis vitae pretium.  </p>
+                                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lacinia ex et iaculis tincidunt. Donec auctor condimentum quam ac convallis.  </p>
                             </div>
                         </div>
                     </div>

@@ -1,21 +1,12 @@
 import styled from "styled-components";
 
-export const BackgroudForm = styled.div`
-    text-align: center;
-    border-radius: 20px;
-    padding: 4vh;
-    box-shadow: 1px 1px rgba(0, 0, 0, 25%);
-    background: var(--pink1);
-    background-image: linear-gradient(to bottom , pink, var(--pink1), var(--pink1), var(--pink1),var(--pink1));
-`;
-
-
 export const EstiloContato = styled.div`
-    width: 99vw; height: 100vh;
+    width: 99vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-shadow: 1px 1px 10px white;
+    text-align: center;
     
     h5{
         flex-wrap: wrap;
@@ -41,11 +32,34 @@ export const EstiloContato = styled.div`
             color: var(--black);
         }
 
-        input, textarea{
+        .opcoes, input, textarea{
             background: none; border: none; outline: none;
             padding: 1%;
             box-shadow: 1px 1px 5px rgba(0, 0, 0, 25%);
         }
+
+        .opcao{
+            border: none;
+            box-shadow: 1px 1px rgba(0, 0, 0, 25%);
+            background: #EED9D6;
+            color: rgba(0, 0, 0, 0.75);
+        }
+
+        select{
+            text-shadow: 1px 1px 10px white;
+        }
+
+
+        /* select option:hover {
+            color: red;
+            background-color: yellow;
+        } */
+
+        
+        select option:checked {
+            background: var(--pink2);
+        }
+       
 
         textarea{
             border-right: 1px solid black;

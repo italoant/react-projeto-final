@@ -21,7 +21,37 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        background-color: #EED9D6;        
+        overflow-x: hidden;
+
+        /* width */
+        ::-webkit-scrollbar {
+            width: 15px;
+            background-image: linear-gradient(to bottom, pink, pink, pink, red)
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 5px blue;
+        
+        }
+        
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: rgba(0,0,0,0.5); 
+            height: 5px;
+            border-radius: 10px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(0,0,0,0.7); 
+        }
+  
+    }
+
+    dl, ol, ul {
+        margin-bottom: 0;
+        /* background-color: #EED9D6; */
     }
 `
 export default GlobalStyle;

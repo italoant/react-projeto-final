@@ -1,0 +1,22 @@
+/* @import "react-alice-carousel/lib/alice-carousel.css";
+
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+.image-gallery-fullscreen-button{
+    display: none;
+}
+
+.image-gallery-icon{
+    display: none;
+}
+
+.image-gallery-right-nav, .image-gallery-left-nav{
+    display: flex;
+}
+
+.image-gallery-image{
+    display: flex;
+    justify-content: center;
+    width: 100vw; height: 50vh;
+    background: cover;
+} */

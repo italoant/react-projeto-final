@@ -10,15 +10,21 @@ import User from '../../assets/user.png';
 import Theme from '../../assets/theme.png';
 import Menu from '../../assets/menu.png';
 
+import { useTheme } from '../../context/Theme';
+import { lightTheme, darkTheme } from '../../styles/themes/theme';
+
 
 export default function Nav() {
 
+    const { themePage, setTheme } = useTheme();
+
     const [display, setDisplay] = useState("none");
     const [themeAnimation, setThemeAnimation] = useState("0deg");
-    
+
+
     return(
         <>
-            <Header theme={themeAnimation}>
+            <Header animationTheme={themeAnimation} theme={themePage}>
                 <div className="container">
                     <Link to="/"><img src={Logo} alt="logo" /></Link>   
                     <ul className="container_nav">
@@ -60,6 +66,7 @@ export default function Nav() {
                             alt="icon theme"
                             onClick={() => {
                                 themeAnimation === "0deg" ? setThemeAnimation("160deg") : setThemeAnimation("0deg")
+                                themePage === lightTheme ? setTheme(darkTheme) : setTheme(lightTheme)
                             }}
                         /></li>
                     </ul>
@@ -70,7 +77,7 @@ export default function Nav() {
                     }} />
                 </div>
             </Header>
-            <NavMobile display={display} theme={themeAnimation}> 
+            <NavMobile display={display} animationTheme={themeAnimation} theme={themePage}> 
                 <nav className="container_nav_mobile">
                     <div className="links_and_buttons">
                         <Link className="link" to="/" >Home</Link>
@@ -87,13 +94,12 @@ export default function Nav() {
                             alt="icon theme"
                             onClick={() => {
                                 themeAnimation === "0deg" ? setThemeAnimation("160deg") : setThemeAnimation("0deg")
+                                themePage === lightTheme ? setTheme(darkTheme) : setTheme(lightTheme)
                             }}
                         />
-                    </div>
+                    </div>  
                 </nav>
             </NavMobile>
         </>
     )
-    
-
 };

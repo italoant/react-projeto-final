@@ -2,13 +2,18 @@ import React from 'react';
 import { Style } from './Style';
 import Logo from '../../assets/logo.png';
 import { Link } from 'react-router-dom';
+import { useTheme } from '../../context/Theme';
+
 
 export default function Footer(){
+
+    const { themePage } = useTheme();
+
     return(
-        <Style>
+        <Style theme={themePage}>
             <div className="infoFooter">
-                <div className="left">
-                    <div className="logo">
+                <div>
+                    <div className="logo" id="logo_footer">
                         <img src={Logo} alt="" /> PanimE
                     </div>
                 </div>
@@ -20,7 +25,7 @@ export default function Footer(){
             </div>
             <div className="copyright"> 
                 <p className="copyright">
-                &copy; 2021 Copyright - As panteras cor de rosa
+                &copy; 2021 Copyright - As panteras Cor de Rosa
                 </p> 
             </div>
         </Style>
