@@ -3,10 +3,10 @@ import EquipeDados from './DadosProps';
 import { H1Style } from '../../../Components';
 
 // imagens
-import Camila from './img/camis.png';
-import Italo from './img/amo.png';
-import Thayza from './img/kythanna.png';
-import Matheus from './img/mateus.png';
+import Camila from './img/camil.png';
+import Italo from './img/italo.jpg';
+import Thayza from './img/kythanna.jfif';
+import Matheus from './img/matheus.png';
 
 
 export default function Equipe(){
