@@ -6,6 +6,7 @@ export const Formulario = styled.form`
     width: 38vw;
     margin: auto;
     margin-top: 5vh;
+    margin-bottom: 1.8vh;
     text-align: center;
     border-radius: 20px;
     padding: 7vh;
@@ -81,6 +82,31 @@ export const Formulario = styled.form`
         width: 55.5vw;
     }
 
+    @media (max-width: 414px){
+
+        margin-left: 70px;
+        padding-left: 8vw;
+
+        label{
+            font-size: 50px;
+            padding-left: 5.5vw;
+        }
+
+        .campos-form input{
+            width: 43vw;
+            height: 7vh;
+            font-size: 17px;
+        }
+
+        #esqueceu-senha{
+            font-size: 24px;
+            padding-left: 5.5vw;
+        }
+    }
+
+    @media (max-width: 280px){
+        padding-left: 10vw;
+    }
 `
 
 export const Botao = styled.button`
@@ -122,5 +148,10 @@ export const Botao = styled.button`
            
            margin-left: 0;
            width: 36vw;
+       }
+
+       @media (max-width: 375px){
+           width: 43vw;
+           height: 6.5vh;
        }
 `
