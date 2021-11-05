@@ -43,7 +43,7 @@ export const Formulario = styled.form`
     }
 
     #contato{
-        color: #F586AD;
+        color: #483D8B;
         text-decoration: none;
     }
 
@@ -115,5 +115,12 @@ export const Botao = styled.button`
        @media (max-width: 840px){
             
             width: 35vw;
+       }
+
+       
+       @media (max-width: 775px){
+           
+           margin-left: 0;
+           width: 36vw;
        }
 `
