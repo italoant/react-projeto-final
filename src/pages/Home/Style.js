@@ -47,7 +47,6 @@ export const Response = styled.article`
         justify-content: center;
         margin: 1rem 0;
     }
-
     h1 {
         margin: .8rem;
         color: ${props => props.theme.textColor};
@@ -66,3 +65,6 @@ export const Response = styled.article`
         transform: scale(1.1);
     }
 `;
+
+export const Amor = styled.div`
+`
