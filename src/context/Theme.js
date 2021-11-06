@@ -10,8 +10,8 @@ export default function ThemeProvider({ children }) {
     return(
         <ThemeContext.Provider 
             value={{
-                    themePage,
-                    setTheme
+                themePage,
+                setTheme
             }}
             >
             {children}

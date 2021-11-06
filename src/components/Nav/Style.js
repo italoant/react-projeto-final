@@ -5,7 +5,7 @@ export const Header = styled.header`
     align-items: center;
     justify-content: space-between;
     padding: 1.7rem 2.5rem;
-    background: ${props => props.theme.backgroundPrimary};
+    background: ${props => props.theme.backgroundPrimary}; 
     opacity: 80%;
 
     .container {
@@ -22,7 +22,6 @@ export const Header = styled.header`
         .theme {
             transform: rotate(${props => props.animationTheme});
             transition: 1s;
-            
         }
     }
 

@@ -4,6 +4,7 @@ import api from '../../services/api';
 import { Container, Response } from "./Style";
 
 import { useTheme } from '../../context/Theme';
+import { useAnimeShow } from '../../context/ShowAnime';
 
 
 import Carrossel from "./Carrousel";
@@ -12,6 +13,7 @@ import Carrossel from "./Carrousel";
 export default function Home() {
 
     const { themePage } = useTheme();
+    const { animeProvider, setAnimeProvider } = useAnimeShow();
 
     const [responseAnime, setResponseAnime] = useState([]);
     const [responseManga, setResponseManga] = useState([]);
@@ -58,7 +60,7 @@ export default function Home() {
                         <div className="resposta_api">
                         {responseReviwManga.map(resp => {
                             return <div className="container_response">
-                                <Link to="/manga_page">
+                                <Link to="/manga_page" onClick={() => setAnimeProvider(resp)}>
                                     <img src={resp.attributes.posterImage.small} />
                                 </Link>
                             </div>
