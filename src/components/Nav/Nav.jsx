@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useContext, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Header, ButtonPopUp, NavMobile } from "./Style";
 
@@ -12,11 +12,15 @@ import Menu from '../../assets/menu.png';
 
 import { useTheme } from '../../context/Theme';
 import { lightTheme, darkTheme } from '../../styles/themes/theme';
+import { InputContext } from "../../context/Input";
 
 
 export default function Nav() {
 
     const { themePage, setTheme } = useTheme();
+
+    const { showInput, setShowInput }  = useContext(InputContext)
+    const { setSearch } = useContext(InputContext)
 
     const [display, setDisplay] = useState("none");
     const [themeAnimation, setThemeAnimation] = useState("0deg");
@@ -26,17 +30,17 @@ export default function Nav() {
         <>
             <Header animationTheme={themeAnimation} theme={themePage}>
                 <div className="container">
-                    <Link to="/"><img src={Logo} alt="logo" /></Link>   
+                    <Link to="/"><img src={Logo} alt="logo"/></Link>   
                     <ul className="container_nav">
-                        <li><Link className="link" to="/" >Home</Link></li>
-                        <li><Link className="link" to="/anime" >Anime</Link></li>
-                        <li><Link className="link" to="/manga">Mangá</Link></li>
-                        <li><Link className="link" to="/noticias">Noticias</Link></li>
+                        <li onClick={() => setShowInput(false)}><Link className="link" to="/">Home</Link></li>
+                        <li onClick={() => setShowInput(true)}><Link className="link" to="/anime">Anime</Link></li>
+                        <li onClick={() => setShowInput(true)}><Link className="link" to="/manga">Mangá</Link></li>
+                        <li onClick={() => setShowInput(false)}><Link className="link" to="/noticias">Noticias</Link></li>
                     </ul>
                 </div>
                 <div  className="container icons">
+                    {showInput === true ? <input onChange={(e) => setSearch(e.target.value)}/> : null}    
                     <ul className="container_nav ">
-
                             {['bottom'].map((placement) => (
                                 <OverlayTrigger
                                     trigger="click"
@@ -82,8 +86,8 @@ export default function Nav() {
                     <div className="links_and_buttons">
                         <Link className="link" to="/" >Home</Link>
                         <Link className="link" to="/anime" >Anime</Link>
-                        <Link className="link" to="/manga">Mangá</Link>
-                        <Link className="link" to="/noticias">Noticias</Link>
+                        <Link className="link" to="/manga" >Mangá</Link>
+                        <Link className="link" to="/noticias" >Noticias</Link>
                     </div>
                     <div className="links_and_buttons">
                         <Link to="/login"><ButtonPopUp color="#F16EA5" >Login</ButtonPopUp></Link>

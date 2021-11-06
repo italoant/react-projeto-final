@@ -20,14 +20,16 @@ import Contato from './components/Footer/pagFooter/Contato/Contato';
 import Equipe from './components/Footer/pagFooter/Equipe/Equipe';
 import Sobre from './components/Footer/pagFooter/Sobre/Sobre';
 import ThemeProvider from './context/Theme';
+import { InputProvider } from './context/Input'
 
 
 
 function App() {
   return (
     <ThemeProvider>
-      <BrowserRouter>
-          <Nav/>
+      <InputProvider>
+        <BrowserRouter>
+          <Nav />
           <div>
             <Switch>
               <Route path="/" exact component={Home}></Route>
@@ -38,16 +40,17 @@ function App() {
               <Route path="/cadastro" component={Cadastro}></Route>
               <Route path="/anime_page" component={AnimePage}></Route>
               <Route path="/manga_page" component={MangaPage}></Route>
-          
+
               <Route path="/contato" component={Contato}></Route>
               <Route path="/equipe" component={Equipe}></Route>
               <Route path="/sobre" component={Sobre}></Route>
               <Route component={NotFound}></Route>
             </Switch>
           </div>
-          <GlobalStyle/>
+          <GlobalStyle />
           <Footer />
-      </BrowserRouter>
+        </BrowserRouter>
+      </InputProvider>
     </ThemeProvider>
 
   );
