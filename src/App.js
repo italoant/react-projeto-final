@@ -21,6 +21,7 @@ import Equipe from './components/Footer/pagFooter/Equipe/Equipe';
 import Sobre from './components/Footer/pagFooter/Sobre/Sobre';
 import ThemeProvider from './context/Theme';
 import { InputProvider } from './context/Input'
+import AnimeShowProvider from './context/ShowAnime';
 
 
 
@@ -28,31 +29,32 @@ function App() {
   return (
     <ThemeProvider>
       <InputProvider>
+      <AnimeShowProvider>
         <BrowserRouter>
-          <Nav />
-          <div>
-            <Switch>
-              <Route path="/" exact component={Home}></Route>
-              <Route path="/anime" component={Anime}></Route>
-              <Route path="/manga" component={Manga}></Route>
-              <Route path="/noticias" component={Noticias}></Route>
-              <Route path="/login" component={Login}></Route>
-              <Route path="/cadastro" component={Cadastro}></Route>
-              <Route path="/anime_page" component={AnimePage}></Route>
-              <Route path="/manga_page" component={MangaPage}></Route>
-
-              <Route path="/contato" component={Contato}></Route>
-              <Route path="/equipe" component={Equipe}></Route>
-              <Route path="/sobre" component={Sobre}></Route>
-              <Route component={NotFound}></Route>
-            </Switch>
-          </div>
-          <GlobalStyle />
-          <Footer />
+            <Nav/>
+            <div>
+              <Switch>
+                <Route path="/" exact component={Home}></Route>
+                <Route path="/anime" component={Anime}></Route>
+                <Route path="/manga" component={Manga}></Route>
+                <Route path="/noticias" component={Noticias}></Route>
+                <Route path="/login" component={Login}></Route>
+                <Route path="/cadastro" component={Cadastro}></Route>
+                <Route path="/anime_page" component={AnimePage}></Route>
+                <Route path="/manga_page" component={MangaPage}></Route>
+            
+                <Route path="/contato" component={Contato}></Route>
+                <Route path="/equipe" component={Equipe}></Route>
+                <Route path="/sobre" component={Sobre}></Route>
+                <Route component={NotFound}></Route>
+              </Switch>
+            </div>
+            <GlobalStyle/>
+            <Footer />
         </BrowserRouter>
+      </AnimeShowProvider>
       </InputProvider>
     </ThemeProvider>
-
   );
 }
 

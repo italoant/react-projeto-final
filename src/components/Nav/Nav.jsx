@@ -25,7 +25,6 @@ export default function Nav() {
     const [display, setDisplay] = useState("none");
     const [themeAnimation, setThemeAnimation] = useState("0deg");
 
-
     return(
         <>
             <Header animationTheme={themeAnimation} theme={themePage}>
