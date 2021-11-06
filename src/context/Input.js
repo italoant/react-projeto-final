@@ -1,11 +1,11 @@
-import react, { createContext, useContext, useState } from 'react'
+import react, { createContext, useState } from 'react'
 
 export const InputContext = createContext({});
 
 
 
 export const InputProvider = (props) => {
-    const [showInput, setShowInput] = useState(true);
+    const [showInput, setShowInput] = useState(false);
     const [search, setSearch] = useState("")
 
 

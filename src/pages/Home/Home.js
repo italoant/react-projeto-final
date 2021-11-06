@@ -1,4 +1,4 @@
-import React, {  useState } from "react";
+import React, {  useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 import api from '../../services/api';
 import { Container, Response } from "./Style";
@@ -24,13 +24,13 @@ export default function Home() {
     var responseReviwManga = [];
 
     
-    useState(() => {
+    useEffect(() => {
         api.get(`/anime`)
         .then((response) => {setResponseAnime(response.data.data)})
         .catch((error) => {console.log(error)})
     }, [loadPageAnime]);
 
-     useState(() => {
+     useEffect(() => {
         api.get(`/manga`)
         .then((response) => {setResponseManga(response.data.data)})
         .catch((error) => {console.log(error)})

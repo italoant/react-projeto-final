@@ -1,4 +1,4 @@
-import React, { useState , useContext, useEffect } from "react";
+import React, { useState , useContext } from "react";
 import { Link } from "react-router-dom";
 import { Header, ButtonPopUp, NavMobile } from "./Style";
 
@@ -38,7 +38,7 @@ export default function Nav() {
                     </ul>
                 </div>
                 <div  className="container icons">
-                    {showInput === true ? <input onChange={(e) => setSearch(e.target.value)}/> : null}    
+                    {showInput === true ? <input type="search" placeholder="ex: naruto" onChange={(e) => setSearch(e.target.value)}/> : null}    
                     <ul className="container_nav ">
                             {['bottom'].map((placement) => (
                                 <OverlayTrigger
