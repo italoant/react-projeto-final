@@ -3,11 +3,15 @@ import { InputContext } from "../../context/Input";
 import { Link } from 'react-router-dom';
 import api from '../../services/api';
 
-import { Response, Amor } from "./../Home/Style";
+import { useAnimeShow } from '../../context/ShowAnime';
+
+import { Response, Amor, Container } from "./../Home/Style";
 
 import { useTheme } from '../../context/Theme';
 
 export default function Anime() {
+
+    const { setAnimeProvider } = useAnimeShow();
 
     const { themePage } = useTheme();
 
@@ -39,7 +43,7 @@ export default function Anime() {
                     <h2>Resultados para: {search}</h2>
                     <div className="resposta_api">
                         {responseAnime.map(resp => {
-                            return <div><Link to="/anime_page"><img src={resp.attributes.posterImage.small} /></Link></div>
+                            return <div><Link to="/manga_page" onClick={() => setAnimeProvider(resp)}><img src={resp.attributes.posterImage.small} /></Link></div>
                         })}
                     </div>
                 </>
@@ -53,7 +57,7 @@ export default function Anime() {
                             <h1>Mais populares</h1>
                             <div className="resposta_api">
                                 {responseAnime.map(resp => {
-                                    return <div><Link to="/anime_page"><img src={resp.attributes.posterImage.small} /></Link>
+                                    return <div><Link to="/manga_page" onClick={() => setAnimeProvider(resp)}><img src={resp.attributes.posterImage.small} /></Link>
                                     </div>
                                 })}
                             </div>
