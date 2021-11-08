@@ -69,6 +69,10 @@ export const Formulario = styled.form`
         }
     }
 
+    @media (max-width: 994px){
+            width: 51%;
+    }
+
     @media (max-width: 982px){
         width: 55%;
 
