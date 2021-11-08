@@ -5,9 +5,8 @@ export const Header = styled.header`
     align-items: center;
     justify-content: space-between;
     padding: 1.7rem 2.5rem;
-    background: linear-gradient(rgba(254, 133, 138, 80), rgba(254, 133, 138, 40),  rgba(254, 133, 138, 20), rgba(254, 133, 138, 10)   ,rgba(254, 133, 138, 0.5));
-    opacity: 80%;    
-
+    background: ${props => props.theme.backgroundPrimary}; 
+    opacity: 80%;
 
     .container {
         display: flex;
@@ -21,9 +20,8 @@ export const Header = styled.header`
         }
 
         .theme {
-            transform: rotate(${props => props.theme});
+            transform: rotate(${props => props.animationTheme});
             transition: 1s;
-            
         }
     }
 
@@ -104,13 +102,13 @@ export const ButtonPopUp = styled.button`
     
 
 export const NavMobile = styled.nav`
-    background: linear-gradient(rgba(254, 133, 138, 0), rgba(254, 133, 138, 80), rgba(254, 133, 138, 40),  rgba(254, 133, 138, 20), rgba(254, 133, 138, 10) );
+    background: ${props => props.theme.backgroundPrimary};
     display: ${props => props.display};
     justify-content: center;
     align-items: center;
     padding: 2rem 1rem;
     position: relative;
-    top: -23px;
+    top: -0px;
 
     .container_nav_mobile{
         display: flex;
@@ -118,7 +116,7 @@ export const NavMobile = styled.nav`
         justify-content: center;
         flex-direction: column;
         padding-top: 1rem;
-        gap: .5rem;
+        gap: .5rem; 
 
         .link {
             text-decoration: none;
@@ -133,7 +131,7 @@ export const NavMobile = styled.nav`
         gap: 1rem;
 
         .theme {
-            transform: rotate(${props => props.theme});
+            transform: rotate(${props => props.animationTheme});
             transition: 1s;
         }
     }
