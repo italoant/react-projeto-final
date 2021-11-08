@@ -81,6 +81,8 @@ export const Header = styled.header`
                 width: 35px;
             }   
         }
+
+        
     }
 
     @media(min-width: 841px){
