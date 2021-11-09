@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Redirect } from 'react-router-dom';
-import { Formulario, Botao } from './Style';
+import { ContainerForm, Formulario, Botao } from './Style';
 import { Link } from 'react-router-dom';
 
 
@@ -38,7 +38,7 @@ export default function Login(){
 
 
     return(
-        <div>
+        <ContainerForm>
             <Formulario>
                 <label>Login</label>
                 <section className="campos-form">
@@ -52,7 +52,7 @@ export default function Login(){
                 <Link to=''><Botao color="#F16EA5" onClick={Logar}>Entrar</Botao></Link>
                 <p id="esqueceu-senha">Esqueceu a senha? <Link id="contato" to="/contato">Clique aqui.</Link></p>
             </Formulario>
-        </div>
+        </ContainerForm>
     );
 
 };
