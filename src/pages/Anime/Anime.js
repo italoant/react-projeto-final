@@ -3,7 +3,7 @@ import { InputContext } from "../../context/Input";
 import { Link } from 'react-router-dom';
 import api from '../../services/api';
 
-import { Response, Amor } from "./../Home/Style";
+import { Response } from "./../Home/Style";
 
 import { useTheme } from '../../context/Theme';
 

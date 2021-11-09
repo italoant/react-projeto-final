@@ -5,7 +5,10 @@ export const InputContext = createContext({});
 
 
 export const InputProvider = (props) => {
-    const [showInput, setShowInput] = useState(false);
+    const [showInput, setShowInput] = useState(() => {
+         const inputStorage = localStorage.getItem('input')
+         return inputStorage ? inputStorage : false
+    });
     const [inputStay, setInputStay] = useState();
     const [search, setSearch] = useState("");
     
