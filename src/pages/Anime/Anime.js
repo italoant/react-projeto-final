@@ -42,8 +42,8 @@ export default function Anime() {
                     <h2>Resultados para: {search}</h2>
                     <div className="resposta_api">
                         {responseAnime.map(resp => {
-                            return <div><Link to="/manga_page" onClick={() => {
-                                localStorage.setItem('manga', JSON.stringify(resp));
+                            return <div><Link to="/anime_page" onClick={() => {
+                                localStorage.setItem('anime', JSON.stringify(resp));
                             }}><img src={resp.attributes.posterImage.small} /></Link></div>
                         })}
                     </div>
@@ -58,8 +58,8 @@ export default function Anime() {
                             <h1>Mais populares</h1>
                             <div className="resposta_api">
                                 {responseAnime.map(resp => {
-                                    return <div><Link to="/manga_page" onClick={() => {
-                                        localStorage.setItem('manga', JSON.stringify(resp));
+                                    return <div><Link to="/anime_page" onClick={() => {
+                                        localStorage.setItem('anime', JSON.stringify(resp));
                                     }}><img src={resp.attributes.posterImage.small} /></Link>
                                     </div>
                                 })}

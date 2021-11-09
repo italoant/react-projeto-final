@@ -15,6 +15,7 @@ export const Main = styled.main`
         width: 100%;
         height: 40vh;
         margin-bottom: 7rem;
+        opacity: 60px;
     }
 
     .card_image {
@@ -26,7 +27,7 @@ export const Main = styled.main`
     }  
 
     .subtitle {
-        margin: 0 2rem;
+        margin: 2rem 1rem;
     }
 
     .post_image_div {
@@ -36,8 +37,11 @@ export const Main = styled.main`
     }
 
     @media(max-width: 840px){
+        .banner {
+            height: 20vh;
+        }
         .card_image {
-            width: 200px;
+            width: 150px;
         }
 
         .subtitle {

@@ -1,8 +1,7 @@
 import React from "react";
 import { useTheme } from '../../context/Theme';
 import { useAnimeShow } from '../../context/ShowAnime';
-import { Main } from './Styled';
-import { Redirect } from "react-router-dom";
+import { Main } from '../../pages/style/Styled';
 
 export default function Anime(){
 

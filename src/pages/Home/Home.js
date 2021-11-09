@@ -47,7 +47,9 @@ export default function Home() {
                     <h1>Animes</h1>
                         <div className="resposta_api">
                             {responseReviwAnime.map(resp => {
-                                return <div><Link to="/anime_page"><img src={resp.attributes.posterImage.small} /></Link></div>
+                                return <div><Link to="/anime_page" onClick={() => {
+                                    localStorage.setItem('anime', JSON.stringify(resp));
+                                }}><img src={resp.attributes.posterImage.small} /></Link></div>
                             })}
                         </div>
                 </aside>
