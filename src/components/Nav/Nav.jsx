@@ -20,25 +20,11 @@ export default function Nav() {
     const { themePage, setTheme } = useTheme();
 
     const { showInput, setShowInput } = useContext(InputContext);
-    const { inputStay, setInputStay } = useContext(InputContext);
     const { setSearch } = useContext(InputContext);
 
     const [display, setDisplay] = useState("none");
     const [themeAnimation, setThemeAnimation] = useState("0deg");
-
-
-    useEffect(() => {
-        setInputStay(localStorage.setItem('input', showInput))
-    }, [showInput])
-
-    useEffect(() => {
-        const inputStorage = localStorage.getItem('input')
-        if(inputStorage){
-            setInputStay(inputStorage)
-        }else{
-            
-        }
-    })
+ 
 
    
    

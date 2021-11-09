@@ -32,8 +32,8 @@ export const Response = styled.article`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 1rem 0;
 
+    background-color: ${props => props.theme.backgroundSecondary};
     aside {
         display: flex;
         flex-direction: column;

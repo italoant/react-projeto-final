@@ -6,23 +6,42 @@ export const Main = styled.main`
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+    
     height: 100vh;
 
-    padding: 1rem 0;
     position: relative;
 
-    .banner {
+    .banner {   
         width: 100%;
         height: 40vh;
-        position: absolute;
-        top: 0;
+        margin-bottom: 7rem;
     }
 
     .card_image {
-        z-index: 10;
         border-radius: 2rem;
+        position: absolute;
+        margin-top: 2rem;
+        width: 250px;
+
     }  
+
+    .subtitle {
+        margin: 0 2rem;
+    }
+
+    .post_image_div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    @media(max-width: 840px){
+        .card_image {
+            width: 200px;
+        }
+
+        .subtitle {
+            font-size: .6rem;
+        }
+    }
 `;
