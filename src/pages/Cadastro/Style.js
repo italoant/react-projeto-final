@@ -19,7 +19,7 @@ export const FormCadastro = styled.form`
     }
 
     h1{
-        font-size: 60px;
+        font-size: 6vh;
         color: #FFFFFF;
         text-shadow: .5px .5px rgba(241, 110, 165, 50);
     }
@@ -71,6 +71,10 @@ export const FormCadastro = styled.form`
 
     @media (max-width:850px){
 
+        h1{
+            font-size: 5vh;
+        }
+
         .container{
             width: 60vw;
         }
@@ -85,8 +89,9 @@ export const FormCadastro = styled.form`
             width: 20vw;
         }
 
-        input, button{
-            width: 28vw; height: 5vh;
+        input, button, #data{
+            width: 50vw; 
+            height: 5vh;
             border: none;
             outline: none;
             padding: 1% 3%;
