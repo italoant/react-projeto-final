@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 export const EstiloContato = styled.div`
-    width: 99vw;
+    width: 100vw; 
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-shadow: 1px 1px 10px white;
-    text-align: center;
     
-    h5{
+    h4{
         flex-wrap: wrap;
         text-align: center;
     }
