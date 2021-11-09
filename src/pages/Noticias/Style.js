@@ -5,8 +5,7 @@ export const EstiloNoticia = styled.div`
 
     .noticias{
         display: flex;
-        gap: 20rem;
-    
+        gap: 5rem;
     }
 
     .noticiaTema{
@@ -29,31 +28,34 @@ export const EstiloNoticia = styled.div`
         gap: 1rem;
     }
 
-    .right{
+    .left{
         display: flex;
         flex-direction: column;
     }
 
-    .noticiaRight{
+    .noticiaLeft{
         margin-left: 2rem;
         display: flex;
         flex-direction: row;
         gap: 1rem;
+       
+    }
+
+    p{
+
     }
 
     img{
         height: 15rem;
     }
 
-    .left{
+    .right{
         display: flex;
         flex-direction: column;
-        background: rgba(255,255,255,0.0);
-        background-image: linear-gradient(to bottom right,rgba(255,255,255,0.0),rgba(255,255,255,0.3),rgba(255,255,255,0.3), var(--pink1), var(--pink2) );
         align-items: center;
     }
 
-    .noticiaLeft{
+    .noticiaRight{
         background-image: url("https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt8739d07baed7d77d/5ed9b1c197379739c07664d9/Arcane_Announcement_Banner.jpg");
         background-size: cover;
         height: 10rem; width: 20rem;
@@ -63,5 +65,24 @@ export const EstiloNoticia = styled.div`
         align-items: baseline;
         padding: 2%;
         margin-left: 2rem;
+    }
+
+    @media (max-width:1000px){
+        .noticias{
+            display: flex;
+            flex-direction: column;
+        }
+
+        .noticiaLeft{
+            width: 90vw;
+        }
+
+        p{
+            overflow: auto;
+        }
+
+        .right{
+            flex-direction: row;
+        }
     }
 `;

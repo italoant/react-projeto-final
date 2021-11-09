@@ -6,9 +6,9 @@ export default function Noticias(){
     return(
         <EstiloNoticia>
             <div className="noticias">
-                <div className="right">
-                    <H1Style> Noticias atuais </H1Style>
-                    <div className="noticiaRight">
+                <div className="left">
+                    <H1Style> Noticias </H1Style>
+                    <div className="noticiaLeft">
                         <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt8739d07baed7d77d/5ed9b1c197379739c07664d9/Arcane_Announcement_Banner.jpg" />
                         <div className="texto">
                             <div className="noticiaTema">
@@ -20,7 +20,7 @@ export default function Noticias(){
                             </div>
                         </div>
                     </div>
-                    <div className="noticiaRight">
+                    <div className="noticiaLeft">
                         <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt8739d07baed7d77d/5ed9b1c197379739c07664d9/Arcane_Announcement_Banner.jpg" />
                         <div className="texto">
                             <div className="noticiaTema">
@@ -32,7 +32,7 @@ export default function Noticias(){
                             </div>
                         </div>
                     </div>
-                    <div className="noticiaRight">
+                    <div className="noticiaLeft">
                         <img src="https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt8739d07baed7d77d/5ed9b1c197379739c07664d9/Arcane_Announcement_Banner.jpg" />
                         <div className="texto">
                             <div className="noticiaTema">
@@ -46,24 +46,24 @@ export default function Noticias(){
                     </div>
                 </div>
 
-                <div className="left">
+                <div className="right">
                     <H1Style> Noticias da semana </H1Style>
-                    <div className="noticiaLeft">
+                    <div className="noticiaRight">
                         <span> data </span>
                         <h6> tema </h6>
                         <p> resumo </p>
                     </div>
-                    <div className="noticiaLeft">
+                    <div className="noticiaRight">
                         <span> data </span>
                         <h6> tema </h6>
                         <p> resumo </p>
                     </div>
-                    <div className="noticiaLeft">
+                    <div className="noticiaRight">
                         <span> data </span>
                         <h6> tema </h6>
                         <p> resumo </p>
                     </div>
-                    <div className="noticiaLeft">
+                    <div className="noticiaRight">
                         <span> data </span>
                         <h6> tema </h6>
                         <p> resumo </p>
