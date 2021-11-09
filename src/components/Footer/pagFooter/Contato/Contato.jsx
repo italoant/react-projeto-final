@@ -14,7 +14,7 @@ export default function Contato() {
                                 <label htmlFor="nome">Nome: </label>
                                 <input type="text" id="nome" placeholder="Claudiany Martins" />
                                 <label htmlFor="email">Email: </label>
-                                <input type="email" placeholder="Claudiany@gmail.com" />
+                                <input type="email" placeholder="Claudiany@gmail.com" id="email" />
                                 <label htmlFor="">Selecione um tema:</label>
                                     <select className="opcoes" name="opcao" id="opcao">
                                         <option value="" selected  className="opcao">-</option>

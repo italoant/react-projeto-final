@@ -5,6 +5,7 @@ export const FormCadastro = styled.form`
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 3rem 0;
     
     .container{
         width: 40vw;
@@ -41,7 +42,6 @@ export const FormCadastro = styled.form`
     }
 
     input, button{
-       
         height: 6vh;
         border: none; 
         background: none;
@@ -73,18 +73,11 @@ export const FormCadastro = styled.form`
         background-color: rgba(241, 110, 165, 0.7);
         border-radius: 25px;
         color: #FFFFFF;
+        height: 5vh;
     }
-    button:hover{
-        background-color: var (--pink3);
-        box-shadow: 1px 1px 5px white;
-    }
-    button:active{
-        background-color: var (--pink3);
-        box-shadow: 1px 1px 5px #cf5575;
-    }
+  
 
     @media (max-width:850px){
-
         h1{
             font-size: 5vh;
         }
@@ -111,6 +104,8 @@ export const FormCadastro = styled.form`
     }
 
     @media (max-width:360px){
+        margin: 4rem 0;
+
         input, button, #date{
             width: 45vw; 
             padding: 1% 8%;

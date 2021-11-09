@@ -9,13 +9,15 @@ export const EstiloContato = styled.div`
     align-items: center;
     text-shadow: 1px 1px 10px white;
     
+    
     h4{
         flex-wrap: wrap;
         text-align: center;
+        color: rgba(0, 0, 0, 0.65);
     }
 
     .containerForm{
-        width: 50vw;
+        width: 30vw;
     }
 
     .formulario{
@@ -30,13 +32,18 @@ export const EstiloContato = styled.div`
         }
 
         input::placeholder, textarea::placeholder{
-            color: var(--black);
+            color: rgba(0, 0, 0, 0.50);
         }
 
         .opcoes, input, textarea{
             background: none; border: none; outline: none;
-            padding: 1%;
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 1%; border-radius: 10px;
             box-shadow: 1px 1px 5px rgba(0, 0, 0, 25%);
+        }
+
+        #nome, #email, .opcoes{
+            height: 4vh;
         }
 
         .opcao{
@@ -44,6 +51,7 @@ export const EstiloContato = styled.div`
             box-shadow: 1px 1px rgba(0, 0, 0, 25%);
             background: #EED9D6;
             color: rgba(0, 0, 0, 0.75);
+            padding: 2%;
         }
 
         select{
@@ -68,7 +76,7 @@ export const EstiloContato = styled.div`
         }
         
         input{
-            border-bottom : 1px solid var(--black);
+            box-shadow: 3px 3px 10px rgba(50, 0, 5, 0.50);
             height: 2rem;
         }
         
@@ -81,7 +89,7 @@ export const EstiloContato = styled.div`
         justify-content: space-around;
         
         button{
-            width: 30%;
+            width: 40%;
             height: 2rem;
             border-radius: 25px;
             border: none; outline: none;
@@ -122,7 +130,11 @@ export const EstiloContato = styled.div`
     }
 
     @media (max-width:700px){
-        margin-bottom: 1rem;
+        
+        .containerForm{
+            width: 60vw;
+        }
+
         h4{
             font-size: 1rem;
             text-shadow: 1px 1px 5px white;
@@ -139,6 +151,7 @@ export const EstiloContato = styled.div`
     }
 
     @media (max-width:435px){
+        margin: 2rem 0;
         .botoes{
             justify-content: space-around;
 

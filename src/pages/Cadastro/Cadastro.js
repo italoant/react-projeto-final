@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FormCadastro } from "./Style";
 import { BackgroundForm } from '../../components/Components';
+import { Botao } from '../Login/Style';
 
 export default function Cadastro(){
 
@@ -55,7 +56,7 @@ export default function Cadastro(){
                             <label htmlFor="data"> Data de nascimento</label>
                             <input type="date" id="date" className="date" max="2021-12-31"/>
                         </div>
-                        <button id="btnCadastro" onClick={valicacaoCadastro}> Cadastre-se </button>
+                        <Botao onClick={valicacaoCadastro}> Cadastre-se </Botao>
                     </div>
                 </BackgroundForm>
             </FormCadastro>
