@@ -3,10 +3,9 @@ import { InputContext } from "../../context/Input";
 import { Link } from 'react-router-dom';
 import api from '../../services/api';
 
-import { useAnimeShow } from '../../context/ShowAnime';
 import { useTheme } from "../../context/Theme";
 
-import { Response, Amor, Container } from "./../Home/Style";
+import { Response } from "./../Home/Style";
 
 
 export default function Anime() {
@@ -76,7 +75,7 @@ export default function Anime() {
     return (
         <Response theme={themePage}>
             <aside>
-                {returnSearch(() => { })}
+                {returnSearch(() => {})}
             </aside>
         </Response>
     );

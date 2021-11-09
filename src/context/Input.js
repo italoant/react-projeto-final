@@ -9,10 +9,6 @@ export const InputProvider = (props) => {
     const [search, setSearch] = useState("");
     
 
-  
-   
-
-
 return (
 <InputContext.Provider value={{ showInput, setShowInput, search, setSearch, }}>
     {props.children}
