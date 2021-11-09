@@ -1,14 +1,15 @@
 import styled from "styled-components";
 
 export const EstiloContato = styled.div`
-    width: 99vw;
+    width: 100vw; 
+    height: 100vh;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-shadow: 1px 1px 10px white;
-    text-align: center;
     
-    h5{
+    h4{
         flex-wrap: wrap;
         text-align: center;
     }
@@ -121,7 +122,7 @@ export const EstiloContato = styled.div`
     }
 
     @media (max-width:700px){
-        
+        margin-bottom: 1rem;
         h4{
             font-size: 1rem;
             text-shadow: 1px 1px 5px white;
@@ -147,6 +148,9 @@ export const EstiloContato = styled.div`
                 font-weight: bold;
             }
         }
+    }
 
+    @media (max-width:280px){
+        margin: 5rem 0;
     }
 `;

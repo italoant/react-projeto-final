@@ -5,8 +5,7 @@ export const InputContext = createContext({});
 
 
 export const InputProvider = (props) => {
-    const [showInput, setShowInput] = useState(false);
-    const [inputStay, setInputStay] = useState();
+    const [showInput, setShowInput] = useState();
     const [search, setSearch] = useState("");
     
 
@@ -15,7 +14,7 @@ export const InputProvider = (props) => {
 
 
 return (
-<InputContext.Provider value={{ showInput, setShowInput, search, setSearch, inputStay, setInputStay }}>
+<InputContext.Provider value={{ showInput, setShowInput, search, setSearch, }}>
     {props.children}
 </InputContext.Provider>
 );

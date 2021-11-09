@@ -19,7 +19,6 @@ export default function Nav() {
 
 
     const { showInput, setShowInput } = useContext(InputContext);
-    const { inputStay, setInputStay } = useContext(InputContext);
     const { setSearch } = useContext(InputContext);
 
     const [display, setDisplay] = useState("none");
@@ -27,18 +26,18 @@ export default function Nav() {
 
     const { themePage, setTheme } = useTheme();
 
-    useEffect(() => {
-        setInputStay(localStorage.setItem('input', showInput))
-    }, [showInput])
+    // useEffect(() => {
+    //     setInputStay(localStorage.setItem('input', showInput))
+    // }, [showInput])
 
-    useEffect(() => {
-        const inputStorage = localStorage.getItem('input')
-        if(inputStorage){
-            setInputStay(inputStorage)
-        }else{
+    // useEffect(() => {
+    //     const inputStorage = localStorage.getItem('input')
+    //     if(inputStorage){
+    //         setInputStay(inputStorage)
+    //     }else{
             
-        }
-    })
+    //     }
+    // })
 
     return (
         <>
@@ -46,10 +45,10 @@ export default function Nav() {
                 <div className="container">
                     <Link to="/"><img src={Logo} alt="logo" /></Link>
                     <ul className="container_nav">
-                        <li onClick={() => setShowInput(false)}><Link className="link" to="/">Home</Link></li>
-                        <li onClick={() => setShowInput(true)}><Link className="link" to="/anime">Anime</Link></li>
-                        <li onClick={() => setShowInput(true)}><Link className="link" to="/manga">Mangá</Link></li>
-                        <li onClick={() => setShowInput(false)}><Link className="link" to="/noticias" >Noticias</Link></li>
+                        <li><Link className="link" to="/" onClick={() => setShowInput(false)}>Home</Link></li>
+                        <li><Link className="link" to="/anime" onClick={() => setShowInput(true)}>Anime</Link></li>
+                        <li><Link className="link" to="/manga" onClick={() => setShowInput(true)}>Mangá</Link></li>
+                        <li><Link className="link" to="/noticias"  onClick={() => setShowInput(false)}>Noticias</Link></li>
                     </ul>
                 </div>
                 <div className="container icons">

@@ -1,11 +1,19 @@
 import styled from "styled-components";
 
 
+
+
+export const ContainerForm = styled.div`
+    display: flex;  
+    justify-content: space-evenly;
+    align-items: center;
+`
+
 export const Formulario = styled.form`
     background-color: #FFBDBF;
     width: 38vw;
-    margin: auto;
     margin-top: 5vh;
+    margin-bottom: 1.8vh;
     text-align: center;
     border-radius: 20px;
     padding: 7vh;
@@ -43,7 +51,7 @@ export const Formulario = styled.form`
     }
 
     #contato{
-        color: #F586AD;
+        color: #483D8B;
         text-decoration: none;
     }
 
@@ -54,33 +62,64 @@ export const Formulario = styled.form`
     //Responsividade  
 
     @media (max-width: 1326px){
-        width: 47vw;
+        width: 50%;
 
         .campos-form input{
-            width: 35vw;
+            width: 33vw;
         }
     }
 
-    @media (max-width: 1291px){
-
-        width: 50vw;
+    @media (max-width: 994px){
+            width: 51%;
     }
 
-    @media (max-width: 1081px){
+    @media (max-width: 982px){
+        width: 55%;
 
-        width: 52vw;
+        label{
+            font-size: 60px;
+        }
+
+        .campos-form input{
+            width: 36vw;
+        }
     }
 
-    @media (max-width: 975px){
+    @media (max-width: 862px){
+        width: 60%;
 
-        width: 55vw;
+        .campos-form input{
+            width: 39vw;
+        }
     }
 
-    @media (max-width: 850px){
-
-        width: 55.5vw;
+    @media (max-width: 740px){
+        padding-left: 0;
+        padding-right: 0;   
     }
 
+    @media (max-width: 700px){
+        width: 70%;
+
+        .campos-form input{
+            width: 50vw;
+        }
+    }
+
+    @media (max-width: 550px){
+        width: 90%;
+
+        .campos-form input{
+            min-width: 65vw;
+        }
+    }
+
+    @media (max-width: 450px){
+    
+        #esqueceu-senha{
+            font-size: 20px;
+        }
+    }
 `
 
 export const Botao = styled.button`
@@ -100,20 +139,30 @@ export const Botao = styled.button`
 
 
         // Responsividade 
-        
+    
         @media (max-width: 1326px){
+            width: 15vw;
+        }
 
-            width: 15.8vw;
+        @media (max-width: 982px){
+            width: 16vw;
+            font-size: 23px;
+        }
+
+        @media (max-width: 862px){
+            width: 17vw;
         }
         
-        @media (max-width: 866px){
-
-            font-size: 20px;
+        @media (max-width: 840px){
+            width: 38.5vw;
+            height: 7.5vh;
         }
-       
 
-       @media (max-width: 840px){
-            
-            width: 35vw;
-       }
+        @media (max-width: 700px){
+            width: 49vw; 
+        }
+
+        @media (max-width: 550px){
+            width: 65vw;
+        }
 `
