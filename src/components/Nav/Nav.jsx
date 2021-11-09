@@ -10,14 +10,13 @@ import User from '../../assets/user.png';
 import Theme from '../../assets/theme.png';
 import Menu from '../../assets/menu.png';
 
-import { useTheme } from '../../context/Theme';
+import { useTheme } from "../../context/Theme";
 import { lightTheme, darkTheme } from '../../styles/themes/theme';
 import { InputContext } from "../../context/Input";
 
 
 export default function Nav() {
 
-    const { themePage, setTheme } = useTheme();
 
     const { showInput, setShowInput } = useContext(InputContext);
     const { inputStay, setInputStay } = useContext(InputContext);
@@ -26,6 +25,7 @@ export default function Nav() {
     const [display, setDisplay] = useState("none");
     const [themeAnimation, setThemeAnimation] = useState("0deg");
 
+    const { themePage, setTheme } = useTheme();
 
     useEffect(() => {
         setInputStay(localStorage.setItem('input', showInput))
@@ -39,9 +39,6 @@ export default function Nav() {
             
         }
     })
-
-   
-   
 
     return (
         <>
@@ -77,10 +74,8 @@ export default function Nav() {
                                 }
                             >
                                 <li><img src={User} alt="user" /></li>
-
                             </OverlayTrigger>
                         ))}
-
                         <li><img
                             src={Theme}
                             className="theme"

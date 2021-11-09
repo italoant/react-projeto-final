@@ -2,8 +2,7 @@ import React from 'react';
 import { Style } from './Style';
 import Logo from '../../assets/logo.png';
 import { Link } from 'react-router-dom';
-import { useTheme } from '../../context/Theme';
-
+import { useTheme } from "../../context/Theme";
 
 export default function Footer(){
 
