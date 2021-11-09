@@ -7,8 +7,6 @@ export const Main = styled.main`
     display: flex;
     flex-direction: column;
     
-    height: 100vh;
-
     position: relative;
 
     .banner {   
@@ -28,6 +26,10 @@ export const Main = styled.main`
 
     .subtitle {
         margin: 2rem 1rem;
+        
+        ::-webkit-scrollbar {
+            width: 0px;
+        }
     }
 
     .post_image_div {
@@ -45,7 +47,11 @@ export const Main = styled.main`
         }
 
         .subtitle {
-            font-size: .6rem;
+            font-size: .8rem;
+            
+            h1, p {
+                margin-bottom: 1rem;
+            }
         }
     }
 `;
