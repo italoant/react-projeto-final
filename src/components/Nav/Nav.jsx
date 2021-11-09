@@ -26,19 +26,6 @@ export default function Nav() {
 
     const { themePage, setTheme } = useTheme();
 
-    // useEffect(() => {
-    //     setInputStay(localStorage.setItem('input', showInput))
-    // }, [showInput])
-
-    // useEffect(() => {
-    //     const inputStorage = localStorage.getItem('input')
-    //     if(inputStorage){
-    //         setInputStay(inputStorage)
-    //     }else{
-            
-    //     }
-    // })
-
     return (
         <>
             <Header animationTheme={themeAnimation} theme={themePage}>
