@@ -12,6 +12,9 @@ export default function Anime() {
 
     const { search } = useContext(InputContext);
     const [responseAnime, setResponseAnime] = useState([]);
+    const [update, setUpadate] = useState([]);
+
+    const { themePage } = useTheme();
 
 
 
@@ -22,17 +25,15 @@ export default function Anime() {
                 setResponseAnime(data.data.data)
             }).catch(erro => { console.log("erro") })
 
-    }, [search]);
+    }, [search]); // requisição para retornar pesquisa
 
     useEffect(() => {
         api.get(`/anime?sort=-popularityRank`)
-            .then((response) => { setResponseAnime(response.data.data) })
+            .then((response) => { setUpadate(response.data.data) })
             .catch((error) => { console.log(error) })
-    }, []);
+    }, []); // requisição sem pesquisa
 
-    const { themePage } = useTheme();
     
-
 
     function returnSearch() {
         if (search !== "") {
@@ -46,17 +47,16 @@ export default function Anime() {
                             }}><img src={resp.attributes.posterImage.small} /></Link></div>
                         })}
                     </div>
-                </>
+                </> // retorno da pesquisa
 
             )
         } else {
             return (
-                <>
                     <Response theme={themePage}>
                         <aside>
-                            <h1>Mais populares</h1>
+                            <h2>Mais populares</h2>
                             <div className="resposta_api">
-                                {responseAnime.map(resp => {
+                                {update.map(resp => {
                                     return <div><Link to="/anime_page" onClick={() => {
                                         localStorage.setItem('anime', JSON.stringify(resp));
                                     }}><img src={resp.attributes.posterImage.small} /></Link>
@@ -64,9 +64,7 @@ export default function Anime() {
                                 })}
                             </div>
                         </aside>
-                    </Response>
-
-                </>
+                    </Response>  // Lista ao abrir a página
             )
         }
 
