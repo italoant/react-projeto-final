@@ -71,8 +71,7 @@ export const EstiloContato = styled.div`
        
 
         textarea{
-            border-right: 1px solid black;
-            border-bottom: 1px solid black;
+            box-shadow: 3px 3px 10px rgba(50, 0, 5, 0.50);
         }
         
         input{
