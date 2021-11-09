@@ -1,11 +1,10 @@
 import styled from "styled-components";
 
 export const FormCadastro = styled.form`
-
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 3rem 0;
+    height: 100vh;
     
     .container{
         width: 40vw;
@@ -23,12 +22,26 @@ export const FormCadastro = styled.form`
         text-shadow: .5px .5px rgba(241, 110, 165, 50);
     }
 
+    
+    .containerInput{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 25vw;
+        
+        p{
+            margin: 0;
+            font-size: 80%;
+            text-align: left;
+        }
+    }
+
     label{
         text-align: center;
     }
 
-    input, button {
-        width: 20vw; 
+    input, button{
+       
         height: 6vh;
         border: none; 
         background: none;
@@ -42,7 +55,7 @@ export const FormCadastro = styled.form`
         align-items: center;
     }
 
-    #data{
+    #date{
         width: 21vw;
     }
 
@@ -80,23 +93,34 @@ export const FormCadastro = styled.form`
             width: 60vw;
         }
 
-        .dataN{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
         label{
             width: 20vw;
         }
 
-        input, button, #data{
-            width: 50vw; 
+        input, button, #date{
+            width: 30vw; 
             height: 5vh;
             border: none;
             outline: none;
             padding: 1% 3%;
         }
+
+        button{
+            font-weight: bold;
+        }
+    }
+
+    @media (max-width:360px){
+        input, button, #date{
+            width: 45vw; 
+            padding: 1% 8%;
+        }
+
+        label{
+            text-align: center;
+            font-size: 85%;
+        }
+
         button{
             font-weight: bold;
         }
@@ -111,7 +135,7 @@ export const FormCadastro = styled.form`
             height: 40px;
         }
 
-        #data{
+        #date{
             padding: 20px;
         }
         
