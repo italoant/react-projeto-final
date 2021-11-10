@@ -6,6 +6,7 @@ export const ContainerForm = styled.div`
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    /* height: 100vh; */
 `
 
 export const Formulario = styled.form`

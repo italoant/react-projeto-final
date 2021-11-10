@@ -64,13 +64,13 @@ export default function Cadastro(){
                         <Botao color="#FE6688" onClick={valicacaoCadastro}> Cadastre-se </Botao>
                     </div>
                 </Formulario>
-                <div className="pop">
+                {/* <div className="pop">
                     <div>
                         <h1> HEY {} </h1>
                         <img scr={Logo} alt="WTF" />
                         <h1> AQUI OH</h1>
                     </div>
-                </div>
+                </div> */}
             </ContainerForm>
             
         </div>
