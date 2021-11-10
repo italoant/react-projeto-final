@@ -66,7 +66,7 @@ export default function Home() {
                 <Carrossel />
             </div>
             <Response theme={themePage} displayErro={displayError}>
-                <aside>
+                <aside className="no-height">
                     {loading === true ? (<h1>Animes</h1>) : (null)}
                         <div className="resposta_api">
                             <div className="error">
@@ -79,11 +79,11 @@ export default function Home() {
                                 }}><img src={resp.attributes.posterImage.small} /></Link></div>
                             })}
                         </div>
-                        {loading === false ? (<img className="loading" src={Loading}/>) : (null)}
+                        {loading === false ? (<div className="bg-loading"><img className="loading"  src={Loading}/></div>) : (null)}
                 </aside>
             </Response>
             <Response theme={themePage}>
-                <aside>
+                <aside className="no-height">
                 {loading === true ? (<h1>Mangás</h1>) : (null)}
                         <div className="resposta_api">
                         {responseReviwManga.map(resp => {

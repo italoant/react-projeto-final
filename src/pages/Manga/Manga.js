@@ -22,7 +22,7 @@ export default function Manga(){
         api.get(`/manga?filter[text]=${search}`)
         .then(data => {
             setManga(data.data.data)
-            setLoading(true)
+            setTimeout(() => {setLoading(true)}, 3000)
         })
         .catch("Erro.")
     }
@@ -44,6 +44,11 @@ export default function Manga(){
     useEffect(()=> {
         mangaSort()
     },[]);
+
+
+    function setTime(){
+        
+    }
 
     const { themePage} = useTheme();
 
@@ -92,7 +97,7 @@ export default function Manga(){
         <Response theme={themePage}>
                 <aside>
                     {retornoManga(() => {})}
-                    {loading === false ? (<img className="loading" src={Loading}/>) : (null)}
+                    {loading === false ? (<div className="bg-loading"><img className="loading" src={Loading}/></div>) : (null)}
                 </aside>
         </Response>
     );

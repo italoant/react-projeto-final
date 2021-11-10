@@ -70,7 +70,7 @@ export default function Anime() {
             return (
                     <>
                         <Response theme={themePage}>
-                            <aside>
+                            <aside className="page_response">
                                 
                                 {loading === true ? (<h1>Mais populares</h1>) : (null)}
 
@@ -107,7 +107,7 @@ export default function Anime() {
         <Response theme={themePage}>
             <aside>
                 {returnSearch(() => {})}
-                {loading === false ? (<img className="loading" src={Loading}/>) : (null)}
+                {loading === false ? (<div className="bg-loading"><img className="loading"  src={Loading}/></div>) : (null)}
             </aside>
         </Response>
     );
