@@ -10,6 +10,8 @@ export default function ThemeProvider({ children }) {
             return darkTheme
         }else if(localStorage.getItem('theme') === "true"){
             return lightTheme
+        }else{
+            return lightTheme
         }
     });
 
