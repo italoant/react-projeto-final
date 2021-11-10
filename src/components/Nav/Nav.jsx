@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import { Header, ButtonPopUp, NavMobile } from "./Style";
 
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
@@ -19,12 +19,54 @@ export default function Nav() {
 
 
     const { showInput, setShowInput } = useContext(InputContext);
+    const { showUser } = useContext(InputContext);
     const { setSearch } = useContext(InputContext);
 
     const [display, setDisplay] = useState("none");
     const [themeAnimation, setThemeAnimation] = useState("0deg");
 
     const { themePage, setTheme } = useTheme();
+    
+    const [redirecinado, setRedirecionado] = useState("");
+
+    function usuario(){
+        if(showUser === ""){
+            return ['bottom'].map((placement) => (
+                <OverlayTrigger
+                    trigger="click"
+                    key={placement}
+                    placement={placement}
+                    overlay={
+                        <Popover className="pop-up-user" Style="border-radius: 1rem;" id={`popover-positioned-${placement}`}>
+                            <Popover.Header className="d-flex justify-content-center" Style="
+                                border-radius: 1rem 1rem 0 0; background-color: #FFBDBF; color: #FFFFFF"
+                                as="h3">{`Usuário`}
+                            </Popover.Header>
+                            <Popover.Body className="d-flex flex-column pop_up">
+                                <Link to="/login" onClick={() => setShowInput(false)}><ButtonPopUp color="#F16EA5" witdh="100px" margin=".7rem">Login</ButtonPopUp></Link>
+                                <Link to="/cadastro" onClick={() => setShowInput(false)}><ButtonPopUp color="#FE6688" witdh="100px" margin=".7rem">Cadastro</ButtonPopUp></Link>
+                            </Popover.Body>
+                        </Popover>
+                    }
+                >
+                    <li><img src={User} alt="user" /></li>
+                </OverlayTrigger>
+            ))
+        } else {
+            return <p>Olá, {showUser}</p>
+        }
+    }
+
+    function redirecionar(){
+        if(showUser === ""){
+            setRedirecionado("/login")
+            setShowInput(false)
+        } else{
+            setRedirecionado("/anime")
+            setShowInput(true)
+        }
+
+    }
 
 
     return (
@@ -34,35 +76,15 @@ export default function Nav() {
                     <Link to="/"><img src={Logo} alt="logo" /></Link>
                     <ul className="container_nav">
                         <li><Link className="link" to="/" onClick={() => setShowInput(false)}>Home</Link></li>
-                        <li><Link className="link" to="/anime" onClick={() => setShowInput(true)}>Anime</Link></li>
-                        <li><Link className="link" to="/manga" onClick={() => setShowInput(true)}>Mangá</Link></li>
+                        <li><Link className="link" to="/anime" onClick={redirecionar}>Anime</Link></li>
+                        <li><Link className="link" to="/manga" onClick={redirecionar}>Mangá</Link></li>
                         <li><Link className="link" to="/noticias"  onClick={() => setShowInput(false)}>Noticias</Link></li>
                     </ul>
                 </div>
                 <div className="container icons">
                     {showInput === true ? <input type="search" placeholder="ex: naruto" onChange={(e) => setSearch(e.target.value)} /> : null}
                     <ul className="container_nav ">
-                        {['bottom'].map((placement) => (
-                            <OverlayTrigger
-                                trigger="click"
-                                key={placement}
-                                placement={placement}
-                                overlay={
-                                    <Popover className="pop-up-user" Style="border-radius: 1rem;" id={`popover-positioned-${placement}`}>
-                                        <Popover.Header className="d-flex justify-content-center" Style="
-                                            border-radius: 1rem 1rem 0 0; background-color: #FFBDBF; color: #FFFFFF"
-                                            as="h3">{`Usuário`}
-                                        </Popover.Header>
-                                        <Popover.Body className="d-flex flex-column pop_up">
-                                            <Link to="/login" onClick={() => setShowInput(false)}><ButtonPopUp color="#F16EA5" witdh="100px" margin=".7rem">Login</ButtonPopUp></Link>
-                                            <Link to="/cadastro" onClick={() => setShowInput(false)}><ButtonPopUp color="#FE6688" witdh="100px" margin=".7rem">Cadastro</ButtonPopUp></Link>
-                                        </Popover.Body>
-                                    </Popover>
-                                }
-                            >
-                                <li><img src={User} alt="user" /></li>
-                            </OverlayTrigger>
-                        ))}
+                        {usuario(() => {})}
                         <li><img
                             src={Theme}
                             className="theme"

@@ -5,6 +5,9 @@ import { useTheme } from "../../context/Theme";
 import { Response } from "./../Home/Style";
 import { Link } from 'react-router-dom';
 
+import Loading from '../../assets/loading.png';
+
+
 
 
 export default function Manga(){
@@ -48,7 +51,7 @@ export default function Manga(){
         if(search !== ""){
             return(
                 <div>
-                    <h2>Resultados para: {search}</h2>
+                    {loading === true ? (<h2>Resultados para: {search}</h2>) : (null)}
                     <div className="resposta_api">
                         {manga.map(resp => {
                             return <div className="container_response">
@@ -66,7 +69,8 @@ export default function Manga(){
             return(
                 <Response theme={themePage}>
                     <aside>
-                    <h1>Mais populares</h1>
+                    {loading === true ? (<h1>Mais populares</h1>) : (null)}
+
                         <div className="resposta_api">
                         {populares.map(resp => {
                             return <div className="container_response">
@@ -88,7 +92,7 @@ export default function Manga(){
         <Response theme={themePage}>
                 <aside>
                     {retornoManga(() => {})}
-                    {loading === false ? (<img className="loading" src="https://i.pinimg.com/originals/6c/72/47/6c7247dfb67e18add93d682dc9fdabcc.png"/>) : (null)}
+                    {loading === false ? (<img className="loading" src={Loading}/>) : (null)}
                 </aside>
         </Response>
     );

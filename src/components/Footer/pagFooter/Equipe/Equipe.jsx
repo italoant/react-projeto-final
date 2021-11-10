@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTheme } from '../../../../context/Theme';
 import EquipeDados from './DadosProps';
 import { H1Style } from '../../../Components';
 
@@ -7,12 +8,15 @@ import Camila from './img/camil.png';
 import Italo from './img/italo.jpg';
 import Thayza from './img/kythanna.jfif';
 import Matheus from './img/matheus.png';
+import { EstiloEquipe } from './Style';
 
 
 export default function Equipe(){
-    
+
+    const { themePage } = useTheme();
+
     return (
-        <div className="containerDados">
+        <EstiloEquipe theme={themePage}>
             <H1Style> As panteras cor de rosa </H1Style>
             <div className="informacoes">
                 <EquipeDados 
@@ -48,7 +52,7 @@ export default function Equipe(){
                     linkCV="https://mateushenriquedasilva.github.io/projeto-curriculo/"
                 />
             </div>
-        </div>
+        </EstiloEquipe>
     );
 }
 

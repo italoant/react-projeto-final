@@ -6,7 +6,7 @@ import { Container, Response } from "./Style";
 import { useTheme } from '../../context/Theme';
 
 import Carrossel from "./Carrousel";
-import loading from '../../assets/theme.png';
+import Loading from '../../assets/loading.png';
 
 export default function Home() {
 
@@ -79,7 +79,7 @@ export default function Home() {
                                 }}><img src={resp.attributes.posterImage.small} /></Link></div>
                             })}
                         </div>
-                        {loading === false ? (<div><img src="https://mangalivre.com.br/wp-content/uploads/2020/12/Dragon-BALLL.png"/></div>) : (null)}
+                        {loading === false ? (<img className="loading" src={Loading}/>) : (null)}
                 </aside>
             </Response>
             <Response theme={themePage}>

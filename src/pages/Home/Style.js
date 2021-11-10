@@ -5,7 +5,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-
+    
 
     h2{
         width: 80vw;
@@ -33,7 +33,6 @@ export const Response = styled.article`
     flex-wrap: wrap;
     justify-content: center;
 
-
     background-color: ${props => props.theme.backgroundSecondary};
 
 
@@ -58,7 +57,6 @@ export const Response = styled.article`
         width: 150px;
         box-shadow: 0 0 0 0;
         animation: loading 2s linear infinite;
-        margin: 20rem 0;
     }
 
     .error {
