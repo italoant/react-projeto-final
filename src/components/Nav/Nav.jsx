@@ -27,7 +27,9 @@ export default function Nav() {
 
     const { themePage, setTheme } = useTheme();
     
-    const [redirecinado, setRedirecionado] = useState("");
+    const { redirecinadoAnime, setRedirecionadoAnime } = useContext(InputContext);
+    const { redirecinadoManga, setRedirecionadoManga } = useContext(InputContext);
+
 
     function usuario(){
         if(showUser === ""){
@@ -57,16 +59,16 @@ export default function Nav() {
         }
     }
 
-    function redirecionar(){
+    function redirecionarAnime(){
         if(showUser === ""){
-            setRedirecionado("/login")
             setShowInput(false)
+            setRedirecionadoAnime("/anime")
+            setRedirecionadoManga("/manga")
         } else{
-            setRedirecionado("/anime")
             setShowInput(true)
         }
-
     }
+
 
     return (
         <>
@@ -75,8 +77,8 @@ export default function Nav() {
                     <Link to="/"><img src={Logo} alt="logo" /></Link>
                     <ul className="container_nav">
                         <li><Link className="link" to="/" onClick={() => setShowInput(false)}>Home</Link></li>
-                        <li><Link className="link" to={redirecinado} onClick={redirecionar}>Anime</Link></li>
-                        <li><Link className="link" to="/manga" onClick={redirecionar}>Mangá</Link></li>
+                        <li><Link className="link" to={redirecinadoAnime} onClick={redirecionarAnime}>Anime</Link></li>
+                        <li><Link className="link" to={redirecinadoManga} onClick={redirecionarAnime}>Mangá</Link></li>
                         <li><Link className="link" to="/noticias"  onClick={() => setShowInput(false)}>Noticias</Link></li>
                     </ul>
                 </div>

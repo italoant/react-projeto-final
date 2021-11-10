@@ -12,6 +12,9 @@ export default function Login(){
 
     const { setShowUser } = useContext(InputContext);
 
+    const { redirecinadoAnime, setRedirecionadoAnime } = useContext(InputContext);
+    const { redirecinadoManga, setRedirecionadoManga } = useContext(InputContext);
+
     //Validação do formulário de login
 
 
@@ -31,11 +34,13 @@ export default function Login(){
             setMensagem("Preencha o campo de usuário.")
             document.getElementById("email").style.boxShadow = "1px 1px 5px red";
             e.preventDefault()
-        } else if(usuario !== "usuario" || senha !== "usuario123"){
+        } else if(usuario !== "usuario" || senha !== "1"){
             setMensagem("Usuário ou senha incorreta.")
             e.preventDefault()
         } else{
             setShowUser(usuario)
+            setRedirecionadoAnime("/anime")
+            setRedirecionadoManga("/manga")
             return <Redirect to="./" />
         }
     }

@@ -10,10 +10,13 @@ export const InputProvider = (props) => {
 
 
     const [showUser, setShowUser] = useState("");
+
+    const [redirecinadoAnime, setRedirecionadoAnime] = useState("/login");
+    const [redirecinadoManga, setRedirecionadoManga] = useState("/login");
     
 
 return (
-<InputContext.Provider value={{ showInput, setShowInput, search, setSearch, showUser, setShowUser}}>
+<InputContext.Provider value={{ showInput, setShowInput, search, setSearch, showUser, setShowUser, redirecinadoAnime, setRedirecionadoAnime, redirecinadoManga, setRedirecionadoManga}}>
     {props.children}
 </InputContext.Provider>
 );
