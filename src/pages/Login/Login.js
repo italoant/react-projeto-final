@@ -19,17 +19,19 @@ export default function Login(){
     function Logar(e){
         
         if(usuario == "" && senha == ""){
-            setMensagem("Preencha todos os campos abaixo.")
+            setMensagem("Preencha todos os campos abaixo.");
+            document.getElementById("email").style.boxShadow = "1px 1px 5px red";
+            document.getElementById("senha").style.boxShadow = "1px 1px 5px red";
             e.preventDefault()
         } else if(senha == ""){
             setMensagem("Preencha o campo de senha.")
-            document.getElementById("senha").focus();
+            document.getElementById("senha").style.boxShadow = "1px 1px 5px red";
             e.preventDefault()
         } else if(usuario == ""){
             setMensagem("Preencha o campo de usuário.")
-            document.getElementById("email").focus();
+            document.getElementById("email").style.boxShadow = "1px 1px 5px red";
             e.preventDefault()
-        } else if(usuario != "usuario" && senha != "usuario123"){
+        } else if(usuario !== "usuario" || senha !== "usuario123"){
             setMensagem("Usuário ou senha incorreta.")
             e.preventDefault()
         } else{
@@ -42,7 +44,7 @@ export default function Login(){
     return(
         <ContainerForm>
             <Formulario>
-                <label>Login</label>
+                <h1>Login</h1>
                 <section className="campos-form">
                     <p id="mensagem">{mensagem}</p>
                     <input onChange={(e) => {setUsuario(e.target.value)}} id="email" type='text' placeholder="Usuário"/>

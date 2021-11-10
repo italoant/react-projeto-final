@@ -1,11 +1,9 @@
 import React, { useState } from "react";
-import { FormCadastro } from "./Style";
-import { BackgroundForm } from '../../components/Components';
-import { Botao } from '../Login/Style';
-
+import { ContainerForm, Formulario, Botao } from '../Login/Style';
+import Logo from '../../assets/logo.png'
 export default function Cadastro(){
 
-    const [nome, setNome] = useState ("");
+    const [mensagem, setMensagem] = useState ();
 
     //Email
     function validarEmail(email){
@@ -29,60 +27,74 @@ export default function Cadastro(){
 
         if(validarEmail(emailValor) && (nomeValor != "") && (senhaValor.length >= 6)){
             console.log("ok"+" "+valores.nome)
+            setMensagem("Feito")
+            document.getElementById("email").style.boxShadow = "1px 1px 5px green"
             e.preventDefault();
         }else{
-            console.log("no")
+            setMensagem("Preencha corretamente")
+            document.getElementById("nome").style.boxShadow = "1px 1px 5px red"
+            document.getElementById("email").style.boxShadow = "1px 1px 5px red"
+            document.getElementById("senha").style.boxShadow = "1px 1px 5px red"
             e.preventDefault();
         }
     }
 
     return(
         <div>
-            <FormCadastro>
-                <BackgroundForm>    
+            <ContainerForm>
+                <Formulario>    
                     <div className="container">
                         <h1>Cadastro</h1>
-                        <div className="containerInput">
+                        <div className="campos-form">
+                        <img scr={Logo} alt="WTF" />
+                            <p id="mensagem">{mensagem}</p>
                             <input type="text" placeholder="Nome" id="nome"  />
                         </div>
-                        <div className="containerInput">
+                        <div className="campos-form">
                             <input type="email"  placeholder="Email" id="email" />
                         </div>
-                        <div className="containerInput">
+                        <div className="campos-form">
                             <input type="password"  placeholder="Senha" id="senha" />
-                            <p>senha maior que 6 dígitos*</p>   
+                            <p>Senha maior que 6 dígitos*</p>   
                         </div>
-                        <div className="dataN">
+                        <div className="campos-form">
                             <label htmlFor="data"> Data de nascimento</label>
                             <input type="date" id="date" className="date" max="2021-12-31"/>
                         </div>
-                        <Botao onClick={valicacaoCadastro}> Cadastre-se </Botao>
+                        <Botao color="#FE6688" onClick={valicacaoCadastro}> Cadastre-se </Botao>
                     </div>
-                </BackgroundForm>
-            </FormCadastro>
+                </Formulario>
+                <div className="pop">
+                    <div>
+                        <h1> HEY {} </h1>
+                        <img scr={Logo} alt="WTF" />
+                        <h1> AQUI OH</h1>
+                    </div>
+                </div>
+            </ContainerForm>
+            
         </div>
     );
 
 };
 
 
-function valicacaoCadastroForm(e){
+// function valicacaoCadastro(e){
 
-    const nome = document.getElementById("nome").value;
-    const email = document.getElementById("email").value;
-    const senha = document.getElementById("senha").value;
-    const dataN = document.getElementById("data").value;
+//     const nome = document.getElementById("nome").value;
+//     const email = document.getElementById("email").value;
+//     const senha = document.getElementById("senha").value;
         
-    if(nome == "" && email == "" && senha == ""){
-        document.getElementById("nome").style.boxShadow = "1px 1px 5px red"
-        document.getElementById("email").style.boxShadow = "1px 1px 5px red"
-        document.getElementById("senha").style.boxShadow = "1px 1px 5px red"
-        e.preventDefault()
+//     if(nome == "" && email == "" && senha == ""){
+//         document.getElementById("nome").style.boxShadow = "1px 1px 5px red"
+//         document.getElementById("email").style.boxShadow = "1px 1px 5px red"
+//         document.getElementById("senha").style.boxShadow = "1px 1px 5px red"
+//         e.preventDefault()
         
-    }else{
-        e.preventDefault();
-        document.getElementById("nome").style.boxShadow = "1px 1px 5px green"
-        document.getElementById("email").style.boxShadow = "1px 1px 5px green"
-        document.getElementById("senha").style.boxShadow = "1px 1px 5px green" 
-    }
-}
+//     }else{
+//         e.preventDefault();
+//         document.getElementById("nome").style.boxShadow = "1px 1px 5px green"
+//         document.getElementById("email").style.boxShadow = "1px 1px 5px green"
+//         document.getElementById("senha").style.boxShadow = "1px 1px 5px green" 
+//     }
+// }
