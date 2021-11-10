@@ -93,6 +93,13 @@ export default function Nav() {
                             onClick={() => {
                                 themeAnimation === "0deg" ? setThemeAnimation("160deg") : setThemeAnimation("0deg")
                                 themePage === lightTheme ? setTheme(darkTheme) : setTheme(lightTheme)
+
+                                if(localStorage.getItem('theme') === "false"){
+                                    localStorage.setItem('theme', "true")
+
+                                }else{
+                                    localStorage.setItem('theme', "false")
+                                }
                             }}
                         /></li>
                     </ul>
@@ -121,6 +128,14 @@ export default function Nav() {
                             onClick={() => {
                                 themeAnimation === "0deg" ? setThemeAnimation("160deg") : setThemeAnimation("0deg")
                                 themePage === lightTheme ? setTheme(darkTheme) : setTheme(lightTheme)
+                                // theme === null ? localStorage.setItem('theme', false) : localStorage.setItem('theme', true)
+
+                                if(localStorage.getItem('theme') === "false"){
+                                    localStorage.setItem('theme', "true")
+
+                                }else{
+                                    localStorage.setItem('theme', "false")
+                                }
                             }}
                         />
                     </div>
