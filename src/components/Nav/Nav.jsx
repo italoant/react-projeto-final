@@ -26,6 +26,7 @@ export default function Nav() {
 
     const { themePage, setTheme } = useTheme();
 
+
     return (
         <>
             <Header animationTheme={themeAnimation} theme={themePage}>

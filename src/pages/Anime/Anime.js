@@ -15,22 +15,32 @@ export default function Anime() {
     const [update, setUpadate] = useState([]);
 
     const { themePage } = useTheme();
+    const [ loading, setLoading ] = useState(false);
 
 
+    function animeFilter(){
+        api.get(`/anime?filter[text]=${search}`)
+        .then(data => {
+            setResponseAnime(data.data.data)
+            setLoading(true)
+        }).catch(erro => { console.log("erro") })
+    }
+
+    function animeSort(){
+        api.get(`/anime?sort=-popularityRank`)
+            .then((response) => { 
+                setUpadate(response.data.data)
+                setLoading(true)
+            })
+            .catch((error) => { console.log(error) })
+    }
 
     useEffect(() => {
-
-        api.get(`/anime?filter[text]=${search}`)
-            .then(data => {
-                setResponseAnime(data.data.data)
-            }).catch(erro => { console.log("erro") })
-
+        animeFilter()
     }, [search]); // requisição para retornar pesquisa
 
     useEffect(() => {
-        api.get(`/anime?sort=-popularityRank`)
-            .then((response) => { setUpadate(response.data.data) })
-            .catch((error) => { console.log(error) })
+        animeSort()
     }, []); // requisição sem pesquisa
 
     
@@ -64,7 +74,7 @@ export default function Anime() {
                                 })}
                             </div>
                         </aside>
-                    </Response>  // Lista ao abrir a página
+                    </Response>  // Lista ao abrir a páginas
             )
         }
 
@@ -74,6 +84,7 @@ export default function Anime() {
         <Response theme={themePage}>
             <aside>
                 {returnSearch(() => {})}
+                {loading === false ? (<img className="loading" src="https://i.pinimg.com/originals/6c/72/47/6c7247dfb67e18add93d682dc9fdabcc.png"/>) : (null)}
             </aside>
         </Response>
     );

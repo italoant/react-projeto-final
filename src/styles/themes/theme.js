@@ -3,7 +3,7 @@ export const lightTheme = {
     backgroundPrimary: "linear-gradient(rgba(254, 133, 138, 80), rgba(254, 133, 138, 40),  rgba(254, 133, 138, 20), rgba(254, 133, 138, 10)   ,rgba(254, 133, 138, 2));",
     backgroundSecondary: "#FFFFFF",
     textColor: "#FE858A",
-    borderColor: "#FE858A",
+    borderColor: "#FE858A"
 }
 
 export const darkTheme = {

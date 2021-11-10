@@ -9,7 +9,7 @@ export const Style = styled.footer`
     justify-content: center;
     align-items: center;
     color: white;
-    
+
     .containerFooter{
         display: flex;
         flex-direction: column;

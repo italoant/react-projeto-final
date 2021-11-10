@@ -6,6 +6,7 @@ import { Container, Response } from "./Style";
 import { useTheme } from '../../context/Theme';
 
 import Carrossel from "./Carrousel";
+import loading from '../../assets/theme.png';
 
 export default function Home() {
 
@@ -13,24 +14,46 @@ export default function Home() {
 
     const [responseAnime, setResponseAnime] = useState([]);
     const [responseManga, setResponseManga] = useState([]);
-    const [loadPageAnime] = useState(true);
-    const [loadPageManga] = useState(true);
+    
+    const [ loading, setLoading ] = useState(false);
+    const [ error, setError ] = useState({h1: "", p: ""});
+    const [ displayError, setDisplayError ] = useState("none");
+
 
     var responseReviwAnime = [];
     var responseReviwManga = [];
 
+    // loading
+    function loadingAnime(){
+        api.get(`/anime`)
+        .then((response) => {
+            setResponseAnime(response.data.data)
+            setLoading(true);
+        })
+        .catch((error) => {
+            console.log(error)
+            setError({h1: "Algo de errado não está certo", 
+            p: "Desculpe, não foi possível carregar a página. Por favor, tente novamente"})
+            displayError === "none" ? setDisplayError("flex") : setDisplayError("none");
+        })
+    }
+
+    function loadingManga(){
+        api.get(`/manga`)
+        .then((response) => {
+            setResponseManga(response.data.data)
+            setLoading(true);
+        })
+        .catch((error) => {console.log(error)})
+    }
     
     useEffect(() => {
-        api.get(`/anime`)
-        .then((response) => {setResponseAnime(response.data.data)})
-        .catch((error) => {console.log(error)})
-    }, [loadPageAnime]);
+        loadingAnime()
+    }, []);
 
      useEffect(() => {
-        api.get(`/manga`)
-        .then((response) => {setResponseManga(response.data.data)})
-        .catch((error) => {console.log(error)})
-    }, [loadPageManga]);
+        loadingManga()
+    }, []);
     
     responseReviwAnime = responseAnime.slice(0, 6);
     responseReviwManga = responseManga.slice(0, 6);
@@ -42,21 +65,26 @@ export default function Home() {
             <div id="carrossel">
                 <Carrossel />
             </div>
-            <Response theme={themePage}>
+            <Response theme={themePage} displayErro={displayError}>
                 <aside>
-                    <h1>Animes</h1>
+                    {loading === true ? (<h1>Animes</h1>) : (null)}
                         <div className="resposta_api">
+                            <div className="error">
+                                <h1>{error.h1}</h1>
+                                <p>{error.p}</p>
+                            </div>
                             {responseReviwAnime.map(resp => {
                                 return <div><Link to="/anime_page" onClick={() => {
                                     localStorage.setItem('anime', JSON.stringify(resp));
                                 }}><img src={resp.attributes.posterImage.small} /></Link></div>
                             })}
                         </div>
+                        {loading === false ? (<div><img src="https://mangalivre.com.br/wp-content/uploads/2020/12/Dragon-BALLL.png"/></div>) : (null)}
                 </aside>
             </Response>
             <Response theme={themePage}>
                 <aside>
-                    <h1>Mangás</h1>
+                {loading === true ? (<h1>Mangás</h1>) : (null)}
                         <div className="resposta_api">
                         {responseReviwManga.map(resp => {
                             return <div className="container_response">

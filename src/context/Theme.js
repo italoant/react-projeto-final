@@ -6,6 +6,7 @@ export const ThemeContext = createContext();
 export default function ThemeProvider({ children }) {
 
     const [themePage, setTheme] = useState(lightTheme);
+    
 
     return(
         <ThemeContext.Provider 
