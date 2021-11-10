@@ -1,7 +1,9 @@
 import React, { useContext, useState, useEffect } from "react";
-import { InputContext } from "../../context/Input";
-import { Link } from 'react-router-dom';
 import api from '../../services/api';
+
+import { Link } from 'react-router-dom';
+
+import { InputContext } from "../../context/Input";
 
 import { useTheme } from "../../context/Theme";
 
@@ -13,19 +15,18 @@ export default function Anime() {
     const { search } = useContext(InputContext);
     const [responseAnime, setResponseAnime] = useState([]);
     const [update, setUpadate] = useState([]);
-
+    const [categoria, setCategoria] = useState([]);
     const { themePage } = useTheme();
 
 
-
     useEffect(() => {
-
         api.get(`/anime?filter[text]=${search}`)
             .then(data => {
                 setResponseAnime(data.data.data)
             }).catch(erro => { console.log("erro") })
 
     }, [search]); // requisição para retornar pesquisa
+
 
     useEffect(() => {
         api.get(`/anime?sort=-popularityRank`)
@@ -52,19 +53,19 @@ export default function Anime() {
             )
         } else {
             return (
-                    <Response theme={themePage}>
-                        <aside>
-                            <h2>Mais populares</h2>
-                            <div className="resposta_api">
-                                {update.map(resp => {
-                                    return <div><Link to="/anime_page" onClick={() => {
-                                        localStorage.setItem('anime', JSON.stringify(resp));
-                                    }}><img src={resp.attributes.posterImage.small} /></Link>
-                                    </div>
-                                })}
-                            </div>
-                        </aside>
-                    </Response>  // Lista ao abrir a página
+                <Response theme={themePage}>
+                    <aside>
+                        <h2>Mais populares</h2>
+                        <div className="resposta_api">
+                            {update.map(resp => {
+                                return <div><Link to="/anime_page" onClick={() => {
+                                    localStorage.setItem('anime', JSON.stringify(resp));
+                                }}><img src={resp.attributes.posterImage.small} /></Link>
+                                </div>
+                            })}
+                        </div>
+                    </aside>
+                </Response>  // Lista ao abrir a página
             )
         }
 
