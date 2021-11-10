@@ -2,12 +2,15 @@ import React from 'react';
 import { EstiloContato } from '../Contato/StylePag';
 import { H1Style } from '../../../Components';
 import { BackgroundForm } from '../../../Components';
+import { useTheme } from '../../../../context/Theme';
 
 export default function Contato() {
+    const { themePage } = useTheme();
+
     return (
-        <EstiloContato>
+        <EstiloContato theme={themePage}>
             <H1Style> Entre em contato </H1Style>
-                    <BackgroundForm>
+                    <BackgroundForm theme={themePage}>
                         <div className="containerForm">
                             <h4> Por meio desse formulário preencha os campos para entrar em contato com nossa equipe de desenvolvimento Front-End do site NOME. </h4>
                             <form className="formulario">

@@ -1,10 +1,14 @@
 import React from 'react';
+import { useTheme } from '../../../../context/Theme';
 import { H1Style } from '../../../Components';
  import { ContainerSobre } from './StylePag';
 
 export default function Sobre() {
+
+    const { themePage } = useTheme();
+    
     return (
-        <ContainerSobre>
+        <ContainerSobre theme={themePage}>
             <H1Style> Informações Sobre o Site</H1Style>
             <div className="container">
                 <div className="left">
