@@ -8,7 +8,7 @@ export const EstiloContato = styled.div`
     justify-content: center;
     align-items: center;
     text-shadow: 1px 1px 10px white;
-    background-color: ${props => props.theme.backgroundSecondary};
+    margin: 8rem 0;
     
     h4{
         flex-wrap: wrap;
@@ -124,7 +124,7 @@ export const EstiloContato = styled.div`
     }
 
     @media (max-width:700px){
-        
+        margin: 3rem 0;
         .containerForm{
             width: 60vw;
         }
