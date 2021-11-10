@@ -6,8 +6,13 @@ export const Main = styled.main`
 
     display: flex;
     flex-direction: column;
-    
-    position: relative;
+
+    .loading {
+        width: 300px;
+        border: none;
+        box-shadow: 0 0 0 0;
+        
+    }
 
     .banner {   
         width: 100%;

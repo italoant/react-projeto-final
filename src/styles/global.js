@@ -22,6 +22,7 @@ const GlobalStyle = createGlobalStyle`
 
     body {
         overflow-x: hidden;
+        height: 100vh;
 
         /* width */
         ::-webkit-scrollbar {

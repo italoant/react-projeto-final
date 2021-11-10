@@ -9,6 +9,9 @@ import { useTheme } from "../../context/Theme";
 
 import { Response } from "./../Home/Style";
 
+import Loading from '../../assets/loading.png';
+
+
 
 export default function Anime() {
 
@@ -17,21 +20,33 @@ export default function Anime() {
     const [update, setUpadate] = useState([]);
     const [categoria, setCategoria] = useState([]);
     const { themePage } = useTheme();
+    const [ loading, setLoading ] = useState(false);
 
+
+    function animeFilter(){
+        api.get(`/anime?filter[text]=${search}`)
+        .then(data => {
+            setResponseAnime(data.data.data)
+            setLoading(true)
+        }).catch(erro => { console.log("erro") })
+    }
+
+    function animeSort(){
+        api.get(`/anime?sort=-popularityRank`)
+            .then((response) => { 
+                setUpadate(response.data.data)
+                setLoading(true)
+            })
+            .catch((error) => { console.log(error) })
+    }
 
     useEffect(() => {
-        api.get(`/anime?filter[text]=${search}`)
-            .then(data => {
-                setResponseAnime(data.data.data)
-            }).catch(erro => { console.log("erro") })
-
+        animeFilter()
     }, [search]); // requisição para retornar pesquisa
 
 
     useEffect(() => {
-        api.get(`/anime?sort=-popularityRank`)
-            .then((response) => { setUpadate(response.data.data) })
-            .catch((error) => { console.log(error) })
+        animeSort()
     }, []); // requisição sem pesquisa
 
     
@@ -53,19 +68,36 @@ export default function Anime() {
             )
         } else {
             return (
-                <Response theme={themePage}>
-                    <aside>
-                        <h2>Mais populares</h2>
-                        <div className="resposta_api">
-                            {update.map(resp => {
-                                return <div><Link to="/anime_page" onClick={() => {
-                                    localStorage.setItem('anime', JSON.stringify(resp));
-                                }}><img src={resp.attributes.posterImage.small} /></Link>
+                    <>
+                        <Response theme={themePage}>
+                            <aside className="page_response">
+                                
+                                {loading === true ? (<h1>Mais populares</h1>) : (null)}
+
+                                <div className="resposta_api">
+                                    {update.map(resp => {
+                                        return <div><Link to="/anime_page" onClick={() => {
+                                            localStorage.setItem('anime', JSON.stringify(resp));
+                                        }}><img src={resp.attributes.posterImage.small} /></Link>
+                                        </div>
+                                    })}
                                 </div>
-                            })}
-                        </div>
-                    </aside>
-                </Response>  // Lista ao abrir a página
+                            </aside>
+                        </Response>
+                        {/* <Response theme={themePage}>
+                            <aside>
+                                {loading === true ? (<h1>Mais populares</h1>) : (null)}
+                                <div className="resposta_api">
+                                    {update.map(resp => {
+                                        return <div><Link to="/anime_page" onClick={() => {
+                                            localStorage.setItem('anime', JSON.stringify(resp));
+                                        }}><img src={resp.attributes.posterImage.small} /></Link>
+                                        </div>
+                                    })}
+                                </div>
+                            </aside>
+                        </Response>   */}
+                    </>
             )
         }
 
@@ -75,6 +107,7 @@ export default function Anime() {
         <Response theme={themePage}>
             <aside>
                 {returnSearch(() => {})}
+                {loading === false ? (<div className="bg-loading"><img className="loading"  src={Loading}/></div>) : (null)}
             </aside>
         </Response>
     );

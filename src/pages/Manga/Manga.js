@@ -1,31 +1,54 @@
-import react, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { InputContext } from "../../context/Input";
 import api from "../../services/api";
 import { useTheme } from "../../context/Theme";
 import { Response } from "./../Home/Style";
 import { Link } from 'react-router-dom';
 
+import Loading from '../../assets/loading.png';
+
+
 
 
 export default function Manga(){
+
+    const [ loading, setLoading ] = useState(false);
 
     const { search } = useContext(InputContext);
     const [manga, setManga] = useState([]);
     const [populares, setPopulares] = useState([]);
 
+    function mangaFilter(){
+        api.get(`/manga?filter[text]=${search}`)
+        .then(data => {
+            setManga(data.data.data)
+            setTimeout(() => {setLoading(true)}, 3000)
+        })
+        .catch("Erro.")
+    }
+
+    function mangaSort(){
+        api.get(`/manga?sort=-popularityRank`)
+        .then(data => {
+            setPopulares(data.data.data)
+            setLoading(true)
+        })
+        .catch("Erro.")
+    }
 
     useEffect(() => {
-        api.get(`/manga?filter[text]=${search}`)
-        .then(data => setManga(data.data.data))
-        .catch("Erro.")
+        mangaFilter()
     },[search]);
 
 
     useEffect(()=> {
-        api.get(`/manga?sort=-popularityRank`)
-        .then(data => setPopulares(data.data.data))
-        .catch("Erro.")
+        mangaSort()
     },[]);
+
+
+    function setTime(){
+        
+    }
 
     const { themePage} = useTheme();
 
@@ -33,7 +56,7 @@ export default function Manga(){
         if(search !== ""){
             return(
                 <div>
-                    <h2>Resultados para: {search}</h2>
+                    {loading === true ? (<h2>Resultados para: {search}</h2>) : (null)}
                     <div className="resposta_api">
                         {manga.map(resp => {
                             return <div className="container_response">
@@ -51,7 +74,8 @@ export default function Manga(){
             return(
                 <Response theme={themePage}>
                     <aside>
-                    <h1>Mais populares</h1>
+                    {loading === true ? (<h1>Mais populares</h1>) : (null)}
+
                         <div className="resposta_api">
                         {populares.map(resp => {
                             return <div className="container_response">
@@ -73,6 +97,7 @@ export default function Manga(){
         <Response theme={themePage}>
                 <aside>
                     {retornoManga(() => {})}
+                    {loading === false ? (<div className="bg-loading"><img className="loading" src={Loading}/></div>) : (null)}
                 </aside>
         </Response>
     );
