@@ -8,7 +8,7 @@ export const EstiloContato = styled.div`
     justify-content: center;
     align-items: center;
     text-shadow: 1px 1px 10px white;
-    
+    background-color: ${props => props.theme.backgroundSecondary};
     
     h4{
         flex-wrap: wrap;
@@ -36,9 +36,12 @@ export const EstiloContato = styled.div`
         }
 
         .opcoes, input, textarea{
-            background: none; border: none; outline: none;
+            background: none; 
+            border: none; 
+            outline: none;
+            border-radius: 5px;
             background-color: rgba(255, 255, 255, 0.5);
-            padding: 1%; border-radius: 10px;
+            padding: 1%;
             box-shadow: 1px 1px 5px rgba(0, 0, 0, 25%);
         }
 
@@ -57,13 +60,6 @@ export const EstiloContato = styled.div`
         select{
             text-shadow: 1px 1px 10px white;
         }
-
-
-        /* select option:hover {
-            color: red;
-            background-color: yellow;
-        } */
-
         
         select option:checked {
             background: var(--pink2);
@@ -71,12 +67,11 @@ export const EstiloContato = styled.div`
        
 
         textarea{
-            box-shadow: 3px 3px 10px rgba(50, 0, 5, 0.50);
+            box-shadow: 3px 3px 10px rgba(40, 0, 5, 0.30);
         }
         
         input{
-            box-shadow: 3px 3px 10px rgba(50, 0, 5, 0.50);
-            height: 2rem;
+            box-shadow: 3px 3px 10px rgba(40, 0, 5, 0.35);
         }
         
     }

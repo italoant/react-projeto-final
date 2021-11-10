@@ -5,7 +5,7 @@ export const EstiloEquipe = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    background-color: ${props => props.theme.backgroundSecondary};
 
     .containerProps{
         padding: 2%;

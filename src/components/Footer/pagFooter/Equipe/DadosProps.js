@@ -6,9 +6,6 @@ function Equipe(props) {
 
   return (
     <EstiloEquipe>
-        <div>
-            <h2>{props.name}</h2>
-        </div>
           <BackgroundForm className="containerProps">
               <div className="bordaImagem">
                 <img className="fotoPerfil" src={props.foto} alt="" />
