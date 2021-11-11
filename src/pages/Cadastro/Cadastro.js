@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { ContainerForm, Formulario, Botao } from '../Login/Style';
 import Logo from '../../assets/logo.png'
+import { Modal } from './../../components/Components';
+
 export default function Cadastro(){
 
     const [mensagem, setMensagem] = useState ();
@@ -64,13 +66,13 @@ export default function Cadastro(){
                         <Botao color="#FE6688" onClick={valicacaoCadastro}> Cadastre-se </Botao>
                     </div>
                 </Formulario>
-                {/* <div className="pop">
-                    <div>
-                        <h1> HEY {} </h1>
-                        <img scr={Logo} alt="WTF" />
-                        <h1> AQUI OH</h1>
-                    </div>
-                </div> */}
+                <Modal color="#FE6688" 
+                        nomeBotao="teste" 
+                        img="https://i.pinimg.com/originals/1f/a8/d9/1fa8d907a5cc6e1fa22f431929ebc12a.gif"  
+                        botaoPop="testePOP"
+                        mensagem="Boas-Vindas ao PanimE"
+                        mensagem2="ようこそ"
+                    /> 
             </ContainerForm>
             
         </div>

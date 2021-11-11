@@ -1,5 +1,5 @@
 import React from 'react';
-import { H1Style } from '../../../Components';
+import { H1Style, Modal } from '../../../Components';
 import { ContainerForm, Formulario, Botao } from '../../../../pages/Login/Style';
 
 export default function Contato() {
@@ -41,21 +41,19 @@ export default function Contato() {
                                     <label htmlFor="comentario">Comentário: </label>
                                     <textarea name="comentario" id="comentario" className="coments" placeholder="Nos informe o motivo do contato..." cols="30" rows="5" className="comentario">    
                                     </textarea>
-                                </div>    
-                                <Botao color="#FE6688"> Cancelar </Botao>
-                                <Botao color="#F16EA5"> Enviar</Botao>
-                                {/* <div className="gif">
-                                    <img src="https://i.pinimg.com/originals/1f/a8/d9/1fa8d907a5cc6e1fa22f431929ebc12a.gif" alt="" />
                                 </div>
-                                <div className="agradecimento">
-                                    <h5>
-                                        Até mais!
-                                            <span className="colocar um popup legal agradecendo e vice versa"> ありがとう </span>
-                                    </h5>
-                                </div> */}
+                                <Botao color="#FE6688" type="button"> Cancelar </Botao>
+                                <Botao color="#F16EA5"> Enviar</Botao>
                             </form>
                         </div>
                     </Formulario>
+                    <Modal color="#FE6688" 
+                        nomeBotao="teste" 
+                        img="https://pa1.narvii.com/6595/33963d95eb637c3e8cbed27e7a204ae821723c2c_hq.gif" 
+                        botaoPop="testePOP"
+                        mensagem="Agradecemos!"
+                        mensagem2="ありがとう"
+                    /> 
         </ContainerForm>
     );
 }

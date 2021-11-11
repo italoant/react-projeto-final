@@ -1,5 +1,11 @@
 import styled from "styled-components";
 
+import Popup from 'reactjs-popup';
+import 'reactjs-popup/dist/index.css';
+import {Botao} from '../pages/Login/Style';
+import './style.css'
+
+
 export const BackgroundForm = styled.div`
     background-color: #FFBDBF;
     border-radius: 20px;
@@ -16,3 +22,18 @@ export const H1Style = styled.h1`
     text-align: center;
     text-shadow: 2px 2px 5px var(--salmao);
 `;
+
+
+export const Modal = (props) => (  
+    <Popup trigger={
+        <Botao color={props.color} className="button" onClick={(e)=>{e.preventDefault()}}> 
+            {props.nomeBotao}
+        </Botao>} modal>
+        <div className="containerBoasVindas">
+            <img className="imgProps" src={props.img} />
+            <button className="botaoPop" onClick={(e)=>{e.preventDefault()}}> ok </button>   
+            <span> {props.mensagem}! </span> 
+            <span> {props.mensagem2}</span> 
+        </div> 
+    </Popup>
+);
