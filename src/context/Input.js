@@ -1,4 +1,4 @@
-import react, { createContext, useEffect, useState } from 'react'
+import react, { createContext, useState } from 'react'
 
 export const InputContext = createContext({});
 
@@ -9,14 +9,20 @@ export const InputProvider = (props) => {
     const [search, setSearch] = useState("");
 
 
-    const [showUser, setShowUser] = useState("");
+    const [showUser, setShowUser] = useState(() => {
+        if(localStorage.getItem('user')){
+            return localStorage.getItem('user')
+        }else{
+            return ""
+        }
+    });
 
-    const [redirecinadoAnime, setRedirecionadoAnime] = useState("/login");
-    const [redirecinadoManga, setRedirecionadoManga] = useState("/login");
+
+
     
 
 return (
-<InputContext.Provider value={{ showInput, setShowInput, search, setSearch, showUser, setShowUser, redirecinadoAnime, setRedirecionadoAnime, redirecinadoManga, setRedirecionadoManga}}>
+<InputContext.Provider value={{ showInput, setShowInput, search, setSearch, showUser, setShowUser }}>
     {props.children}
 </InputContext.Provider>
 );

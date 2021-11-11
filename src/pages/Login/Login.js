@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom';
 import { ContainerForm, Formulario, Botao } from './Style';
 import { Link } from 'react-router-dom';
 import { InputContext } from "../../context/Input";
+import { RedirectContext } from "../../context/Redirecionamento"
 
 export default function Login(){
 
@@ -12,8 +13,8 @@ export default function Login(){
 
     const { setShowUser } = useContext(InputContext);
 
-    const { redirecinadoAnime, setRedirecionadoAnime } = useContext(InputContext);
-    const { redirecinadoManga, setRedirecionadoManga } = useContext(InputContext);
+    const { setRedirecionadoAnime } = useContext(RedirectContext);
+    const { setRedirecionadoManga } = useContext(RedirectContext);
 
     //Validação do formulário de login
 
