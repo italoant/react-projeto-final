@@ -27,14 +27,14 @@ export default function Nav() {
     const [themeAnimation, setThemeAnimation] = useState("0deg");
 
     const { themePage, setTheme } = useTheme();
-    
+
     const { redirecinadoAnime, setRedirecionadoAnime } = useContext(RedirectContext);
     const { redirecinadoManga, setRedirecionadoManga } = useContext(RedirectContext);
     const { redirecinadoNoticia, setRedirecionadoNoticia } = useContext(RedirectContext);
 
 
-    function usuario(){
-        if(showUser === ""){
+    function usuario() {
+        if (showUser === "") {
             return ['bottom'].map((placement) => (
                 <OverlayTrigger
                     trigger="click"
@@ -68,7 +68,26 @@ export default function Nav() {
         }
     }
 
-    function removeUser(){
+    function usuarioMobile() {
+        if (showUser === "") {
+            return <>
+                <Link to="/login" onClick={() => setShowInput(false)}><ButtonPopUp color="#F16EA5" >Login</ButtonPopUp></Link>
+                <Link to="/cadastro" onClick={() => setShowInput(false)}><ButtonPopUp color="#FE6688" >Cadastro</ButtonPopUp></Link>
+            </>
+
+        } else {
+            localStorage.setItem('user', showUser)
+            localStorage.setItem('animeLink', redirecinadoAnime)
+            localStorage.setItem('mangaLink', redirecinadoManga)
+            localStorage.setItem('noticiasLink', redirecinadoNoticia)
+            return <div>
+                <p>Olá, {showUser}</p>
+                <button>Perfil</button> <Link to=""><button onClick={removeUser}>Sair</button></Link>
+            </div>
+        }
+    }
+
+    function removeUser() {
         localStorage.removeItem('user')
         localStorage.removeItem('animeLink')
         localStorage.removeItem('mangaLink')
@@ -78,19 +97,19 @@ export default function Nav() {
         setRedirecionadoManga("/login")
         setRedirecionadoNoticia("login")
         setShowInput(false)
-        return <Redirect to="/"/>
+        return <Redirect to="/" />
     }
 
 
-    function redirecionarPage(){
-        if(showUser === ""){
+    function redirecionarPage() {
+        if (showUser === "") {
             setShowInput(false)
-        } else{
-            setShowInput(true)            
+        } else {
+            setShowInput(true)
         }
     }
 
-   
+
 
     return (
         <>
@@ -101,13 +120,13 @@ export default function Nav() {
                         <li><Link className="link" to="/" onClick={() => setShowInput(false)}>Home</Link></li>
                         <li><Link className="link" to={redirecinadoAnime} onClick={redirecionarPage}>Anime</Link></li>
                         <li><Link className="link" to={redirecinadoManga} onClick={redirecionarPage}>Mangá</Link></li>
-                        <li><Link className="link" to={redirecinadoNoticia}  onClick={redirecionarPage}>Noticias</Link></li>
+                        <li><Link className="link" to={redirecinadoNoticia} onClick={redirecionarPage}>Noticias</Link></li>
                     </ul>
                 </div>
                 <div className="container icons">
                     {showInput === true ? <input type="search" placeholder="ex: naruto" onChange={(e) => setSearch(e.target.value)} /> : null}
                     <ul className="container_nav ">
-                        {usuario(() => {})}
+                        {usuario(() => { })}
                         <li><img
                             src={Theme}
                             className="theme"
@@ -116,10 +135,10 @@ export default function Nav() {
                                 themeAnimation === "0deg" ? setThemeAnimation("160deg") : setThemeAnimation("0deg")
                                 themePage === lightTheme ? setTheme(darkTheme) : setTheme(lightTheme)
 
-                                if(localStorage.getItem('theme') === "false"){
+                                if (localStorage.getItem('theme') === "false") {
                                     localStorage.setItem('theme', "true")
 
-                                }else{
+                                } else {
                                     localStorage.setItem('theme', "false")
                                 }
                             }}
@@ -141,8 +160,7 @@ export default function Nav() {
                         <Link className="link" to={redirecinadoNoticia} onClick={redirecionarPage}>Noticias</Link>
                     </div>
                     <div className="links_and_buttons">
-                        <Link to="/login" onClick={() => setShowInput(false)}><ButtonPopUp color="#F16EA5" >Login</ButtonPopUp></Link>
-                        <Link to="/cadastro" onClick={() => setShowInput(false)}><ButtonPopUp color="#FE6688" >Cadastro</ButtonPopUp></Link>
+                        {usuarioMobile(() => { })}
                         <img
                             src={Theme}
                             className="theme"
@@ -152,10 +170,10 @@ export default function Nav() {
                                 themePage === lightTheme ? setTheme(darkTheme) : setTheme(lightTheme)
                                 // theme === null ? localStorage.setItem('theme', false) : localStorage.setItem('theme', true)
 
-                                if(localStorage.getItem('theme') === "false"){
+                                if (localStorage.getItem('theme') === "false") {
                                     localStorage.setItem('theme', "true")
 
-                                }else{
+                                } else {
                                     localStorage.setItem('theme', "false")
                                 }
                             }}
