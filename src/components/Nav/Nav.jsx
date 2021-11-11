@@ -33,27 +33,10 @@ export default function Nav() {
 
     function usuario(){
         if(showUser === ""){
-            return ['bottom'].map((placement) => (
-                <OverlayTrigger
-                    trigger="click"
-                    key={placement}
-                    placement={placement}
-                    overlay={
-                        <Popover className="pop-up-user" Style="border-radius: 1rem;" id={`popover-positioned-${placement}`}>
-                            <Popover.Header className="d-flex justify-content-center" Style="
-                                border-radius: 1rem 1rem 0 0; background-color: #FFBDBF; color: #FFFFFF"
-                                as="h3">{`Usuário`}
-                            </Popover.Header>
-                            <Popover.Body className="d-flex flex-column pop_up">
-                                <Link to="/login" onClick={() => setShowInput(false)}><ButtonPopUp color="#F16EA5" witdh="100px" margin=".7rem">Login</ButtonPopUp></Link>
-                                <Link to="/cadastro" onClick={() => setShowInput(false)}><ButtonPopUp color="#FE6688" witdh="100px" margin=".7rem">Cadastro</ButtonPopUp></Link>
-                            </Popover.Body>
-                        </Popover>
-                    }
-                >
-                    <li><img src={User} alt="user" /></li>
-                </OverlayTrigger>
-            ))
+            return <div>
+                <Link to="/login" onClick={() => setShowInput(false)}><ButtonPopUp color="#F16EA5" witdh="100px" margin=".7rem">Login</ButtonPopUp></Link>
+                <Link to="/cadastro" onClick={() => setShowInput(false)}><ButtonPopUp color="#FE6688" witdh="100px" margin=".7rem">Cadastro</ButtonPopUp></Link>
+            </div>
         } else {
             return <p>Olá, {showUser}</p>
         }
