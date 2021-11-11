@@ -52,7 +52,7 @@ export default function Login(){
             <Formulario>
                 <h1>Login</h1>
                 <section className="campos-form">
-                    <p id="mensagem">{mensagem}</p>
+                    <p className="mensagem">{mensagem}</p>
                     <input onChange={(e) => {setUsuario(e.target.value)}} id="email" type='text' placeholder="Usuário"/>
                 </section>
                 <section className="campos-form">

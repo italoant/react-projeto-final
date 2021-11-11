@@ -32,7 +32,7 @@ export default function Cadastro(){
             document.getElementById("email").style.boxShadow = "1px 1px 5px green"
             e.preventDefault();
         }else{
-            setMensagem("Preencha corretamente")
+            setMensagem("Preencha todos os campos abaixo.")
             document.getElementById("nome").style.boxShadow = "1px 1px 5px red"
             document.getElementById("email").style.boxShadow = "1px 1px 5px red"
             document.getElementById("senha").style.boxShadow = "1px 1px 5px red"
@@ -47,7 +47,7 @@ export default function Cadastro(){
                     <div className="container">
                         <h1>Cadastro</h1>
                         <div className="campos-form">
-                            <p id="mensagem">{mensagem}</p>
+                            <p className="mensagem">{mensagem}</p>
                             <input type="text" placeholder="Nome" id="nome"  />
                         </div>
                         <div className="campos-form">
@@ -55,10 +55,10 @@ export default function Cadastro(){
                         </div>
                         <div className="campos-form">
                             <input type="password"  placeholder="Senha" id="senha" />
-                            <p>Senha maior que 6 dígitos*</p>   
+                            <p className="mensagem">Senha maior que 6 dígitos*</p>   
                         </div>
                         <div className="campos-form">
-                            <label htmlFor="data"> Data de nascimento</label>
+                            <label htmlFor="data"> Data de Nascimento</label>
                             <input type="date" id="date" className="date" max="2021-12-31"/>
                         </div>
                         <Botao color="#FE6688" onClick={valicacaoCadastro}> Cadastre-se </Botao>
