@@ -36,7 +36,7 @@ export const Header = styled.header`
     }
 
     input{
-        border-radius: 15px;
+        border-radius: 6px;
         background-color: #FE858A;
         text-align: center;
         border: 1px solid #FE858A;
@@ -60,11 +60,6 @@ export const Header = styled.header`
         display: flex;
         align-items: center;
         gap: 2rem;
-
-        p {
-            border: 1px solid white;
-            border-radius: 2rem;
-        }
 
         li{
             list-style: none;
@@ -136,7 +131,7 @@ export const ButtonPopUp = styled.button`
     height: 30px;
     margin: ${props => props.margin};
     border: none;
-    border-radius: 15px;
+    border-radius: 6px;
     background-color: ${props => props.color};
     color: white;
 `;

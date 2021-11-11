@@ -46,10 +46,6 @@ export default function Manga(){
     },[]);
 
 
-    function setTime(){
-        
-    }
-
     const { themePage} = useTheme();
 
     function retornoManga(){
@@ -59,8 +55,7 @@ export default function Manga(){
                     {loading === true ? (<h2>Resultados para: {searchManga}</h2>) : (null)}
                     <div className="resposta_api">
                         {manga.map(resp => {
-                            return 
-                            <div className="container_response">
+                            return <div className="container_response">
                                 <Link to="/manga_page" onClick={() => {
                                     localStorage.setItem('manga', JSON.stringify(resp));
                                 }}>
@@ -79,8 +74,7 @@ export default function Manga(){
 
                         <div className="resposta_api">
                         {populares.map(resp => {
-                            return 
-                            <div className="container_response">
+                            return <div className="container_response">
                                 <Link to="/manga_page" onClick={() => {
                                     localStorage.setItem('manga', JSON.stringify(resp));
                                 }}>
@@ -99,7 +93,8 @@ export default function Manga(){
         <Response theme={themePage}>
                 <aside>
                     {retornoManga(() => {})}
-                    {loading === false ? (<div className="bg-loading"><img className="loading" src={Loading}/></div>) : (null)}
+                    {loading === false ? (<div className="bg-loading"><img className="loading" src={Loading}/>
+                    </div>) : (null)}
                 </aside>
         </Response>
     );
