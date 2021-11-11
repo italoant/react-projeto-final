@@ -22,6 +22,7 @@ import Sobre from './components/Footer/pagFooter/Sobre/Sobre';
 import ThemeProvider from './context/Theme';
 import { InputProvider } from './context/Input'
 import AnimeShowProvider from './context/ShowAnime';
+import { RedirectProvider } from './context/Redirecionamento'
 
 
 
@@ -30,6 +31,7 @@ function App() {
     <ThemeProvider>
       <InputProvider>
       <AnimeShowProvider>
+        <RedirectProvider>
         <BrowserRouter>
             <Nav/>
             <div>
@@ -52,6 +54,7 @@ function App() {
             <GlobalStyle/>
             <Footer />
         </BrowserRouter>
+        </RedirectProvider>
       </AnimeShowProvider>
       </InputProvider>
     </ThemeProvider>
