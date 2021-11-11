@@ -12,6 +12,8 @@ export const Container = styled.div`
         padding: 2%;
     }
 
+    
+
     .w-100{
         height: 50vh;
         background-size: cover !important;
@@ -97,6 +99,18 @@ export const Response = styled.article`
         flex-wrap: wrap;
         justify-content: center;
         margin: 1rem 0;
+
+        .container_response {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                color: ${props => props.theme.textColor};
+                font-size: 1.1rem;
+            }
+        }
     }
     h1 {
         margin: .8rem;
@@ -113,8 +127,10 @@ export const Response = styled.article`
     }
 
     img:hover {
-        transform: scale(1.1);
+        transform: scale(1.05);
     }
+
+    
 
    
 `;

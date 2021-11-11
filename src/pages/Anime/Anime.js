@@ -60,7 +60,8 @@ export default function Anime() {
                         {responseAnime.map(resp => {
                             return <div><Link to="/anime_page" onClick={() => {
                                 localStorage.setItem('anime', JSON.stringify(resp));
-                            }}><img src={resp.attributes.posterImage.small} /></Link></div>
+                            }}><img src={resp.attributes.posterImage.small} /></Link>
+                            </div>
                         })}
                     </div>
                 </> // retorno da pesquisa
