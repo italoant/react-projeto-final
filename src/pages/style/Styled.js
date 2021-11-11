@@ -6,6 +6,8 @@ export const Main = styled.main`
 
     display: flex;
     flex-direction: column;
+    align-items: center;
+    
 
     .loading {
         width: 300px;
@@ -14,11 +16,20 @@ export const Main = styled.main`
         
     }
 
+    .tipo {
+        background: white;
+        display: inline-block;
+        background: #FE858A;
+        padding: .3rem .5rem;
+        border-radius: 1rem;
+        font-weight: 700;
+    }
+
     .banner {   
         width: 100%;
         height: 40vh;
         margin-bottom: 7rem;
-        opacity: 60px;
+        opacity: 20px;
     }
 
     .card_image {
@@ -30,7 +41,12 @@ export const Main = styled.main`
     }  
 
     .subtitle {
-        margin: 2rem 1rem;
+        margin: auto 1rem;
+        height: 100vh;
+        max-width: 800px;
+
+        font-weight: 400;
+
         
         ::-webkit-scrollbar {
             width: 0px;

@@ -43,6 +43,11 @@ export const Header = styled.header`
         align-items: center;
         gap: 2rem;
 
+        p {
+            border: 1px solid white;
+            border-radius: 2rem;
+        }
+
         li{
             list-style: none;
             text-transform: uppercase;
@@ -67,6 +72,8 @@ export const Header = styled.header`
 
         .container_nav {
             display: none;
+
+            
         }
         .menuMobile {
             display: inline;
@@ -129,8 +136,13 @@ export const NavMobile = styled.nav`
 
     .links_and_buttons {
         display: flex;
-        align-items: center;
+        align-items: flex-end;
         gap: 1rem;
+
+        p {
+            border: 1px solid white;
+            border-radius: 2rem;
+        }
 
         .theme {
             transform: rotate(${props => props.animationTheme});
