@@ -63,7 +63,7 @@ export default function Nav() {
             localStorage.setItem('noticiasLink', redirecinadoNoticia)
             return <div>
                 <p>Olá, {showUser}</p>
-                <button>Perfil</button> <button onClick={removeUser}>Sair</button>
+                <button>Perfil</button> <Link to=""><button onClick={removeUser}>Sair</button></Link>
             </div>
         }
     }
@@ -78,7 +78,7 @@ export default function Nav() {
         setRedirecionadoManga("/login")
         setRedirecionadoNoticia("login")
         setShowInput(false)
-
+        return <Redirect to="/"/>
     }
 
 
