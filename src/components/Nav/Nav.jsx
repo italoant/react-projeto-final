@@ -38,6 +38,7 @@ export default function Nav() {
                     <Link to="/cadastro" onClick={() => setShowInput(false)}><ButtonPopUp color="#FE6688" witdh="100px" margin=".7rem">Cadastro</ButtonPopUp></Link>
                 </div>
         } else {
+            setRedirecionadoNoticias("/noticias")
             localStorage.setItem('user', showUser)
             localStorage.setItem('animeLink', redirecinadoAnime)
             localStorage.setItem('mangaLink', redirecinadoManga)
@@ -57,6 +58,7 @@ export default function Nav() {
             </>
 
         } else {
+            setRedirecionadoNoticias("/noticias")
             localStorage.setItem('user', showUser)
             localStorage.setItem('animeLink', redirecinadoAnime)
             localStorage.setItem('mangaLink', redirecinadoManga)
