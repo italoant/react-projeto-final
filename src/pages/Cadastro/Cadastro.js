@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { ContainerForm, Formulario, Botao } from '../Login/Style';
-import Logo from '../../assets/logo.png'
 import { Modal } from './../../components/Components';
 
 export default function Cadastro(){
