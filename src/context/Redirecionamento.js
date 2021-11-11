@@ -5,12 +5,27 @@ export const RedirectContext = createContext({});
 export const RedirectProvider = (props) => {
 
 
-    const [redirecinadoAnime, setRedirecionadoAnime] = useState(() => localStorage.getItem('animeLink')      
-    ); //validação do link redirect
-    const [redirecinadoManga, setRedirecionadoManga] = useState(() => localStorage.getItem('mangaLink'));   //validação do link redirect
-    const [ redirecinadoNoticias, setRedirecionadoNoticias ] = useState(() => localStorage.getItem('notLink')     
-    );//validação do link redirect
-
+    const [redirecinadoAnime, setRedirecionadoAnime] = useState(() => {
+        if(localStorage.getItem('animeLink') ){
+            return localStorage.getItem('animeLink') 
+        } else {
+            return "/login"
+        }
+    }); //validação do link redirect
+    const [redirecinadoManga, setRedirecionadoManga] = useState(() => {
+        if(localStorage.getItem('mangaLink') ){
+            return localStorage.getItem('mangaLink') 
+        } else {
+            return "/login"
+        }
+    });   //validação do link redirect
+    const [ redirecinadoNoticias, setRedirecionadoNoticias ] = useState(() => {
+        if(localStorage.getItem('notLink') ){
+            return localStorage.getItem('notLink') 
+        } else {
+            return "/login"
+        }
+    });   //validação do link redirect
 
     
 

@@ -10,26 +10,30 @@ import { useTheme } from "../../context/Theme";
 import { Response } from "./../Home/Style";
 
 import Loading from '../../assets/loading.png';
+import axios from "axios";
 
 
 
 export default function Anime() {
 
-    const { search } = useContext(InputContext);
+    const { searchAnime } = useContext(InputContext);
     const [responseAnime, setResponseAnime] = useState([]);
     const [update, setUpadate] = useState([]);
-    const [categoria, setCategoria] = useState([]);
     const { themePage } = useTheme();
     const [ loading, setLoading ] = useState(false);
 
 
+
     function animeFilter(){
-        api.get(`/anime?filter[text]=${search}`)
+        api.get(`/anime?filter[text]=${searchAnime}`)
         .then(data => {
             setResponseAnime(data.data.data)
             setTimeout(() => {setLoading(true)}, 3000)
         }).catch(erro => { console.log("erro") })
     }
+   
+
+
 
     function animeSort(){
         api.get(`/anime?sort=-popularityRank`)
@@ -42,7 +46,7 @@ export default function Anime() {
 
     useEffect(() => {
         animeFilter()
-    }, [search]); // requisição para retornar pesquisa
+    }, [searchAnime]); // requisição para retornar pesquisa
 
 
     useEffect(() => {
@@ -52,10 +56,10 @@ export default function Anime() {
     
 
     function returnSearch() {
-        if (search !== "") {
+        if (searchAnime !== "") {
             return (
                 <>
-                    <h2>Resultados para: {search}</h2>
+                    <h2>Resultados para: {searchAnime}</h2>
                     <div className="resposta_api">
                         {responseAnime.map(resp => {
                             return <div><Link to="/anime_page" onClick={() => {
@@ -85,32 +89,20 @@ export default function Anime() {
                                 </div>
                             </aside>
                         </Response>
-                        {/* <Response theme={themePage}>
-                            <aside>
-                                {loading === true ? (<h1>Mais populares</h1>) : (null)}
-                                <div className="resposta_api">
-                                    {update.map(resp => {
-                                        return <div><Link to="/anime_page" onClick={() => {
-                                            localStorage.setItem('anime', JSON.stringify(resp));
-                                        }}><img src={resp.attributes.posterImage.small} /></Link>
-                                        </div>
-                                    })}
-                                </div>
-                            </aside>
-                        </Response>   */}
                     </>
             )
         }
 
     }
 
-    return (
+    return ( <>
         <Response theme={themePage}>
             <aside>
                 {returnSearch(() => {})}
                 {loading === false ? (<div className="bg-loading"><img className="loading"  src={Loading}/></div>) : (null)}
             </aside>
         </Response>
+        </>
     );
 
 };

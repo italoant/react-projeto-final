@@ -14,12 +14,12 @@ export default function Manga(){
 
     const [ loading, setLoading ] = useState(false);
 
-    const { search } = useContext(InputContext);
+    const { searchManga } = useContext(InputContext);
     const [manga, setManga] = useState([]);
     const [populares, setPopulares] = useState([]);
 
     function mangaFilter(){
-        api.get(`/manga?filter[text]=${search}`)
+        api.get(`/manga?filter[text]=${searchManga}`)
         .then(data => {
             setManga(data.data.data)
             setTimeout(() => {setLoading(true)}, 3000)
@@ -38,7 +38,7 @@ export default function Manga(){
 
     useEffect(() => {
         mangaFilter()
-    },[search]);
+    },[searchManga]);
 
 
     useEffect(()=> {
@@ -53,10 +53,10 @@ export default function Manga(){
     const { themePage} = useTheme();
 
     function retornoManga(){
-        if(search !== ""){
+        if(searchManga !== ""){
             return(
                 <div>
-                    {loading === true ? (<h2>Resultados para: {search}</h2>) : (null)}
+                    {loading === true ? (<h2>Resultados para: {searchManga}</h2>) : (null)}
                     <div className="resposta_api">
                         {manga.map(resp => {
                             return <div className="container_response">

@@ -19,7 +19,8 @@ export default function Nav() {
     const { showInputAnime, setShowInputAnime } = useContext(InputContext);
     const { showInputManga, setShowInputManga } = useContext(InputContext);
     const { showUser, setShowUser } = useContext(InputContext);
-    const { setSearch } = useContext(InputContext);
+    const { setSearchAnime } = useContext(InputContext);
+    const { setSearchManga } = useContext(InputContext);
 
     const [display, setDisplay] = useState("none");
     const [themeAnimation, setThemeAnimation] = useState("0deg");
@@ -35,7 +36,7 @@ export default function Nav() {
     function usuario() {
         if (showUser === "") {
             return <div>
-                <Link to="/login" onClick={() => setShowInputAnime(false), setShowInputManga(false)}><ButtonPopUp color="#F16EA5" witdh="100px" margin=".7rem">Login</ButtonPopUp></Link>
+                    <Link to="/login" onClick={() => setShowInputAnime(false), setShowInputManga(false)}><ButtonPopUp color="#F16EA5" witdh="100px" margin=".7rem">Login</ButtonPopUp></Link>
                 <Link to="/cadastro" onClick={() => setShowInputAnime(false), setShowInputManga(false)}><ButtonPopUp color="#FE6688" witdh="100px" margin=".7rem">Cadastro</ButtonPopUp></Link>
             </div>
         } else {
@@ -59,7 +60,7 @@ export default function Nav() {
             </>
 
         } else {
-            // setRedirecionadoNoticias("/noticias")
+            setRedirecionadoNoticias("/noticias")
             localStorage.setItem('user', showUser)
             localStorage.setItem('animeLink', redirecinadoAnime)
             localStorage.setItem('mangaLink', redirecinadoManga)
@@ -85,12 +86,27 @@ export default function Nav() {
         return <Redirect to="/" />
     }
 
-    function redirecionarPage() {
+    function redirecionarHome(){
+        setShowInputAnime(false)
+        setShowInputManga(false)
+
+    }
+
+    function redirecionarPageAnime() {
         if (showUser === "") {
             setShowInputAnime(false)
             setShowInputManga(false)
         } else {
             setShowInputAnime(true)
+            setShowInputManga(false)
+        }
+    }
+    function redirecionarPageManga() {
+        if (showUser === "") {
+            setShowInputAnime(false)
+            setShowInputManga(false)
+        } else {
+            setShowInputAnime(false)
             setShowInputManga(true)
         }
     }
@@ -105,17 +121,19 @@ export default function Nav() {
         <>
             <Header animationTheme={themeAnimation} theme={themePage}>
                 <div className="container">
-                    <Link to="/" onClick={() => setShowInputAnime(false), setShowInputManga(false)}><img src={Logo} alt="logo" /></Link>
+                    <Link to="/" onClick={redirecionarHome}><img src={Logo} alt="logo" /></Link>
                     <ul className="container_nav">
-                        <li><Link className="link" to="/" onClick={() => showInputAnime(false), setShowInputManga(false)}>Home</Link></li>
-                        <li><Link className="link" to={redirecinadoAnime} onClick={redirecionarPage}>Anime</Link></li>
-                        <li><Link className="link" to={redirecinadoManga} onClick={redirecionarPage}>Mangá</Link></li>
+                        <li><Link className="link" to="/" onClick={redirecionarHome}>Home</Link></li>
+                        <li><Link className="link" to={redirecinadoAnime} onClick={redirecionarPageAnime}>Anime</Link></li>
+                        <li><Link className="link" to={redirecinadoManga} onClick={redirecionarPageManga}>Mangá</Link></li>
                         <li><Link className="link" to={redirecinadoNoticias} onClick={redirecionarPageNoti}>Noticias</Link></li>
                     </ul>
                 </div>
+                <div className="containerInput">
+                        {showInputAnime === true ? <input type="search" placeholder="Ex: Dragon" onChange={(e) => setSearchAnime(e.target.value)} /> : null}
+                        {showInputManga === true ? <input type="search" placeholder="Ex: Naruto" onChange={(e) => setSearchManga(e.target.value)} /> : null}
+                </div>
                 <div className="container icons">
-                    {showInputAnime === true ? <input type="search" placeholder="ex: naruto" onChange={(e) => setSearch(e.target.value)} /> : null}
-                    {showInputManga === true ? <input type="search" placeholder="ex: naruto" onChange={(e) => setSearch(e.target.value)} /> : null}
                     <ul className="container_nav ">
                         {usuario(() => { })}
                         <li><img
@@ -145,10 +163,10 @@ export default function Nav() {
             <NavMobile display={display} animationTheme={themeAnimation} theme={themePage}>
                 <nav className="container_nav_mobile">
                     <div className="links_and_buttons">
-                        <Link className="link" to="/" onClick={() => setShowInputAnime(false), setShowInputManga(false)}>Home</Link>
-                        <Link className="link" to={redirecinadoAnime} onClick={redirecionarPage}>Anime</Link>
-                        <Link className="link" to={redirecinadoManga} onClick={redirecionarPage}>Mangá</Link>
-                        <Link className="link" to={redirecinadoNoticias} onClick={redirecionarPage}>Noticias</Link>
+                        <Link className="link" to="/" onClick={redirecionarHome}>Home</Link>
+                        <Link className="link" to={redirecinadoAnime} onClick={redirecionarPageAnime}>Anime</Link>
+                        <Link className="link" to={redirecinadoManga} onClick={redirecionarPageManga}>Mangá</Link>
+                        <Link className="link" to={redirecinadoNoticias} onClick={redirecionarPageNoti}>Noticias</Link>
                     </div>
                     <div className="links_and_buttons">
                         {usuarioMobile(() => { })}

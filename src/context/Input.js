@@ -7,7 +7,8 @@ export const InputContext = createContext({});
 export const InputProvider = (props) => {
     const [ showInputAnime, setShowInputAnime ] = useState();
     const [ showInputManga, setShowInputManga ] = useState();
-    const [ search, setSearch ] = useState("");
+    const [ searchAnime, setSearchAnime ] = useState("");
+    const [ searchManga, setSearchManga ] = useState("");
 
 
     const [showUser, setShowUser] = useState(() => {
@@ -23,7 +24,7 @@ export const InputProvider = (props) => {
     
 
 return (
-<InputContext.Provider value={{ showInputAnime, setShowInputAnime, showInputManga, setShowInputManga, search, setSearch, showUser, setShowUser }}>
+<InputContext.Provider value={{ showInputAnime, setShowInputAnime, showInputManga, setShowInputManga, searchAnime, setSearchAnime, searchManga, setSearchManga, showUser, setShowUser }}>
     {props.children}
 </InputContext.Provider>
 );
