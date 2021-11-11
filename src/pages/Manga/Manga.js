@@ -59,7 +59,8 @@ export default function Manga(){
                     {loading === true ? (<h2>Resultados para: {search}</h2>) : (null)}
                     <div className="resposta_api">
                         {manga.map(resp => {
-                            return <div className="container_response">
+                            return 
+                            <div className="container_response">
                                 <Link to="/manga_page" onClick={() => {
                                     localStorage.setItem('manga', JSON.stringify(resp));
                                 }}>
@@ -78,17 +79,18 @@ export default function Manga(){
 
                         <div className="resposta_api">
                         {populares.map(resp => {
-                            return <div className="container_response">
+                            return 
+                            <div className="container_response">
                                 <Link to="/manga_page" onClick={() => {
                                     localStorage.setItem('manga', JSON.stringify(resp));
                                 }}>
                                     <img src={resp.attributes.posterImage.small} />
                                 </Link>
                             </div>
-                        })}
-                    </div>
+                            })}
+                        </div>
                     </aside>
-            </Response>
+                </Response>
             )
         }
     }

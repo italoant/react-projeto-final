@@ -25,10 +25,21 @@ export const Formulario = styled.form`
         text-shadow: .5px .5px rgba(241, 110, 165, 50);
         margin: 0;
     }
+
+    h4{
+        text-shadow: 2px 2px 5px var(--salmao)
+    }
     
-    #mensagem{
+    label{
+        font-size: 30px;
+        margin-bottom: 1.5vh;
+        color: #FFFFFF;
+        text-shadow: .5px .5px rgba(241, 110, 165, 50);
+    }
+
+    .mensagem{
+        margin-top: 1.5vh;
         color: #FF0000;
-        font-size: 20px;
     }
 
     .campos-form{
@@ -88,7 +99,7 @@ export const Formulario = styled.form`
         color: #FE6688;
     }
 
-    //Responsividade  
+    //Responsividade de todos os formulários
 
     @media (max-width: 1326px){
         width: 50%;
@@ -124,7 +135,12 @@ export const Formulario = styled.form`
 
     @media (max-width: 740px){
         padding-left: 0;
-        padding-right: 0;   
+        padding-right: 0;  
+        
+        h4{
+            font-size: 30px;
+            padding: 2.5vw;
+        }
     }
 
     @media (max-width: 700px){
@@ -133,6 +149,14 @@ export const Formulario = styled.form`
         .campos-form input{
             width: 50vw;
         }
+
+        .campos-form select{
+            width: 49vw;
+        }
+
+        .campos-form textarea{
+            width: 49vw;
+        }
     }
 
     @media (max-width: 550px){
@@ -140,6 +164,14 @@ export const Formulario = styled.form`
 
         .campos-form input{
             min-width: 65vw;
+        }
+
+        .campos-form select{
+            width: 64vw;
+        }
+
+        .campos-form textarea{
+            width: 64vw;
         }
     }
 
@@ -166,7 +198,7 @@ export const Botao = styled.button`
             background-color: #EED9D6;
         }
 
-        // Responsividade 
+        // Responsividade de todos os botões dos formulários
     
         @media (max-width: 1326px){
             width: 15vw;
@@ -182,15 +214,27 @@ export const Botao = styled.button`
         }
         
         @media (max-width: 840px){
-            width: 38.5vw;
+            width: 39.5vw;
             height: 7.5vh;
+            margin-left: 1.3vw;
+        }
+
+        @media (max-width: 740px){
+            width: 40vw;
+            margin-left: 1.8vw;
         }
 
         @media (max-width: 700px){
-            width: 49vw; 
+            width: 50vw; 
+            margin-left: 2vw;
         }
 
         @media (max-width: 550px){
-            width: 65vw;
+            width: 66vw;
+            margin-left: 3vw;
+        }
+
+        @media (max-width: 450px){
+            margin-left: 4vw;
         }
 `

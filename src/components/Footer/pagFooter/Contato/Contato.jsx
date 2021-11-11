@@ -10,7 +10,7 @@ export default function Contato() {
             <H1Style> Entre em contato </H1Style>
                     <Formulario>
                         <div className="containerForm">
-                            <h4> Por meio desse formulário preencha os campos para entrar em contato com nossa equipe de desenvolvimento Front-End do site NOME. </h4>
+                            <h4> Preencha os campos deste formulário para entrar em contato com nossa equipe de desenvolvimento Front-End do site PanimeE. </h4>
                             <form className="formulario">
                                 <div className="campos-form">
                                     <input type="text" id="nome" placeholder="Nome" />
