@@ -27,7 +27,7 @@ export default function Anime() {
         api.get(`/anime?filter[text]=${search}`)
         .then(data => {
             setResponseAnime(data.data.data)
-            setLoading(true)
+            setTimeout(() => {setLoading(true)}, 3000)
         }).catch(erro => { console.log("erro") })
     }
 

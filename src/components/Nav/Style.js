@@ -142,3 +142,9 @@ export const NavMobile = styled.nav`
         display: none;
     }
 `;
+
+export const Usuario = styled.div`
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+`;
