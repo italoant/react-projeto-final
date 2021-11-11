@@ -1,12 +1,9 @@
-import React, { useState, useContext, useEffect } from "react";
+import React, { useState, useContext } from "react";
 import { Link, Redirect } from "react-router-dom";
-import { Header, ButtonPopUp, NavMobile } from "./Style";
+import { Header, ButtonPopUp, NavMobile, Usuario } from "./Style";
 
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-import Popover from 'react-bootstrap/Popover';
 
 import Logo from '../../assets/logo.png';
-import User from '../../assets/user.png';
 import Theme from '../../assets/theme.png';
 import Menu from '../../assets/menu.png';
 
@@ -28,9 +25,10 @@ export default function Nav() {
 
     const { themePage, setTheme } = useTheme();
 
+    const { redirecinadoNoticias, setRedirecionadoNoticias } = useContext(RedirectContext);
     const { redirecinadoAnime, setRedirecionadoAnime } = useContext(RedirectContext);
     const { redirecinadoManga, setRedirecionadoManga } = useContext(RedirectContext);
-    const { redirecinadoNoticia, setRedirecionadoNoticia } = useContext(RedirectContext);
+    
 
 
     function usuario() {
@@ -43,11 +41,11 @@ export default function Nav() {
             localStorage.setItem('user', showUser)
             localStorage.setItem('animeLink', redirecinadoAnime)
             localStorage.setItem('mangaLink', redirecinadoManga)
-            localStorage.setItem('noticiasLink', redirecinadoNoticia)
-            return <div>
+            localStorage.setItem('notLink', redirecinadoNoticias)
+            return <Usuario>
                 <p>Olá, {showUser}</p>
-                <button>Perfil</button> <Link to=""><button onClick={removeUser}>Sair</button></Link>
-            </div>
+                <ButtonPopUp  color="#F16EA5">Perfil</ButtonPopUp> <Link to=""><ButtonPopUp  color="#FE6688" onClick={removeUser}>Sair</ButtonPopUp></Link>
+            </Usuario>
         }
     }
 
@@ -62,11 +60,11 @@ export default function Nav() {
             localStorage.setItem('user', showUser)
             localStorage.setItem('animeLink', redirecinadoAnime)
             localStorage.setItem('mangaLink', redirecinadoManga)
-            localStorage.setItem('noticiasLink', redirecinadoNoticia)
-            return <div>
+            localStorage.setItem('notLink', redirecinadoNoticias)
+            return <Usuario>
                 <p>Olá, {showUser}</p>
-                <button>Perfil</button> <Link to=""><button onClick={removeUser}>Sair</button></Link>
-            </div>
+                <ButtonPopUp color="#F16EA5">Perfil</ButtonPopUp> <Link to=""><ButtonPopUp color="#FE6688" onClick={removeUser}>Sair</ButtonPopUp></Link>
+            </Usuario>
         }
     }
 
@@ -74,22 +72,25 @@ export default function Nav() {
         localStorage.removeItem('user')
         localStorage.removeItem('animeLink')
         localStorage.removeItem('mangaLink')
-        localStorage.removeItem('noticiasLink')
+        localStorage.removeItem('notLink')
         setShowUser("")
         setRedirecionadoAnime("/login")
         setRedirecionadoManga("/login")
-        setRedirecionadoNoticia("login")
+        setRedirecionadoNoticias("/login")
         setShowInput(false)
         return <Redirect to="/" />
     }
 
 
     function redirecionarPage() {
-        if (showUser === "") {
+        if (showUser === "" ) {
             setShowInput(false)
         } else {
             setShowInput(true)
         }
+    }
+    function redirecionarPageNoti(){
+        setShowInput(false)
     }
 
 
@@ -98,12 +99,12 @@ export default function Nav() {
         <>
             <Header animationTheme={themeAnimation} theme={themePage}>
                 <div className="container">
-                    <Link to="/"><img src={Logo} alt="logo" /></Link>
+                    <Link to="/" onClick={() => setShowInput(false)}><img src={Logo} alt="logo" /></Link>
                     <ul className="container_nav">
                         <li><Link className="link" to="/" onClick={() => setShowInput(false)}>Home</Link></li>
                         <li><Link className="link" to={redirecinadoAnime} onClick={redirecionarPage}>Anime</Link></li>
                         <li><Link className="link" to={redirecinadoManga} onClick={redirecionarPage}>Mangá</Link></li>
-                        <li><Link className="link" to={redirecinadoNoticia} onClick={redirecionarPage}>Noticias</Link></li>
+                        <li><Link className="link" to={redirecinadoNoticias} onClick={redirecionarPageNoti}>Noticias</Link></li>
                     </ul>
                 </div>
                 <div className="container icons">
@@ -140,7 +141,7 @@ export default function Nav() {
                         <Link className="link" to="/" onClick={() => setShowInput(false)}>Home</Link>
                         <Link className="link" to={redirecinadoAnime} onClick={redirecionarPage}>Anime</Link>
                         <Link className="link" to={redirecinadoManga} onClick={redirecionarPage}>Mangá</Link>
-                        <Link className="link" to={redirecinadoNoticia} onClick={redirecionarPage}>Noticias</Link>
+                        <Link className="link" to={redirecinadoNoticias} onClick={redirecionarPage}>Noticias</Link>
                     </div>
                     <div className="links_and_buttons">
                         {usuarioMobile(() => { })}
@@ -151,7 +152,6 @@ export default function Nav() {
                             onClick={() => {
                                 themeAnimation === "0deg" ? setThemeAnimation("160deg") : setThemeAnimation("0deg")
                                 themePage === lightTheme ? setTheme(darkTheme) : setTheme(lightTheme)
-                                // theme === null ? localStorage.setItem('theme', false) : localStorage.setItem('theme', true)
 
                                 if (localStorage.getItem('theme') === "false") {
                                     localStorage.setItem('theme', "true")

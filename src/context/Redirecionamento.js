@@ -19,9 +19,9 @@ export const RedirectProvider = (props) => {
             return "/login"
         }
     });
-    const [redirecinadoNoticia, setRedirecionadoNoticia] = useState(() => {
-        if(localStorage.getItem('noticiasLink')){
-            return localStorage.getItem('noticiasLink')
+    const [ redirecinadoNoticias, setRedirecionadoNoticias ] = useState(() => {
+        if(localStorage.getItem('notLink')){
+            return localStorage.getItem('notLink')
         }else{
             return "/login"
         }
@@ -31,7 +31,7 @@ export const RedirectProvider = (props) => {
     
 
 return (
-<RedirectContext.Provider value={{ redirecinadoAnime, setRedirecionadoAnime, redirecinadoManga, setRedirecionadoManga, redirecinadoNoticia, setRedirecionadoNoticia}}>
+<RedirectContext.Provider value={{ redirecinadoAnime, setRedirecionadoAnime, redirecinadoManga, setRedirecionadoManga,  redirecinadoNoticias, setRedirecionadoNoticias  }}>
     {props.children}
 </RedirectContext.Provider>
 );
