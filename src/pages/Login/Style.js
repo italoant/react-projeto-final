@@ -93,7 +93,7 @@ export const Formulario = styled.form`
     @media (max-width: 1326px){
         width: 50%;
 
-        .campos-form input{
+        .campos-form input,.campos-form select, .campos-form textarea{
             width: 33vw;
         }
     }
@@ -109,7 +109,7 @@ export const Formulario = styled.form`
             font-size: 60px;
         }
 
-        .campos-form input{
+        .campos-form input, .campos-form select, .campos-form textarea{
             width: 36vw;
         }
     }
@@ -117,7 +117,7 @@ export const Formulario = styled.form`
     @media (max-width: 862px){
         width: 60%;
 
-        .campos-form input{
+        .campos-form input, .campos-form select, .campos-form textarea{
             width: 39vw;
         }
     }
