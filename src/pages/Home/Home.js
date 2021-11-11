@@ -74,9 +74,13 @@ export default function Home() {
                                 <p>{error.p}</p>
                             </div>
                             {responseReviwAnime.map(resp => {
-                                return <div><Link to="/anime_page" onClick={() => {
-                                    localStorage.setItem('anime', JSON.stringify(resp));
-                                }}><img src={resp.attributes.posterImage.small} /></Link></div>
+                                return <div className="container_response">
+                                    <Link to="/anime_page" onClick={() => {
+                                        localStorage.setItem('anime', JSON.stringify(resp));
+                                    }}>
+                                    <img src={resp.attributes.posterImage.small} /></Link>
+                                    <p>{resp.attributes.titles.en_jp || resp.attributes.titles.en || resp.attributes.titles.en_us}</p>     
+                                </div>
                             })}
                         </div>
                         {loading === false ? (<div className="bg-loading"><img className="loading"  src={Loading}/></div>) : (null)}
@@ -93,6 +97,7 @@ export default function Home() {
                                 }}>
                                     <img src={resp.attributes.posterImage.small} />
                                 </Link>
+                                <p>{resp.attributes.titles.en_jp || resp.attributes.titles.en || resp.attributes.titles.en_us}</p>     
                             </div>
                         })}
                     </div>

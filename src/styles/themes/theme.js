@@ -2,7 +2,7 @@ export const lightTheme = {
     name: "light",
     backgroundPrimary: "linear-gradient(rgba(254, 133, 138, 80), rgba(254, 133, 138, 40),  rgba(254, 133, 138, 20), rgba(254, 133, 138, 10)   ,rgba(254, 133, 138, 2));",
     backgroundSecondary: "#FFFFFF",
-    textColor: "#FE858A",
+    textColor: "rgba(85, 72, 76, 0.9)",
     borderColor: "#FE858A",
     backgroundForm: "linear-gradient(to bottom , pink, var(--pink1), var(--pink1), var(--pink1),var(--pink1));"
 }
