@@ -45,11 +45,6 @@ export default function Manga(){
         mangaSort()
     },[]);
 
-
-    function setTime(){
-        
-    }
-
     const { themePage} = useTheme();
 
     function retornoManga(){
