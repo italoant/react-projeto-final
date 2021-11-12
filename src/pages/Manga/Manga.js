@@ -102,8 +102,9 @@ export default function Manga() {
 
     return <>
         <Response theme={themePage}>
-            <DivInput class="search-box">
-                <div theme={themePage}>{showInputManga === true ? <input class="search-txt" type="search" placeholder="Ex: Naruto" onChange={(e) => setSearchManga(e.target.value)} /> : null}
+            <DivInput theme={themePage}>
+                <div theme={themePage}  class="search-box">
+                    {showInputManga === true ? <input class="search-txt" type="search" placeholder="Ex: Naruto" onChange={(e) => setSearchManga(e.target.value)} /> : null}
                     <a class="search-btn" href="#">
                     </a>
                 </div>

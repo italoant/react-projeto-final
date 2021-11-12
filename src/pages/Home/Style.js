@@ -151,33 +151,41 @@ export const Response = styled.article`
 `;
 
 export const DivInput = styled.div`
-    
-    display: flex;
-    justify-content: flex-end;
     width: 100vw;
-    background: ${props => props.theme.backgroundSecondary};
+    margin: 1%;
+    background: ${props => props.theme.backgroundPrimaryButton};
     padding: 0 3rem;
 
     
     .search-box{
-    background:rgb(219, 157, 219);
-    height: 40px;
-    border-radius: 40px;
-    padding: 10px;
+    position: absolute;
+    padding: 0 0.5rem;
+    right: 5vw;
+    background: rgba(241, 110, 165, 0.2);
+    height: 5vh;
+    border-radius: 4px;
+    border: 1px solid ${props => props.theme.borderColor};
 }
 
+    .search-txt{
+        border: none;
+        text-align: justify;
+    }
+
     :hover .search-txt{
-    width: 240px;
+    width: 10vw;
     padding: 0 6px;
 }
     :hover .search-btn{
-    background: rgb(182, 188, 206);
+    background: ${props => props.theme.borderColor};
 }
     .search-btn{
+    position: absolute;
+    top: 0.7vh;
+    right: 0.5vw;
     color: teal;
-    float: right;
-    width: 40px;
-    height: 40px;
+    width: 2rem;
+    height: 2rem;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -186,15 +194,19 @@ export const DivInput = styled.div`
 }
 
     .search-txt{
-    border: none;
+    border-radius: 4px;
     background: none;
+    margin: 1%;
     outline: none;
     float: left;
-    padding: 0;
+    padding: 0rem 1rem;
     color: white;
-    font-size: 16px;
+    font-size: 1rem;
     transition: 0.4s;
     line-height: 40px;
     width: 0px;
+    ::placeholder{
+     color: ${props => props.theme.textColor};
 }
+
 `;

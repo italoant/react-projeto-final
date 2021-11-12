@@ -95,7 +95,7 @@ export default function Anime() {
 
     return (<>
         <Response theme={themePage}>
-            <DivInput>
+            <DivInput theme={themePage}>
                 <div class="search-box">
                     <div theme={themePage}>{showInputAnime === true ? <input class="search-txt" type="search" placeholder="Ex: Dragon" onChange={(e) => setSearchAnime(e.target.value)} /> : null}
                         <a class="search-btn" href="#">
