@@ -17,16 +17,19 @@ function AnimePagina(){
   return(
     <Main theme={themePage}>
       <div className="post_image_div">
-          <img src={resposta.attributes.posterImage.small} className="card_image"/>
+          
       </div>
       <img className="banner" src={resposta.attributes.coverImage === null ? (imgNotFound) : (resposta.attributes.coverImage.small)} />
       <div className="subtitle">
-          <h1>{resposta.attributes.titles.en_jp || resposta.attributes.titles.en || resposta.attributes.titles.en_us}</h1>
-          <p className="tipo">Tipo: {resposta.type === "anime" ? ("Anime") : ("Manga")}</p>
-          <p>Data de início: {dateBrStart}</p>
-          <p>{resposta.attributes.synopsis}</p>
-          <p>{resposta.attributes.ageRatingGuide}</p>
-          <p>Status: {resposta.attributes.status === "finished" ? ("finalizado") : ("Atual")}</p>
+          <img src={resposta.attributes.posterImage.small} className="card_image"/>
+          <div>
+            <h1>{resposta.attributes.titles.en_jp || resposta.attributes.titles.en || resposta.attributes.titles.en_us}</h1>
+            <p className="tipo">Tipo: {resposta.type === "anime" ? ("Anime") : ("Manga")}</p>
+            <p>Data de início: {dateBrStart}</p>
+            <p className="subtitle_synopsis">{resposta.attributes.synopsis}</p>
+            <p>{resposta.attributes.ageRatingGuide}</p>
+            <p>Status: {resposta.attributes.status === "finished" ? ("finalizado") : ("Atual")}</p>
+          </div>
       </div>
     </Main>
   );

@@ -15,6 +15,7 @@ import Nav from './components/Nav/Nav';
 import Footer from './components/Footer/Footer';
 import AnimePage from './pages/AnimePage/AnimePage';
 import MangaPage from './pages/MangaPage/MangaPage';
+import Perfil from './pages/Perfil/Perfil';
 
 import Contato from './components/Footer/pagFooter/Contato/Contato';
 import Equipe from './components/Footer/pagFooter/Equipe/Equipe';
@@ -44,6 +45,7 @@ function App() {
                 <Route path="/cadastro" component={Cadastro}></Route>
                 <Route path="/anime_page" component={AnimePage}></Route>
                 <Route path="/manga_page" component={MangaPage}></Route>
+                <Route path="/perfil" component={Perfil}></Route>
             
                 <Route path="/contato" component={Contato}></Route>
                 <Route path="/equipe" component={Equipe}></Route>

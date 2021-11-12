@@ -8,6 +8,13 @@ export const Main = styled.main`
     flex-direction: column;
     align-items: center;
     
+    .subtitle_synopsis {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 12;
+        -webkit-box-orient: vertical;
+    }
 
     .loading {
         width: 300px;
@@ -28,29 +35,30 @@ export const Main = styled.main`
     .banner {   
         width: 100%;
         height: 40vh;
-        margin-bottom: 7rem;
+        margin-bottom: 3rem;
         opacity: 20px;
     }
 
     .card_image {
         border-radius: 2rem;
-        position: absolute;
-        margin-top: 2rem;
         width: 250px;
-
     }  
+
+    p {
+        text-align: justify;
+    }
 
     .subtitle {
         margin: auto 1rem;
-        height: 100vh;
+        max-height: 100vh;
         max-width: 800px;
-
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2rem;
         font-weight: 400;
 
-        
-        ::-webkit-scrollbar {
-            width: 0px;
-        }
+        margin-bottom: 3rem;
     }
 
     .post_image_div {
@@ -60,11 +68,13 @@ export const Main = styled.main`
     }
 
     @media(max-width: 840px){
+
         .banner {
             height: 20vh;
+            margin-bottom: 1rem;
         }
         .card_image {
-            width: 150px;
+            display: none;
         }
 
         .subtitle {

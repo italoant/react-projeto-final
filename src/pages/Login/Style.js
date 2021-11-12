@@ -54,8 +54,8 @@ export const Formulario = styled.form`
         padding: 15px;
         width: 25vw;
         min-height: 6vh;
-        border-radius: 20px;
         border: none;
+        border-radius: 10px;
         background-color: #FFFFFF;
         color: #A9A9A9;
         outline: none;
@@ -186,7 +186,7 @@ export const Formulario = styled.form`
 export const Botao = styled.button`
         margin: 20px;
         width: 11.5vw;
-        border-radius: 25px;
+        border-radius: 10px;
         border: none;
         color: #FFFFFF;
         height: 6vh;
