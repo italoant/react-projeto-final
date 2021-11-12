@@ -52,7 +52,7 @@ export const Response = styled.article`
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        min-height: 100vh;
+        min-height: 85vh;
     }
 
     .no-height {
@@ -133,4 +133,22 @@ export const Response = styled.article`
     
 
    
+`;
+
+export const DivInput = styled.div`
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+
+    input{
+        border-radius: 4px;
+        text-align: center;
+        border: 0.5px solid #FE858A;
+        width: 18vw;
+        height: 3.5vh;
+        margin: 1%;
+    }
+    input::placeholder{
+        color: black;
+    }
 `;
