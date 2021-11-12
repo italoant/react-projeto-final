@@ -16,11 +16,9 @@ import { RedirectContext } from "../../context/Redirecionamento"
 export default function Nav() {
 
 
-    const { showInputAnime, setShowInputAnime } = useContext(InputContext);
-    const { showInputManga, setShowInputManga } = useContext(InputContext);
+    const { setShowInputAnime } = useContext(InputContext);
+    const { setShowInputManga } = useContext(InputContext);
     const { showUser, setShowUser } = useContext(InputContext);
-    const { setSearchAnime } = useContext(InputContext);
-    const { setSearchManga } = useContext(InputContext);
 
     const [display, setDisplay] = useState("none");
     const [themeAnimation, setThemeAnimation] = useState("0deg");
@@ -130,8 +128,7 @@ export default function Nav() {
                     </ul>
                 </div>
                 <div className="containerInput">
-                         {showInputAnime === true ? <input type="search" placeholder="Ex: Dragon" onChange={(e) => setSearchAnime(e.target.value)} /> : null}
-                        {showInputManga === true ? <input type="search" placeholder="Ex: Naruto" onChange={(e) => setSearchManga(e.target.value)} /> : null}
+                        
                 </div>
                 <div className="container icons">
                     <ul className="container_nav ">

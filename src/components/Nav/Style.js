@@ -31,22 +31,7 @@ export const Header = styled.header`
         width: 65vw;
         padding: 0;
     }
-    .containerInput{
-        width: 40vw;
-    }
 
-    input{
-        border-radius: 6px;
-        background-color: #FE858A;
-        text-align: center;
-        border: 1px solid #FE858A;
-        width: 15vw;
-        height: 3.5vh;
-        margin: 0 auto;
-    }
-    input::placeholder{
-        color: white;
-    }
     .icons {
         justify-content: flex-end;
 
@@ -81,9 +66,6 @@ export const Header = styled.header`
     }
 
     @media(max-width: 997px){
-        input {
-            width: 9vw;
-        }
         .container.icons{
         width: 83vw;
         padding: 0;
@@ -110,13 +92,7 @@ export const Header = styled.header`
             img {
                 width: 35px;
             }   
-        }
-        input{
-            margin: 0 auto;
-            width: 20vw;
-        }
-
-        
+        }        
     }
 
     @media(min-width: 935px){
