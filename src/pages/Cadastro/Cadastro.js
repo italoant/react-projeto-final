@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import { ContainerForm, Formulario, Botao } from '../Login/Style';
 import { Modal } from './../../components/Components';
 
+import { useTheme } from "../../context/Theme";
+
+
 export default function Cadastro(){
 
     const [nome, setNome] = useState ("");
@@ -40,7 +43,7 @@ export default function Cadastro(){
 
     return(
         <div>
-            <ContainerForm>
+            <ContainerForm theme={themePage}>
                 <Formulario>    
                     <div className="container">
                         <h1>Cadastro</h1>

@@ -16,11 +16,9 @@ import { RedirectContext } from "../../context/Redirecionamento"
 export default function Nav() {
 
 
-    const { showInputAnime, setShowInputAnime } = useContext(InputContext);
-    const { showInputManga, setShowInputManga } = useContext(InputContext);
+    const { setShowInputAnime } = useContext(InputContext);
+    const { setShowInputManga } = useContext(InputContext);
     const { showUser, setShowUser } = useContext(InputContext);
-    const { setSearchAnime } = useContext(InputContext);
-    const { setSearchManga } = useContext(InputContext);
 
     const [display, setDisplay] = useState("none");
     const [themeAnimation, setThemeAnimation] = useState("0deg");
@@ -36,18 +34,17 @@ export default function Nav() {
     function usuario() {
         if (showUser === "") {
             return <div>
-                    <Link to="/login" onClick={() => setShowInputAnime(false), setShowInputManga(false)}><ButtonPopUp color="#F16EA5" witdh="100px" margin=".7rem">Login</ButtonPopUp></Link>
-                <Link to="/cadastro" onClick={() => setShowInputAnime(false), setShowInputManga(false)}><ButtonPopUp color="#FE6688" witdh="100px" margin=".7rem">Cadastro</ButtonPopUp></Link>
+                    <Link to="/login" onClick={() => setShowInputAnime(false), setShowInputManga(false)}><ButtonPopUp theme={themePage} witdh="100px" margin=".7rem">Login</ButtonPopUp></Link>
+                <Link to="/cadastro" onClick={() => setShowInputAnime(false), setShowInputManga(false)}><ButtonPopUp theme={themePage} witdh="100px" margin=".7rem">Cadastro</ButtonPopUp></Link>
             </div>
         } else {
-            // setRedirecionadoNoticias("/noticias")
             localStorage.setItem('user', showUser)
             localStorage.setItem('animeLink', redirecinadoAnime)
             localStorage.setItem('mangaLink', redirecinadoManga)
             localStorage.setItem('notLink', redirecinadoNoticias)
             return <Usuario>
                 <p>Olá, {showUser}</p>
-                <ButtonPopUp color="#F16EA5">Perfil</ButtonPopUp> <Link to=""><ButtonPopUp color="#FE6688" onClick={removeUser}>Sair</ButtonPopUp></Link>
+                <ButtonPopUp theme={themePage} >Perfil</ButtonPopUp> <Link to=""><ButtonPopUp theme={themePage} onClick={removeUser}>Sair</ButtonPopUp></Link>
             </Usuario>
         }
     }
@@ -55,8 +52,8 @@ export default function Nav() {
     function usuarioMobile() {
         if (showUser === "") {
             return <>
-                <Link to="/login" onClick={() => setShowInputAnime(false), setShowInputManga(false)}><ButtonPopUp color="#F16EA5" >Login</ButtonPopUp></Link>
-                <Link to="/cadastro" onClick={() => setShowInputAnime(false), setShowInputManga(false)}><ButtonPopUp color="#FE6688" >Cadastro</ButtonPopUp></Link>
+                <Link to="/login" onClick={() => setShowInputAnime(false), setShowInputManga(false)}><ButtonPopUp theme={themePage}>Login</ButtonPopUp></Link>
+                <Link to="/cadastro" onClick={() => setShowInputAnime(false), setShowInputManga(false)}><ButtonPopUp theme={themePage}>Cadastro</ButtonPopUp></Link>
             </>
 
         } else {
@@ -67,7 +64,7 @@ export default function Nav() {
             localStorage.setItem('notLink', redirecinadoNoticias)
             return <Usuario>
                 <p>Olá, {showUser}</p>
-                <ButtonPopUp color="#F16EA5">Perfil</ButtonPopUp> <Link to=""><ButtonPopUp color="#FE6688" onClick={removeUser}>Sair</ButtonPopUp></Link>
+                <ButtonPopUp theme={themePage} >Perfil</ButtonPopUp> <Link to=""><ButtonPopUp theme={themePage} onClick={removeUser}>Sair</ButtonPopUp></Link>
             </Usuario>
         }
     }
@@ -130,8 +127,7 @@ export default function Nav() {
                     </ul>
                 </div>
                 <div className="containerInput">
-                        {showInputAnime === true ? <input type="search" placeholder="Ex: Dragon" onChange={(e) => setSearchAnime(e.target.value)} /> : null}
-                        {showInputManga === true ? <input type="search" placeholder="Ex: Naruto" onChange={(e) => setSearchManga(e.target.value)} /> : null}
+                        
                 </div>
                 <div className="container icons">
                     <ul className="container_nav ">

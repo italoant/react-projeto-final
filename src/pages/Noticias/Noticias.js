@@ -1,10 +1,14 @@
 import React from "react";
 import { EstiloNoticia } from "./Style";
 import { H1Style } from "../../components/Components";
+import { useTheme } from "../../context/Theme";
 
 export default function Noticias(){
+
+    const { themePage } = useTheme();
+
     return(
-        <EstiloNoticia>
+        <EstiloNoticia theme={themePage} >
             <div className="noticias">
                 <div className="right">
                     <H1Style> Noticias atuais </H1Style>

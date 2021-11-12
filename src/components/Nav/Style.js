@@ -8,6 +8,10 @@ export const Header = styled.header`
     background: ${props => props.theme.backgroundPrimary}; 
     opacity: 80%;
 
+    a {
+        font-size: 1rem;
+    }
+
     .container {
         display: flex;
         justify-content: flex-start;
@@ -31,22 +35,7 @@ export const Header = styled.header`
         width: 65vw;
         padding: 0;
     }
-    .containerInput{
-        width: 40vw;
-    }
 
-    input{
-        border-radius: 6px;
-        background-color: #FE858A;
-        text-align: center;
-        border: 1px solid #FE858A;
-        width: 15vw;
-        height: 3.5vh;
-        margin: 0 auto;
-    }
-    input::placeholder{
-        color: white;
-    }
     .icons {
         justify-content: flex-end;
 
@@ -81,9 +70,6 @@ export const Header = styled.header`
     }
 
     @media(max-width: 997px){
-        input {
-            width: 9vw;
-        }
         .container.icons{
         width: 83vw;
         padding: 0;
@@ -110,13 +96,7 @@ export const Header = styled.header`
             img {
                 width: 35px;
             }   
-        }
-        input{
-            margin: 0 auto;
-            width: 20vw;
-        }
-
-        
+        }        
     }
 
     @media(min-width: 935px){
@@ -132,7 +112,7 @@ export const ButtonPopUp = styled.button`
     margin: ${props => props.margin};
     border: none;
     border-radius: 6px;
-    background-color: ${props => props.color};
+    background: ${props => props.theme.backgroundPrimaryButton};
     color: white;
 `;
     
@@ -167,7 +147,6 @@ export const NavMobile = styled.nav`
         gap: 1rem;
 
         p {
-            border: 1px solid white;
             border-radius: 2rem;
         }
 

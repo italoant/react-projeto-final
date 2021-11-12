@@ -1,12 +1,15 @@
 import React from 'react';
 import { H1Style, Modal } from '../../../Components';
 import { ContainerForm, Formulario, Botao } from '../../../../pages/Login/Style';
+import { useTheme } from "../../../../context/Theme";
+
 
 export default function Contato() {
 
+    const { themePage } = useTheme();
 
     return (
-        <ContainerForm>
+        <ContainerForm theme={themePage}>
             <H1Style> Entre em contato </H1Style>
                     <Formulario>
                         <div className="containerForm">

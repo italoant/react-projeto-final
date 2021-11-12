@@ -10,9 +10,18 @@ function AnimePagina(){
 
   const anime = localStorage.getItem('anime');
   const resposta = JSON.parse(anime);
+
+  var startDate = "";
+  var dateBrStart = "";
   
-  var startDate = resposta.attributes.startDate.split("-");
-  var dateBrStart = `${startDate[2]}/${startDate[1]}/${startDate[0]}`
+  if(resposta.attributes.startDate === null){
+    startDate = "Data indisponível";
+  }else{
+    startDate = resposta.attributes.startDate.split("-");
+    dateBrStart = `${startDate[2]}/${startDate[1]}/${startDate[0]}`
+  }
+
+  
 
   return(
     <Main theme={themePage}>
@@ -25,7 +34,7 @@ function AnimePagina(){
           <div>
             <h1>{resposta.attributes.titles.en_jp || resposta.attributes.titles.en || resposta.attributes.titles.en_us}</h1>
             <p className="tipo">Tipo: {resposta.type === "anime" ? ("Anime") : ("Manga")}</p>
-            <p>Data de início: {dateBrStart}</p>
+            <p>Data de lançamento: {startDate === "Data indisponível" ? (startDate) : (dateBrStart)}</p>
             <p className="subtitle_synopsis">{resposta.attributes.synopsis}</p>
             <p>{resposta.attributes.ageRatingGuide}</p>
             <p>Status: {resposta.attributes.status === "finished" ? ("finalizado") : ("Atual")}</p>

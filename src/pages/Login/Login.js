@@ -3,7 +3,9 @@ import { Redirect } from 'react-router-dom';
 import { ContainerForm, Formulario, Botao } from './Style';
 import { Link } from 'react-router-dom';
 import { InputContext } from "../../context/Input";
-import { RedirectContext } from "../../context/Redirecionamento"
+import { RedirectContext } from "../../context/Redirecionamento";
+import { useTheme } from "../../context/Theme";
+
 
 export default function Login(){
 
@@ -15,6 +17,9 @@ export default function Login(){
 
     const { setRedirecionadoAnime } = useContext(RedirectContext);
     const { setRedirecionadoManga } = useContext(RedirectContext);
+
+    const { themePage } = useTheme();
+
 
     //Validação do formulário de login
 
@@ -48,7 +53,7 @@ export default function Login(){
 
 
     return(
-        <ContainerForm>
+        <ContainerForm theme={themePage}> 
             <Formulario>
                 <h1>Login</h1>
                 <section className="campos-form">

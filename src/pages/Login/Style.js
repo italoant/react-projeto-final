@@ -2,11 +2,12 @@ import styled from "styled-components";
 
 
 export const ContainerForm = styled.div`
-    display: flex;  
+    display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    /* height: 100vh; */
+    background: ${props => props.theme.backgroundSecondary};
+    height: 100vh; 
 `
 
 export const Formulario = styled.form`
@@ -38,6 +39,7 @@ export const Formulario = styled.form`
     }
 
     .mensagem{
+        font-size: 1.3rem;
         margin-top: 1.5vh;
         color: #FF0000;
     }

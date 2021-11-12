@@ -33,6 +33,7 @@ export const Response = styled.article`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-bottom: 1rem;
 
 
     background-color: ${props => props.theme.backgroundSecondary};
@@ -47,11 +48,16 @@ export const Response = styled.article`
         }
     }
 
+    h2 {
+        color: ${props => props.theme.textColor};
+    }
+
     aside {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        min-height: 100vh;
+        align-items: center;
+        min-height: 85vh;
     }
 
     .no-height {
@@ -142,4 +148,25 @@ export const Response = styled.article`
     }
 
    
+`;
+
+export const DivInput = styled.div`
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+    background: ${props => props.theme.backgroundSecondary};
+    padding: 0 3rem;
+
+    input{
+        border-radius: 4px;
+        padding: 0rem 1rem;
+        border: 0.5px solid #FE858A;
+        width: 200px;
+        height: 5vh;
+        margin: 1%;
+        outline: none;
+    }
+    input::placeholder{
+        color: black;
+    }
 `;
