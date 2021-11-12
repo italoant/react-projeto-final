@@ -51,12 +51,16 @@ export const Response = styled.article`
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
         min-height: 100vh;
     }
 
     .no-height {
         min-height: 0;
+        margin-top: 2rem;
+
+        h1 {
+            font-size: 2.5rem;
+        }
     }
 
     .loading {
@@ -75,6 +79,7 @@ export const Response = styled.article`
         justify-content: center;
         align-items: center;
         top: 0;
+        left: 0;
         background-color: rgba(0, 0, 0, 0.5);
     }
 
@@ -130,7 +135,11 @@ export const Response = styled.article`
         transform: scale(1.05);
     }
 
-    
+    @media(max-width: 840px){
+        aside {
+            align-items: center;
+        }
+    }
 
    
 `;
