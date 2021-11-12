@@ -70,7 +70,7 @@ export default function Home() {
             return <Container theme={themePage}>
                 <div id="carrossel">
                     <Carrossel />
-                </div>
+                </div> 
                 <Response theme={themePage} displayErro={displayError}>
                     <aside className="no-height">
                         {loading === true ? (<h1>Animes</h1>) : (null)}

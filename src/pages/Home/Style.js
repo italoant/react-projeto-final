@@ -152,21 +152,65 @@ export const Response = styled.article`
 
 export const DivInput = styled.div`
     width: 100vw;
-    display: flex;
-    justify-content: flex-end;
-    background: ${props => props.theme.backgroundSecondary};
+    margin: 1%;
+    background: ${props => props.theme.backgroundPrimaryButton};
     padding: 0 3rem;
 
-    input{
-        border-radius: 4px;
-        padding: 0rem 1rem;
-        border: 0.5px solid #FE858A;
-        width: 200px;
-        height: 5vh;
-        margin: 1%;
-        outline: none;
+    
+    .search-box{
+    position: absolute;
+    padding: 0 0.5rem;
+    right: 5vw;
+    background: rgba(241, 110, 165, 0.3);
+    height: 4vh;
+    border-radius: 4px;
+    border: 1px solid ${props => props.theme.borderColor};  
+    .search-btn{
+        color: white;   
+        height: 2.5vh;
     }
-    input::placeholder{
-        color: black;
+}
+
+    .search-txt{
+        border: none;
+        text-align: justify;
+    }
+
+    :hover .search-txt{
+    width: 10vw;
+    padding: 0 10px;
+}
+    .search-btn{
+    position: absolute;
+    top: 0.7vh;
+    right: 0.5vw;
+    color: teal;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+    .search-txt{
+    border-radius: 4px;
+    background: none;
+    margin: 1%;
+    outline: none;
+    float: left;
+    padding: 0rem 1rem;
+    color: white;
+    font-size: 1rem;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+    ::placeholder{
+     color: ${props => props.theme.textColor};
+    }
+}
+    @media (max-width: 840px){
+        
     }
 `;
