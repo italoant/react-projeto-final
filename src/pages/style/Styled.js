@@ -57,6 +57,8 @@ export const Main = styled.main`
         align-items: flex-start;
         gap: 2rem;
         font-weight: 400;
+        font-size: 1.2rem;
+
 
         margin-bottom: 3rem;
     }

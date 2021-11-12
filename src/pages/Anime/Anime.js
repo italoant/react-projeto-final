@@ -32,9 +32,6 @@ export default function Anime() {
         }).catch(erro => { console.log("erro") })
     }
    
-
-
-
     function animeSort(){
         api.get(`/anime?sort=-popularityRank`)
             .then((response) => { 

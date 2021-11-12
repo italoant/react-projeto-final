@@ -132,7 +132,7 @@ export const ButtonPopUp = styled.button`
     margin: ${props => props.margin};
     border: none;
     border-radius: 6px;
-    background-color: ${props => props.color};
+    background: ${props => props.theme.backgroundPrimaryButton};
     color: white;
 `;
     
@@ -167,7 +167,6 @@ export const NavMobile = styled.nav`
         gap: 1rem;
 
         p {
-            border: 1px solid white;
             border-radius: 2rem;
         }
 
