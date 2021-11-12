@@ -34,8 +34,8 @@ export default function Nav() {
     function usuario() {
         if (showUser === "") {
             return <div>
-                    <Link to="/login" onClick={() => setShowInputAnime(false), setShowInputManga(false)}><ButtonPopUp color="#F16EA5" witdh="100px" margin=".7rem">Login</ButtonPopUp></Link>
-                <Link to="/cadastro" onClick={() => setShowInputAnime(false), setShowInputManga(false)}><ButtonPopUp color="#FE6688" witdh="100px" margin=".7rem">Cadastro</ButtonPopUp></Link>
+                    <Link to="/login" onClick={() => setShowInputAnime(false), setShowInputManga(false)}><ButtonPopUp theme={themePage} witdh="100px" margin=".7rem">Login</ButtonPopUp></Link>
+                <Link to="/cadastro" onClick={() => setShowInputAnime(false), setShowInputManga(false)}><ButtonPopUp theme={themePage} witdh="100px" margin=".7rem">Cadastro</ButtonPopUp></Link>
             </div>
         } else {
             localStorage.setItem('user', showUser)
@@ -44,7 +44,7 @@ export default function Nav() {
             localStorage.setItem('notLink', redirecinadoNoticias)
             return <Usuario>
                 <p>Olá, {showUser}</p>
-                <ButtonPopUp color="#F16EA5">Perfil</ButtonPopUp> <Link to=""><ButtonPopUp color="#FE6688" onClick={removeUser}>Sair</ButtonPopUp></Link>
+                <ButtonPopUp theme={themePage} >Perfil</ButtonPopUp> <Link to=""><ButtonPopUp theme={themePage} onClick={removeUser}>Sair</ButtonPopUp></Link>
             </Usuario>
         }
     }
@@ -52,8 +52,8 @@ export default function Nav() {
     function usuarioMobile() {
         if (showUser === "") {
             return <>
-                <Link to="/login" onClick={() => setShowInputAnime(false), setShowInputManga(false)}><ButtonPopUp color="#F16EA5" >Login</ButtonPopUp></Link>
-                <Link to="/cadastro" onClick={() => setShowInputAnime(false), setShowInputManga(false)}><ButtonPopUp color="#FE6688" >Cadastro</ButtonPopUp></Link>
+                <Link to="/login" onClick={() => setShowInputAnime(false), setShowInputManga(false)}><ButtonPopUp theme={themePage}>Login</ButtonPopUp></Link>
+                <Link to="/cadastro" onClick={() => setShowInputAnime(false), setShowInputManga(false)}><ButtonPopUp theme={themePage}>Cadastro</ButtonPopUp></Link>
             </>
 
         } else {
@@ -64,7 +64,7 @@ export default function Nav() {
             localStorage.setItem('notLink', redirecinadoNoticias)
             return <Usuario>
                 <p>Olá, {showUser}</p>
-                <ButtonPopUp color="#F16EA5">Perfil</ButtonPopUp> <Link to=""><ButtonPopUp color="#FE6688" onClick={removeUser}>Sair</ButtonPopUp></Link>
+                <ButtonPopUp theme={themePage} >Perfil</ButtonPopUp> <Link to=""><ButtonPopUp theme={themePage} onClick={removeUser}>Sair</ButtonPopUp></Link>
             </Usuario>
         }
     }

@@ -16,8 +16,15 @@ export default function Anime(){
     const manga = localStorage.getItem('manga');
     const resposta = JSON.parse(manga);
 
-    var startDate = resposta.attributes.startDate.split("-");
-    var dateBrStart = `${startDate[2]}/${startDate[1]}/${startDate[0]}`
+    var startDate = "";
+    var dateBrStart = "";
+    
+    if(resposta.attributes.startDate === null){
+        startDate = "Data indisponível";
+    }else{
+        startDate = resposta.attributes.startDate.split("-");
+        dateBrStart = `${startDate[2]}/${startDate[1]}/${startDate[0]}`
+    }
 
     return(
         <Main theme={themePage}>
@@ -27,7 +34,7 @@ export default function Anime(){
                     <div>
                         <h1>{resposta.attributes.titles.en_jp || resposta.attributes.titles.en || resposta.attributes.titles.en_us}</h1>
                         <p className="tipo">Tipo: {resposta.type === "anime" ? ("Anime") : ("Manga")}</p>
-                        <p>Data de início: {dateBrStart}</p>
+                        <p>Data de lançamento: {startDate === "Data indisponível" ? (startDate) : (dateBrStart)}</p>
 
                         <p>{resposta.attributes.synopsis}</p>
                         <p>{resposta.attributes.ageRatingGuide}</p>

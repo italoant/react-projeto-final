@@ -4,7 +4,9 @@ export const lightTheme = {
     backgroundSecondary: "#FFFFFF",
     textColor: "rgba(85, 72, 76, 0.9)",
     borderColor: "#FE858A",
-    backgroundForm: "linear-gradient(to bottom , pink, var(--pink1), var(--pink1), var(--pink1),var(--pink1));"
+    backgroundForm: "linear-gradient(to bottom , pink, var(--pink1), var(--pink1), var(--pink1),var(--pink1));",
+    backgroundPrimaryButton: "linear-gradient(rgba(85, 72, 76, 80), rgba(85, 72, 76, 40), rgba(85, 72, 76, 20), rgba(85, 72, 76, 10), rgba(85, 72, 76, 2));",
+
 }
 
 export const darkTheme = {
@@ -13,5 +15,6 @@ export const darkTheme = {
     backgroundSecondary: "rgba(85, 72, 76, 0.9)",
     textColor: "#FFFFFF",
     borderColor: "#FFFFFF",
-    backgroundForm: "linear-gradient(to bottom,rgba(85, 72, 76, 80),rgba(85, 72, 76, 80),rgba(85, 72, 76, 80),rgba(85, 72, 76, 80),rgba(85, 72, 76, 40));"
+    backgroundForm: "linear-gradient(to bottom,rgba(85, 72, 76, 80),rgba(85, 72, 76, 80),rgba(85, 72, 76, 80),rgba(85, 72, 76, 80),rgba(85, 72, 76, 40));",
+    backgroundPrimaryButton: "linear-gradient(rgba(254, 133, 138, 80), rgba(254, 133, 138, 40),  rgba(254, 133, 138, 20), rgba(254, 133, 138, 10)   ,rgba(254, 133, 138, 2));",
 }

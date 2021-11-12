@@ -84,8 +84,8 @@ export default function Home() {
                                     <Link to="/login" onClick={() => {
                                         localStorage.setItem('anime', JSON.stringify(resp));
                                     }}>
-                                        <img src={resp.attributes.posterImage.small} /></Link>
-                                    <p>{resp.attributes.titles.en_jp || resp.attributes.titles.en || resp.attributes.titles.en_us}</p>
+                                    <img src={resp.attributes.posterImage.small} /></Link>
+                                    <p className="title_card">{resp.attributes.titles.en_jp || resp.attributes.titles.en || resp.attributes.titles.en_us}</p>     
                                 </div>
                             })}
                         </div>
