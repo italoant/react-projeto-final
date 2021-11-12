@@ -63,10 +63,55 @@ export default function Home() {
     responseReviwAnime = responseAnime.slice(0, 6);
     responseReviwManga = responseManga.slice(0, 6);
 
+   
 
-
-    return (
-        <Container theme={themePage}>
+    function homeLogged(){
+        if (showUser === "") {
+            return <Container theme={themePage}>
+                <div id="carrossel">
+                    <Carrossel />
+                </div> 
+                <Response theme={themePage} displayErro={displayError}>
+                    <aside className="no-height">
+                        {loading === true ? (<h1>Animes</h1>) : (null)}
+                        <div className="resposta_api">
+                            <div className="error">
+                                <h1>{error.h1}</h1>
+                                <p>{error.p}</p>
+                            </div>
+                            {responseReviwAnime.map(resp => {
+                                return <div className="container_response">
+                                    <Link to="/login" onClick={() => {
+                                        localStorage.setItem('anime', JSON.stringify(resp));
+                                    }}>
+                                    <img src={resp.attributes.posterImage.small} /></Link>
+                                    <p className="title_card">{resp.attributes.titles.en_jp || resp.attributes.titles.en || resp.attributes.titles.en_us}</p>     
+                                </div>
+                            })}
+                        </div>
+                        {loading === false ? (<div className="bg-loading"><img className="loading" src={Loading} /></div>) : (null)}
+                    </aside>
+                </Response>
+                <Response theme={themePage}>
+                    <aside className="no-height">
+                        {loading === true ? (<h1>Mangás</h1>) : (null)}
+                        <div className="resposta_api">
+                            {responseReviwManga.map(resp => {
+                                return <div className="container_response">
+                                    <Link to="/login" onClick={() => {
+                                        localStorage.setItem('manga', JSON.stringify(resp));
+                                    }}>
+                                        <img src={resp.attributes.posterImage.small} />
+                                    </Link>
+                                    <p>{resp.attributes.titles.en_jp || resp.attributes.titles.en || resp.attributes.titles.en_us}</p>
+                                </div>
+                            })}
+                        </div>
+                    </aside>
+                </Response>
+            </Container>
+        } else {
+            return <Container theme={themePage}>
                 <div id="carrossel">
                     <Carrossel />
                 </div>
@@ -109,6 +154,10 @@ export default function Home() {
                     </aside>
                 </Response>
             </Container>
+        }
+    }
 
-    );
+
+
+    return (homeLogged());
 };
