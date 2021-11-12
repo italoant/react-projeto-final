@@ -8,6 +8,10 @@ export const Header = styled.header`
     background: ${props => props.theme.backgroundPrimary}; 
     opacity: 80%;
 
+    a {
+        font-size: 1rem;
+    }
+
     .container {
         display: flex;
         justify-content: flex-start;
