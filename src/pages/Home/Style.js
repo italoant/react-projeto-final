@@ -161,10 +161,14 @@ export const DivInput = styled.div`
     position: absolute;
     padding: 0 0.5rem;
     right: 5vw;
-    background: rgba(241, 110, 165, 0.2);
-    height: 5vh;
+    background: rgba(241, 110, 165, 0.3);
+    height: 4vh;
     border-radius: 4px;
-    border: 1px solid ${props => props.theme.borderColor};
+    border: 1px solid ${props => props.theme.borderColor};  
+    .search-btn{
+        color: white;   
+        height: 2.5vh;
+    }
 }
 
     .search-txt{
@@ -174,10 +178,7 @@ export const DivInput = styled.div`
 
     :hover .search-txt{
     width: 10vw;
-    padding: 0 6px;
-}
-    :hover .search-btn{
-    background: ${props => props.theme.borderColor};
+    padding: 0 10px;
 }
     .search-btn{
     position: absolute;
@@ -207,6 +208,9 @@ export const DivInput = styled.div`
     width: 0px;
     ::placeholder{
      color: ${props => props.theme.textColor};
+    }
 }
-
+    @media (max-width: 840px){
+        
+    }
 `;
