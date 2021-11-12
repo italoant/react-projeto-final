@@ -29,13 +29,9 @@ export default function Cadastro(){
         if(validarEmail(emailValor) && (nomeValor != "") && (senhaValor.length >= 6)){
             console.log("ok"+" "+valores.nome)
             setMensagem("Feito")
-            document.getElementById("email").style.boxShadow = "1px 1px 5px green"
             e.preventDefault();
         }else{
             setMensagem("Preencha todos os campos abaixo.")
-            document.getElementById("nome").style.boxShadow = "1px 1px 5px red"
-            document.getElementById("email").style.boxShadow = "1px 1px 5px red"
-            document.getElementById("senha").style.boxShadow = "1px 1px 5px red"
             e.preventDefault();
         }
     }
@@ -61,7 +57,7 @@ export default function Cadastro(){
                             <label htmlFor="data"> Data de Nascimento</label>
                             <input type="date" id="date" className="date" max="2021-12-31"/>
                         </div>
-                        <Botao color="#FE6688" onClick={valicacaoCadastro}> Cadastre-se </Botao>
+                        <Botao color="#FE6688" onClick={valicacaoCadastro}> Cadastrar </Botao>
                     </div>
                 </Formulario>
                 <Modal color="#FE6688" 
