@@ -44,7 +44,9 @@ export default function Nav() {
             localStorage.setItem('notLink', redirecinadoNoticias)
             return <Usuario>
                 <p>Olá, {showUser}</p>
-                <ButtonPopUp theme={themePage} >Perfil</ButtonPopUp> <Link to=""><ButtonPopUp theme={themePage} onClick={removeUser}>Sair</ButtonPopUp></Link>
+                <Link to="/perfil">
+                    <ButtonPopUp theme={themePage} >Perfil</ButtonPopUp>
+                </Link> <Link to=""><ButtonPopUp theme={themePage} onClick={removeUser}>Sair</ButtonPopUp></Link>
             </Usuario>
         }
     }
