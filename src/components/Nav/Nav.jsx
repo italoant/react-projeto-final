@@ -38,7 +38,6 @@ export default function Nav() {
                 <Link to="/cadastro" onClick={() => setShowInputAnime(false), setShowInputManga(false)}><ButtonPopUp color="#FE6688" witdh="100px" margin=".7rem">Cadastro</ButtonPopUp></Link>
             </div>
         } else {
-            // setRedirecionadoNoticias("/noticias")
             localStorage.setItem('user', showUser)
             localStorage.setItem('animeLink', redirecinadoAnime)
             localStorage.setItem('mangaLink', redirecinadoManga)
