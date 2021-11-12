@@ -21,7 +21,9 @@ export default function Manga() {
     const [manga, setManga] = useState([]);
     const [populares, setPopulares] = useState([]);
 
-
+    function searchBugShow(){
+        setTimeout(() => { setLoading(true) }, 3000)
+    }
 
     function mangaFilter() {
         api.get(`/manga?filter[text]=${searchManga}`)
@@ -50,14 +52,18 @@ export default function Manga() {
         mangaSort()
     }, []);
 
+    useEffect(() => {
+        searchBugShow()
+    }, [])
+
 
     const { themePage } = useTheme();
 
     function retornoManga() {
         if (searchManga !== "") {
             return (
-                <div>
-                    {loading === true ? (<h2>Resultados para: {searchManga}</h2>) : (null)}
+                <Response theme={themePage}>
+                    {loading === true ? (<h2>Resultados para Mangá: {searchManga}</h2>) : (null)}
                     <div className="resposta_api">
                         {manga.map(resp => {
                             return <div className="container_response">
@@ -69,13 +75,13 @@ export default function Manga() {
                             </div>
                         })}
                     </div>
-                </div>
+                </Response>
             )
         } else {
             return (
                 <Response theme={themePage}>
                     <aside>
-                        {loading === true ? (<h1>Mais populares</h1>) : (null)}
+                        {loading === true ? (<h1>Mangás mais populares</h1>) : (null)}
 
                         <div className="resposta_api">
                             {populares.map(resp => {

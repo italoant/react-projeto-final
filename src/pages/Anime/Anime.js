@@ -15,9 +15,7 @@ import Loading from '../../assets/loading.png';
 
 export default function Anime() {
 
-    const { searchAnime } = useContext(InputContext);
-    const { showInputAnime } = useContext(InputContext);
-    const { setSearchAnime } = useContext(InputContext);
+    const { searchAnime, showInputAnime, setSearchAnime  } = useContext(InputContext);
 
     const [responseAnime, setResponseAnime] = useState([]);
     const [update, setUpadate] = useState([]);
@@ -55,12 +53,11 @@ export default function Anime() {
     }, []); // requisição sem pesquisa
 
 
-
     function returnSearch() {
         if (searchAnime !== "") {
             return (
-                <>
-                    <h2>Resultados para: {searchAnime}</h2>
+                <Response theme={themePage}>
+                    <h2>Resultados para Anime: {searchAnime}</h2>
                     <div className="resposta_api">
                         {responseAnime.map(resp => {
                             return <div><Link to="/anime_page" onClick={() => {
@@ -69,7 +66,7 @@ export default function Anime() {
                             </div>
                         })}
                     </div>
-                </> // retorno da pesquisa
+                </Response> // retorno da pesquisa
 
             )
         } else {
@@ -78,7 +75,7 @@ export default function Anime() {
                     <Response theme={themePage}>
                         <aside className="page_response">
 
-                            {loading === true ? (<h1>Mais populares</h1>) : (null)}
+                            {loading === true ? (<h1>Animes mais populares</h1>) : (null)}
 
                             <div className="resposta_api">
                                 {update.map(resp => {

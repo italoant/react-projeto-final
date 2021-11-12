@@ -33,6 +33,7 @@ export const Response = styled.article`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding-bottom: 1rem;
 
 
     background-color: ${props => props.theme.backgroundSecondary};
@@ -45,6 +46,10 @@ export const Response = styled.article`
         100% {
             transform: rotate(360deg);
         }
+    }
+
+    h2 {
+        color: ${props => props.theme.textColor};
     }
 
     aside {
@@ -149,14 +154,17 @@ export const DivInput = styled.div`
     width: 100vw;
     display: flex;
     justify-content: flex-end;
+    background: ${props => props.theme.backgroundSecondary};
+    padding: 0 3rem;
 
     input{
         border-radius: 4px;
-        text-align: center;
+        padding: 0rem 1rem;
         border: 0.5px solid #FE858A;
-        width: 18vw;
-        height: 3.5vh;
+        width: 200px;
+        height: 5vh;
         margin: 1%;
+        outline: none;
     }
     input::placeholder{
         color: black;
