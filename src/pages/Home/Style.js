@@ -154,8 +154,9 @@ export const DivInput = styled.div`
     
     display: flex;
     justify-content: flex-end;
-    margin: 1%;
     width: 100vw;
+    background: ${props => props.theme.backgroundSecondary};
+    padding: 0 3rem;
 
     
     .search-box{
