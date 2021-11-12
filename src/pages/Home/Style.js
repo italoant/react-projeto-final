@@ -165,8 +165,9 @@ export const DivInput = styled.div`
     height: 4vh;
     border-radius: 4px;
     border: 1px solid ${props => props.theme.borderColor};  
+    
     .search-btn{
-        color: white;   
+        color:  #FFFFFF;   
         height: 2.5vh;
     }
 }
@@ -178,7 +179,7 @@ export const DivInput = styled.div`
 
     :hover .search-txt{
     width: 10vw;
-    padding: 0 10px;
+    padding: 0px 10px;
 }
     .search-btn{
     position: absolute;
