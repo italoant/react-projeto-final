@@ -38,6 +38,7 @@ export const Formulario = styled.form`
     }
 
     .mensagem{
+        font-size: 1.3rem;
         margin-top: 1.5vh;
         color: #FF0000;
     }
