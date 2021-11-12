@@ -15,7 +15,7 @@ import Loading from '../../assets/loading.png';
 
 export default function Anime() {
 
-    const { searchAnime, showInputAnime, setSearchAnime  } = useContext(InputContext);
+    const { searchAnime, showInputAnime, setSearchAnime } = useContext(InputContext);
 
     const [responseAnime, setResponseAnime] = useState([]);
     const [update, setUpadate] = useState([]);
@@ -33,8 +33,8 @@ export default function Anime() {
                 setTimeout(() => { setLoading(true) }, 3000)
             }).catch(erro => { console.log("erro") })
     }
-   
-    function animeSort(){
+
+    function animeSort() {
         api.get(`/anime?sort=-popularityRank`)
             .then((response) => {
                 setUpadate(response.data.data)
@@ -95,7 +95,13 @@ export default function Anime() {
 
     return (<>
         <Response theme={themePage}>
-            <DivInput theme={themePage}>{showInputAnime === true ? <input type="search" placeholder="Ex: Dragon" onChange={(e) => setSearchAnime(e.target.value)} /> : null}
+            <DivInput>
+                <div class="search-box">
+                    <div theme={themePage}>{showInputAnime === true ? <input class="search-txt" type="search" placeholder="Ex: Dragon" onChange={(e) => setSearchAnime(e.target.value)} /> : null}
+                        <a class="search-btn" href="#">
+                        </a>
+                    </div>
+                </div>
             </DivInput>
             <aside>
                 {returnSearch(() => { })}

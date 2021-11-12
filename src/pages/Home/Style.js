@@ -151,22 +151,49 @@ export const Response = styled.article`
 `;
 
 export const DivInput = styled.div`
-    width: 100vw;
+    
     display: flex;
     justify-content: flex-end;
-    background: ${props => props.theme.backgroundSecondary};
-    padding: 0 3rem;
+    margin: 1%;
+    width: 100vw;
 
-    input{
-        border-radius: 4px;
-        padding: 0rem 1rem;
-        border: 0.5px solid #FE858A;
-        width: 200px;
-        height: 5vh;
-        margin: 1%;
-        outline: none;
-    }
-    input::placeholder{
-        color: black;
-    }
+    
+    .search-box{
+    background:rgb(219, 157, 219);
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+}
+
+    :hover .search-txt{
+    width: 240px;
+    padding: 0 6px;
+}
+    :hover .search-btn{
+    background: rgb(182, 188, 206);
+}
+    .search-btn{
+    color: teal;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+    .search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: white;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+}
 `;

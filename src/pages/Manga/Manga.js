@@ -21,7 +21,7 @@ export default function Manga() {
     const [manga, setManga] = useState([]);
     const [populares, setPopulares] = useState([]);
 
-    function searchBugShow(){
+    function searchBugShow() {
         setTimeout(() => { setLoading(true) }, 3000)
     }
 
@@ -102,8 +102,11 @@ export default function Manga() {
 
     return <>
         <Response theme={themePage}>
-            <DivInput theme={themePage}>
-            {showInputManga === true ? <input type="search" placeholder="Ex: Naruto" onChange={(e) => setSearchManga(e.target.value)} /> : null}
+            <DivInput class="search-box">
+                <div theme={themePage}>{showInputManga === true ? <input class="search-txt" type="search" placeholder="Ex: Naruto" onChange={(e) => setSearchManga(e.target.value)} /> : null}
+                    <a class="search-btn" href="#">
+                    </a>
+                </div>
             </DivInput>
             <aside>
                 {retornoManga(() => { })}
