@@ -7,7 +7,7 @@ export const Container = styled.div`
     justify-content: space-evenly;
     align-items: center;
     background: ${props => props.theme.backgroundSecondary};
-    height: 100vh; 
+    height: 150vh; 
     padding-top: 60vh;
     padding-bottom: 60vh;
 

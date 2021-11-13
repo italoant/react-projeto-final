@@ -79,7 +79,7 @@ export default function Cadastro(){
                         botaoPop="testePOP"
                         mensagem="Boas-Vindas ao PanimE"
                         mensagem2="ようこそ"
-                    /> 
+                /> 
             </Container>
             
         </div>
