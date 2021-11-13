@@ -24,7 +24,7 @@ export default function Footer(){
             </div>
             <div className="copyright"> 
                 <p className="copyright">
-                &copy; 2021 Copyright - As panteras Cor de Rosa
+                &copy; 2021 Copyright - As Panteras Cor de Rosa
                 </p> 
             </div>
         </Style>

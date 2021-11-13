@@ -42,7 +42,7 @@ export default function Sobre() {
                 </div>
             </div>
             <div className="bot">
-                <h5> Para mais informações sobre os desenvolvedores </h5>
+                <h6> Para mais informações sobre os nossos desenvolvedores, acesse a página Equipe. </h6>
             </div>
         </ContainerSobre>
     );

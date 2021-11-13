@@ -17,7 +17,7 @@ export default function Equipe(){
 
     return (
         <EstiloEquipe theme={themePage}>
-            <H1Style> As panteras cor de rosa </H1Style>
+            <H1Style> As Panteras Cor de Rosa </H1Style>
             <div className="informacoes">
                 <EquipeDados 
                     foto={Camila}
