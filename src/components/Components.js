@@ -26,7 +26,7 @@ export const H1Style = styled.h1`
 
 export const Modal = (props) => (  
     <Popup trigger={
-        <Botao color={props.color} className="button" onClick={(e)=>{e.preventDefault()}}> 
+        <Botao type="button" color={props.color} className="button" onClick={(e)=>{e.preventDefault()}}> 
             {props.nomeBotao}
         </Botao>} modal>
         <div className="containerBoasVindas">

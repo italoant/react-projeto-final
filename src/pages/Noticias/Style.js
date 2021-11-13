@@ -3,69 +3,80 @@ import styled from "styled-components";
 export const EstiloNoticia = styled.div`
     width: 100vw; 
     height: 100vh;
-
+    justify-content: center;
     background: ${props => props.theme.backgroundSecondary};
 
-    .noticias{
-        display: flex;
-        gap: 20rem;
-    
+
+    h4, h6, p{
+        margin: 0;
     }
+`;
 
-    .noticiaTema{
-        display: flex;
-        gap: 25px;
-    }
-
-    span{
-        background-color: yellow;
-    }
-
-    .texto{
-       display: flex;
-       flex-direction: column;
-
-    }
-
-    .right, .left{
-        width: 50%;
-        gap: 1rem;
-    }
-
-    .right{
-        display: flex;
-        flex-direction: column;
-    }
-
+export const EstiloNR = styled.div`
+    span, h6, p{
+       display: none;
+   }
     .noticiaRight{
-        margin-left: 2rem;
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-    }
-
-    img{
-        height: 10rem;
-    }
-
-    .left{
-        display: flex;
-        flex-direction: column;
-        background: rgba(255,255,255,0.0);
-        /* background-image: linear-gradient(to bottom right,rgba(255,255,255,0.0),rgba(255,255,255,0.3),rgba(255,255,255,0.3), var(--pink1), var(--pink2) ); */
-        align-items: center;
-    }
-
-    .noticiaLeft{
-        background-image: url("https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt8739d07baed7d77d/5ed9b1c197379739c07664d9/Arcane_Announcement_Banner.jpg");
+        background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)), url(${props => props.imgR}) center;
         background-size: cover;
-        height: 9rem;
-        width: 20rem;
+        height: 13rem;
+        width: 22rem;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         align-items: baseline;
-        padding: 2%;
-        margin-left: 2rem;
+        padding: 1%;
+        color: grey;
+        transition: 1s;
+        h6,p{margin: 0;}
     }
+
+    .noticiaRight:hover{
+        background: linear-gradient(rgba(0,0,0,.0),rgba(0,0,0,.0)), url(${props => props.imgR}) center;
+        background-size: cover;
+        transform: scale(1.1);
+        cursor: pointer;
+
+        span, h6{
+            display: flex;
+            background: #f0ee86;
+        }
+
+        h6{
+            background: none;
+        }
+    }
+`;
+
+export const EstiloNL = styled.div`
+    
+    
+    img{
+        height: 30vh;
+    }
+    
+    .noticiaLeft{
+        display: flex;
+        gap: 1rem;
+        width: 50%;
+        margin-right: 40rem;
+        padding-left: 2rem;
+
+        span{
+            background: #f0ee86;
+            padding: 1%;
+        }
+
+        .noticia{
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .resumo{
+            width: 30vw;
+        }
+    }
+
+    
 `;

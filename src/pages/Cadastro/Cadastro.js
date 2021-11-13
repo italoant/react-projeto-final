@@ -7,8 +7,11 @@ import { useTheme } from "../../context/Theme";
 
 export default function Cadastro(){
 
-    const [mensagem, setMensagem] = useState ();
-    const { themePage } = useTheme();
+    const { themePage } = useTheme()
+    const [nome, setNome] = useState ("");
+    const [email, setEmail] = useState("");
+    const [senha, setSenha] = useState("");
+    const [mensagem, setMensagem] = useState("");
 
     //Email
     function validarEmail(email){
@@ -20,28 +23,28 @@ export default function Cadastro(){
  
 
     function valicacaoCadastro(e){
-        const emailValor = document.getElementById("email").value;
-        const nomeValor = document.getElementById("nome").value;
-        const senhaValor = document.getElementById("senha").value;
-
-        const valores = {
-            nome: nomeValor,
-            email: emailValor,
-            senha: senhaValor
-        };
-
-        if(validarEmail(emailValor) && (nomeValor != "") && (senhaValor.length >= 6)){
-            console.log("ok"+" "+valores.nome)
-            setMensagem("Feito")
-            e.preventDefault();
-        }else{
+        if(nome=="" || email=="" || senha==""){
             setMensagem("Preencha todos os campos abaixo.")
             e.preventDefault();
+        }else{
+            return (
+                <div>
+                     <Modal color="#FE6688" 
+                        nomeBotao="teste" 
+                        img="https://i.pinimg.com/originals/1f/a8/d9/1fa8d907a5cc6e1fa22f431929ebc12a.gif"  
+                        botaoPop="testePOP"
+                        mensagem="Boas-Vindas ao PanimE"
+                        mensagem2="ようこそ"
+                    /> 
+                </div>
+            )
+            
         }
     }
 
     return(
         <div>
+<<<<<<< HEAD
             <Container theme={themePage}>
                 <Form>    
                     <h1>Cadastro</h1>
@@ -62,6 +65,41 @@ export default function Cadastro(){
                     </div>
                     <Button color="#FE6688" onClick={valicacaoCadastro}> Cadastrar </Button>
                 </Form>
+=======
+            <ContainerForm theme={themePage}>
+                <Formulario>    
+                    <div className="container">
+                        <h1>Cadastro</h1>
+                        <div className="campos-form">
+                            <p className="mensagem">{mensagem}</p>
+                            <input type="text" placeholder="Nome" id="nome" onChange={(e)=>{setNome(e.target.value)}} />
+                        </div>
+                        <div className="campos-form">
+                            <input type="email"  placeholder="Email" id="email" onChange={(e)=>{setEmail(e.target.value)}} />
+                        </div>
+                        <div className="campos-form">
+                            <input type="password"  placeholder="Senha" id="senha" onChange={(e)=>{setSenha(e.target.value)}} />
+                            <p className="mensagem">Senha maior que 6 dígitos*</p>   
+                        </div>
+                        <div className="campos-form">
+                            <label htmlFor="data"> Data de Nascimento</label>
+                            <input type="date" id="date" className="date" max="2021-12-31" />
+                        </div>
+                        <Botao type="button" color="#FE6688" onClick={valicacaoCadastro}> Cadastrar </Botao>
+                        
+                        <Modal
+                            color="#FE6688" 
+                            nomeBotao="teste" 
+                            img="https://i.pinimg.com/originals/1f/a8/d9/1fa8d907a5cc6e1fa22f431929ebc12a.gif"  
+                            botaoPop="testePOP"
+                            mensagem="Boas-Vindas ao PanimE"
+                            mensagem2="ようこそ"
+                        /> 
+                    
+                    </div>
+                    
+                </Formulario>
+>>>>>>> f5753aee27d9972e4d6806a08b94e4497d99fb0d
                 <Modal color="#FE6688" 
                         nomeBotao="teste" 
                         img="https://i.pinimg.com/originals/1f/a8/d9/1fa8d907a5cc6e1fa22f431929ebc12a.gif"  
