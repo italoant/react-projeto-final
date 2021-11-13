@@ -1,4 +1,4 @@
-import { H1Style } from "../../components/Components";
+import { H1Style, Modal } from "../../components/Components";
 import { EstiloNR, EstiloNL } from './Style';
 
 
@@ -27,12 +27,14 @@ export const NoticiasL = (props) => {
                         <h4>{props.nomeL} <span> {props.dataL} </span> </h4> 
                     </div>
                     <h6> {props.statusL} </h6>
-
+                    <div className="resumo">
+                        <p> {props.resumoL}  </p>
+                    </div>
                 </div>
-                <div className="resumo">
-                    <p> {props.resumoL}  </p>
-                   
-                </div>
+                
+                <Modal 
+                    color="#724848"
+                />
             </div>
         </div>
     </EstiloNL>

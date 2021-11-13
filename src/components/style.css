@@ -5,19 +5,29 @@
 }
 
 .containerBoasVindas{
-    padding: 2%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
+  padding: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+button{
+  height: 2vh;
+  width: 5vw;
+  border: none; 
+  background: none;
+  outline: none;
+  background-color: indianred;
 }
 
 .botaoPop{
-    border: none; outline: none;
-    border-radius: 10px;
-    background-color: #F16EA5;
-    width: 10vw;
+  border: none; outline: none;
+  border-radius: 10px;
+  background-color: #F16EA5;
+  width: 10vw;
+  line-height: normal;
 }
 
 .botaoPop:hover{

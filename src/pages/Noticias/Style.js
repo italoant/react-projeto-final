@@ -5,7 +5,7 @@ export const EstiloNoticia = styled.div`
     height: 100vh;
     justify-content: center;
     background: ${props => props.theme.backgroundSecondary};
-
+    padding-left: 2rem;
 
     h4, h6, p{
         margin: 0;
@@ -60,7 +60,7 @@ export const EstiloNL = styled.div`
         gap: 1rem;
         width: 50%;
         margin-right: 40rem;
-        padding-left: 2rem;
+        
 
         span{
             background: #f0ee86;
@@ -73,9 +73,12 @@ export const EstiloNL = styled.div`
             gap: 0.5rem;
         }
 
+
         .resumo{
             width: 30vw;
         }
+
+
     }
 
     
