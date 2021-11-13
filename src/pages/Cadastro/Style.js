@@ -4,12 +4,23 @@ import styled from "styled-components";
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     background: ${props => props.theme.backgroundSecondary};
-    height: 150vh; 
-    padding-top: 60vh;
-    padding-bottom: 60vh;
+    height: 120vh; 
+
+    @media (max-width: 1326px){
+        height: 140vh;
+    }
+
+    @media (max-width: 1024px){
+        height: 145vh;
+    }
+
+    @media (max-width: 994px){
+        height: 150vh;
+    }
+
 
 `
 
@@ -18,7 +29,7 @@ export const Form = styled.form`
     width: 38vw;
     text-align: center;
     border-radius: 20px;
-    padding: 5vh;
+    padding: 7vh;
     box-shadow: 1px 1px rgba(0, 0, 0, 25%);
 
     h1{
@@ -130,7 +141,13 @@ export const Form = styled.form`
             min-width: 65vw;
         }
     }
+    
+    @media (max-width: 320px){
 
+        h1{
+            font-size: 2rem;
+        }
+    }
 `
 
 export const Button = styled.button`
@@ -167,8 +184,14 @@ export const Button = styled.button`
             height: 7.5vh;
         }
 
+        @media (max-width: 768px){
+
+            margin-left: 1vw;
+        }
+
         @media (max-width: 740px){
-            width: 40vw;
+            width: 39vw;
+            margin-left: 2vw;
         }
 
         @media (max-width: 700px){
@@ -177,5 +200,13 @@ export const Button = styled.button`
 
         @media (max-width: 550px){
             width: 66vw;
+        }
+
+        @media (max-width: 540px){
+            margin-left: 2.7vw;
+        }
+
+        @media (max-width: 375px){
+            margin-left: 4vw;
         }
 `
