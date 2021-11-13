@@ -9,13 +9,21 @@ import { useTheme } from "../../context/Theme";
 
 import { Response, DivInput } from "./../Home/Style";
 
+import { library } from "@fortawesome/fontawesome-svg-core"; 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+
 import Loading from '../../assets/loading.png';
+
+library.add(fas)
+
+
 
 
 
 export default function Anime() {
 
-    const { searchAnime, showInputAnime, setSearchAnime  } = useContext(InputContext);
+    const { searchAnime, showInputAnime, setSearchAnime } = useContext(InputContext);
 
     const [responseAnime, setResponseAnime] = useState([]);
     const [update, setUpadate] = useState([]);
@@ -33,8 +41,8 @@ export default function Anime() {
                 setTimeout(() => { setLoading(true) }, 3000)
             }).catch(erro => { console.log("erro") })
     }
-   
-    function animeSort(){
+
+    function animeSort() {
         api.get(`/anime?sort=-popularityRank`)
             .then((response) => {
                 setUpadate(response.data.data)
@@ -95,7 +103,14 @@ export default function Anime() {
 
     return (<>
         <Response theme={themePage}>
-            <DivInput theme={themePage}>{showInputAnime === true ? <input type="search" placeholder="Ex: Dragon" onChange={(e) => setSearchAnime(e.target.value)} /> : null}
+            <DivInput theme={themePage}>
+                <div className="search-box">
+                    <div theme={themePage}>{showInputAnime === true ? <input class="search-txt" type="search" placeholder="Ex: Dragon Ball" onChange={(e) => setSearchAnime(e.target.value)} /> : null}
+                        <a className="search-btn" href="#">
+                        </a>
+                        <FontAwesomeIcon className="search-btn" icon="search"/>
+                    </div>
+                </div>
             </DivInput>
             <aside>
                 {returnSearch(() => { })}

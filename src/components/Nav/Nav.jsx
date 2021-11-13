@@ -44,7 +44,9 @@ export default function Nav() {
             localStorage.setItem('notLink', redirecinadoNoticias)
             return <Usuario>
                 <p>Olá, {showUser}</p>
-                <ButtonPopUp theme={themePage} >Perfil</ButtonPopUp> <Link to=""><ButtonPopUp theme={themePage} onClick={removeUser}>Sair</ButtonPopUp></Link>
+                <Link to="/perfil">
+                    <ButtonPopUp theme={themePage} >Perfil</ButtonPopUp>
+                </Link> <Link to=""><ButtonPopUp theme={themePage} onClick={removeUser}>Sair</ButtonPopUp></Link>
             </Usuario>
         }
     }
@@ -64,7 +66,7 @@ export default function Nav() {
             localStorage.setItem('notLink', redirecinadoNoticias)
             return <Usuario>
                 <p>Olá, {showUser}</p>
-                <ButtonPopUp theme={themePage} >Perfil</ButtonPopUp> <Link to=""><ButtonPopUp theme={themePage} onClick={removeUser}>Sair</ButtonPopUp></Link>
+                <Link to="/perfil"><ButtonPopUp theme={themePage} >Perfil</ButtonPopUp></Link> <Link to=""><ButtonPopUp theme={themePage} onClick={removeUser}>Sair</ButtonPopUp></Link>
             </Usuario>
         }
     }
@@ -162,7 +164,7 @@ export default function Nav() {
                         <Link className="link" to="/" onClick={redirecionarHome}>Home</Link>
                         <Link className="link" to={redirecinadoAnime} onClick={redirecionarPageAnime}>Anime</Link>
                         <Link className="link" to={redirecinadoManga} onClick={redirecionarPageManga}>Mangá</Link>
-                        <Link className="link" to={redirecinadoNoticias} onClick={redirecionarPageNoti}>Noticias</Link>
+                        <Link className="link" to={redirecinadoNoticias} onClick={redirecionarPageNoti}>Noticias</Link> 
                     </div>
                     <div className="links_and_buttons">
                         {usuarioMobile(() => { })}

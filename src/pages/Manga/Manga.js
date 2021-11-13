@@ -5,7 +5,14 @@ import { useTheme } from "../../context/Theme";
 import { Response, DivInput } from "./../Home/Style";
 import { Link } from 'react-router-dom';
 
+import { library } from "@fortawesome/fontawesome-svg-core"; 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { fas } from "@fortawesome/free-solid-svg-icons";
 import Loading from '../../assets/loading.png';
+
+library.add(fas)
+
+
 
 
 
@@ -21,7 +28,7 @@ export default function Manga() {
     const [manga, setManga] = useState([]);
     const [populares, setPopulares] = useState([]);
 
-    function searchBugShow(){
+    function searchBugShow() {
         setTimeout(() => { setLoading(true) }, 3000)
     }
 
@@ -103,7 +110,12 @@ export default function Manga() {
     return <>
         <Response theme={themePage}>
             <DivInput theme={themePage}>
-            {showInputManga === true ? <input type="search" placeholder="Ex: Naruto" onChange={(e) => setSearchManga(e.target.value)} /> : null}
+                <div theme={themePage}  className="search-box">
+                    {showInputManga === true ? <input class="search-txt" type="search" placeholder="Ex: Naruto" onChange={(e) => setSearchManga(e.target.value)} /> : null}
+                    <a className="search-btn" href="#">
+                    </a>
+                    <FontAwesomeIcon className="search-btn" icon="search"/>
+                </div>
             </DivInput>
             <aside>
                 {retornoManga(() => { })}
