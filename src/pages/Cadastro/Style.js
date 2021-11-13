@@ -1,143 +1,181 @@
 import styled from "styled-components";
 
-export const FormCadastro = styled.form`
+
+export const Container = styled.div`
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
-    height: 100vh;
-    margin: 3rem 0;
-    
-    .container{
-        width: 40vw;
-        height: 55vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-    }
+    background: ${props => props.theme.backgroundSecondary};
+    height: 100vh; 
+    padding-top: 60vh;
+    padding-bottom: 60vh;
+
+`
+
+export const Form = styled.form`
+    background-color: #FFBDBF;
+    width: 38vw;
+    text-align: center;
+    border-radius: 20px;
+    padding: 5vh;
+    box-shadow: 1px 1px rgba(0, 0, 0, 25%);
 
     h1{
-        font-size: 6vh;
+        font-size: 3rem;
+        color: #FFFFFF;
+        text-shadow: .5px .5px rgba(241, 110, 165, 50);
+        margin: 0;
+    }
+
+    label{
+        font-size: 1.4rem;
+        margin-bottom: 1.5vh;
         color: #FFFFFF;
         text-shadow: .5px .5px rgba(241, 110, 165, 50);
     }
 
-    
-    .containerInput{
+    .mensagem{
+        font-size: 1.3rem;
+        margin-top: 1.5vh;
+        color: #FF0000;
+    }
+
+    .campos-form{
+        margin-top: 4.8vh;
+        margin-bottom: 0.5vh;
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .campos-form input{
+        padding: 2.5%;
         width: 25vw;
-        
-        p{
-            margin: 0;
-            font-size: 80%;
-            text-align: left;
-        }
-    }
-
-    label{
-        text-align: center;
-    }
-
-    input, button{
-        height: 6vh;
-        border: none; 
-        background: none;
-        outline: none;
-        padding: 1% 3%;
-    }
-    
-    .dataN{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    #date{
-        width: 21vw;
-    }
-
-    input{
+        min-height: 6vh;
+        border: none;
+        border-radius: 10px;
         background-color: #FFFFFF;
-        border-radius: 20px;
-        width: 80%;
+        color: #A9A9A9;
+        outline: none;
     }
 
-    input::placeholder, input[type=date]{
-        color: grey;
+    .campos-form p{
+       text-align: center;
     }
 
-    button{
-        background-color: rgba(241, 110, 165, 0.7);
-        border-radius: 25px;
-        color: #FFFFFF;
-        height: 5vh;
-    }
-  
+    //Responsividade do formulário
 
-    @media (max-width:850px){
+    @media (max-width: 1326px){
+        width: 50%;
+
+        .campos-form input{
+            width: 33vw;
+        }
+    }
+
+    @media (max-width: 994px){
+            width: 51%;
+
+            .mensagem{
+                font-size: 1.1rem;
+            }
+    }
+
+    @media (max-width: 982px){
+        width: 55%;
+
         h1{
-            font-size: 5vh;
+            font-size: 3rem;
         }
 
-        .container{
-            width: 60vw;
-        }
-
-        label{
-            width: 20vw;
-        }
-
-        input, button, #date{
-            width: 30vw; 
-            height: 5vh;
-            border: none;
-            outline: none;
-            padding: 1% 3%;
-        }
-
-        button{
-            font-weight: bold;
+        .campos-form input{
+            width: 36vw;
         }
     }
 
-    @media (max-width:360px){
-        margin: 4rem 0;
+    @media (max-width: 862px){
+        width: 60%;
 
-        input, button, #date{
-            width: 45vw; 
-            padding: 1% 8%;
+        .campos-form input{
+            width: 39vw;
         }
 
-        label{
-            text-align: center;
-            font-size: 85%;
-        }
+        .mensagem{
+                font-size: 1rem;
+            }
+    }
 
-        button{
-            font-weight: bold;
+    @media (max-width: 740px){
+        padding-left: 0;
+        padding-right: 0;  
+        
+        .mensagem{
+                font-size: 0.9rem;
+            }
+    }
+
+    @media (max-width: 700px){
+        width: 70%;
+
+        .campos-form input{
+            width: 50vw;
         }
     }
 
-    @media (max-height:720px){
-        .container{
-            height: 600px;
+    @media (max-width: 550px){
+        width: 90%;
+
+        .campos-form input{
+            min-width: 65vw;
+        }
+    }
+
+`
+
+export const Button = styled.button`
+        margin: 2vh;
+        width: 11.5vw;
+        border-radius: 10px;
+        border: none;
+        color: #FFFFFF;
+        height: 6vh;
+        font-size: 1.1rem;
+        background-color: ${props => props.color};
+        
+        :hover{
+            color: #A9A9A9;
+            background-color: #EED9D6;
         }
 
-        input{
-            height: 40px;
+        // Responsividade dos botões
+    
+        @media (max-width: 1326px){
+            width: 15vw;
         }
 
-        #date{
-            padding: 20px;
+        @media (max-width: 982px){
+            width: 16vw;
+        }
+
+        @media (max-width: 862px){
+            width: 17vw;
         }
         
-        button{
-            margin-top: 2rem;
-            height: 50px;
+        @media (max-width: 840px){
+            width: 39.5vw;
+            height: 7.5vh;
         }
-    }
-    
-`;
+
+        @media (max-width: 740px){
+            width: 40vw;
+        }
+
+        @media (max-width: 700px){
+            width: 50vw; 
+        }
+
+        @media (max-width: 550px){
+            width: 66vw;
+        }
+`

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ContainerForm, Formulario, Botao } from '../Login/Style';
+import { Container, Form, Button } from './Style';
 import { Modal } from './../../components/Components';
 
 import { useTheme } from "../../context/Theme";
@@ -42,28 +42,26 @@ export default function Cadastro(){
 
     return(
         <div>
-            <ContainerForm theme={themePage}>
-                <Formulario>    
-                    <div className="container">
-                        <h1>Cadastro</h1>
-                        <div className="campos-form">
-                            <p className="mensagem">{mensagem}</p>
-                            <input type="text" placeholder="Nome" id="nome"  />
-                        </div>
-                        <div className="campos-form">
-                            <input type="email"  placeholder="Email" id="email" />
-                        </div>
-                        <div className="campos-form">
-                            <input type="password"  placeholder="Senha" id="senha" />
-                            <p className="mensagem">Senha maior que 6 dígitos*</p>   
-                        </div>
-                        <div className="campos-form">
-                            <label htmlFor="data"> Data de Nascimento</label>
-                            <input type="date" id="date" className="date" max="2021-12-31"/>
-                        </div>
-                        <Botao color="#FE6688" onClick={valicacaoCadastro}> Cadastrar </Botao>
+            <Container theme={themePage}>
+                <Form>    
+                    <h1>Cadastro</h1>
+                    <div className="campos-form">
+                        <p className="mensagem">{mensagem}</p>
+                        <input type="text" placeholder="Nome" id="nome"  />
                     </div>
-                </Formulario>
+                    <div className="campos-form">
+                        <input type="email"  placeholder="Email" id="email" />
+                    </div>
+                    <div className="campos-form">
+                        <input type="password"  placeholder="Senha" id="senha" />
+                        <p className="mensagem">Senha maior que 6 dígitos*</p>   
+                    </div>
+                    <div className="campos-form">
+                        <label htmlFor="data"> Data de Nascimento</label>
+                        <input type="date" id="date" className="date" max="2021-12-31"/>
+                    </div>
+                    <Button color="#FE6688" onClick={valicacaoCadastro}> Cadastrar </Button>
+                </Form>
                 <Modal color="#FE6688" 
                         nomeBotao="teste" 
                         img="https://i.pinimg.com/originals/1f/a8/d9/1fa8d907a5cc6e1fa22f431929ebc12a.gif"  
@@ -71,7 +69,7 @@ export default function Cadastro(){
                         mensagem="Boas-Vindas ao PanimE"
                         mensagem2="ようこそ"
                     /> 
-            </ContainerForm>
+            </Container>
             
         </div>
     );
