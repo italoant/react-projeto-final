@@ -200,7 +200,7 @@ export const Botao = styled.button`
             background-color: #EED9D6;
         }
 
-        // Responsividade de todos os botões dos formulários
+        // Responsividade dos botões
     
         @media (max-width: 1326px){
             width: 15vw;
@@ -218,22 +218,18 @@ export const Botao = styled.button`
         @media (max-width: 840px){
             width: 39.5vw;
             height: 7.5vh;
-            margin-left: 1.3vw;
         }
 
         @media (max-width: 740px){
             width: 40vw;
-            margin-left: 1.8vw;
         }
 
         @media (max-width: 700px){
             width: 50vw; 
-            margin-left: 2vw;
         }
 
         @media (max-width: 550px){
             width: 66vw;
-            margin-left: 3vw;
         }
 
         @media (max-width: 450px){
