@@ -61,7 +61,13 @@ export default function Cadastro(){
                             <label htmlFor="data"> Data de Nascimento</label>
                             <input type="date" id="date" className="date" max="2021-12-31"/>
                         </div>
-                        <Botao color="#FE6688" onClick={valicacaoCadastro}> Cadastrar </Botao>
+                        <Modal color="#FE6688" 
+                        nomeBotao="teste" 
+                        img="https://i.pinimg.com/originals/1f/a8/d9/1fa8d907a5cc6e1fa22f431929ebc12a.gif"  
+                        botaoPop="testePOP"
+                        mensagem="Boas-Vindas ao PanimE"
+                        mensagem2="ようこそ"
+                /> 
                     </div>
                 </Formulario>
                 <Modal color="#FE6688" 
@@ -70,7 +76,7 @@ export default function Cadastro(){
                         botaoPop="testePOP"
                         mensagem="Boas-Vindas ao PanimE"
                         mensagem2="ようこそ"
-                    /> 
+                /> 
             </ContainerForm>
             
         </div>
