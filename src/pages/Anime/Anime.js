@@ -83,7 +83,7 @@ export default function Anime() {
                     <Response theme={themePage}>
                         <aside className="page_response">
 
-                            {loading === true ? (<h1>Animes mais populares</h1>) : (null)}
+                            {loading === true ? (<h2>Animes mais populares</h2>) : (null)}
 
                             <div className="resposta_api">
                                 {update.map(resp => {
@@ -105,7 +105,7 @@ export default function Anime() {
         <Response theme={themePage}>
             <DivInput theme={themePage}>
                 <div className="search-box">
-                    <div theme={themePage}>{showInputAnime === true ? <input class="search-txt" type="search" placeholder="Ex: Dragon Ball" onChange={(e) => setSearchAnime(e.target.value)} /> : null}
+                    <div theme={themePage}>{showInputAnime === true ? <input class="search-txt" type="text" placeholder="Ex: Dragon Ball" onChange={(e) => setSearchAnime(e.target.value)} /> : null}
                         <a className="search-btn" href="#">
                         </a>
                         <FontAwesomeIcon className="search-btn" icon="search"/>
