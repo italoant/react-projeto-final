@@ -21,10 +21,7 @@ export default function Manga() {
 
     const [loading, setLoading] = useState(false);
 
-    const { searchManga } = useContext(InputContext);
-    const { setSearchManga } = useContext(InputContext);
-    const { showInputManga } = useContext(InputContext);
-
+    const { searchManga, setSearchManga, showInputManga } = useContext(InputContext);
     const [manga, setManga] = useState([]);
     const [populares, setPopulares] = useState([]);
 
