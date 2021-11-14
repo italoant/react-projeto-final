@@ -7,6 +7,8 @@ export const Main = styled.main`
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-height: 100vh;
+
     
     .subtitle_synopsis {
         overflow: hidden;
@@ -49,7 +51,7 @@ export const Main = styled.main`
     }
 
     .subtitle {
-        margin: auto 1rem;
+        margin: 0 1rem;
         max-height: 100vh;
         max-width: 800px;
         display: flex;
@@ -70,6 +72,7 @@ export const Main = styled.main`
     }
 
     @media(max-width: 840px){
+
 
         .banner {
             height: 20vh;
