@@ -1,13 +1,18 @@
 import React, { useState, useContext } from "react";
-import { Redirect } from 'react-router-dom';
+import { Redirect, Link } from 'react-router-dom';
+
 import { ContainerForm, Formulario, Botao } from './Style';
-import { Link } from 'react-router-dom';
+
 import { InputContext } from "../../context/Input";
 import { RedirectContext } from "../../context/Redirecionamento";
+import { FormsContext } from '../../context/Forms';
+
 import { useTheme } from "../../context/Theme";
 
 
 export default function Login(){
+
+    const { nome, email, pass, data } = useContext(FormsContext);
 
     const [ usuario, setUsuario ] = useState("");
     const [senha, setSenha] = useState("");
@@ -19,6 +24,7 @@ export default function Login(){
     const { setRedirecionadoManga } = useContext(RedirectContext);
 
     const { themePage } = useTheme();
+     
 
 
     //Validação do formulário de login
@@ -40,7 +46,7 @@ export default function Login(){
             setMensagem("Preencha o campo de usuário.")
             document.getElementById("email").style.boxShadow = "1px 1px 5px red";
             e.preventDefault()
-        } else if(usuario !== "usuario" || senha !== "1"){
+        } else if(usuario !== nome || senha !== pass){
             setMensagem("Usuário ou senha incorreta.")
             e.preventDefault()
         } else{
@@ -50,7 +56,7 @@ export default function Login(){
             return <Redirect to="./" />
         }
     }
-
+    console.log(nome)
 
     return(
         <ContainerForm theme={themePage}> 

@@ -7,6 +7,10 @@ export default function Perfil(){
 
     const { themePage } = useTheme();
 
+    const user = localStorage.getItem('usuario')
+    const email = localStorage.getItem('email')
+    const data = localStorage.getItem('data')
+
     return(
         <Container theme={themePage}>
             <div id='container-dois'>
@@ -15,9 +19,9 @@ export default function Perfil(){
                 </div>
                 <div>
                     <h3>Minato Namizake</h3>
-                    <p><span>Usuário: </span>@minato_</p>
-                    <p><span>Email: </span>minatinho_jesus@gmail.com</p>
-                    <p><span>Data de Nascimento: </span>18/11/2001</p>
+                    <p><span>Usuário: </span>@{user}</p>
+                    <p><span>Email: </span>{email}</p>
+                    <p><span>Data de Nascimento: </span>{data}</p>
                 </div>
             </div>
         </Container>
