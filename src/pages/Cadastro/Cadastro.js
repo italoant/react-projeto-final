@@ -58,7 +58,10 @@ export default function Cadastro(){
                     <h1>Cadastro</h1>
                     <div className="campos-form">
                         {/* <p className="mensagem">{mensagem}</p> */}
-                        <input type="text" placeholder="Nome" id="nome" onChange={(e)=>{setNome(e.target.value)}} />
+                        <input type="text" placeholder="Nome e Sobrenome" id="nome" onChange={(e)=>{setNome(e.target.value)}} />
+                    </div>
+                    <div className="campos-form">
+                        <input type="text" placeholder="Usuário" id="nome" onChange={(e)=>{setNome(e.target.value)}} />
                     </div>
                     <div className="campos-form">
                         <input type="email"  placeholder="Email" id="email" onChange={(e)=>{setEmail(e.target.value)}} />
