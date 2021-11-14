@@ -12,7 +12,7 @@ import { useTheme } from "../../context/Theme";
 
 export default function Login(){
 
-    const { nome, email, pass, data } = useContext(FormsContext);
+    const { nome, pass } = useContext(FormsContext);
 
     const [ usuario, setUsuario ] = useState("");
     const [senha, setSenha] = useState("");
@@ -24,10 +24,6 @@ export default function Login(){
     const { setRedirecionadoManga } = useContext(RedirectContext);
 
     const { themePage } = useTheme();
-     
-
-
-    //Validação do formulário de login
 
 
 
@@ -46,17 +42,17 @@ export default function Login(){
             setMensagem("Preencha o campo de usuário.")
             document.getElementById("email").style.boxShadow = "1px 1px 5px red";
             e.preventDefault()
-        } else if(usuario !== nome || senha !== pass){
-            setMensagem("Usuário ou senha incorreta.")
-            e.preventDefault()
-        } else{
+        } else if(usuario === nome && senha === pass){
             setShowUser(usuario)
             setRedirecionadoAnime("/anime")
             setRedirecionadoManga("/manga")
-            return <Redirect to="./" />
+            return <Redirect to="./" /> 
+        }else{
+            setMensagem("Usuário ou senha incorreta.")
+            e.preventDefault()
         }
     }
-    console.log(nome)
+
 
     return(
         <ContainerForm theme={themePage}> 
