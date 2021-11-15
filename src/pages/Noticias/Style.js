@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 export const EstiloNoticia = styled.div`
     background: ${props => props.theme.backgroundSecondary};
+    color: ${props => props.theme.textColor};
     height: 100%;
- 
+    font-size: large;
 
     .noticias{
         display: flex;
@@ -21,13 +22,20 @@ export const EstiloNoticia = styled.div`
         gap: 1.5rem;
     }
 
+    .linha{
+        height: 2px;
+        background-color: rgba(0,0,0,0.40);
+        margin-top: 2rem;
+    }
+
     .topicos{
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin: 2.5rem 0;
-        gap: 2rem;
+        padding: 2.5rem 0;
+        gap: 1rem;
+
 
         .topicosL, .topicosR{
             display: flex;
@@ -35,6 +43,54 @@ export const EstiloNoticia = styled.div`
         }
     }
 
+
+    @media (max-width:1300px){
+        .noticias{
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+
+        .noticiaLeft{
+            width: 75vw;
+            flex-direction: column;
+
+            p{
+                width: 70vw;
+            }
+        }
+
+        .right{
+            flex-direction: row;
+        }
+
+        .topicosL, .topicosR{
+            width: 70vw;
+            overflow-y: hidden;
+            overflow-x: scroll;
+
+        }
+    }
+
+    @media (max-width:850px){
+
+        .right{
+            width: 70vw;
+            overflow-x: scroll;
+            overflow-y: hidden;
+        }
+
+        .noticiaLeft{
+            flex-direction: column;
+            img{
+                width: 70vw;
+            }
+
+            p{
+                width: 70vw;
+            }
+            
+        }
+    }
 `;
 
 export const EstiloNR = styled.div`
@@ -77,8 +133,8 @@ export const EstiloNR = styled.div`
 `;
 
 export const EstiloNL = styled.div`
-    
-    
+    display: flex;
+    justify-content: center;
     img{
         height: 25vh;
     }
@@ -87,9 +143,8 @@ export const EstiloNL = styled.div`
         display: flex;
         gap: 1rem;
         
-
         span{
-            background: #f0ee86;
+            background: darkturquoise;
             padding: 1%;
         }
 
@@ -99,13 +154,21 @@ export const EstiloNL = styled.div`
             gap: 0.5rem;
         }
 
-
         .resumo{
             width: 30vw;
         }
 
-
     }
 
-    
+`;
+
+export const TemaN = styled.div`
+    text-align: left;
+    h3{margin: 0;}
+    .linhaT{
+        height: 2px;
+        background-color: ${props => props.theme.borderColor};
+        box-shadow: 1px 1px 20px ${props => props.theme.textColor};
+    }
+
 `;
