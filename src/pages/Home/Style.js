@@ -12,8 +12,6 @@ export const Container = styled.div`
         padding: 2%;
     }
 
-    
-
     .w-100{
         height: 50vh;
         background-size: cover !important;
@@ -33,7 +31,7 @@ export const Response = styled.article`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding-bottom: 1rem;
+    /* padding-bottom: 1rem; */
 
 
     background-color: ${props => props.theme.backgroundSecondary};
@@ -50,12 +48,13 @@ export const Response = styled.article`
 
     h2 {
         color: ${props => props.theme.textColor};
+        margin-top: 2.5rem;
     }
 
     aside {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        /* justify-content: center; */
         align-items: center;
         min-height: 85vh;
     }
@@ -110,12 +109,15 @@ export const Response = styled.article`
         flex-wrap: wrap;
         justify-content: center;
         margin: 1rem 0;
+        width: 100vw;
+        min-height: ${props => props.height};
 
         .container_response {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            /* justify-content: center; */
             align-items: center;
+            
 
             p {
                 color: ${props => props.theme.textColor};
@@ -142,6 +144,11 @@ export const Response = styled.article`
     }
 
     @media(max-width: 840px){
+    
+        h2 {
+            font-size: 1.3rem;
+        }
+
         aside {
             align-items: center;
         }
@@ -152,25 +159,25 @@ export const Response = styled.article`
 
 export const DivInput = styled.div`
     width: 100vw;
-    margin: 1%;
+    /* margin: 1%; */
     background: ${props => props.theme.backgroundPrimaryButton};
     padding: 0 3rem;
 
     
     .search-box{
-    position: absolute;
-    padding: 0 0.5rem;
-    right: 5vw;
-    background: rgba(241, 110, 165, 0.3);
-    height: 4vh;
-    border-radius: 4px;
-    border: 1px solid ${props => props.theme.borderColor};  
+        position: absolute;
+        padding: 0 0.5rem;
+        right: 5vw;
+        background: rgba(241, 110, 165, 0.3);
+        height: 4vh;
+        border-radius: 4px;
+        border: 1px solid ${props => props.theme.borderColor};  
     
-    .search-btn{
-        color:  #FFFFFF;   
-        height: 2.5vh;
+        .search-btn{
+            color:  #FFFFFF;   
+            height: 2.5vh;
+        }
     }
-}
 
     .search-txt{
         border: none;
@@ -178,40 +185,44 @@ export const DivInput = styled.div`
     }
 
     :hover .search-txt{
-    width: 10vw;
-    padding: 0px 10px;
-}
+        width: 10vw;
+        padding: 0px 10px;
+    }
+
     .search-btn{
-    position: absolute;
-    top: 0.7vh;
-    right: 0.5vw;
-    color: teal;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.4s;
-}
+        position: absolute;
+        top: 0.7vh;
+        right: 0.5vw;
+        color: teal;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.4s;
+    }
 
     .search-txt{
-    border-radius: 4px;
-    background: none;
-    margin: 1%;
-    outline: none;
-    float: left;
-    padding: 0rem 1rem;
-    color: white;
-    font-size: 1rem;
-    transition: 0.4s;
-    line-height: 40px;
-    width: 0px;
-    ::placeholder{
-     color: ${props => props.theme.textColor};
+        border-radius: 4px;
+        background: none;
+        margin: 1%;
+        outline: none;
+        float: left;
+        padding: 0rem 1rem;
+        color: white;
+        font-size: 1rem;
+        transition: 0.4s;
+        line-height: 40px;
+        width: 0px;
+        ::placeholder{
+            color: ${props => props.theme.textColor};
+        }
     }
-}
-    @media (max-width: 840px){
-        
+
+    @media (max-width: 935px){
+        .search-box{
+           
+        }
     }
 `;

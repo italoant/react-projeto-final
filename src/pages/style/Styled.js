@@ -9,12 +9,41 @@ export const Main = styled.main`
     align-items: center;
     min-height: 100vh;
 
-    
+    .voltar {
+        position: absolute;
+        left: 1rem;
+        margin-top: .9rem;
+        background: ${props => props.theme.backgroundPrimary}; 
+        border: 1px solid white;
+        padding: .2rem .9rem;
+        border-radius: 1rem;
+        font-size: 1.3rem;
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+    }
+
+    .categories {
+        display: flex;
+        gap: .5rem;
+        
+        p {
+            display: inline-block;
+            background: #FE858A;
+            padding: .1rem .5rem;
+            border-radius: 1rem;
+            font-size: .9rem;
+            font-weight: 400;
+        }
+    }
+
     .subtitle_synopsis {
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
-        -webkit-line-clamp: 12;
+        -webkit-line-clamp: 9;
         -webkit-box-orient: vertical;
     }
 
@@ -59,10 +88,14 @@ export const Main = styled.main`
         align-items: flex-start;
         gap: 2rem;
         font-weight: 400;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
 
 
-        margin-bottom: 3rem;
+        margin-bottom: 4rem;
+
+        p {
+            
+        }
     }
 
     .post_image_div {
@@ -72,7 +105,14 @@ export const Main = styled.main`
     }
 
     @media(max-width: 840px){
-
+        .subtitle_synopsis {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 9;
+            -webkit-box-orient: vertical;
+            font-size: 1rem;
+        }   
 
         .banner {
             height: 20vh;
@@ -83,11 +123,21 @@ export const Main = styled.main`
         }
 
         .subtitle {
-            font-size: .8rem;
+            font-size: 1.1rem;
             
             h1, p {
                 margin-bottom: 1rem;
             }
+        }
+
+        .categories {
+            p {
+                font-size: .8rem;
+            }
+        }
+
+        .voltar {
+            font-size: 1rem;
         }
     }
 `;

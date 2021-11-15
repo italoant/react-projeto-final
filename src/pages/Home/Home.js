@@ -115,7 +115,7 @@ export default function Home() {
                 <div id="carrossel">
                     <Carrossel />
                 </div>
-                <Response theme={themePage} displayErro={displayError}>
+                <Response height="0vh" theme={themePage} displayErro={displayError}>
                     <aside className="no-height">
                         {loading === true ? (<h1>Animes</h1>) : (null)}
                         <div className="resposta_api">
@@ -136,7 +136,7 @@ export default function Home() {
                         {loading === false ? (<div className="bg-loading"><img className="loading" src={Loading} /></div>) : (null)}
                     </aside>
                 </Response>
-                <Response theme={themePage}>
+                <Response height="0vh" theme={themePage}>
                     <aside className="no-height">
                         {loading === true ? (<h1>Mangás</h1>) : (null)}
                         <div className="resposta_api">

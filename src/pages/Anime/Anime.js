@@ -23,7 +23,7 @@ library.add(fas)
 
 export default function Anime() {
 
-    const { searchAnime, showInputAnime, setSearchAnime } = useContext(InputContext);
+    const { searchAnime, setSearchAnime } = useContext(InputContext);
 
     const [responseAnime, setResponseAnime] = useState([]);
     const [update, setUpadate] = useState([]);
@@ -38,7 +38,7 @@ export default function Anime() {
         api.get(`/anime?filter[text]=${searchAnime}`)
             .then(data => {
                 setResponseAnime(data.data.data)
-                setTimeout(() => { setLoading(true) }, 3000)
+                setLoading(true)
             }).catch(erro => { console.log("erro") })
     }
 
@@ -60,11 +60,14 @@ export default function Anime() {
         animeSort()
     }, []); // requisição sem pesquisa
 
+    useEffect(() => {
+        setTimeout(() => { setLoading(true) }, 3000)
+    },[searchAnime])
 
     function returnSearch() {
         if (searchAnime !== "") {
             return (
-                <Response theme={themePage}>
+                <Response height="100vh" theme={themePage}>
                     <h2>Resultados para Anime: {searchAnime}</h2>
                     <div className="resposta_api">
                         {responseAnime.map(resp => {
@@ -80,7 +83,7 @@ export default function Anime() {
         } else {
             return (
                 <>
-                    <Response theme={themePage}>
+                    <Response height="100vh" theme={themePage}>
                         <aside className="page_response">
 
                             {loading === true ? (<h2>Animes mais populares</h2>) : (null)}
@@ -105,7 +108,8 @@ export default function Anime() {
         <Response theme={themePage}>
             <DivInput theme={themePage}>
                 <div className="search-box">
-                    <div theme={themePage}>{showInputAnime === true ? <input class="search-txt" type="text" placeholder="Ex: Dragon Ball" onChange={(e) => setSearchAnime(e.target.value)} /> : null}
+                    <div theme={themePage}>
+                        <input class="search-txt" type="text" placeholder="Ex: Dragon Ball" onChange={(e) => setSearchAnime(e.target.value)}/>
                         <a className="search-btn" href="#">
                         </a>
                         <FontAwesomeIcon className="search-btn" icon="search"/>
