@@ -9,17 +9,26 @@ export const Main = styled.main`
     align-items: center;
     min-height: 100vh;
 
-    
+    .categories {
+        display: flex;
+        gap: .5rem;
+        
+        p {
+            display: inline-block;
+            background: #FE858A;
+            padding: .1rem .5rem;
+            border-radius: 1rem;
+            font-size: .9rem;
+            font-weight: 400;
+        }
+    }
+
     .subtitle_synopsis {
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
         -webkit-line-clamp: 12;
         -webkit-box-orient: vertical;
-
-        padding: .5rem;
-        border: 2px solid ${props => props.theme.textColor};
-        border-radius: .5rem;
     }
 
     .loading {
@@ -66,7 +75,7 @@ export const Main = styled.main`
         font-size: 1.3rem;
 
 
-        margin-bottom: 3rem;
+        margin-bottom: 4rem;
     }
 
     .post_image_div {
@@ -87,10 +96,16 @@ export const Main = styled.main`
         }
 
         .subtitle {
-            font-size: .8rem;
+            font-size: 1rem;
             
             h1, p {
                 margin-bottom: 1rem;
+            }
+        }
+
+        .categories {
+            p {
+                font-size: .8rem;
             }
         }
     }
