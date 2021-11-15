@@ -27,7 +27,7 @@ export const Main = styled.main`
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
-        -webkit-line-clamp: 12;
+        -webkit-line-clamp: 9;
         -webkit-box-orient: vertical;
     }
 
@@ -96,7 +96,7 @@ export const Main = styled.main`
         }
 
         .subtitle {
-            font-size: 1rem;
+            font-size: 1.1rem;
             
             h1, p {
                 margin-bottom: 1rem;

@@ -57,7 +57,7 @@ export default function Anime(){
                                 })
                             }
                         </div>
-                        <p>Classificação Média: {resposta.attributes.averageRating === null ? ("Indisponível") : (resposta.attributes.averageRating)}</p>
+                        <p>Classificação Média: {resposta.attributes.averageRating === null ? ("Indisponível") : (resposta.attributes.averageRating + "⭐")}</p>
                         <p className="subtitle_synopsis">{resposta.attributes.synopsis}</p>
                         <p>Data de lançamento: {startDate === "Data indisponível" ? (startDate) : (dateBrStart)}</p>
                         <p>Quantidade de episódios: {resposta.attributes.episodeCount === null || resposta.attributes.episodeCount === undefined ? ("Indisponível") : (resposta.attributes.episodeCount)}</p>
