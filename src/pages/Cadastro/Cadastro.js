@@ -11,23 +11,26 @@ export default function Cadastro() {
     const { nome, setNome, email, setEmail, pass, setSenha, data, setData } = useContext(FormsContext);
 
     const { themePage } = useTheme();
+    const [ mensagem, setMenssagem ] = useState("");
 
 
     function validate(e) {
-        if (nome != "" && email != "" && pass != "" && data != "") {
-            localStorage.setItem('usuario', nome)
-            localStorage.setItem('email', email)
-            localStorage.setItem('pass', pass)
-            localStorage.setItem('data', data)
+        if (nome.length > 3 && validateEmail(email) === true && pass.length > 6 && data != "") {
             return <Redirect to='/login'/>
         } else {
-            alert('existem campos nao preenchidos')
+            setMenssagem('Preencha todos os campos abaixo corretamente.')
             e.preventDefault()
-    
         }
     }
 
-
+    function validateEmail(email){
+        var reg = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
+        if (reg.test(email)){
+            return true; }
+        else{
+            return false;
+        }
+    } 
 
 
     return (
@@ -35,6 +38,7 @@ export default function Cadastro() {
             <Container theme={themePage}>
                 <Form>
                     <h1>Cadastro</h1>
+                    <p className="mensagem">{mensagem}</p>
                     <div className="campos-form">
                         <input type="text" placeholder="Nome" id="inputNome" onChange={e => setNome(e.target.value)} />
                     </div>
