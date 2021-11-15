@@ -21,35 +21,36 @@ export const Container = styled.div`
         box-shadow: 1px 1px rgba(0, 0, 0, 25%);
     }
 
-    img{
+    #container-dois img{
         margin-right: 5vw;
         width: 11.5vw;
         height: 25vh;
         border-radius: 50%;
     }
 
-    span{
+    #container-dois span{
         font-weight: bold;
     }
 
-    h3{
+    #container-dois h3{
         font-size: 2.5rem;
         color: ${props => props.theme.textColor};
     }
 
-    p{
+    #container-dois p{
         font-size: 1rem;
         margin-bottom: 0;
         margin-top: 0.5vh;
         color: ${props => props.theme.textColor};
     }
 
+
     @media (max-width: 1440px){
         #container-dois{
             width: 60vw;
         }
 
-        img{
+        #container-dois img{
             width: 13vw;
         }
     }
@@ -59,15 +60,15 @@ export const Container = styled.div`
             height: 45vh;
         }
 
-        img{
+        #container-dois img{
             width: 14vw;
         }
 
-        h3{
+        #container-dois h3{
             font-size: 2.2rem;
         }
 
-        p{
+        #container-dois p{
             font-size: 0.8rem;
         }
     }
@@ -77,13 +78,13 @@ export const Container = styled.div`
             width: 70vw;
         }
 
-        img{
+        #container-dois img{
             width: 16vw;
         }
     }
 
     @media (max-width: 1024px){
-        img{
+        #container-dois img{
             width: 17vh;
             height: 20vh;
         }
@@ -94,7 +95,7 @@ export const Container = styled.div`
             width: 75vw;
         }
 
-        img{
+        #container-dois img{
             height: 21vh;
             width: 18vw;
         }
@@ -105,7 +106,7 @@ export const Container = styled.div`
             width: 80vw;
         }
 
-        img{
+        #container-dois img{
             width: 20vw;
         }
     }
@@ -116,7 +117,7 @@ export const Container = styled.div`
             height: 65vh;
         }
 
-        img{
+        #container-dois img{
             width: 22vw;
             margin-right: 0;
             margin-bottom: 2vh;
@@ -124,7 +125,7 @@ export const Container = styled.div`
     }
 
     @media (max-width: 780px){
-        img{
+        #container-dois img{
             height: 23vh;
             width: 25vw;
             margin-bottom: 3vh;
@@ -132,7 +133,7 @@ export const Container = styled.div`
     }
 
     @media (max-width: 700px){
-        img{
+        #container-dois img{
             width: 27vw;
         }
     }
@@ -148,7 +149,7 @@ export const Container = styled.div`
             width: 80%;
         }
 
-        img{
+        #container-dois img{
             width: 29vw;
         }
     }
@@ -158,7 +159,7 @@ export const Container = styled.div`
             width: 85%;
         }
 
-        img{
+        #container-dois img{
             width: 31vw;
         }
     }
@@ -168,36 +169,36 @@ export const Container = styled.div`
             width: 90%;
         }
 
-        img{
+        #container-dois img{
             width: 33vw;
         }
 
-        h3{
+        #container-dois h3{
             font-size: 2rem;
         }
     }
 
     @media (max-width: 450px){
-        img{
+        #container-dois img{
             width: 40vw;
             margin-bottom: 5vh;
         }
 
-        h3{
+        #container-dois h3{
             font-size: 1.8rem;
         }
     }
 
     @media (max-width: 400px){
-        img{
+        #container-dois img{
             width: 45vw;
         }
 
-        h3{
+        #container-dois h3{
             font-size: 1.5rem;
         }
 
-        p{
+        #container-dois p{
             font-size: 0.8rem;
         }
     }
@@ -207,11 +208,11 @@ export const Container = styled.div`
             height: 70vh;
         }
 
-        h3{
+        #container-dois h3{
             padding: 2%;
         }
 
-        p{
+        #container-dois p{
             padding: 1%;
         }
     }
@@ -222,4 +223,15 @@ export const Container = styled.div`
             text-align: center;
         }
     }
+`
+
+
+export const BotaoPerfil = styled.button`
+    text-transform: uppercase;
+    margin-left: 19vw;
+    width: 10vw;
+    text-align: center;
+    font-size: 0.8rem;
+    color: ${props => props.theme.textColor};
+    background: none;
 `
