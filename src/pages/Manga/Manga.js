@@ -85,7 +85,7 @@ export default function Manga() {
             return (
                 <Response theme={themePage}>
                     <aside>
-                        {loading === true ? (<h1>Mangás mais populares</h1>) : (null)}
+                        {loading === true ? (<h2>Mangás mais populares</h2>) : (null)}
 
                         <div className="resposta_api">
                             {populares.map(resp => {

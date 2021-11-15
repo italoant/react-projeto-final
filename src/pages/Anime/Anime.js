@@ -38,7 +38,7 @@ export default function Anime() {
         api.get(`/anime?filter[text]=${searchAnime}`)
             .then(data => {
                 setResponseAnime(data.data.data)
-                setTimeout(() => { setLoading(true) }, 3000)
+                setLoading(true)
             }).catch(erro => { console.log("erro") })
     }
 
@@ -60,6 +60,9 @@ export default function Anime() {
         animeSort()
     }, []); // requisição sem pesquisa
 
+    useEffect(() => {
+        setTimeout(() => { setLoading(true) }, 3000)
+    },[searchAnime])
 
     function returnSearch() {
         if (searchAnime !== "") {
