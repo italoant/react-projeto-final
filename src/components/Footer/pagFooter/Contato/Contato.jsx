@@ -1,44 +1,57 @@
 import React from 'react';
-import { EstiloContato, BackgroudForm } from '../Contato/StylePag';
-import { H1Style } from '../Equipe/Style';
+import { H1Style, Modal } from '../../../Components';
+import { Container, Form, Button } from './StylePag';
+import { useTheme } from "../../../../context/Theme";
+
 
 export default function Contato() {
+
+    const { themePage } = useTheme();
+
     return (
-        <div className="containerContato">
-                <EstiloContato>
-                    <H1Style> Entre em contato </H1Style>
-                    <BackgroudForm>
-                        <div className="containerForm">
-                            <h4> Por meio desse formulário preencha os campos para entrar em contato com nossa equipe de desenvolvimento Front-End do site NOME. </h4>
-                            <form className="formulario">
-                                <label htmlFor="nome">Nome: </label>
-                                <input type="text" id="nome" placeholder="Claudiany Martins" />
-                                <label htmlFor="email">Email: </label>
-                                <input type="email" placeholder="Claudiany@gmail.com" />
+        <Container theme={themePage}>
+            <H1Style> Entre em contato </H1Style>
+                    <Form>
+                        <h4> Preencha os campos deste formulário para entrar em contato com nossa equipe de desenvolvimento Front-End do site PanimeE. </h4>
+                            <div className="campos-form">
+                                <input type="text" id="nome" placeholder="Nome" />
+                            </div> 
+                            <div className="campos-form">
+                                <input type="email" placeholder="Email@email.com" id="email" />
+                            </div>
+                            <div className="campos-form">
+                                <label htmlFor="opcao">Selecione um tema:</label>
+                                    <select className="opcoes" name="opcao" id="opcao">
+                                        <option value="" selected  className="opcao">-</option>
+                                        <optgroup label="Senha:" className="opcao">
+                                            <option value="esqueceuSenha" className="opcao">Esqueceu a senha</option>
+                                        </optgroup>
+                                        <optgroup label="Gerenciamento de conta:" className="opcao">
+                                            <option value="gerenciamento" className="opcao">Solicitação de dados, recuperar conta e exclusão de conta</option>
+                                        </optgroup>
+                                        <optgroup label="Problemas técnicos:" className="opcao">
+                                            <option value="problemasTecnicos" className="opcao">Lag, fechamento</option>
+                                        </optgroup>
+                                        <optgroup label="Outros:" className="opcao">
+                                            <option value="outros" className="opcao">Outros temas</option>
+                                        </optgroup>
+                                    </select>
+                            </div>
+                            <div className="campos-form">
                                 <label htmlFor="comentario">Comentário: </label>
-                                <textarea name="comentario" id="comentario" placeholder="Nos informe o motivo do contato..." cols="30" rows="10" className="comentario">
+                                <textarea name="comentario" id="comentario" className="coments" placeholder="Nos informe o motivo do contato..." cols="30" rows="5" className="comentario">    
                                 </textarea>
-                                <div className="botoes">
-                                    <button className="btnCancelar">
-                                        Cancelar
-                                    </button>
-                                    <button className="btnEnviar">
-                                        Enviar
-                                    </button>
-                                </div>
-                                <div className="gif">
-                                    <img src="https://i.pinimg.com/originals/1f/a8/d9/1fa8d907a5cc6e1fa22f431929ebc12a.gif" alt="" />
-                                </div>
-                                <div className="agradecimento">
-                                    <h5>
-                                        Até mais!
-                                            <span className="colocar um popup legal agradecendo e vice versa"> ありがとう </span>
-                                    </h5>
-                                </div>
-                            </form>
-                        </div>
-                    </BackgroudForm>
-                </EstiloContato>
-        </div>
+                            </div>
+                            <Button color="#FE6688" type="button"> Cancelar </Button>
+                            <Button color="#F16EA5"> Enviar</Button>
+                    </Form>
+                    <Modal color="#FE6688" 
+                        nomeBotao="teste" 
+                        img="https://pa1.narvii.com/6595/33963d95eb637c3e8cbed27e7a204ae821723c2c_hq.gif" 
+                        botaoPop="testePOP"
+                        mensagem="Agradecemos!"
+                        mensagem2="ありがとう"
+                    /> 
+        </Container>
     );
 }

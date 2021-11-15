@@ -7,35 +7,20 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     background: ${props => props.theme.backgroundSecondary};
-    height: 150vh; 
+    height: 120vh; 
 
     @media (max-width: 1326px){
-        height: 160vh;
+        height: 140vh;
     }
 
     @media (max-width: 1024px){
-        height: 165vh;
+        height: 145vh;
     }
 
     @media (max-width: 994px){
-        height: 170vh;
+        height: 150vh;
     }
 
-    @media (max-width: 600px){
-        height: 185vh;
-    }
-
-    @media (max-width: 400px){
-        height: 190vh;
-    }
-
-    @media (max-width: 375px){
-        height: 210vh;
-    }
-
-    @media (max-width: 350px){
-        height: 250vh;
-    }
 
 `
 
@@ -47,11 +32,24 @@ export const Form = styled.form`
     padding: 7vh;
     box-shadow: 1px 1px rgba(0, 0, 0, 25%);
 
+    h1{
+        font-size: 3rem;
+        color: #FFFFFF;
+        text-shadow: .5px .5px rgba(241, 110, 165, 50);
+        margin: 0;
+    }
+
     label{
         font-size: 1.4rem;
         margin-bottom: 1.5vh;
         color: #FFFFFF;
         text-shadow: .5px .5px rgba(241, 110, 165, 50);
+    }
+
+    .mensagem{
+        font-size: 1.3rem;
+        margin-top: 1.5vh;
+        color: #FF0000;
     }
 
     .campos-form{
@@ -73,20 +71,6 @@ export const Form = styled.form`
         outline: none;
     }
 
-    .campos-form select{
-        width: 25vw;
-        min-height: 6vh;
-        border: none;
-        border-radius: 10px;
-    }
-
-    .campos-form textarea{
-        width: 25vw;
-        padding: 2.5%;
-        border: none;
-        border-radius: 10px;
-    }
-
     .campos-form p{
        text-align: center;
     }
@@ -97,14 +81,6 @@ export const Form = styled.form`
         width: 50%;
 
         .campos-form input{
-            width: 33vw;
-        }
-
-        .campos-form select{
-            width: 33vw;
-        }
-
-        .campos-form textarea{
             width: 33vw;
         }
     }
@@ -127,28 +103,12 @@ export const Form = styled.form`
         .campos-form input{
             width: 36vw;
         }
-
-        .campos-form select{
-            width: 36vw;
-        }
-
-        .campos-form textarea{
-            width: 36vw;
-        }
     }
 
     @media (max-width: 862px){
         width: 60%;
 
         .campos-form input{
-            width: 39vw;
-        }
-
-        .campos-form select{
-            width: 39vw;
-        }
-
-        .campos-form textarea{
             width: 39vw;
         }
 
@@ -164,24 +124,12 @@ export const Form = styled.form`
         .mensagem{
                 font-size: 0.9rem;
             }
-
-            h4{
-                padding: 2.5%;
-            }
     }
 
     @media (max-width: 700px){
         width: 70%;
 
         .campos-form input{
-            width: 50vw;
-        }
-
-        .campos-form select{
-            width: 50vw;
-        }
-
-        .campos-form textarea{
             width: 50vw;
         }
     }
@@ -192,14 +140,6 @@ export const Form = styled.form`
         .campos-form input{
             min-width: 65vw;
         }
-
-        .campos-form select{
-            width: 65vw;
-        }
-
-        .campos-form textarea{
-            width: 65vw;
-        }
     }
     
     @media (max-width: 320px){
@@ -207,7 +147,6 @@ export const Form = styled.form`
         h1{
             font-size: 2rem;
         }
-        
     }
 `
 
@@ -229,7 +168,7 @@ export const Button = styled.button`
         // Responsividade dos botões
     
         @media (max-width: 1326px){
-            width: 15.1vw;
+            width: 15vw;
         }
 
         @media (max-width: 982px){
@@ -237,7 +176,7 @@ export const Button = styled.button`
         }
 
         @media (max-width: 862px){
-            width: 17.5vw;
+            width: 17vw;
         }
         
         @media (max-width: 840px){
@@ -247,7 +186,7 @@ export const Button = styled.button`
 
         @media (max-width: 768px){
 
-            margin-left: 2vw;
+            margin-left: 1vw;
         }
 
         @media (max-width: 740px){
@@ -261,7 +200,10 @@ export const Button = styled.button`
 
         @media (max-width: 550px){
             width: 66vw;
-            margin-left: 3vw;
+        }
+
+        @media (max-width: 540px){
+            margin-left: 2.7vw;
         }
 
         @media (max-width: 375px){

@@ -1,88 +1,111 @@
 import styled from "styled-components";
 
 export const EstiloNoticia = styled.div`
-    width: 100vw; height: 100vh;
+    background: ${props => props.theme.backgroundSecondary};
+    height: 100%;
+ 
 
     .noticias{
         display: flex;
-        gap: 5rem;
-    }
-
-    .noticiaTema{
-        display: flex;
-        gap: 25px;
-    }
-
-    span{
-        background-color: yellow;
-    }
-
-    .texto{
-       display: flex;
-       flex-direction: column;
-
+        justify-content: center;
+        gap: 3rem;
+        
+        h4, h6, p{
+        margin: 0;
+        }
     }
 
     .right, .left{
-        width: 50%;
-        gap: 1rem;
-    }
-
-    .left{
         display: flex;
         flex-direction: column;
+        gap: 1.5rem;
     }
 
-    .noticiaLeft{
-        margin-left: 2rem;
+    .topicos{
         display: flex;
         flex-direction: row;
-        gap: 1rem;
-       
-    }
-
-    p{
-
-    }
-
-    img{
-        height: 15rem;
-    }
-
-    .right{
-        display: flex;
-        flex-direction: column;
         align-items: center;
+        justify-content: center;
+        margin: 2.5rem 0;
+        gap: 2rem;
+
+        .topicosL, .topicosR{
+            display: flex;
+            gap: 1.5rem;
+        }
     }
 
+`;
+
+export const EstiloNR = styled.div`
+    span, h6, p, .botaoInfo{
+       display: none;
+    }
+    
     .noticiaRight{
-        background-image: url("https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt8739d07baed7d77d/5ed9b1c197379739c07664d9/Arcane_Announcement_Banner.jpg");
+        background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)), url(${props => props.imgR}) center;
         background-size: cover;
-        height: 10rem; width: 20rem;
+        height: 10rem;
+        width: 15rem;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
         align-items: baseline;
-        padding: 2%;
-        margin-left: 2rem;
+        padding: 1%;
+        color: grey;
+        transition: 1s;
+        margin: 0;
+
+        h6,p{margin: 0;}
     }
 
-    @media (max-width:1000px){
-        .noticias{
+    .noticiaRight:hover{
+        background: linear-gradient(rgba(0,0,0,.0),rgba(0,0,0,.0)), url(${props => props.imgR}) center;
+        background-size: cover;
+        transform: scale(1.1);
+        cursor: pointer;
+
+        span, h6, .botaoInfo{
+            display: flex;
+            background: #f0ee86;
+        }
+
+        h6, .botaoInfo{
+            background: none;
+        }
+    }
+`;
+
+export const EstiloNL = styled.div`
+    
+    
+    img{
+        height: 25vh;
+    }
+    
+    .noticiaLeft{
+        display: flex;
+        gap: 1rem;
+        
+
+        span{
+            background: #f0ee86;
+            padding: 1%;
+        }
+
+        .noticia{
             display: flex;
             flex-direction: column;
+            gap: 0.5rem;
         }
 
-        .noticiaLeft{
-            width: 90vw;
+
+        .resumo{
+            width: 30vw;
         }
 
-        p{
-            overflow: auto;
-        }
 
-        .right{
-            flex-direction: row;
-        }
     }
+
+    
 `;
