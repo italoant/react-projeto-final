@@ -17,8 +17,6 @@ import { FormsContext } from '../../context/Forms';
 export default function Nav() {
 
 
-    const { setShowInputAnime } = useContext(InputContext);
-    const { setShowInputManga } = useContext(InputContext);
     const { showUser, setShowUser } = useContext(InputContext);
 
     const [display, setDisplay] = useState("none");
@@ -30,15 +28,15 @@ export default function Nav() {
     const { redirecinadoAnime, setRedirecionadoAnime } = useContext(RedirectContext);
     const { redirecinadoManga, setRedirecionadoManga } = useContext(RedirectContext);
     
-    const { setNome, setEmail, setSenha, setData } = useContext(FormsContext);
+    // const { setNome, setEmail, setSenha, setData } = useContext(FormsContext);
 
 
 
     function usuario() {
         if (showUser === "") {
             return <div>
-                    <Link to="/login" onClick={() => setShowInputAnime(false), setShowInputManga(false)}><ButtonPopUp theme={themePage} witdh="100px" margin=".7rem">Login</ButtonPopUp></Link>
-                <Link to="/cadastro" onClick={() => setShowInputAnime(false), setShowInputManga(false)}><ButtonPopUp theme={themePage} witdh="100px" margin=".7rem">Cadastro</ButtonPopUp></Link>
+                    <Link to="/login" ><ButtonPopUp theme={themePage} witdh="100px" margin=".7rem">Login</ButtonPopUp></Link>
+                <Link to="/cadastro" ><ButtonPopUp theme={themePage} witdh="100px" margin=".7rem">Cadastro</ButtonPopUp></Link>
             </div>
         } else {
             localStorage.setItem('user', showUser)
@@ -57,8 +55,8 @@ export default function Nav() {
     function usuarioMobile() {
         if (showUser === "") {
             return <>
-                <Link to="/login" onClick={() => setShowInputAnime(false), setShowInputManga(false)}><ButtonPopUp theme={themePage}>Login</ButtonPopUp></Link>
-                <Link to="/cadastro" onClick={() => setShowInputAnime(false), setShowInputManga(false)}><ButtonPopUp theme={themePage}>Cadastro</ButtonPopUp></Link>
+                <Link to="/login" ><ButtonPopUp theme={themePage}>Login</ButtonPopUp></Link>
+                <Link to="/cadastro" ><ButtonPopUp theme={themePage}>Cadastro</ButtonPopUp></Link>
             </>
 
         } else {
@@ -83,39 +81,9 @@ export default function Nav() {
         setRedirecionadoAnime("/login")
         setRedirecionadoManga("/login")
         setRedirecionadoNoticias("/login")
-        setShowInputAnime(false)
-        setShowInputManga(false)
         return <Redirect to="/" />
     }
 
-    function redirecionarHome(){
-        setShowInputAnime(false)
-        setShowInputManga(false)
-
-    }
-
-    function redirecionarPageAnime() {
-        if (showUser === "") {
-            setShowInputAnime(false)
-            setShowInputManga(false)
-        } else {
-            setShowInputAnime(true)
-            setShowInputManga(false)
-        }
-    }
-    function redirecionarPageManga() {
-        if (showUser === "") {
-            setShowInputAnime(false)
-            setShowInputManga(false)
-        } else {
-            setShowInputAnime(false)
-            setShowInputManga(true)
-        }
-    }
-    function redirecionarPageNoti() {
-        setShowInputAnime(false)
-        setShowInputManga(false)
-    }
 
 
 
@@ -123,12 +91,12 @@ export default function Nav() {
         <>
             <Header animationTheme={themeAnimation} theme={themePage}>
                 <div className="container">
-                    <Link to="/" onClick={redirecionarHome}><img src={Logo} alt="logo" /></Link>
+                    <Link to="/"><img src={Logo} alt="logo" /></Link>
                     <ul className="container_nav">
-                        <li><Link className="link" to="/" onClick={redirecionarHome}>Home</Link></li>
-                        <li><Link className="link" to={redirecinadoAnime} onClick={redirecionarPageAnime}>Anime</Link></li>
-                        <li><Link className="link" to={redirecinadoManga} onClick={redirecionarPageManga}>Mangá</Link></li>
-                        <li><Link className="link" to={redirecinadoNoticias} onClick={redirecionarPageNoti}>Noticias</Link></li>
+                        <li><Link className="link" to="/">Home</Link></li>
+                        <li><Link className="link" to={redirecinadoAnime} >Anime</Link></li>
+                        <li><Link className="link" to={redirecinadoManga} >Mangá</Link></li>
+                        <li><Link className="link" to={redirecinadoNoticias}>Noticias</Link></li>
                     </ul>
                 </div>
                 <div className="containerInput">
@@ -164,10 +132,10 @@ export default function Nav() {
             <NavMobile display={display} animationTheme={themeAnimation} theme={themePage}>
                 <nav className="container_nav_mobile">
                     <div className="links_and_buttons">
-                        <Link className="link" to="/" onClick={redirecionarHome}>Home</Link>
-                        <Link className="link" to={redirecinadoAnime} onClick={redirecionarPageAnime}>Anime</Link>
-                        <Link className="link" to={redirecinadoManga} onClick={redirecionarPageManga}>Mangá</Link>
-                        <Link className="link" to={redirecinadoNoticias} onClick={redirecionarPageNoti}>Noticias</Link> 
+                        <Link className="link" to="/" >Home</Link>
+                        <Link className="link" to={redirecinadoAnime} >Anime</Link>
+                        <Link className="link" to={redirecinadoManga} >Mangá</Link>
+                        <Link className="link" to={redirecinadoNoticias} >Noticias</Link> 
                     </div>
                     <div className="links_and_buttons">
                         {usuarioMobile(() => { })}

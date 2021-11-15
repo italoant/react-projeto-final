@@ -211,7 +211,9 @@ export const DivInput = styled.div`
      color: ${props => props.theme.textColor};
     }
 }
-    @media (max-width: 840px){
-        
+    @media (max-width: 935px){
+        .search-box{
+           
+        }
     }
 `;
