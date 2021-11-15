@@ -3,6 +3,7 @@ import { Main } from '../../pages/style/Styled';
 import { useTheme } from '../../context/Theme';
 import imgNotFound from '../../assets/imagem_nao_disponivel.png'
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 function AnimePagina(){
 
@@ -42,6 +43,7 @@ function AnimePagina(){
           
       </div>
       <img className="banner" src={resposta.attributes.coverImage === null ? (imgNotFound) : (resposta.attributes.coverImage.small)} />
+      <div className="voltar"><Link to="/anime">Voltar</Link></div>
       <div className="subtitle">
           <img src={resposta.attributes.posterImage.small} className="card_image"/>
           <div>
@@ -56,16 +58,16 @@ function AnimePagina(){
               }
             </div>
 
-            <p>Classificação Média: {resposta.attributes.averageRating === null ? ("Indisponível") : (resposta.attributes.averageRating + "⭐")}</p>
+            <p>Classificação Média: {resposta.attributes.averageRating === null ? ("Indisponível") : (<span className="resposta_text">{resposta.attributes.averageRating + "%"}</span>)}</p>
 
             <p className="subtitle_synopsis">{resposta.attributes.synopsis}</p>
-            <p>Data de lançamento: {startDate === "Data indisponível" ? (startDate) : (dateBrStart)}</p>
-            <p>Quantidade de episódios: {resposta.attributes.episodeCount === null ? ("Indisponível") : (resposta.attributes.episodeCount)}</p>
+            <p>Data de lançamento: {startDate === "Data indisponível" ? (startDate) : (<span className="resposta_text">{dateBrStart}</span>)}</p>
+            <p>Quantidade de episódios: {resposta.attributes.episodeCount === null ? ("Indisponível") : (<span className="resposta_text">{resposta.attributes.episodeCount}</span>)}</p>
             
 
-            <p>Classificação Indicativa: {resposta.attributes.ageRatingGuide === null ? ("Indisponível") : (resposta.attributes.ageRatingGuide)}</p>
+            <p>Classificação Indicativa: {resposta.attributes.ageRatingGuide === null ? ("Indisponível") : (<span className="resposta_text">{resposta.attributes.ageRatingGuide}</span>)}</p>
             
-            <p>Status: {resposta.attributes.status === "finished" ? ("finalizado") : ("Atual")}</p>
+            <p>Status: {resposta.attributes.status === "finished" ? (<span className="resposta_text">finalizado</span>) : (<span className="resposta_text">Atual</span>)}</p>
           </div>
       </div>
     </Main>

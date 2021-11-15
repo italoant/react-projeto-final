@@ -4,6 +4,7 @@ import { useAnimeShow } from '../../context/ShowAnime';
 import { Main } from '../../pages/style/Styled';
 import imgNotFound from '../../assets/imagem_nao_disponivel.png'
 import axios from 'axios';
+import { Link } from "react-router-dom";
 
 
 export default function Anime(){
@@ -44,6 +45,7 @@ export default function Anime(){
     return(
         <Main theme={themePage}>
                 <img className="banner" src={resposta.attributes.coverImage === null ? (imgNotFound) : (resposta.attributes.coverImage.small)} />
+        <div className="voltar"><Link to="/manga">Voltar</Link></div>        
                 <div className="subtitle">
                     <img src={resposta.attributes.posterImage.small} className="card_image"/>
                     <div>

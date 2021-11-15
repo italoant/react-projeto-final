@@ -87,9 +87,9 @@ export default function Manga() {
             )
         } else {
             return (
-                <Response theme={themePage}>
+                <Response height="100vh" theme={themePage}>
                     <aside>
-                        {loading === true ? (<h1>Mangás mais populares</h1>) : (null)}
+                        {loading === true ? (<h2>Mangás mais populares</h2>) : (null)}
 
                         <div className="resposta_api">
                             {populares.map(resp => {
@@ -109,7 +109,7 @@ export default function Manga() {
     }
 
     return <>
-        <Response theme={themePage}>
+        <Response height="100vh" theme={themePage}>
             <DivInput theme={themePage}>
                 <div theme={themePage}  className="search-box">
                     <input class="search-txt" type="search" placeholder="Ex: Naruto" onChange={(e) => setSearchManga(e.target.value)} />
