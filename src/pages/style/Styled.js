@@ -16,6 +16,10 @@ export const Main = styled.main`
         display: -webkit-box;
         -webkit-line-clamp: 12;
         -webkit-box-orient: vertical;
+
+        padding: .5rem;
+        border: 2px solid ${props => props.theme.textColor};
+        border-radius: .5rem;
     }
 
     .loading {
@@ -59,7 +63,7 @@ export const Main = styled.main`
         align-items: flex-start;
         gap: 2rem;
         font-weight: 400;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
 
 
         margin-bottom: 3rem;
