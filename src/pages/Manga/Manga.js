@@ -87,7 +87,7 @@ export default function Manga() {
             )
         } else {
             return (
-                <Response theme={themePage}>
+                <Response height="100vh" theme={themePage}>
                     <aside>
                         {loading === true ? (<h2>Mangás mais populares</h2>) : (null)}
 
@@ -109,7 +109,7 @@ export default function Manga() {
     }
 
     return <>
-        <Response theme={themePage}>
+        <Response height="100vh" theme={themePage}>
             <DivInput theme={themePage}>
                 <div theme={themePage}  className="search-box">
                     <input class="search-txt" type="search" placeholder="Ex: Naruto" onChange={(e) => setSearchManga(e.target.value)} />

@@ -67,7 +67,7 @@ export default function Anime() {
     function returnSearch() {
         if (searchAnime !== "") {
             return (
-                <Response theme={themePage}>
+                <Response height="100vh" theme={themePage}>
                     <h2>Resultados para Anime: {searchAnime}</h2>
                     <div className="resposta_api">
                         {responseAnime.map(resp => {
@@ -83,7 +83,7 @@ export default function Anime() {
         } else {
             return (
                 <>
-                    <Response theme={themePage}>
+                    <Response height="100vh" theme={themePage}>
                         <aside className="page_response">
 
                             {loading === true ? (<h2>Animes mais populares</h2>) : (null)}

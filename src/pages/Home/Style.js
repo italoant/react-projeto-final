@@ -12,8 +12,6 @@ export const Container = styled.div`
         padding: 2%;
     }
 
-    
-
     .w-100{
         height: 50vh;
         background-size: cover !important;
@@ -56,7 +54,7 @@ export const Response = styled.article`
     aside {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        /* justify-content: center; */
         align-items: center;
         min-height: 85vh;
     }
@@ -112,13 +110,14 @@ export const Response = styled.article`
         justify-content: center;
         margin: 1rem 0;
         width: 100vw;
-        min-height: 100vh;
+        min-height: ${props => props.height};
 
         .container_response {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            /* justify-content: center; */
             align-items: center;
+            
 
             p {
                 color: ${props => props.theme.textColor};
@@ -186,7 +185,7 @@ export const DivInput = styled.div`
     }
 
     :hover .search-txt{
-        width: 50vw;
+        width: 10vw;
         padding: 0px 10px;
     }
 
@@ -205,7 +204,6 @@ export const DivInput = styled.div`
     }
 
     .search-txt{
-<<<<<<< HEAD
         border-radius: 4px;
         background: none;
         margin: 1%;
@@ -217,32 +215,14 @@ export const DivInput = styled.div`
         transition: 0.4s;
         line-height: 40px;
         width: 0px;
-            ::placeholder{
+        ::placeholder{
             color: ${props => props.theme.textColor};
         }
     }
-    @media (max-width: 840px){
-        
-=======
-    border-radius: 4px;
-    background: none;
-    margin: 1%;
-    outline: none;
-    float: left;
-    padding: 0rem 1rem;
-    color: white;
-    font-size: 1rem;
-    transition: 0.4s;
-    line-height: 40px;
-    width: 0px;
-    ::placeholder{
-     color: ${props => props.theme.textColor};
-    }
-}
+
     @media (max-width: 935px){
         .search-box{
            
         }
->>>>>>> e6c13ca060a7d60b695aac05af6752ba4c454414
     }
 `;
