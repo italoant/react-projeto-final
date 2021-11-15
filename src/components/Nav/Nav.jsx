@@ -11,6 +11,7 @@ import { useTheme } from "../../context/Theme";
 import { lightTheme, darkTheme } from '../../styles/themes/theme';
 import { InputContext } from "../../context/Input";
 import { RedirectContext } from "../../context/Redirecionamento"
+import { FormsContext } from '../../context/Forms';
 
 
 export default function Nav() {
@@ -28,6 +29,8 @@ export default function Nav() {
     const { redirecinadoNoticias, setRedirecionadoNoticias } = useContext(RedirectContext);
     const { redirecinadoAnime, setRedirecionadoAnime } = useContext(RedirectContext);
     const { redirecinadoManga, setRedirecionadoManga } = useContext(RedirectContext);
+    
+    const { setNome, setEmail, setSenha, setData } = useContext(FormsContext);
 
 
 
