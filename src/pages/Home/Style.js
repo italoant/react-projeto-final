@@ -205,6 +205,7 @@ export const DivInput = styled.div`
     }
 
     .search-txt{
+<<<<<<< HEAD
         border-radius: 4px;
         background: none;
         margin: 1%;
@@ -222,5 +223,26 @@ export const DivInput = styled.div`
     }
     @media (max-width: 840px){
         
+=======
+    border-radius: 4px;
+    background: none;
+    margin: 1%;
+    outline: none;
+    float: left;
+    padding: 0rem 1rem;
+    color: white;
+    font-size: 1rem;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+    ::placeholder{
+     color: ${props => props.theme.textColor};
+    }
+}
+    @media (max-width: 935px){
+        .search-box{
+           
+        }
+>>>>>>> e6c13ca060a7d60b695aac05af6752ba4c454414
     }
 `;

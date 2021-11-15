@@ -1,9 +1,13 @@
 import React, { useContext, useEffect, useState } from "react";
-import { InputContext } from "../../context/Input";
-import api from "../../services/api";
-import { useTheme } from "../../context/Theme";
-import { Response, DivInput } from "./../Home/Style";
 import { Link } from 'react-router-dom';
+
+import { useTheme } from "../../context/Theme";
+import { InputContext } from "../../context/Input";
+
+import api from "../../services/api";
+
+import { Response, DivInput } from "./../Home/Style";
+
 
 import { library } from "@fortawesome/fontawesome-svg-core"; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -21,7 +25,7 @@ export default function Manga() {
 
     const [loading, setLoading] = useState(false);
 
-    const { searchManga, setSearchManga, showInputManga } = useContext(InputContext);
+    const { searchManga, setSearchManga } = useContext(InputContext);
     const [manga, setManga] = useState([]);
     const [populares, setPopulares] = useState([]);
 
@@ -108,7 +112,7 @@ export default function Manga() {
         <Response theme={themePage}>
             <DivInput theme={themePage}>
                 <div theme={themePage}  className="search-box">
-                    {showInputManga === true ? <input class="search-txt" type="search" placeholder="Ex: Naruto" onChange={(e) => setSearchManga(e.target.value)} /> : null}
+                    <input class="search-txt" type="search" placeholder="Ex: Naruto" onChange={(e) => setSearchManga(e.target.value)} />
                     <a className="search-btn" href="#">
                     </a>
                     <FontAwesomeIcon className="search-btn" icon="search"/>
