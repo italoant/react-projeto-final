@@ -213,7 +213,7 @@ export const DivInput = styled.div`
 }
     @media (max-width: 935px){
         .search-box{
-           
+           position: none;
         }
     }
 `;

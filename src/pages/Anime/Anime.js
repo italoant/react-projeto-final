@@ -9,7 +9,7 @@ import { useTheme } from "../../context/Theme";
 
 import { Response, DivInput } from "./../Home/Style";
 
-import { library } from "@fortawesome/fontawesome-svg-core"; 
+import { library } from "@fortawesome/fontawesome-svg-core";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 
@@ -106,10 +106,8 @@ export default function Anime() {
             <DivInput theme={themePage}>
                 <div className="search-box">
                     <div theme={themePage}>
-                        <input class="search-txt" type="text" placeholder="Ex: Dragon Ball" onChange={(e) => setSearchAnime(e.target.value)}/>
-                        <a className="search-btn" href="#">
-                        </a>
-                        <FontAwesomeIcon className="search-btn" icon="search"/>
+                        <input class="search-txt" type="text" placeholder="Ex: Dragon Ball" onChange={(e) => setSearchAnime(e.target.value)} /><a className="search-btn" href="#"></a>
+                        <FontAwesomeIcon className="search-btn" icon="search" />
                     </div>
                 </div>
             </DivInput>
