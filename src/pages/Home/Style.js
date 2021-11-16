@@ -53,6 +53,8 @@ export const Response = styled.article`
     h2 {
         color: ${props => props.theme.textColor};
         margin-top: 5rem;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
     }
 
     aside {
