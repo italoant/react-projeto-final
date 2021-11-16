@@ -7,7 +7,6 @@ export const Container = styled.div`
     min-height: 100vh;
     transition: 0.4s;
 
-
     h2{
         width: 80vw;
         margin: 0 auto;
@@ -33,7 +32,6 @@ export const Response = styled.article`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /* padding-bottom: 1rem; */
     transition: 0.4s;
 
 
@@ -53,6 +51,16 @@ export const Response = styled.article`
     h2 {
         color: ${props => props.theme.textColor};
         margin-top: 5rem;
+    }
+    .containerBtn{
+        width: 75vw;
+        display: flex;
+        justify-content: flex-start;
+        margin: 1%;
+    }
+    .viewMore{
+        width: 10vw;
+        height: 4vh;
     }
 
     aside {

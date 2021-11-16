@@ -88,6 +88,7 @@ export default function Home() {
                                     <p className="title_card">{resp.attributes.titles.en_jp || resp.attributes.titles.en || resp.attributes.titles.en_us}</p>     
                                 </div>
                             })}
+                       
                         </div>
                         {loading === false ? (<div className="bg-loading"><img className="loading" src={Loading} /></div>) : (null)}
                     </aside>

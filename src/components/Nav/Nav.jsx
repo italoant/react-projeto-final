@@ -70,7 +70,6 @@ export default function Nav() {
     }
 
     function removeUser() {
-        localStorage.removeItem('user')
         localStorage.removeItem('animeLink')
         localStorage.removeItem('mangaLink')
         localStorage.removeItem('notLink')

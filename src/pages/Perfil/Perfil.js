@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Redirect, Link } from 'react-router-dom';
 
 import { Container, BotaoPerfil } from './Style'
@@ -15,6 +15,9 @@ export default function Perfil(){
     const { setNome, setEmail, setSenha, setData, setUser } = useContext(FormsContext);
     const { setRedirecionadoNoticias, setRedirecionadoAnime, setRedirecionadoManga } = useContext(RedirectContext);
     const { setShowUser } = useContext(InputContext);
+
+
+    const [img, setImg] = useState()
 
 
     const { themePage } = useTheme();
@@ -37,12 +40,19 @@ export default function Perfil(){
         return <Redirect to="/" />
     }
 
+    function trocarImg(){
+        localStorage.setItem('foto' , img)
+        window.location.reload(true)
+    }
+
 
     return(
         <Container theme={themePage}>
             <div id='container-dois'>
-                <div>
-                <img src="http://pm1.narvii.com/6391/0d2712acf624dd93eddc015b80a5b68e02b62fca_00.jpg" alt=""/>
+                <div id='esquerda'>
+                    <img src={localStorage.getItem('foto')} alt=""/>
+                    <input placeholder="Envie a URL da sua imagem" onChange={e => setImg(e.target.value)} type="text"/>
+                    <button className="botaoEnviar" onClick={trocarImg}>enviar</button>
                 </div>
                 <div id='direita'>
                     <h3>{localStorage.getItem("nome_e_sobrenome")}</h3>
