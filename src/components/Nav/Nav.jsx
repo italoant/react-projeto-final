@@ -41,7 +41,7 @@ export default function Nav() {
             localStorage.setItem('mangaLink', redirecinadoManga)
             localStorage.setItem('notLink', redirecinadoNoticias)
             return <Usuario>
-                <p>Olá, {showUser}</p>
+                <p>Olá, {showUser} <img className="imagemUser" alt=''src={localStorage.getItem('foto')}/></p>
                 <Link to="/perfil">
                     <ButtonPopUp theme={themePage} >Perfil</ButtonPopUp>
                 </Link> <Link to=""><ButtonPopUp theme={themePage} onClick={removeUser}>Sair</ButtonPopUp></Link>
@@ -63,7 +63,7 @@ export default function Nav() {
             localStorage.setItem('mangaLink', redirecinadoManga)
             localStorage.setItem('notLink', redirecinadoNoticias)
             return <Usuario>
-                <p>Olá, {showUser}</p>
+                <p>Olá, {showUser} <img className="imagemUserMobile" alt=''src={localStorage.getItem('foto')}/></p>
                 <Link to="/perfil"><ButtonPopUp theme={themePage} >Perfil</ButtonPopUp></Link> <Link to=""><ButtonPopUp theme={themePage} onClick={removeUser}>Sair</ButtonPopUp></Link>
             </Usuario>
         }
