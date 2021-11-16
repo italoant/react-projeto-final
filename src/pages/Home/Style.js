@@ -5,6 +5,8 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    transition: 0.4s;
+
 
     h2{
         width: 80vw;
@@ -32,6 +34,8 @@ export const Response = styled.article`
     flex-wrap: wrap;
     justify-content: center;
     /* padding-bottom: 1rem; */
+    transition: 0.4s;
+
 
 
     background-color: ${props => props.theme.backgroundSecondary};
@@ -48,7 +52,7 @@ export const Response = styled.article`
 
     h2 {
         color: ${props => props.theme.textColor};
-        margin-top: 2.5rem;
+        margin-top: 5rem;
     }
 
     aside {
@@ -162,6 +166,7 @@ export const Response = styled.article`
 
 export const DivInput = styled.div`
     width: 100vw;
+    display: flex;
     /* margin: 1%; */
     background: ${props => props.theme.backgroundPrimaryButton};
     padding: 0 3rem;
@@ -175,6 +180,9 @@ export const DivInput = styled.div`
         border-radius: 4px;
         border: 1px solid ${props => props.theme.borderColor};  
         margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
     
         .search-btn{
             color:  #FFFFFF;   
@@ -182,12 +190,7 @@ export const DivInput = styled.div`
         }
     }
 
-    .search-txt{
-        border: none;
-        text-align: justify;
-    }
-
-    :hover .search-txt{
+    /* :hover .search-txt{
         width: 200px;
         padding: 0px 10px;
     }
@@ -200,9 +203,7 @@ export const DivInput = styled.div`
     :focus .search-txt{
         width: 200px;
         padding: 0px 10px;
-    }
-
-
+    } */
 
     .search-btn{
         position: absolute;
@@ -221,15 +222,13 @@ export const DivInput = styled.div`
     .search-txt{
         border-radius: 4px;
         background: none;
-        margin: 1%;
         outline: none;
-        float: left;
-        padding: 0rem 1rem;
-        color: white;
+        padding: 0rem .5rem;
+        color: ${props => props.theme.textColor};
         font-size: 1rem;
         transition: 0.4s;
-        line-height: 40px;
-        width: 0px;
+        border: none;
+        width: 200px;
 
         ::placeholder{
             color: ${props => props.theme.textColor};
@@ -239,10 +238,6 @@ export const DivInput = styled.div`
     @media (max-width: 935px){
         .search-box{
            position: none;
-        }
-        .search-txt{
-            width: 200px;
-            padding: 0px 10px;
         }
     }
 `;

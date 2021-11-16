@@ -7,6 +7,7 @@ export const ContainerSobre = styled.div`
     flex-direction: column;
     align-items: center;
     background-color: ${props => props.theme.backgroundSecondary};
+    transition: 0.4s;
 
     .container{
         display: flex;

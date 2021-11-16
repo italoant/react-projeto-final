@@ -5,6 +5,8 @@ export const EstiloNoticia = styled.div`
     color: ${props => props.theme.textColor};
     height: 100%;
     font-size: large;
+    transition: 0.4s;
+
 
     .noticias{
         display: flex;

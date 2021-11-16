@@ -8,6 +8,8 @@ export const Container = styled.div`
     align-items: center;
     background: ${props => props.theme.backgroundSecondary};
     height: 150vh; 
+    transition: 0.4s;
+
 
     @media (max-width: 1326px){
         height: 160vh;

@@ -6,6 +6,7 @@ export const EstiloEquipe = styled.div`
     justify-content: center;
     align-items: center;
     background-color: ${props => props.theme.backgroundSecondary};
+    transition: 0.4s;
 
     .containerProps{
         padding: 2%;

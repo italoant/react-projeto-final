@@ -8,6 +8,7 @@ export const Container = styled.div`
     height: 100vh;
     color: #FFFFFF;
     background: ${props => props.theme.backgroundSecondary};
+    transition: 0.4s;
 
     #butao_delete_account {
         padding-top: 1rem;

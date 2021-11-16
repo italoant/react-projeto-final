@@ -7,7 +7,9 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     background: ${props => props.theme.backgroundSecondary};
-    height: 120vh; 
+    height: 120vh;
+    transition: 0.4s;
+
 
     @media (max-width: 1326px){
         height: 140vh;

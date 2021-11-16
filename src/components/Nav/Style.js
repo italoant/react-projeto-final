@@ -7,6 +7,7 @@ export const Header = styled.header`
     padding: 1.7rem 2.5rem;
     background: ${props => props.theme.backgroundPrimary}; 
     opacity: 80%;
+    transition: 0.4s;
 
     a {
         font-size: 1rem;

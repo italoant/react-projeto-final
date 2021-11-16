@@ -8,6 +8,8 @@ export const Main = styled.main`
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+    transition: 0.4s;
+
 
     .voltar {
         position: absolute;

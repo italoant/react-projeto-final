@@ -9,6 +9,8 @@ export const Style = styled.footer`
     justify-content: center;
     align-items: center;
     color: white;
+    transition: 0.4s;
+
 
     .containerFooter{
         display: flex;
