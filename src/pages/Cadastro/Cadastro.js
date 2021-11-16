@@ -20,8 +20,8 @@ export default function Cadastro() {
 
 
     function validate(e) {
-        if (validateNome(nome) === true && validateEmail(email) === true && pass.length > 6 && user.length >= 1 && data.length != "") {
-            setPassword("");
+        if (validateNome(nome) === true && validateEmail(email) === true && user.length > 1 && pass.length > 6 && data.length != "") {
+            localStorage.setItem('foto' , "https://img.elo7.com.br/product/zoom/342ED94/painel-de-festa-3d-sublimada-pantera-cor-de-rosa-1-50x1-50-painel-de-festa-redondo-da-pantera-cor-de.jpg")
             return <Redirect to='/login'/>
         }else if(pass.length < 6){
             setPassword("A senha precisa ter pelo menos 6 caracteres");

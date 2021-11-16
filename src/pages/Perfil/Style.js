@@ -10,6 +10,37 @@ export const Container = styled.div`
     background: ${props => props.theme.backgroundSecondary};
     transition: 0.4s;
 
+    #esquerda{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: 10%;
+        width: 32%;
+        height: 30vh;
+    }
+
+    #esquerda input{
+        width: 70%;
+        margin: 3%;
+        border: none;
+        padding: 1%;
+        border-radius: 5px;
+    }
+    .botaoEnviar{
+        width: 50%;
+        background: #FE5F55;
+        height: 3vh;
+    } 
+    #direita{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 30vh;
+        min-width: 20vw;
+        max-width: 50vw;
+    }
+
     #butao_delete_account {
         padding-top: 1rem;
         display: flex;
@@ -29,9 +60,9 @@ export const Container = styled.div`
     }
 
     #container-dois img{
-        margin-right: 5vw;
-        width: 11.5vw;
+        width: 10vw;
         height: 25vh;
+        margin: 5%;
         border-radius: 50%;
     }
 
@@ -45,7 +76,7 @@ export const Container = styled.div`
     }
 
     #container-dois p{
-        font-size: 1rem;
+        font-size: 1.2rem;
         margin-bottom: 0;
         margin-top: 0.5vh;
         color: ${props => props.theme.textColor};
@@ -95,6 +126,9 @@ export const Container = styled.div`
             width: 17vh;
             height: 20vh;
         }
+        #esquerda{
+           margin: 9%;
+        }
     }
 
     @media (max-width: 1000px){
@@ -127,7 +161,12 @@ export const Container = styled.div`
         #container-dois img{
             width: 22vw;
             margin-right: 0;
-            margin-bottom: 2vh;
+        }
+        #esquerda{
+            margin: 0;
+        }
+        .botaoEnviar{
+            margin: 3%;
         }
     }
 
@@ -135,7 +174,6 @@ export const Container = styled.div`
         #container-dois img{
             height: 23vh;
             width: 25vw;
-            margin-bottom: 3vh;
         }
     }
 

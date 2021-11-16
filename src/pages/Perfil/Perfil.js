@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Redirect, Link } from 'react-router-dom';
 
 import { Container, BotaoPerfil } from './Style'
@@ -21,6 +21,9 @@ export default function Perfil(){
     const { setShowUser } = useContext(InputContext);
 
 
+    const [img, setImg] = useState()
+
+
     const { themePage } = useTheme();
 
     function deleteAccount(){
@@ -41,18 +44,30 @@ export default function Perfil(){
         return <Redirect to="/" />
     }
 
+    function trocarImg(){
+        localStorage.setItem('foto' , img)
+        window.location.reload(true)
+    }
+
+    const data_localStorege = localStorage.getItem('data');
+    var data_br = data_localStorege.split("-");
+    
+
+    // console.log(typeof(data_localStorege))
 
     return(
         <Container theme={themePage}>
             <div id='container-dois'>
-                <div>
-                <img src="http://pm1.narvii.com/6391/0d2712acf624dd93eddc015b80a5b68e02b62fca_00.jpg" alt=""/>
+                <div id='esquerda'>
+                    <img src={localStorage.getItem('foto')} alt=""/>
+                    <input placeholder="Envie a URL da sua imagem" onChange={e => setImg(e.target.value)} type="text"/>
+                    <button className="botaoEnviar" onClick={trocarImg}>enviar</button>
                 </div>
                 <div id='direita'>
                     <h3>{localStorage.getItem("nome_e_sobrenome")}</h3>
                     <p><span>Usuário: </span>@{localStorage.getItem("user")}</p>
                     <p><span>Email: </span>{localStorage.getItem("email")}</p>
-                    <p><span>Data de Nascimento: </span>{localStorage.getItem("data")}</p>
+                    <p><span>Data de Nascimento: </span>{`${data_br[2]}/${data_br[1]}/${data_br[0]}`}</p>
                     <div id="butao_delete_account">
                         <Link to=""><BotaoPerfil onClick={deleteAccount} theme={themePage}>Excluir Conta</BotaoPerfil></Link>
                     </div>
