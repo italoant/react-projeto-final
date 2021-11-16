@@ -165,7 +165,6 @@ export const DivInput = styled.div`
     /* margin: 1%; */
     background: ${props => props.theme.backgroundPrimaryButton};
     padding: 0 3rem;
-
     
     .search-box{
         position: absolute;
@@ -175,6 +174,7 @@ export const DivInput = styled.div`
         height: 4vh;
         border-radius: 4px;
         border: 1px solid ${props => props.theme.borderColor};  
+        margin-top: 1rem;
     
         .search-btn{
             color:  #FFFFFF;   
@@ -188,9 +188,21 @@ export const DivInput = styled.div`
     }
 
     :hover .search-txt{
-        width: 10vw;
+        width: 200px;
         padding: 0px 10px;
     }
+
+    :focus .search-box{
+        width: 200px;
+        padding: 0px 10px;
+    }
+
+    :focus .search-txt{
+        width: 200px;
+        padding: 0px 10px;
+    }
+
+
 
     .search-btn{
         position: absolute;
@@ -218,6 +230,7 @@ export const DivInput = styled.div`
         transition: 0.4s;
         line-height: 40px;
         width: 0px;
+
         ::placeholder{
             color: ${props => props.theme.textColor};
         }
@@ -226,6 +239,10 @@ export const DivInput = styled.div`
     @media (max-width: 935px){
         .search-box{
            position: none;
+        }
+        .search-txt{
+            width: 200px;
+            padding: 0px 10px;
         }
     }
 `;
