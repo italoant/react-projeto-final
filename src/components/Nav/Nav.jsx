@@ -84,9 +84,6 @@ export default function Nav() {
         return <Redirect to="/" />
     }
 
-
-
-
     return (
         <>
             <Header animationTheme={themeAnimation} theme={themePage}>
@@ -138,7 +135,7 @@ export default function Nav() {
                         <Link className="link" to={redirecinadoNoticias} >Noticias</Link> 
                     </div>
                     <div className="links_and_buttons">
-                        {usuarioMobile(() => { })}
+                        {usuarioMobile(() => {})}
                         <img
                             src={Theme}
                             className="theme"

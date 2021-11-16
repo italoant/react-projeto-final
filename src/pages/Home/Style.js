@@ -118,6 +118,9 @@ export const Response = styled.article`
             /* justify-content: center; */
             align-items: center;
             
+            .title_card {
+                width: 200px;
+            }
 
             p {
                 color: ${props => props.theme.textColor};
