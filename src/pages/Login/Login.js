@@ -65,8 +65,8 @@ export default function Login(){
                 <section className="campos-form">
                     <input onChange={(e) => {setSenha(e.target.value)}} id="senha" type='password' placeholder="Senha"/>
                 </section>
-                <Link to=''><Botao color="#F16EA5" onClick={Logar}>Entrar</Botao></Link>
                 <Link to='/cadastro'><Botao color="#FE6688">Cadastre-se</Botao></Link>
+                <Link to=''><Botao color="#F16EA5" onClick={Logar}>Entrar</Botao></Link>
                 <p id="esqueceu-senha">Esqueceu a senha? <Link id="contato" to="/contato">Clique aqui.</Link></p>
             </Formulario>
         </ContainerForm>
