@@ -49,7 +49,9 @@ export default function Perfil(){
                     <p><span>Usuário: </span>@{localStorage.getItem("user")}</p>
                     <p><span>Email: </span>{localStorage.getItem("email")}</p>
                     <p><span>Data de Nascimento: </span>{localStorage.getItem("data")}</p>
-                    <Link to=""><BotaoPerfil onClick={deleteAccount} theme={themePage}>Excluir Conta</BotaoPerfil></Link>
+                    <div id="butao_delete_account">
+                        <Link to=""><BotaoPerfil onClick={deleteAccount} theme={themePage}>Excluir Conta</BotaoPerfil></Link>
+                    </div>
                 </div>
             </div>
         </Container>

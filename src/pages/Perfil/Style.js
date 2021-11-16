@@ -2,13 +2,19 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: space-evenly;
     align-items: center;
     height: 100vh;
     color: #FFFFFF;
     background: ${props => props.theme.backgroundSecondary};
-    
+
+    #butao_delete_account {
+        padding-top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
 
     #container-dois{
         display: flex;
@@ -228,10 +234,10 @@ export const Container = styled.div`
 
 export const BotaoPerfil = styled.button`
     text-transform: uppercase;
-    margin-left: 19vw;
-    width: 10vw;
+    font-weight: 600;
     text-align: center;
     font-size: 0.8rem;
-    color: ${props => props.theme.textColor};
-    background: none;
+    color: white;
+    background: #FE5F55;
+    height: 50px;
 `
