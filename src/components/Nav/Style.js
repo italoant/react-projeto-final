@@ -169,7 +169,7 @@ export const Usuario = styled.div`
     
     .imagemUser{
         border-radius: 50%;
-        height: 2.5rem;
+        height: 2.2rem;
         margin: 2%;
 
     }
