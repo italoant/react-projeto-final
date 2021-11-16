@@ -12,7 +12,7 @@ import { useTheme } from "../../context/Theme";
 
 export default function Login(){
 
-    const { nome, pass } = useContext(FormsContext);
+    const { user, pass } = useContext(FormsContext);
 
     const [ usuario, setUsuario ] = useState("");
     const [senha, setSenha] = useState("");
@@ -42,7 +42,7 @@ export default function Login(){
             setMensagem("Preencha o campo de usuário.")
             document.getElementById("email").style.boxShadow = "1px 1px 5px red";
             e.preventDefault()
-        } else if(usuario === nome && senha === pass){
+        } else if(usuario === user && senha === pass){
             setShowUser(usuario)
             setRedirecionadoAnime("/anime")
             setRedirecionadoManga("/manga")

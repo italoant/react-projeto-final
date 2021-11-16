@@ -24,11 +24,8 @@ export default function Nav() {
 
     const { themePage, setTheme } = useTheme();
 
-    const { redirecinadoNoticias, setRedirecionadoNoticias } = useContext(RedirectContext);
-    const { redirecinadoAnime, setRedirecionadoAnime } = useContext(RedirectContext);
-    const { redirecinadoManga, setRedirecionadoManga } = useContext(RedirectContext);
+    const { redirecinadoNoticias, setRedirecionadoNoticias, redirecinadoAnime, setRedirecionadoAnime, redirecinadoManga, setRedirecionadoManga } = useContext(RedirectContext);
     
-    // const { setNome, setEmail, setSenha, setData } = useContext(FormsContext);
 
 
 
@@ -84,9 +81,6 @@ export default function Nav() {
         return <Redirect to="/" />
     }
 
-
-
-
     return (
         <>
             <Header animationTheme={themeAnimation} theme={themePage}>
@@ -138,7 +132,7 @@ export default function Nav() {
                         <Link className="link" to={redirecinadoNoticias} >Noticias</Link> 
                     </div>
                     <div className="links_and_buttons">
-                        {usuarioMobile(() => { })}
+                        {usuarioMobile(() => {})}
                         <img
                             src={Theme}
                             className="theme"
