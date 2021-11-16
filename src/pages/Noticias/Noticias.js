@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { EstiloNoticia, TemaN } from "./Style";
 import { useTheme } from "../../context/Theme";
 import { NoticiasR, NoticiasL, Tema } from "./Components";
@@ -7,6 +7,10 @@ import { H1Style } from "../../components/Components";
 export default function Noticias(){
 
     const { themePage } = useTheme();
+
+    useEffect(() => {
+        window.document.title = "PanimeE - Noticías"
+    })
 
     return(
         <EstiloNoticia theme={themePage} > 

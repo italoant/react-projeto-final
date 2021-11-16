@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Redirect, Link } from 'react-router-dom';
 
 import { Container, BotaoPerfil } from './Style'
@@ -11,6 +11,10 @@ import { InputContext } from "../../context/Input";
 
 
 export default function Perfil(){
+
+    useEffect(() => {
+        window.document.title = "PanimeE - Perfil"
+    })
 
     const { setNome, setEmail, setSenha, setData, setUser } = useContext(FormsContext);
     const { setRedirecionadoNoticias, setRedirecionadoAnime, setRedirecionadoManga } = useContext(RedirectContext);

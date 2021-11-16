@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useTheme } from '../../../../context/Theme';
 import { H1Style } from '../../../Components';
  import { ContainerSobre } from './StylePag';
@@ -6,7 +6,11 @@ import { H1Style } from '../../../Components';
 export default function Sobre() {
 
     const { themePage } = useTheme();
-    
+
+    useEffect(() => {
+        window.document.title = "PanimeE - Sobre"
+    })
+
     return (
         <ContainerSobre theme={themePage}>
             <H1Style> Informações Sobre o Site</H1Style>
