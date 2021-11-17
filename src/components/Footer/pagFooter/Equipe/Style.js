@@ -7,6 +7,7 @@ export const EstiloEquipe = styled.div`
     align-items: center;
     background-color: ${props => props.theme.backgroundSecondary};
     transition: 0.4s;
+    font-size: 2vh;
 
     .containerProps{
         padding: 2%;
@@ -32,6 +33,21 @@ export const EstiloEquipe = styled.div`
             margin: 0;
         }
 
+        .sobreEquipe{
+            margin-bottom: 0.5rem;
+
+            a{
+                text-decoration: none;
+                font-size: 4vh;
+                color: var(--pink2);
+                transition: 0.5s;
+            }
+
+            a:hover{
+                color: white;
+            }
+        }
+
         .cvEquipe{
             background-color: var(--pink2);
             padding: 1%;
@@ -43,6 +59,8 @@ export const EstiloEquipe = styled.div`
         .cvEquipe:hover{
             transition: 1s;
             box-shadow: 1px 1px 10px var(--salmao);
+            color: rgba(255, 255, 255, 0.8);
+            transition: 0.5s;
         }
     }
 

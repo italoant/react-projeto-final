@@ -25,34 +25,51 @@ export default function Equipe(){
             <div className="informacoes">
                 <EquipeDados 
                     foto={Camila}
-                    nome="Bala"
-                    sobrenome="Cami" 
+                    nome="Camila"
+                    sobrenome="“Bala” Silva" 
                     cidade="Recife" estado="PE" 
-                    sobre="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce est nulla, facilisis at odio in, vulputate varius sem. Cras fermentum in turpis vel efficitur. Pellentesque non venenatis magna. Morbi in tincidunt lectus. Curabitur non lorem mauris. Cras nec mi pulvinar, ultrices ligula ut, fermentum ex. Nullam dolor nulla, pellentesque ut nisl eu, pharetra dictum neque. Quisque feugiat pharetra mauris, id vestibulum nulla maximus vel."
+                    sobre="Me chamo camila, mas pode me chamar de cami. Faço parte da equipe de desenvolvimento
+                    da aplicação PanimeE, sou apaixonada pelo universo que trazemos aqui, assim também 
+                    como o mundo da tecnologia. Sou aluna START recife e aqui trago alguns dos meus
+                    aprendizados. Minha meta é conhecer de perto esses universos e expandir cada vez mais
+                    meus conhecimentos."
+                    linkGithub="https://github.com/camilams27"
+                    linkLinkedin="https://www.linkedin.com/in/camila-camasi/"
+                    linkInsta="https://www.instagram.com/camii.las/"
                     linkCV="https://camilams27.github.io/ProjetoCurriculo/"
                 />
                 <EquipeDados 
                     foto={Italo}
-                    nome="Numeros"
-                    sobrenome="Italo" 
+                    nome="Italo"
+                    sobrenome="“Numeros” Antonio" 
                     cidade="Recife" estado="PE" 
-                    sobre="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce est nulla, facilisis at odio in, vulputate varius sem. Cras fermentum in turpis vel efficitur. Pellentesque non venenatis magna. Morbi in tincidunt lectus. Curabitur non lorem mauris. Cras nec mi pulvinar, ultrices ligula ut, fermentum ex. Nullam dolor nulla, pellentesque ut nisl eu, pharetra dictum neque. Quisque feugiat pharetra mauris, id vestibulum nulla maximus vel."
+                    sobre="Atualmente sou aluno do projeto Start-Recife da rede cidadã e estou aprendendo as tecnologias: HTML, CSS, JS e REACT.
+                    Busco vaga de desenvolvedor, estagiário, aprendiz ou Jr em empresa do ramo para desenvolver minhas habilidades adquiridas até o momento e assim agregar valor conjunto a empresa."
+                    linkGithub="https://github.com/italoant"
+                    linkLinkedin="https://www.linkedin.com/in/italo-antonio/"
+                    linkInsta="https://www.instagram.com/italoant/"
                     linkCV="https://italoant.github.io/Atividade-de-avalia-o-HTML-e-CSS/"
                 />
                 <EquipeDados 
                     foto={Thayza}
-                    nome="Kythanna"
-                    sobrenome="Thayza" 
+                    nome="Thayza"
+                    sobrenome="“Kythanna” Santana" 
                     cidade="Recife" estado="PE" 
-                    sobre="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce est nulla, facilisis at odio in, vulputate varius sem. Cras fermentum in turpis vel efficitur. Pellentesque non venenatis magna. Morbi in tincidunt lectus. Curabitur non lorem mauris. Cras nec mi pulvinar, ultrices ligula ut, fermentum ex. Nullam dolor nulla, pellentesque ut nisl eu, pharetra dictum neque. Quisque feugiat pharetra mauris, id vestibulum nulla maximus vel."
+                    sobre="Me chamo Thayza Santana e sou conhecida pelos meus amigos por “Kythanna” Tenho 22 anos e no momento sou estudante de Desenvolvimento Front-end pelo Start Recife. No meu tempo livre eu gosto de ler livros e mangás, escrever e publicar algumas histórias de minha autoria, ouvir música, assistir animes e filmes, jogar e sair com meus amigos. Para me conhecer mais um pouco, é só acessar as minhas Redes Sociais."
+                    linkGithub="https://github.com/thayzasantana"
+                    linkLinkedin="https://www.linkedin.com/in/thayza-santana/"
+                    linkInsta="https://www.instagram.com/thayzasantana_/"
                     linkCV="https://thayzasantana.github.io/avaliacao-html-css/"
                 />
                 <EquipeDados 
                     foto={Matheus}
-                    nome="Deslumbrante"
-                    sobrenome="Matheus" 
+                    nome="Matheus"
+                    sobrenome="“Deslumbrante” Silva" 
                     cidade="Recife" estado="PE" 
-                    sobre="Tenho 19 anos, nasci em Recife - Pernambuco. Tive meu primeiro contato com programação os 15 anos, quando comecei a estudar Python. Me apaixonei no mesmo momento! Atualmente, estudo Desenvolvente Web e pretendo me especializar em Front-end. Gosto de assistir, ouvir música, jogar um Lolzinho e sair com os meus amigos. Esse sou eu, Matheus Henrique."
+                    sobre="Tenho 19 anos, nasci em Recife - Pernambuco. Tive meu primeiro contato com programação os 15 anos, quando comecei a estudar Python. Me apaixonei no mesmo momento! Atualmente, estudo Desenvolvento Web e pretendo me especializar em Front-end. Gosto de assistir, ouvir música, jogar um Lolzinho e sair com os meus amigos. Esse sou eu, Matheus Henrique."
+                    linkGithub="https://github.com/mateushenriquedasilva"
+                    linkLinkedin="https://www.linkedin.com/in/matheus-henrique-54a673197/"
+                    linkInsta="https://www.instagram.com/themateusreal/"
                     linkCV="https://mateushenriquedasilva.github.io/projeto-curriculo/"
                 />
             </div>
