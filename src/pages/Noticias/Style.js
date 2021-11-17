@@ -93,7 +93,7 @@ export const Style = styled.div`
                 align-items: center;
             }
 
-            .teste{
+            .scrollRight{
                 width: 80vw;
                 height: 23vh;
                 background-color: rgba(100, 0, 0, 0.1);
@@ -150,7 +150,7 @@ export const Style = styled.div`
     }
 
     @media (max-width:600px){
-        .teste{
+        .scrollRight{
 
             .right{
                 gap: 0.8rem;

@@ -36,7 +36,7 @@ export default function Noticias(){
                         resumo="O novo mangá Yomi no Tsugai de Hiromu Arakawa teve sua data de estreia revelada. De acordo com informações, a obra chega dia 10 de dezembro na revista Shounen Gangan da Square Enix. Por fim Hiromu teve sua maior obra, o mangá Fullmetal Alchemist, lançado em 2001 e 2010, pela Shonen Gangan, com 27 volumes. A JBC publica o quadrinho por aqui."
                     />
                 </div>
-                <div className="teste">
+                <div className="scrollRight">
                     <div className="right">
                         <h2 className="emAlta"> em alta</h2>
                         <NoticesRight 
