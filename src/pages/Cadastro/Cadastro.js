@@ -90,8 +90,8 @@ export default function Cadastro() {
                             setData(e.target.value)
                     }} />
                     </div>
-                    <Link to='/'><Button color="#FE6688"> Cancelar </Button></Link>
                     <Link to='/login'><Button color="#FE6688" onClick={validate}> Cadastrar </Button></Link>
+                    <Link to='/'><Button color="#FE6688"> Cancelar </Button></Link>
                 </Form>
             </Container>
         </div>
