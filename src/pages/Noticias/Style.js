@@ -93,7 +93,7 @@ export const Style = styled.div`
                 align-items: center;
             }
 
-            .teste{
+            .scrollRight{
                 width: 80vw;
                 height: 23vh;
                 background-color: rgba(100, 0, 0, 0.1);
@@ -101,6 +101,8 @@ export const Style = styled.div`
                 overflow-y: hidden;
                 display: flex;
                 align-items:center;
+                padding: 6rem 0;
+                border-radius: 5px;
                 
                 .right{
                     width: 100vw;
@@ -148,11 +150,7 @@ export const Style = styled.div`
     }
 
     @media (max-width:600px){
-        .teste{
-            height: 10vh;
-            width: 50vw;
-            padding: 1rem 0;
-            border-radius: 5px;
+        .scrollRight{
 
             .right{
                 gap: 0.8rem;
