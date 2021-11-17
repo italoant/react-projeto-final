@@ -78,7 +78,9 @@ export default function Cadastro() {
                         }} />
                     </div>
                     <div className="campos-form">
-                        <input type="password" placeholder="Senha" id="inputSenha" onChange={e => setSenha(e.target.value)} />
+                        <input type="password" placeholder="Senha" id="inputSenha" onChange={e => {
+                            setSenha(e.target.value)
+                            }} />
                         <p className="mensagem">{password}</p>
                     </div>
                     <div className="campos-form">
