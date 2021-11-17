@@ -31,6 +31,9 @@ export const Container = styled.div`
         width: 50%;
         background: #FE5F55;
         height: 3vh;
+        outline: none;
+        border: none;
+        border-radius: .5rem;
     } 
     #direita{
         display: flex;
@@ -46,6 +49,13 @@ export const Container = styled.div`
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        
+        button {
+            outline: none;
+            border: none;
+            border-radius: .5rem;
+            padding: .5rem;
+        }
     }
 
     #container-dois{
