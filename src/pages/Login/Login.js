@@ -31,16 +31,12 @@ export default function Login(){
         
         if(usuario == "" && senha == ""){
             setMensagem("Preencha todos os campos abaixo.");
-            document.getElementById("email").style.boxShadow = "1px 1px 5px red";
-            document.getElementById("senha").style.boxShadow = "1px 1px 5px red";
             e.preventDefault()
         } else if(senha == ""){
             setMensagem("Preencha o campo de senha.")
-            document.getElementById("senha").style.boxShadow = "1px 1px 5px red";
             e.preventDefault()
         } else if(usuario == ""){
             setMensagem("Preencha o campo de usuário.")
-            document.getElementById("email").style.boxShadow = "1px 1px 5px red";
             e.preventDefault()
         } else if(usuario === user && senha === pass){
             setShowUser(usuario)
