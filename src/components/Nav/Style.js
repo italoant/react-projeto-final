@@ -166,4 +166,17 @@ export const Usuario = styled.div`
     text-align: center;
     font-size: 1rem;
     color: white;
+    
+    .imagemUser{
+        border-radius: 50%;
+        height: 2.2rem;
+        margin: 2%;
+
+    }
+    .imagemUserMobile{
+        border-radius: 50%;
+        height: 2.2rem;
+        margin-left: 2%;
+        
+    }
 `;
