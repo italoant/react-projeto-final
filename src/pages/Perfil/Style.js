@@ -169,11 +169,16 @@ export const Container = styled.div`
         }
 
         #container-dois img{
-            width: 22vw;
-            margin-right: 0;
+            display: none;
         }
-        #esquerda{
+        #esquerda {
             margin: 0;
+            justify-content: flex-start;
+        }
+
+        #direita {
+            justify-content: flex-end;
+            
         }
         .botaoEnviar{
             margin: 3%;

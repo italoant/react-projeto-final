@@ -3,7 +3,7 @@
 </h1>
 
 <h3 align="center">
-    <a href="https://projeto-final-react.vercel.app/">Acessar a demonstração</a>
+    <a href="https://panime.vercel.app">Acessar a demonstração</a>
 </h3>
 
 ## 📕️ Sobre 
