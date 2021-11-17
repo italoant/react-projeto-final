@@ -60,7 +60,7 @@ export const Container = styled.div`
     }
 
     #container-dois img{
-        width: 10vw;
+        width: 11.5vw;
         height: 25vh;
         margin: 5%;
         border-radius: 50%;

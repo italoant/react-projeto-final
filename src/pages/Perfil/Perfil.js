@@ -45,8 +45,12 @@ export default function Perfil(){
     }
 
     function trocarImg(){
-        localStorage.setItem('foto' , img)
-        window.location.reload(true)
+        if(img === undefined){
+            localStorage.setItem('foto' , "https://img.elo7.com.br/product/zoom/342ED94/painel-de-festa-3d-sublimada-pantera-cor-de-rosa-1-50x1-50-painel-de-festa-redondo-da-pantera-cor-de.jpg")
+        }else{
+            localStorage.setItem('foto' , img)
+            window.location.reload(true)
+        }
     }
 
     const data_localStorege = localStorage.getItem('data');
