@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Redirect, Link } from 'react-router-dom';
 
 import { Container, BotaoPerfil } from './Style'
@@ -11,6 +11,10 @@ import { InputContext } from "../../context/Input";
 
 
 export default function Perfil(){
+
+    useEffect(() => {
+        window.document.title = "PanimeE - Perfil"
+    })
 
     const { setNome, setEmail, setSenha, setData, setUser } = useContext(FormsContext);
     const { setRedirecionadoNoticias, setRedirecionadoAnime, setRedirecionadoManga } = useContext(RedirectContext);
@@ -45,6 +49,11 @@ export default function Perfil(){
         window.location.reload(true)
     }
 
+    const data_localStorege = localStorage.getItem('data');
+    var data_br = data_localStorege.split("-");
+    
+
+    // console.log(typeof(data_localStorege))
 
     return(
         <Container theme={themePage}>
@@ -58,7 +67,7 @@ export default function Perfil(){
                     <h3>{localStorage.getItem("nome_e_sobrenome")}</h3>
                     <p><span>Usuário: </span>@{localStorage.getItem("user")}</p>
                     <p><span>Email: </span>{localStorage.getItem("email")}</p>
-                    <p><span>Data de Nascimento: </span>{localStorage.getItem("data")}</p>
+                    <p><span>Data de Nascimento: </span>{`${data_br[2]}/${data_br[1]}/${data_br[0]}`}</p>
                     <div id="butao_delete_account">
                         <Link to=""><BotaoPerfil onClick={deleteAccount} theme={themePage}>Excluir Conta</BotaoPerfil></Link>
                     </div>

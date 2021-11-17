@@ -22,6 +22,9 @@ export default function Home() {
 
     const { showUser } = useContext(InputContext);
 
+    useEffect(() => {
+        window.document.title = "PanimeE - Home"
+    })
 
     var responseReviwAnime = [];
     var responseReviwManga = [];

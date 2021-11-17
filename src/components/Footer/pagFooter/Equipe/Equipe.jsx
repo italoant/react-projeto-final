@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useTheme } from '../../../../context/Theme';
 import EquipeDados from './DadosProps';
 import { H1Style } from '../../../Components';
@@ -14,6 +14,10 @@ import { EstiloEquipe } from './Style';
 export default function Equipe(){
 
     const { themePage } = useTheme();
+
+    useEffect(() => {
+        window.document.title = "PanimeE - Equipe"
+    })
 
     return (
         <EstiloEquipe theme={themePage}>

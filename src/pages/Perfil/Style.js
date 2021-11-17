@@ -21,7 +21,7 @@ export const Container = styled.div`
     }
 
     #esquerda input{
-        width: 90%;
+        width: 70%;
         margin: 3%;
         border: none;
         padding: 1%;

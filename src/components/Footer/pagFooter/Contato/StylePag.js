@@ -7,38 +7,28 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     background: ${props => props.theme.backgroundSecondary};
-    height: 150vh; 
+    height: 120vh; 
     transition: 0.4s;
 
-
-    @media (max-width: 1326px){
-        height: 160vh;
+    .mensagem{
+        font-size: 1.3rem;
+        margin-top: 1.5vh;
+        color: #FF0000;
     }
 
-    @media (max-width: 1024px){
-        height: 165vh;
+    .mensagem_ok {
+        font-size: 1.3rem;
+        margin-top: 1.5vh;
+        color: #009C49;
     }
 
-    @media (max-width: 994px){
-        height: 170vh;
-    }
-
-    @media (max-width: 600px){
-        height: 185vh;
-    }
-
-    @media (max-width: 400px){
-        height: 190vh;
+    @media (max-width: 862px){
+        height: 140vh;
     }
 
     @media (max-width: 375px){
-        height: 210vh;
+        height: 160vh;
     }
-
-    @media (max-width: 350px){
-        height: 250vh;
-    }
-
 `
 
 export const Form = styled.form`

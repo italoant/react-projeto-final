@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ContainerSobre = styled.div`
     width: 100vw; 
-    height: 120vh;
+    height: 100vh;
     display: flex; 
     flex-direction: column;
     align-items: center;
@@ -34,25 +34,7 @@ export const ContainerSobre = styled.div`
         color: ${props => props.theme.textColor};
     }
 
-    @media (max-width: 1440px){
-        height: 127vh;
-    }
     
-
-    @media (max-width: 1399px){
-        height: 140vh;
-    }
-
-    @media (max-width: 1204px){
-        height: 155vh;
-        .left, .right{
-            padding: 1%;
-        }
-    }
-
-    @media (max-width: 1199px){
-        height: 170vh;
-    }
 
     @media (max-width: 991px){
         .container{
@@ -69,7 +51,6 @@ export const ContainerSobre = styled.div`
     }
 
     @media (max-width: 767px){
-        height: 200vh;
 
         h6{
             width: 55vw;
@@ -88,35 +69,18 @@ export const ContainerSobre = styled.div`
         }
     }
 
-    @media (max-width: 552px){
-        height: 170vh;
-    }
-
-    @media (max-width: 492px){
-        height: 180vh;
-    }
-
-    @media (max-width: 443px){
-        height: 190vh;
-    }
+    
 
     @media (max-width: 414px){
-        height: 220vh;
+        height: 120vh;
 
         .container{
             padding: 2%;
         }
     }
 
-    @media (max-width: 375px){
-        height: 260vh;
-    }
-
-    @media (max-width: 360px){
-        height: 280vh;
-    }
 
     @media (max-width: 320px){
-        height: 340vh;
+        height: 160vh;
     }
 `;

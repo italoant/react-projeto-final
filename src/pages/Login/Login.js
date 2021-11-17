@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Redirect, Link } from 'react-router-dom';
 
 import { ContainerForm, Formulario, Botao } from './Style';
@@ -11,6 +11,10 @@ import { useTheme } from "../../context/Theme";
 
 
 export default function Login(){
+
+    useEffect(() => {
+        window.document.title = "PanimeE - Login"
+    })
 
     const { user, pass } = useContext(FormsContext);
 

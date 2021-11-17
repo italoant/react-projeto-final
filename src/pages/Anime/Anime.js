@@ -32,6 +32,10 @@ export default function Anime() {
 
     const [loading, setLoading] = useState(false);
 
+    useEffect(() => {
+        window.document.title = "PanimeE - Anime"
+    })
+
 
 
     function animeFilter() {

@@ -64,6 +64,10 @@ export default function Manga() {
         searchBugShow()
     }, [])
 
+    useEffect(() => {
+        window.document.title = "PanimeE - Mangá"
+    })
+
 
     const { themePage } = useTheme();
 
