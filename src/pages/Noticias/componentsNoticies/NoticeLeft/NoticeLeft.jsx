@@ -1,10 +1,12 @@
 import React from 'react';
-import { Container } from './Style';
+import { Container, Imagem } from './Style';
 
 function NoticeLeft(props) {
   return (
-        <Container>
-            <img src={props.imgLeft} />
+        <Container >
+            <Imagem imgLeft={props.imgLeft} >
+                
+            </Imagem>
             <div className="noticia">
                 <div className="titulo">
                     <h4>{props.nome} </h4> 

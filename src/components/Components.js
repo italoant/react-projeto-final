@@ -18,6 +18,7 @@ export const H1Style = styled.h1`
     padding: 2rem;
     text-align: center;
     text-shadow: 2px 2px 5px var(--salmao);
+    text-transform: uppercase;
 `;
 
 

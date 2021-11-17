@@ -3,7 +3,8 @@ import styled from 'styled-components';
 export const Container = styled.main`
     display: flex;
     gap: 1rem;
-    
+    justify-content:center;
+
     img{
         height: 15vh;
         width: 20vw;
@@ -34,4 +35,13 @@ export const Container = styled.main`
         flex-direction: column;
     }
 
+    @media (max-width:750px){
+        flex-direction: row;
+
+        img{
+            width: 30vw;
+            height: 10vh;
+        }
+
+    }
 `;
