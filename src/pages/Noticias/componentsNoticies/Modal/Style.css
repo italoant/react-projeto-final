@@ -1,0 +1,19 @@
+.btn{
+    border: none;
+    background: none;
+    outline: none;
+    background-color: #FE6688;
+    border-radius: 6px;
+    padding: 0 1%;
+    width: 5rem;
+    color: #d1cab6;
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+
+.popup-content{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 6px;
+}
