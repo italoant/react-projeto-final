@@ -26,7 +26,7 @@ const GlobalStyle = createGlobalStyle`
 
         /* width */
         ::-webkit-scrollbar {
-            width: 15px;
+            width: 10px;
             background-image: linear-gradient(to bottom, pink, pink, pink, red)
         }
 
