@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTheme } from '../../context/Theme';
 import { Container } from './Style'
-import Gif from '../../components/Footer/pagFooter/Equipe/img/error.gif';
+import Gif from './img/error.gif';
 
 function NotFound() {
 

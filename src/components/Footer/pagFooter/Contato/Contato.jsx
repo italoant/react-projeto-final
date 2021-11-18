@@ -89,13 +89,6 @@ export default function Contato() {
                             <Button color="#FE6688" type="button"> Cancelar </Button>
                             <Button color="#F16EA5" onClick={validacao}> Enviar</Button>
                     </Form>
-                    {/* <Modal color="#FE6688" 
-                        nomeBotao="teste" 
-                        img="https://pa1.narvii.com/6595/33963d95eb637c3e8cbed27e7a204ae821723c2c_hq.gif" 
-                        botaoPop="testePOP"
-                        mensagem="Agradecemos!"
-                        mensagem2="ありがとう"
-                    /> */}
         </Container>
     );
 }
