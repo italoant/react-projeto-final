@@ -43,8 +43,7 @@ export default function Equipe(){
                     nome="Italo"
                     sobrenome="“Numeros” Antonio" 
                     cidade="Recife" estado="PE" 
-                    sobre="Atualmente sou aluno do projeto Start-Recife da rede cidadã e estou aprendendo as tecnologias: HTML, CSS, JS e REACT.
-                    Busco vaga de desenvolvedor, estagiário, aprendiz ou Jr em empresa do ramo para desenvolver minhas habilidades adquiridas até o momento e assim agregar valor conjunto a empresa."
+                    sobre="Olá, me chamo Italo tenho 24 anos mas sou conhecido como numer0s, faço parte da equipe As panteras cor de rosa, nas horas vagas costumo assistir animes e conversar com meus amigos, então pra mim realizar esse projeto foi muito confortavel, tanto pelo tema como me relacionar com meus companheiros. Faço parte do Start Recife 2021 e neste projeto espelho todo meu aprendizado as vocês, no Start descobri o meu amor por tecnologia e tenho planos de proximo ano iniciar ADS para aprimorar minhas habilidades."
                     linkGithub="https://github.com/italoant"
                     linkLinkedin="https://www.linkedin.com/in/italo-antonio/"
                     linkInsta="https://www.instagram.com/italoant/"
